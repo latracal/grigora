@@ -23,7 +23,7 @@
   }
 }
 
-.navbar .menu-item-has-children::after {
+.navbar .menu-item-has-children a::after {
   content: '';
   border: solid #000;
   border-width: 0 2px 2px 0;
@@ -32,6 +32,7 @@
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   margin-bottom: 3px;
+  margin-left: 8px;
 }
 
 .navbar .logo {
@@ -204,6 +205,10 @@
   .navbar .menu-container .menu .menu-item .sub-menu li {
     margin: 0;
   }
+}
+
+.navbar .menu-container .menu .menu-item .sub-menu a::after {
+  content: none;
 }
 
 @media (max-width: 768px) {
