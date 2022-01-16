@@ -2,7 +2,8 @@
 
 function ltr_setup_theme(){
 
-	register_nav_menu('primary', __('Primary Menu', 'ltr2022'));
+	register_nav_menu('primary', __('Primary Menu', 'grg'));
+	register_nav_menu('footer', __('footer Menu', 'grg'));
 	
 }
 
