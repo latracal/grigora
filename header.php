@@ -18,6 +18,13 @@
                     }
                 ?>
             </div>
+            <div id="menu-toggle-btn">
+                <div class="icon">
+                    <span class="line top"></span>
+                    <span class="line middle"></span>
+                    <span class="line bottom"></span>
+                </div>
+            </div>
             <div class="menu-container">
                 <?php
 
@@ -25,7 +32,7 @@
                     wp_nav_menu([
                         'theme_location' => 'primary',
                         'container' => false,
-                        'menu_class' => 'menu',
+                        'menu_class' => 'menu hide',
                         'fallback_cb' => false,
                         'depth' => 2
                     ]);
