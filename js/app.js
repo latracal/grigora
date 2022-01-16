@@ -1,3 +1,16 @@
+window.addEventListener('mouseup', function (event) {
+	var searchbox = document.querySelector('.search-box');
+	var toggleMenu = document.querySelector('.menu');
+
+	if (event.target != searchbox && event.target.parentNode != searchbox) {
+		searchbox.classList.add('s-hide');
+	}
+
+	if (event.target != toggleMenu && event.target.parentNode != toggleMenu) {
+		toggleMenu.classList.add('hide');
+	}
+});
+
 /*search box*/
 const searchToggle = document.querySelector('.toggle');
 const search = document.querySelector('.search-box');
