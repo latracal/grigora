@@ -3,10 +3,10 @@ const searchToggle = document.querySelector('.toggle');
 const search = document.querySelector('.search-box');
 
 searchToggle.addEventListener('click', function () {
-	if (search.classList.contains('hide')) {
-		search.classList.remove('hide');
+	if (search.classList.contains('s-hide')) {
+		search.classList.remove('s-hide');
 	} else {
-		search.classList.add('hide');
+		search.classList.add('s-hide');
 	}
 });
 

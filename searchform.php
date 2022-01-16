@@ -1,6 +1,6 @@
 <?php $unique_id = esc_attr( uniqid( 'search-form-' ) ); ?>
 
-<form role="search" method="get" class="search-box hide" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+<form role="search" method="get" class="search-box s-hide" action="<?php echo esc_url( home_url( '/' ) ); ?>">
     <input type="text" class="search-field" id="search" name="search" value="<?php the_search_query(); ?>"
         placeholder="<?php _e( 'Search Text', 'grg' ); ?>">
     <button class="search-icon"><svg width="27" height="27" viewBox="0 0 27 27" fill="none"

@@ -67,7 +67,9 @@
 		}
 
 		.hide {
-			display: none !important;
+			@media (max-width: 768px) {
+				display: none !important;
+			}
 		}
 
 		.menu {
@@ -157,6 +159,10 @@
 					}
 				}
 			}
+		}
+
+		.s-hide {
+			display: none !important;
 		}
 
 		.search-btn {
