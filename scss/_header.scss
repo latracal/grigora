@@ -9,6 +9,16 @@
 		justify-content: center;
 	}
 
+	.menu-item-has-children::after {
+		content: '';
+		border: solid #000;
+		border-width: 0 2px 2px 0;
+		display: inline-block;
+		padding: 3px;
+		transform: rotate(45deg);
+		margin-bottom: 3px;
+	}
+
 	.logo {
 		display: flex;
 		flex-direction: row;
