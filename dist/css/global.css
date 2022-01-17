@@ -300,6 +300,10 @@
   }
 }
 
+.navbar .menu-container .search-btn .search-box .search-field::-webkit-input-placeholder {
+  font-size: 16px;
+}
+
 .navbar .menu-container .search-btn .search-box .search-icon {
   border: none;
   background-color: transparent;
