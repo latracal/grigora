@@ -408,6 +408,7 @@
 @media (max-width: 768px) {
   .container .article {
     border-right: none;
+    padding: 0 1rem;
   }
 }
 

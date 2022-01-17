@@ -19,6 +19,14 @@ window.addEventListener('mouseup', function (event) {
 				search.classList.add('s-hide');
 			}
 		});
+	} else {
+		searchToggle.addEventListener('click', function () {
+			if (search.classList.contains('s-hide')) {
+				search.classList.remove('s-hide');
+			} else {
+				search.classList.add('s-hide');
+			}
+		});
 	}
 
 	if (event.target != toggleMenu && event.target.parentNode != toggleMenu) {
@@ -30,5 +38,24 @@ window.addEventListener('mouseup', function (event) {
 				menu.classList.add('hide');
 			}
 		});
+	} else {
+		navToggle.addEventListener('click', function () {
+			if (menu.classList.contains('hide')) {
+				menu.classList.remove('hide');
+			} else {
+				menu.classList.add('hide');
+			}
+		});
+	}
+});
+
+var parent = document.querySelector('.menu-item-has-children');
+var subMenu = document.querySelector('.sub-menu');
+
+parent.addEventListener('click', function () {
+	if (subMenu.classList.contains('hide')) {
+		subMenu.classList.remove('hide');
+	} else {
+		subMenu.classList.add('hide');
 	}
 });
