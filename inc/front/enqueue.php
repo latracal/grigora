@@ -13,7 +13,7 @@ function ltr_enqueue(){
 	
 
     // load default jquery provided by wordpress
-	wp_enqueue_script( 'jquery' );	
+	// wp_enqueue_script( 'jquery' );	
 	wp_enqueue_script( 'ltr_scripts1' );
 
 } 
