@@ -1,52 +1,49 @@
 window.addEventListener('mouseup', function (event) {
-	var searchbox = document.querySelector('.search-box');
 	var toggleMenu = document.querySelector('.menu');
 
 	/*search box*/
-	const searchToggle = document.querySelector('.toggle');
-	const search = document.querySelector('.search-box');
+	const searchbox = document.querySelector('.search-box');
+	var searchbtn = document.querySelector('.search-btn');
+	var searchbtnobj = document.querySelector('.search-btn-obj');
+	var searchbtnsvg = document.querySelector('.search-btn-svg');
 
 	/*navbar*/
-	const navToggle = document.querySelector('#menu-toggle-btn');
 	const menu = document.querySelector('.menu');
+	var menubtn = document.querySelector('.menu-toggle-btn');
+	var menuicon = document.querySelector('.menu-toggle-icon');
 
-	if (event.target != searchbox && event.target.parentNode != searchbox) {
+	console.log(event.target);
+
+	if(event.target==searchbtn || event.target==searchbtnobj || event.target==searchbtnsvg){
+		menu.classList.add('hide');
+		if(searchbox.classList.contains('s-hide')){
+			searchbox.classList.remove('s-hide');
+		}
+		else{
+			searchbox.classList.add('s-hide');
+		}
+	}
+	else if(menubtn.contains(event.target)){
 		searchbox.classList.add('s-hide');
-		searchToggle.addEventListener('click', function () {
-			if (search.classList.contains('s-hide')) {
-				search.classList.remove('s-hide');
-			} else {
-				search.classList.add('s-hide');
-			}
-		});
-	} else {
-		searchToggle.addEventListener('click', function () {
-			if (search.classList.contains('s-hide')) {
-				search.classList.remove('s-hide');
-			} else {
-				search.classList.add('s-hide');
-			}
-		});
+		if(menu.classList.contains('hide')){
+			menu.classList.remove('hide');
+		}
+		else{
+			menu.classList.add('hide');
+		}
+	}
+	else if(event.target == searchbox || searchbox.contains(event.target)){
+		;
+	}
+	else if(event.target == menu || menu.contains(event.target)){
+		;
+	}
+	else{
+		searchbox.classList.add('s-hide');
+		menu.classList.add('hide');
 	}
 
-	if (event.target != toggleMenu && event.target.parentNode != toggleMenu) {
-		toggleMenu.classList.add('hide');
-		navToggle.addEventListener('click', function () {
-			if (menu.classList.contains('hide')) {
-				menu.classList.remove('hide');
-			} else {
-				menu.classList.add('hide');
-			}
-		});
-	} else {
-		navToggle.addEventListener('click', function () {
-			if (menu.classList.contains('hide')) {
-				menu.classList.remove('hide');
-			} else {
-				menu.classList.add('hide');
-			}
-		});
-	}
+
 });
 
 var parent = document.querySelector('.menu-item-has-children');
