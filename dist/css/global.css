@@ -73,6 +73,9 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 10px 0;
 }
 
@@ -482,7 +485,7 @@
 
 .container .article .post-container .post img {
   border-radius: 0.25rem;
-  width: 256px;
+  width: 300px;
   height: 204px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -512,6 +515,16 @@
   .container .article .post-container .post .post-desc a {
     float: right;
   }
+}
+
+.container .article .post-container .post .post-desc .meta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .article .post-container .post .post-desc .meta h5 {
+  margin-bottom: 1rem;
 }
 
 .container .article .pagination {

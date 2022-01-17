@@ -11,7 +11,30 @@
 <body>
     <header>
         <nav class="navbar">
+            <?php 
 
+            if(has_custom_logo()){
+                ?>
+            <div class="logo">
+                <?php
+                    if ( function_exists( 'the_custom_logo' ) ) {
+                    the_custom_logo();
+                    }
+                ?>
+                <div class="title">
+                    <a href="<?php echo get_home_url(); ?>">
+                        <h1><?php echo get_bloginfo( 'name' ); ?></h1>
+                    </a>
+                    <a href="<?php echo get_home_url(); ?>">
+                        <h2>
+                            <?php echo get_bloginfo( 'description' ); ?>
+                        </h2>
+                    </a>
+                </div>
+            </div>
+            <?php
+            } else { 
+            ?>
             <div class="title">
                 <a href="<?php echo get_home_url(); ?>">
                     <h1><?php echo get_bloginfo( 'name' ); ?></h1>
@@ -22,6 +45,13 @@
                     </h2>
                 </a>
             </div>
+
+            <?php
+            }
+            ?>
+
+
+
             <div id="menu-toggle-btn">
                 <div class="icon">
                     <span class="line top"></span>
