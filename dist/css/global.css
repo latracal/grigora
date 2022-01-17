@@ -475,6 +475,11 @@
   margin-bottom: 1rem;
 }
 
+.container .article .post-container .post .post-desc a {
+  color: #000;
+  text-decoration: none;
+}
+
 @media (max-width: 768px) {
   .container .article .post-container .post .post-desc a {
     float: right;
