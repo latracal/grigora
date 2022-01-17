@@ -26,7 +26,9 @@
         <?php the_posts_pagination(); ?>
 
     </section>
-    <aside>Sidebar Area Will Design Later</aside>
+    <aside>
+        <section class="sidebar">Sidebar Area Will Design Later</section>
+    </aside>
 </div>
 
 <?php get_footer(); ?>
