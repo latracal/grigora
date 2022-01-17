@@ -11,12 +11,16 @@
 <body>
     <header>
         <nav class="navbar">
-            <div class="logo">
-                <?php
-                    if ( function_exists( 'the_custom_logo' ) ) {
-                    the_custom_logo();
-                    }
-                ?>
+
+            <div class="title">
+                <a href="<?php echo get_home_url(); ?>">
+                    <h1><?php echo get_bloginfo( 'name' ); ?></h1>
+                </a>
+                <a href="<?php echo get_home_url(); ?>">
+                    <h2>
+                        <?php echo get_bloginfo( 'description' ); ?>
+                    </h2>
+                </a>
             </div>
             <div id="menu-toggle-btn">
                 <div class="icon">
@@ -34,7 +38,7 @@
                         'container' => false,
                         'menu_class' => 'menu hide',
                         'fallback_cb' => false,
-                        'depth' => 2
+                        'depth' => 2,
                     ]);
                 }
 
