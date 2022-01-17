@@ -432,6 +432,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 0 2.5rem;
+  width: 70%;
   border-right: 1px solid #aaaaaa;
 }
 
