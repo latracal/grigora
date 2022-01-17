@@ -363,6 +363,99 @@
   height: 2.5rem;
 }
 
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 3rem 0;
+}
+
+.container .article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 2.5rem;
+  max-width: 1024px;
+  border-right: 1px solid #aaaaaa;
+}
+
+.container .article .archive-desc {
+  padding: 1rem 0;
+  border-bottom: 1px solid #aaaaaa;
+}
+
+.container .article .post-container {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #aaaaaa;
+}
+
+.container .article .post-container .post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.container .article .post-container .post img {
+  border-radius: 0.25rem;
+  width: 256px;
+  height: 204px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container .article .post-container .post .post-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 1rem;
+}
+
+.container .article .pagination {
+  margin: 2rem 0;
+}
+
+.container .article .pagination a {
+  color: #000;
+}
+
+.container .article .pagination .prev {
+  text-decoration: none;
+  background-color: #c4c4c4;
+  padding: 0.25rem 1rem;
+  border-radius: 0.25rem;
+  float: left;
+}
+
+.container .article .pagination .next {
+  text-decoration: none;
+  background-color: #c4c4c4;
+  padding: 0.25rem 1rem;
+  border-radius: 0.25rem;
+  float: right;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -372,5 +465,26 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
+}
+
+p {
+  font-size: 13px;
+}
+
+.read-btn {
+  color: #000;
+  text-decoration: none;
+  background-color: #c4c4c4;
+  padding: 0.25rem 1rem;
+  border-radius: 0.25rem;
+}
+
+.post-title {
+  font-size: 1.313rem;
+}
+
+.page-title {
+  font-size: 1.875rem;
+  margin-bottom: 1rem;
 }
 /*# sourceMappingURL=global.css.map */

@@ -18,3 +18,7 @@ function grigora_custom_logo_setup() {
  
     add_theme_support( 'custom-logo', $defaults );
 }
+
+function change_excerpt_end_bracket( $more ) {
+    return '&#46;&#46;&#46;';
+}
