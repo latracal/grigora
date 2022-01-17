@@ -309,6 +309,10 @@
   background-color: transparent;
 }
 
+.navbar .menu-container .search-btn .search-box .search-icon:hover {
+  cursor: pointer;
+}
+
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
