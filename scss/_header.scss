@@ -162,6 +162,8 @@
 					a {
 						display: block;
 						padding: 0.5rem 1rem;
+						border: none;
+
 						&::after {
 							content: none;
 						}
