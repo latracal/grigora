@@ -378,6 +378,15 @@
   margin: 3rem 0;
 }
 
+@media (max-width: 768px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .container .article {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -391,6 +400,12 @@
   border-right: 1px solid #aaaaaa;
 }
 
+@media (max-width: 768px) {
+  .container .article {
+    border-right: none;
+  }
+}
+
 .container .article .archive-desc {
   padding: 1rem 0;
   border-bottom: 1px solid #aaaaaa;
@@ -400,6 +415,13 @@
   padding-top: 3rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid #aaaaaa;
+}
+
+@media (max-width: 768px) {
+  .container .article .post-container {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
 }
 
 .container .article .post-container .post {
@@ -414,6 +436,17 @@
   margin-bottom: 2rem;
 }
 
+@media (max-width: 768px) {
+  .container .article .post-container .post {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-bottom: 1px solid #aaaaaa;
+    padding-bottom: 2rem;
+  }
+}
+
 .container .article .post-container .post img {
   border-radius: 0.25rem;
   width: 256px;
@@ -422,22 +455,37 @@
      object-fit: cover;
 }
 
-.container .article .post-container .post .post-desc {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  gap: 1rem;
+@media (max-width: 768px) {
+  .container .article .post-container .post img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.container .article .post-container .post .post-desc h3 {
+  margin-bottom: 1rem;
+}
+
+.container .article .post-container .post .post-desc p {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .container .article .post-container .post .post-desc a {
+    float: right;
+  }
 }
 
 .container .article .pagination {
   margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .container .article .pagination {
+    margin-top: 0;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #aaaaaa;
+  }
 }
 
 .container .article .pagination a {

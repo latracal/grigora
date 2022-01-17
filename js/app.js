@@ -6,7 +6,7 @@ window.addEventListener('mouseup', function (event) {
 	const searchToggle = document.querySelector('.toggle');
 	const search = document.querySelector('.search-box');
 
-	/*nav box*/
+	/*navbar*/
 	const navToggle = document.querySelector('#menu-toggle-btn');
 	const menu = document.querySelector('.menu');
 
