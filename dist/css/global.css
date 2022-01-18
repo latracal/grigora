@@ -412,7 +412,8 @@
       -ms-flex-direction: row;
           flex-direction: row;
   width: 100%;
-  margin: 3rem 0;
+  margin: 3rem auto;
+  max-width: 1366px;
 }
 
 @media (max-width: 768px) {
