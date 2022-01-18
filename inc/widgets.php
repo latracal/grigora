@@ -1,6 +1,6 @@
 <?php
 
-function grg_widgets(){
+function grg_sidebar(){
     register_sidebar(
         array(
             'id'            => 'primary',
