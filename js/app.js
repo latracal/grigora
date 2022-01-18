@@ -12,8 +12,6 @@ window.addEventListener('mouseup', function (event) {
 	var menubtn = document.querySelector('.menu-toggle-btn');
 	var menuicon = document.querySelector('.menu-toggle-icon');
 
-	console.log(event.target);
-
 	if (
 		event.target == searchbtn ||
 		event.target == searchbtnobj ||
