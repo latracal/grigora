@@ -1,30 +1,35 @@
-<?php
+<?php get_header(); ?>
 
-get_header();
-?>
+<div class="container">
+    <section class="article">
+        <div class="archive-desc">
+            <h2 class="page-title">Search results for "<?php the_search_query(); ?>"
+            </h2>
+        </div>
+        <div class="post-container v-80">
 
-<?php
-	// Display Search: query term
-	printf( esc_html__( 'Search Results for: %s', 'sample' ), '<span>' . get_search_query() . '</span>' );
+            <?php
 
-?>
+				if( have_posts() ){
+					while( have_posts() ){
+						the_post();
+						
+						get_template_part('/template-parts/posts/content-posts');
+					}
+				}else{
+					echo "<h4 class='search-not-found'>Sorry, your search did not match any entries. Please try again with different search terms.</h4>";
+					get_search_form(); 
+            }
+            ?>
 
-<?php
-	
-	while ( have_posts() ) :
-		the_post();
+        </div>
 
-		//fetch the search template
-		get_template_part( 'template-parts/content-search' );
+        <?php the_posts_pagination(); ?>
 
-	endwhile;
+    </section>
+    <aside>
+        <section class="sidebar">Sidebar Area Will Design Later</section>
+    </aside>
+</div>
 
-	the_posts_navigation();
-
-
-?>
-
-
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer(); ?>

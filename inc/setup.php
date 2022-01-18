@@ -9,11 +9,9 @@ function ltr_setup_theme(){
 
 function grigora_custom_logo_setup() {
     $defaults = array(
-        'height'               => 100,
-        'width'                => 100,
         'flex-height'          => true,
         'flex-width'           => true,
-        'header-text'          => array( 'site-title', 'site-description' ),
+        'header-text'          => array( 'site-title', 'grg-site-description' ),
     );
  
     add_theme_support( 'custom-logo', $defaults );

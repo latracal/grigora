@@ -18,6 +18,7 @@
 		@media (max-width: 768px) {
 			border-right: none;
 			padding: 0 1rem;
+			width: 100%;
 		}
 
 		.archive-desc {
@@ -89,6 +90,48 @@
 					}
 				}
 			}
+
+			.search-box {
+				display: flex;
+				flex-direction: row;
+				padding: 0.5rem;
+				background-color: #e9e9e9;
+				border: 1px solid #888888;
+				border-radius: 0.25rem;
+				margin: 3rem 0;
+				gap: 0.5rem;
+
+				.search-field {
+					font-size: 1rem;
+					outline: none;
+					padding: 0.5rem;
+					background-color: #e9e9e9;
+					border-top: none;
+					border-left: none;
+					border-right: none;
+					border-bottom-color: #000000;
+					width: 100vw;
+
+					&::-webkit-input-placeholder {
+						color: #000000;
+						font-size: 16px;
+					}
+				}
+
+				.search-icon {
+					border: none;
+					background-color: transparent;
+
+					&:hover {
+						cursor: pointer;
+					}
+
+					svg {
+						width: 20px;
+						height: 20px;
+					}
+				}
+			}
 		}
 
 		.pagination {
@@ -100,8 +143,16 @@
 				border-bottom: 1px solid #aaaaaa;
 			}
 
-			a {
-				color: #000;
+			.screen-reader-text {
+				display: none;
+			}
+
+			.nav-links {
+				text-align: center;
+
+				a {
+					color: #000;
+				}
 			}
 
 			.prev {
@@ -123,8 +174,10 @@
 	}
 
 	aside {
-		@media (min-width: 768px) {
-			width: 30%;
+		width: 30%;
+		@media (max-width: 768px) {
+			width: 100%;
+			padding: 0 1rem;
 		}
 	}
 }
