@@ -6,13 +6,12 @@ window.addEventListener('mouseup', function (event) {
 	var searchbtn = document.querySelector('.search-btn');
 	var searchbtnobj = document.querySelector('.search-btn-obj');
 	var searchbtnsvg = document.querySelector('.search-btn-svg');
+	var searchinput = document.getElementsByClassName('search-field')[0];
 
 	/*navbar*/
 	const menu = document.querySelector('.menu');
 	var menubtn = document.querySelector('.menu-toggle-btn');
 	var menuicon = document.querySelector('.menu-toggle-icon');
-
-	console.log(event.target);
 
 	if (
 		event.target == searchbtn ||
@@ -22,6 +21,8 @@ window.addEventListener('mouseup', function (event) {
 		menu.classList.add('hide');
 		if (searchbox.classList.contains('s-hide')) {
 			searchbox.classList.remove('s-hide');
+			searchinput.focus();
+			searchinput.select();
 		} else {
 			searchbox.classList.add('s-hide');
 		}
