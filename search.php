@@ -6,7 +6,7 @@
             <h2 class="page-title">Search results for "<?php the_search_query(); ?>"
             </h2>
         </div>
-        <div class="post-container v-80">
+        <div class="post-container">
 
             <?php
 
