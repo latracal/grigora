@@ -196,6 +196,9 @@
   .navbar .menu-container .menu a {
     padding: 0.5rem;
   }
+  .navbar .menu-container .menu a:hover {
+    border-bottom: none !important;
+  }
 }
 
 .navbar .menu-container .menu a:hover {
@@ -229,6 +232,12 @@
 
 .navbar .menu-container .menu .menu-item .sub-menu li {
   padding: 0;
+}
+
+@media (max-width: 768px) {
+  .navbar .menu-container .menu .menu-item .sub-menu li:first-child {
+    border-top: 1px solid #888888;
+  }
 }
 
 @media (max-width: 768px) {
