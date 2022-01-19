@@ -9,7 +9,19 @@
 
     <section class="post-content">
         <h1 class="post-title"><?php the_title(); ?></h1>
-        <span class="post-meta">Published by <?php echo nl2br(get_the_author_meta('display_name')); ?> on
+        <span class="post-meta">Published by
+            <?php 
+
+            if (empty( get_the_author_meta('first_name') ) && empty( get_the_author_meta('last_name') ) ){
+                echo nl2br(get_the_author_meta('display_name')); 
+               
+            }else{
+                echo nl2br(get_the_author_meta('first_name')); 
+                echo " ";
+                echo nl2br(get_the_author_meta('last_name')); 
+            }
+            
+            ?> on
             <?php echo get_the_date(); ?></span>
         <?php the_post_thumbnail(); ?>
         <?php the_content(); ?>
@@ -36,7 +48,20 @@
         <div class="author-desc">
             <div class="avatar"><?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?></div>
             <div class="details">
-                <h3><?php echo nl2br(get_the_author_meta('display_name')); ?></h3>
+                <h3><?php 
+
+                if (empty( get_the_author_meta('first_name') ) && empty( get_the_author_meta('last_name') ) ){
+                    echo nl2br(get_the_author_meta('display_name')); 
+                
+                }else{
+                    echo nl2br(get_the_author_meta('first_name')); 
+                    echo " ";
+                    echo nl2br(get_the_author_meta('last_name')); 
+                }
+
+                ?>
+
+                </h3>
                 <p><?php echo nl2br(get_the_author_meta('description')); ?></p>
             </div>
         </div>

@@ -676,6 +676,14 @@
   margin-bottom: 1rem;
 }
 
+.post-content p a {
+  color: #0170b9;
+}
+
+.post-content p img {
+  vertical-align: middle;
+}
+
 .post-content li {
   font-size: 0.938rem;
 }
@@ -756,6 +764,7 @@
   border: 1px solid #000;
 }
 
+.post-content .wp-block-table table th,
 .post-content .wp-block-table table td {
   padding: 1rem;
 }
@@ -784,15 +793,19 @@
   padding: 0.5rem 1rem;
   margin-bottom: 1rem;
   border-radius: 0.25rem;
-  background-color: #c4c4c4;
 }
 
 .post-content .wp-block-separator {
+  color: #c4c4c4;
   margin-bottom: 1rem;
 }
 
 .post-content .blocks-gallery-item img {
   margin-bottom: 0;
+}
+
+.post-content .blocks-gallery-grid {
+  margin-left: 0;
 }
 
 .post-content .cat {
@@ -807,7 +820,6 @@
 
 .post-content .cat-name {
   color: #000;
-  text-decoration: none;
   margin-right: 0.5rem;
 }
 
@@ -817,10 +829,6 @@
 
 .post-content .cat-name:last-child::after {
   content: none;
-}
-
-.post-content .cat-name:hover {
-  text-decoration: underline;
 }
 
 .post-content .post-pagination {
@@ -885,6 +893,21 @@
 
 .post-content .author-desc .details p {
   font-size: 0.938rem;
+}
+
+.post-content .wp-block-pullquote {
+  border-left: 3px solid #c4c4c4;
+}
+
+.post-content .wp-block-pullquote p {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.188rem;
+}
+
+.post-content .wp-block-pullquote .cite {
+  font-weight: 700;
+  font-size: 1.063rem;
 }
 
 * {
