@@ -1,10 +1,8 @@
 <?php
 
 function ltr_setup_theme(){
-
 	register_nav_menu('primary', __('Primary Menu', 'grg'));
 	register_nav_menu('footer', __('footer Menu', 'grg'));
-	
 }
 
 function grigora_custom_logo_setup() {
@@ -13,7 +11,6 @@ function grigora_custom_logo_setup() {
         'flex-width'           => true,
         'header-text'          => array( 'site-title', 'grg-site-description' ),
     );
- 
     add_theme_support( 'custom-logo', $defaults );
 }
 

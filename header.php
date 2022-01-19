@@ -21,16 +21,6 @@
                     the_custom_logo();
                     }
                 ?>
-                <div class="title">
-                    <a href="<?php echo get_home_url(); ?>">
-                        <h1><?php echo get_bloginfo( 'name' ); ?></h1>
-                    </a>
-                    <a href="<?php echo get_home_url(); ?>">
-                        <h2>
-                            <?php echo get_bloginfo( 'description' ); ?>
-                        </h2>
-                    </a>
-                </div>
             </div>
             <?php
             } else { 
@@ -49,8 +39,6 @@
             <?php
             }
             ?>
-
-
 
             <div class="menu-toggle-btn" id="menu-toggle-btn">
                 <div class="menu-toggle-icon">
