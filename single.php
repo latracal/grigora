@@ -31,19 +31,22 @@
         } 
         ?>
         </span>
+        <?php
+        if(has_tag()){ 
+            ?>
         <span class="tag">Tags - <?php
-        foreach((get_the_tags()) as $tag) { 
-            echo '<a href="'. esc_url( get_tag_link( $tag ) ) . '" class="cat-name">'.$tag->name.'</a>'; 
-        } 
+        
+            foreach((get_the_tags()) as $tag) { 
+                echo '<a href="'. esc_url( get_tag_link( $tag ) ) . '" class="cat-name">'.$tag->name.'</a>'; 
+            }
+            ?>
+
+        </span> <?php
+        }
         ?>
-        </span>
         <div class="post-pagination">
-            <div>
-                <?php previous_post_link(); ?>
-            </div>
-            <div>
-                <?php next_post_link(); ?>
-            </div>
+            <?php previous_post_link('<div class="pagination-prev-post"> %link </div>', '← %title'); ?>
+            <?php next_post_link('<div class="pagination-next-post"> %link </div>', '%title →'); ?>
         </div>
         <div class="author-desc">
             <div class="avatar"><?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?></div>
