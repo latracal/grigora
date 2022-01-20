@@ -66,41 +66,25 @@
                     echo " ";
                     echo nl2br(get_the_author_meta('last_name')); 
                 }
-
                 ?>
-
                 </h3>
                 <p><?php echo nl2br(get_the_author_meta('description')); ?></p>
             </div>
         </div>
         <div class="related-posts">
             <?php
-
-            $categories = get_the_category();
-
-            $rp_query = new WP_Query([
-                'posts_per_page' => 3,
-                'post__not_in' => [ $post->ID ],
-                'cat' => !empty($categories) ? $categories[0]->term_id : null,
-            ]);
-
-            if( $rp_query->have_posts()){
-                while( $rp_query->have_posts() ){
-                    $rp_query->the_post();
-
+                $related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 5, 'post__not_in' => array($post->ID) ) );
+                if( $related ) foreach( $related as $post ) {
+                    setup_postdata($post); 
                     get_template_part('template-parts/posts/content-related');
+                    wp_reset_postdata();
                 }
-            }
-
-            ?>
-
+                wp_reset_postdata();
+                 ?>
         </div>
         <div class="comment-section">
             <?php
-
-            if(comments_open() || get_comments_number() ){
                 comments_template();
-            }
             ?>
         </div>
     </section>
