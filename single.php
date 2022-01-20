@@ -16,20 +16,23 @@
                 echo nl2br(get_the_author_meta('display_name')); 
                
             }else{
-                echo nl2br(get_the_author_meta('first_name')); 
+                
+                echo '<a href="'. get_the_author_meta('user_url') .'">'.nl2br(get_the_author_meta('first_name')).'</a>';
                 echo " ";
-                echo nl2br(get_the_author_meta('last_name')); 
+                echo nl2br(get_the_author_meta('last_name'));
+                
             }
-            
+
             ?> on
             <?php echo get_the_date(); ?></span>
         <?php the_post_thumbnail(); ?>
         <?php the_content(); ?>
-        <span class="cat">Posted in <?php
-        foreach((get_the_category()) as $category) { 
-            echo '<a href="'. esc_url( get_category_link( $categories[0]->term_id ) ) . '" class="cat-name">'.$category->cat_name .'</a>'; 
-        } 
-        ?>
+        <span class="cat">Posted in
+            <?php
+                foreach((get_the_category()) as $category) { 
+                    echo '<a href="'. esc_url( get_category_link( $categories[0]->term_id ) ) . '" class="cat-name">'.$category->cat_name .'</a>'; 
+                } 
+            ?>
         </span>
         <?php
         if(has_tag()){ 
@@ -49,7 +52,9 @@
             <?php next_post_link('<div class="pagination-next-post"> %link </div>', '%title →'); ?>
         </div>
         <div class="author-desc">
-            <div class="avatar"><?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?></div>
+            <div class="avatar"><a
+                    href="<?php get_the_author_meta('user_url') ?>"><?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?></a>
+            </div>
             <div class="details">
                 <h3><?php 
 
@@ -67,6 +72,28 @@
                 </h3>
                 <p><?php echo nl2br(get_the_author_meta('description')); ?></p>
             </div>
+        </div>
+        <div class="related-posts">
+            <?php
+
+            $categories = get_the_category();
+
+            $rp_query = new WP_Query([
+                'posts_per_page' => 3,
+                'post__not_in' => [ $post->ID ],
+                'cat' => !empty($categories) ? $categories[0]->term_id : null,
+            ]);
+
+            if( $rp_query->have_posts()){
+                while( $rp_query->have_posts() ){
+                    $rp_query->the_post();
+
+                    get_template_part('template-parts/posts/content-related');
+                }
+            }
+
+            ?>
+
         </div>
         <div class="comment-section">
             Comment Section, will add later

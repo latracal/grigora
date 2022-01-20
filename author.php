@@ -3,7 +3,11 @@
 <div class="container">
     <section class="article">
         <div class="archive-desc">
-            <h2 class="page-title"><?php single_tag_title(); ?></h2>
+            <?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et augue eu purus vehicula rhoncus.
+                Etiam at quam massa. Integer nulla ante, faucibus ut facilisis non, euismod eu est. Aenean vehicula
+                massa quis rutrum vestibulum. Vestibulum non viverra diam. Aenean ultrices interdum maximus. Integer sed
+                fermentum massa.</p>
         </div>
         <div class="post-container">
 

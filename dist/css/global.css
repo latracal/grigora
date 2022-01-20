@@ -835,26 +835,26 @@
   border-top: 1px solid #aaaaaa;
 }
 
-.post-content .post-pagination div:first-child {
+.post-content .post-pagination .pagination-prev-post {
   float: left;
   background-color: #c4c4c4;
   padding: 0.5rem;
   border-radius: 0.25rem;
 }
 
-.post-content .post-pagination div:last-child {
+.post-content .post-pagination .pagination-next-post {
   float: right;
   background-color: #c4c4c4;
   padding: 0.5rem;
   border-radius: 0.25rem;
 }
 
-.post-content .post-pagination div a {
+.post-content .post-pagination a {
   color: #000;
   text-decoration: none;
 }
 
-.post-content .author-desc {
+.author-desc {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -871,42 +871,71 @@
   border-bottom: 1px solid #aaaaaa;
 }
 
-.post-content .author-desc .avatar {
+.author-desc .avatar {
   width: 30%;
   text-align: center;
 }
 
-.post-content .author-desc .avatar img {
+.author-desc .avatar img {
   width: 55%;
   border-radius: 50%;
   margin-bottom: 0;
 }
 
-.post-content .author-desc .details {
+.author-desc .details {
   width: 70%;
 }
 
-.post-content .author-desc .details h3 {
+.author-desc .details h3 {
   font-size: 1.313rem;
 }
 
-.post-content .author-desc .details p {
+.author-desc .details p {
   font-size: 0.938rem;
 }
 
-.post-content .wp-block-pullquote {
+.wp-block-pullquote {
   border-left: 3px solid #c4c4c4;
 }
 
-.post-content .wp-block-pullquote p {
+.wp-block-pullquote p {
   font-style: italic;
   font-weight: 700;
   font-size: 1.188rem;
 }
 
-.post-content .wp-block-pullquote .cite {
+.wp-block-pullquote .cite {
   font-weight: 700;
   font-size: 1.063rem;
+}
+
+.related-posts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 1rem;
+  margin: 3rem 0;
+}
+
+.related-posts div {
+  width: 100%;
+}
+
+.related-posts a {
+  color: #000;
+  font-size: 0.938rem;
+  text-decoration: none;
+}
+
+.related-posts img {
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 0;
 }
 
 * {
