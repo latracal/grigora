@@ -251,10 +251,18 @@
 }
 
 .related-posts {
-	display: flex;
-	flex-direction: row;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
 	gap: 1rem;
 	margin: 3rem 0;
+
+	@media (max-width: 768px) {
+		grid-template-columns: repeat(1, 1fr);
+
+		img {
+			height: auto !important;
+		}
+	}
 
 	div {
 		width: 100%;

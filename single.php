@@ -96,7 +96,12 @@
 
         </div>
         <div class="comment-section">
-            Comment Section, will add later
+            <?php
+
+            if(comments_open() || get_comments_number() ){
+                comments_template();
+            }
+            ?>
         </div>
     </section>
 
