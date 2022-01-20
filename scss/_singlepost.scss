@@ -291,3 +291,21 @@
 		margin-bottom: 0;
 	}
 }
+
+.comment-body {
+	list-style: none;
+
+	.author-det {
+		display: flex;
+		gap: 1rem;
+
+		img {
+			border-radius: 50%;
+		}
+
+		.author-meta {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+}

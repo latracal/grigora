@@ -1025,6 +1025,31 @@
   margin-bottom: 0;
 }
 
+.comment-body {
+  list-style: none;
+}
+
+.comment-body .author-det {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.comment-body .author-det img {
+  border-radius: 50%;
+}
+
+.comment-body .author-det .author-meta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 aside .wp-block-pullquote {
   border-left: 3px solid #c4c4c4;
 }
