@@ -13,14 +13,13 @@
             <?php 
 
             if (empty( get_the_author_meta('first_name') ) && empty( get_the_author_meta('last_name') ) ){
-                echo nl2br(get_the_author_meta('display_name')); 
+                                
+                echo '<a href="'. esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) .'">'.nl2br(get_the_author_meta('display_name')).'</a>';
                
             }else{
                 
-                echo '<a href="'. get_the_author_meta('user_url') .'">'.nl2br(get_the_author_meta('first_name')).'</a>';
-                echo " ";
-                echo nl2br(get_the_author_meta('last_name'));
-                
+                echo '<a href="'. esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) .'">'.nl2br(get_the_author_meta('first_name'))." ". nl2br(get_the_author_meta('last_name')) .'</a>';
+                               
             }
 
             ?> on
@@ -53,18 +52,17 @@
         </div>
         <div class="author-desc">
             <div class="avatar"><a
-                    href="<?php get_the_author_meta('user_url') ?>"><?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?></a>
+                    href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?></a>
             </div>
             <div class="details">
                 <h3><?php 
 
                 if (empty( get_the_author_meta('first_name') ) && empty( get_the_author_meta('last_name') ) ){
-                    echo nl2br(get_the_author_meta('display_name')); 
+
+                    echo '<a href="'. esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) .'">'.nl2br(get_the_author_meta('display_name')).'</a>';
                 
                 }else{
-                    echo nl2br(get_the_author_meta('first_name')); 
-                    echo " ";
-                    echo nl2br(get_the_author_meta('last_name')); 
+                    echo '<a href="'. esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) .'">'.nl2br(get_the_author_meta('first_name'))." ". nl2br(get_the_author_meta('last_name')) .'</a>';
                 }
                 ?>
                 </h3>

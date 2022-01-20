@@ -76,6 +76,11 @@
 		color: #454545;
 		font-size: 0.813rem;
 		margin-bottom: 1rem;
+
+		a {
+			color: #454545;
+			text-decoration: none;
+		}
 	}
 
 	.wp-block-quote {
@@ -214,6 +219,7 @@
 
 	.avatar {
 		width: 30%;
+		height: auto;
 		text-align: center;
 
 		img {
@@ -232,6 +238,11 @@
 
 		p {
 			font-size: 0.938rem;
+		}
+
+		a {
+			color: #000;
+			text-decoration: none;
 		}
 	}
 }

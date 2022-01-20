@@ -27,6 +27,45 @@
 			border-bottom: 1px solid #aaaaaa;
 		}
 
+		.author-descp {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			width: 100%;
+			padding: 1rem 0;
+			border-bottom: 1px solid #aaaaaa;
+
+			.avatar {
+				width: 30%;
+				height: auto;
+				text-align: center;
+
+				img {
+					width: 55%;
+					border-radius: 50%;
+					margin-bottom: 0;
+				}
+			}
+
+			.details {
+				width: 70%;
+
+				h3 {
+					font-size: 1.313rem;
+					margin-bottom: 1rem;
+				}
+
+				p {
+					font-size: 0.938rem;
+				}
+
+				a {
+					color: #000;
+					text-decoration: none;
+				}
+			}
+		}
+
 		.post-container {
 			padding-top: 3rem;
 			padding-bottom: 1rem;
