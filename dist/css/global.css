@@ -475,6 +475,15 @@
   border-bottom: 1px solid #aaaaaa;
 }
 
+@media (max-width: 768px) {
+  .container .article .author-descp {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .container .article .author-descp .avatar {
   width: 30%;
   height: auto;
@@ -489,6 +498,12 @@
 
 .container .article .author-descp .details {
   width: 70%;
+}
+
+@media (max-width: 768px) {
+  .container .article .author-descp .details {
+    text-align: center;
+  }
 }
 
 .container .article .author-descp .details h3 {

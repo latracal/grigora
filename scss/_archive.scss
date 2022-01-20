@@ -35,6 +35,10 @@
 			padding: 1rem 0;
 			border-bottom: 1px solid #aaaaaa;
 
+			@media (max-width: 768px) {
+				flex-direction: column;
+			}
+
 			.avatar {
 				width: 30%;
 				height: auto;
@@ -49,6 +53,10 @@
 
 			.details {
 				width: 70%;
+
+				@media (max-width: 768px) {
+					text-align: center;
+				}
 
 				h3 {
 					font-size: 1.313rem;
