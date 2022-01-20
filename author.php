@@ -2,12 +2,26 @@
 
 <div class="container">
     <section class="article">
-        <div class="archive-desc">
-            <?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et augue eu purus vehicula rhoncus.
-                Etiam at quam massa. Integer nulla ante, faucibus ut facilisis non, euismod eu est. Aenean vehicula
-                massa quis rutrum vestibulum. Vestibulum non viverra diam. Aenean ultrices interdum maximus. Integer sed
-                fermentum massa.</p>
+        <div class="author-descp">
+            <div class="avatar"><a
+                    href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?></a>
+            </div>
+            <div class="details">
+                <h3><?php 
+
+                if (empty( get_the_author_meta('first_name') ) && empty( get_the_author_meta('last_name') ) ){
+
+                    echo '<a href="'. esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) .'">'.nl2br(get_the_author_meta('display_name')).'</a>';
+                
+                }else{
+                    echo '<a href="'. esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) .'">'.nl2br(get_the_author_meta('first_name'))." ". nl2br(get_the_author_meta('last_name')) .'</a>';
+                }
+
+                ?>
+
+                </h3>
+                <p><?php echo nl2br(get_the_author_meta('description')); ?></p>
+            </div>
         </div>
         <div class="post-container">
 
