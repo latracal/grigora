@@ -29,7 +29,7 @@
         <span class="cat">Posted in
             <?php
                 foreach((get_the_category()) as $category) { 
-                    echo '<a href="'. esc_url( get_category_link( $categories[0]->term_id ) ) . '" class="cat-name">'.$category->cat_name .'</a>'; 
+                    echo '<a href="'. esc_url( get_category_link( $category ) ) . '" class="cat-name">'.$category->cat_name .'</a>'; 
                 } 
             ?>
         </span>
