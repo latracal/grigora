@@ -44,6 +44,11 @@
 				height: auto;
 				text-align: center;
 
+				@media (max-width: 768px) {
+					width: 100%;
+					margin-bottom: 1rem;
+				}
+
 				img {
 					width: 55%;
 					border-radius: 50%;
@@ -55,6 +60,7 @@
 				width: 70%;
 
 				@media (max-width: 768px) {
+					width: 100%;
 					text-align: center;
 				}
 

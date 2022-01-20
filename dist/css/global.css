@@ -490,6 +490,13 @@
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  .container .article .author-descp .avatar {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
 .container .article .author-descp .avatar img {
   width: 55%;
   border-radius: 50%;
@@ -502,6 +509,7 @@
 
 @media (max-width: 768px) {
   .container .article .author-descp .details {
+    width: 100%;
     text-align: center;
   }
 }
