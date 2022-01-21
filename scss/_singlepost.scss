@@ -455,6 +455,7 @@
 
 .form-submit {
 	.submit {
+		cursor: pointer;
 		color: #000;
 		font-weight: 600;
 		padding: 0.5rem;
@@ -462,6 +463,14 @@
 		border: none;
 		border-radius: 0.25rem;
 		width: 100%;
+	}
+}
+
+.comment-awaiting-moderation {
+	padding-left: 100px;
+
+	@media (max-width: 768px) {
+		padding-left: 50px;
 	}
 }
 

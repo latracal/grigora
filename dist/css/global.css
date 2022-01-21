@@ -1221,6 +1221,7 @@
 }
 
 .form-submit .submit {
+  cursor: pointer;
   color: #000;
   font-weight: 600;
   padding: 0.5rem;
@@ -1228,6 +1229,16 @@
   border: none;
   border-radius: 0.25rem;
   width: 100%;
+}
+
+.comment-awaiting-moderation {
+  padding-left: 100px;
+}
+
+@media (max-width: 768px) {
+  .comment-awaiting-moderation {
+    padding-left: 50px;
+  }
 }
 
 .required {
@@ -1357,7 +1368,7 @@ aside .wp-block-button .wp-block-button__link {
 
 aside .wp-block-separator {
   color: #c4c4c4;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 
 aside .blocks-gallery-item img {
