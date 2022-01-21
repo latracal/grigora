@@ -1153,10 +1153,71 @@
   margin-bottom: 0.5rem;
 }
 
-#comment {
+.comment-form-author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.comment-form-author label {
+  color: #000;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.comment-form-email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.comment-form-email label {
+  color: #000;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.comment-form-url {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.comment-form-url label {
+  color: #000;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.comment-form textarea,
+.comment-form input {
+  font-size: 1rem;
   background-color: #c4c4c4;
   outline: none;
   border-radius: 0.25rem;
+  border: none;
+  padding: 0.5rem;
 }
 
 .form-submit .submit {
@@ -1167,6 +1228,10 @@
   border: none;
   border-radius: 0.25rem;
   width: 100%;
+}
+
+.required {
+  color: red;
 }
 
 aside .wp-block-pullquote {
