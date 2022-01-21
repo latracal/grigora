@@ -51,6 +51,20 @@ if ( ! function_exists( 'grigora_comment' ) ) {
 
 					?>
 				</div>
+                <div class="comment-reply" itemprop="text">
+                    <?php 
+                        comment_reply_link(
+                            array_merge(
+                                $args,
+                                array(
+                                    'add_below' => 'div-comment',
+                                    'depth'     => $depth,
+                                    'max_depth' => $args['max_depth'],
+                                )
+                            )
+                        );
+                    ?>
+                </div>
             </div>
         <?php endif;
   }
