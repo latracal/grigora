@@ -7,6 +7,7 @@ define( 'ltr_DEV_MODE', true );
 include( get_theme_file_path( '/inc/front/enqueue.php' ) );
 include( get_theme_file_path( '/inc/setup.php' ) );
 include( get_theme_file_path( '/inc/sidebarfunction.php' ) );
+include( get_theme_file_path( '/inc/commentstemplate.php' ) );
 
 // Hooks
 add_action('wp_enqueue_scripts', 'ltr_enqueue'); //enqueue scripts
