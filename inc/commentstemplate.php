@@ -13,10 +13,10 @@ if ( ! function_exists( 'grigora_comment' ) ) {
 			</div>
         <?php else : ?>
             <li id="comment-<?php comment_ID(); ?>" <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?>>
-			<div class='comment-box comment-id=<?php get_comment_ID()?>'>
+			<div class='comment-box comment-id=<?php echo get_comment_ID()?>'>
 				<div class='comment-meta'>
 					<?php
-					if ( 0 != $args['avatar_size'] ) { // phpcs:ignore
+					if ( 0 != $args['avatar_size'] ) {
 						echo get_avatar( $comment, $args['avatar_size'] );
 					}
 					?>
@@ -29,20 +29,20 @@ if ( ! function_exists( 'grigora_comment' ) ) {
 									<time datetime="<?php comment_time( 'c' ); ?>" itemprop="datePublished">
 										<?php
 											printf(
-												get_comment_date(), // phpcs:ignore
-												get_comment_time() // phpcs:ignore
+												get_comment_date(),
+												get_comment_time()
 											);
 										?>
 									</time>
 								</a>
 							</div>
-					</div>
-
-					<?php if ( '0' == $comment->comment_approved ) : // phpcs:ignore ?>
-						<p class="comment-awaiting-moderation">Your comment is awaiting moderation.</p>
-					<?php endif; ?>
+                        </div>
                     </div>
-
+                <?php if ( '0' == $comment->comment_approved ) : ?>
+                    <div class="comment-moderation">
+						<p class="comment-awaiting-moderation">Your comment is awaiting moderation.</p>
+                    </div>
+                <?php endif; ?>
 				<div class="comment-content" itemprop="text">
 					<?php
 
