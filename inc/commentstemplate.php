@@ -15,11 +15,13 @@ if ( ! function_exists( 'grigora_comment' ) ) {
             <li id="comment-<?php comment_ID(); ?>" <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?>>
 			<div class='comment-box comment-id=<?php echo get_comment_ID()?>'>
 				<div class='comment-meta'>
-					<?php
-					if ( 0 != $args['avatar_size'] ) {
-						echo get_avatar( $comment, $args['avatar_size'] );
-					}
-					?>
+                    <div class='comment-author-avatar'>
+                        <?php
+                        if ( 0 != $args['avatar_size'] ) {
+                            echo get_avatar( $comment, $args['avatar_size'] );
+                        }
+                        ?>
+                    </div>
 					<div class="comment-author-info">
 						<div class='comment-author'>
 							<?php printf( '<cite itemprop="name" class="fn">%s</cite>', get_comment_author_link() ); ?>
