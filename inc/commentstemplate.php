@@ -12,7 +12,7 @@ if ( ! function_exists( 'grigora_comment' ) ) {
 				Pingback: <?php comment_author_link(); ?>
 			</div>
         <?php else : ?>
-            <li id="comment-<?php comment_ID(); ?>" <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?>>
+            <li id="comment-list comment-<?php comment_ID(); ?>" <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?>>
 			<div class='comment-box comment-id=<?php echo get_comment_ID()?>'>
 				<div class='comment-meta'>
                     <div class='comment-author-avatar'>
@@ -23,20 +23,19 @@ if ( ! function_exists( 'grigora_comment' ) ) {
                         ?>
                     </div>
 					<div class="comment-author-info">
-						<div class='comment-author'>
+						<div class='comment-author-name'>
 							<?php printf( '<cite itemprop="name" class="fn">%s</cite>', get_comment_author_link() ); ?>
 						</div>
-							<div class="entry-meta comment-metadata">
-								<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
+							<div class="comment-author-time">
 									<time datetime="<?php comment_time( 'c' ); ?>" itemprop="datePublished">
 										<?php
 											printf(
+                                                '%1$s at %2$s',
 												get_comment_date(),
 												get_comment_time()
 											);
 										?>
 									</time>
-								</a>
 							</div>
                         </div>
                     </div>
@@ -52,7 +51,7 @@ if ( ! function_exists( 'grigora_comment' ) ) {
 
 					?>
 				</div>
-                    </div>
+            </div>
         <?php endif;
   }
 }
