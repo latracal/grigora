@@ -9,7 +9,7 @@ if ( ! function_exists( 'grigora_comment' ) ) {
         if ( 'pingback' === $comment->comment_type || 'trackback' === $comment->comment_type ) : ?>
             <li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
 			<div class="comment-body">
-				Pingback: <?php comment_author_link(); ?>
+				Pingback: <?php comment_author_link(); ?> <?php edit_comment_link( 'Edit', '<span class="comment-edit-link">- ', '</span>' ); ?>
 			</div>
         <?php else : ?>
             <li id="comment-list comment-<?php comment_ID(); ?>" <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?>>
@@ -28,13 +28,7 @@ if ( ! function_exists( 'grigora_comment' ) ) {
 						</div>
 							<div class="comment-author-time">
 									<time datetime="<?php comment_time( 'c' ); ?>" itemprop="datePublished">
-										<?php
-											printf(
-                                                '%1$s at %2$s',
-												get_comment_date(),
-												get_comment_time()
-											);
-										?>
+										<?php printf('%1$s at %2$s',get_comment_date(),get_comment_time()); ?> <?php edit_comment_link( 'Edit', '<span class="comment-edit-link">- ', '</span>' ); ?>
 									</time>
 							</div>
                         </div>
