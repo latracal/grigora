@@ -1026,7 +1026,18 @@
 }
 
 .comment-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   list-style: none;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #aaaaaa;
 }
 
 .comment-body .author-det {
@@ -1048,6 +1059,43 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.comment-body .author-det .author-meta .commentor {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0.5rem 0;
+}
+
+.comment-body .author-det .author-meta .comment-meta {
+  color: #7b7b7b;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.comment-body .comment-text {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.comment-body .reply-btn {
+  float: right;
+  padding: 0.5rem 1rem;
+  background-color: #c4c4c4;
+}
+
+.comment-body .reply-btn a {
+  color: #000;
+  text-decoration: none;
+}
+
+.comment-respond .comment-reply-title {
+  font-size: 12px;
+}
+
+.comment-respond .comment-reply-title span {
+  color: red;
 }
 
 aside .wp-block-pullquote {
