@@ -72,13 +72,23 @@ menubtn.addEventListener('click', togglemenu, false);
 //submenu toggle in mobile
 w = screen.width;
 
-const parent = document.querySelector('.menu-item-has-children');
-const child = document.querySelector('.sub-menu');
+const parents = document.getElementsByClassName('menu-item-has-children');
 
-parent.addEventListener('click', function () {
+for(var i = 0; i < parents.length; i++) {
+	parents[i].addEventListener("click", toggleSubMenu, false);
+}
+
+function toggleSubMenu(event) {
+	var targetElement = event.target || event.srcElement;
+	var child = targetElement.getElementsByClassName('sub-menu')[0];
+	console.log(child.style.display);
+
 	if (w < 768) {
-		child.style.display = 'block';
-	} else {
-		child.style.display = 'none';
+		if(child.style.display == 'none' || child.style.display == ''){
+			child.style.display = 'block';
+		}
+		else{
+			child.style.display = 'none';
+		}
 	}
-});
+}

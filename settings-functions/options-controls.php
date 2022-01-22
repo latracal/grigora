@@ -17,7 +17,8 @@ if ( ! function_exists( 'grigora_options_page' ) ) {
         settings_errors();
         ?>
         <form action="options.php" method="post">
-
+            <h2>Customizer</h2>
+            <p>Customizer Info Text</p>
         <?php
             settings_fields("grigora_customizer_section");
             do_settings_fields("grigora-options", "grigora_customizer_section");
@@ -25,6 +26,8 @@ if ( ! function_exists( 'grigora_options_page' ) ) {
         ?>
         </form>
         <form action="options.php" method="post">
+            <h2>Performance</h2>
+            <p>Customizer Info Text</p>
         <?php
             settings_fields("grigora_performance_section");
             do_settings_fields("grigora-options", "grigora_performance_section");
