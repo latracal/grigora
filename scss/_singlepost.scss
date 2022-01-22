@@ -219,6 +219,10 @@
 			background-color: #c4c4c4;
 			padding: 0.5rem;
 			border-radius: 0.25rem;
+
+			@media (max-width: 768px) {
+				text-align: end;
+			}
 		}
 
 		a {
@@ -357,12 +361,13 @@
 			}
 
 			.fn {
+				font-weight: 700;
+				font-style: normal;
 				font-size: 1rem;
 				margin-bottom: 1rem;
 
 				a {
 					color: #000;
-					font-weight: 700;
 					font-style: normal;
 					text-decoration: none;
 				}
@@ -475,4 +480,15 @@
 
 .required {
 	color: red;
+}
+
+.comment-reply-title {
+	a {
+		color: #000;
+		text-decoration: none;
+	}
+
+	#cancel-comment-reply-link {
+		color: #0170b9;
+	}
 }

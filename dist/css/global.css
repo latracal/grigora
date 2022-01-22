@@ -950,6 +950,12 @@
   border-radius: 0.25rem;
 }
 
+@media (max-width: 768px) {
+  .post-content .post-pagination .pagination-next-post {
+    text-align: end;
+  }
+}
+
 .post-content .post-pagination a {
   color: #000;
   text-decoration: none;
@@ -1106,13 +1112,14 @@
 }
 
 .comment-list .comment-box .comment-meta .fn {
+  font-weight: 700;
+  font-style: normal;
   font-size: 1rem;
   margin-bottom: 1rem;
 }
 
 .comment-list .comment-box .comment-meta .fn a {
   color: #000;
-  font-weight: 700;
   font-style: normal;
   text-decoration: none;
 }
@@ -1247,6 +1254,15 @@
 
 .required {
   color: red;
+}
+
+.comment-reply-title a {
+  color: #000;
+  text-decoration: none;
+}
+
+.comment-reply-title #cancel-comment-reply-link {
+  color: #0170b9;
 }
 
 aside .wp-block-pullquote {
