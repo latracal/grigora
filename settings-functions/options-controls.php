@@ -23,19 +23,13 @@ if ( ! function_exists( 'grigora_options_page' ) ) {
 
 if ( ! function_exists( 'grigora_options_page_elements' ) ) {
     function grigora_options_page_elements() {?>
-        <div id="app-cover">
-            <div class="row">
-                <div class="toggle-button-cover">
-                <div class="button-cover">
-                    <div class="button r" id="button-8">
-                    <input type="checkbox" class="checkbox">
-                    <div class="knobs">
-                        <span></span>
-                    </div>
-                    <div class="layer"></div>
-                    </div>
+        <div class="button-cover">
+            <div class="button-box r" id="button-8">
+                <input type="checkbox" class="checkbox">
+                <div class="knobs">
+                    <span></span>
                 </div>
-                </div>
+                <div class="layer"></div>
             </div>
         </div>
     <?php }

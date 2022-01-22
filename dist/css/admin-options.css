@@ -1,7 +1,7 @@
-/* CSS rules are kept repetitive so that you can get CSS rules for each button easily :) */
-
-* *:focus {
-  outline: none;
+#app-cover {
+  display: table;
+  width: 600px;
+  margin: 80px auto;
 }
 
 .button-cover {
@@ -13,8 +13,6 @@
 }
 
 .button-cover:before {
-  counter-increment: button-counter;
-  content: counter(button-counter);
   position: absolute;
   right: 0;
   bottom: 0;
@@ -34,7 +32,7 @@
   left: 0;
 }
 
-.button {
+.button-box {
   position: relative;
   top: 50%;
   width: 74px;
@@ -43,12 +41,12 @@
   overflow: hidden;
 }
 
-.button.r,
-.button.r .layer {
+.button-box.r,
+.button-box.r .layer {
   border-radius: 100px;
 }
 
-.button.b2 {
+.button-box.b2 {
   border-radius: 2px;
 }
 
