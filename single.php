@@ -8,6 +8,15 @@
 <div class="container">
 
     <section class="post-content">
+        <div class="breadcrumb">
+            <a href="<?php echo home_url(); ?>">Home</a>><?php
+            $categories = get_the_category();
+
+            if ( ! empty( $categories ) ) {
+            echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
+            }
+        ?>><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a>
+        </div>
         <h1 class="post-title"><?php the_title(); ?></h1>
         <span class="post-meta">Published by
             <?php 

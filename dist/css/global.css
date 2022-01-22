@@ -734,6 +734,20 @@
   }
 }
 
+.post-content .breadcrumb {
+  color: #454545;
+  margin: 1rem 0;
+}
+
+.post-content .breadcrumb a {
+  color: #454545;
+  margin: 0 0.3rem;
+}
+
+.post-content .breadcrumb a:first-child {
+  margin-left: 0;
+}
+
 .post-content img {
   width: 100%;
   height: auto;
@@ -995,7 +1009,9 @@
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  margin: 3rem 0;
+  padding: 3rem 0;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #aaaaaa;
 }
 
 @media (max-width: 768px) {
@@ -1046,24 +1062,53 @@
   }
 }
 
-.comment-list .comment-body {
-  position: relative;
+.comment-list .comment-box {
+  padding-top: 1rem;
   border-bottom: 1px solid #aaaaaa;
-  padding-top: 1.5rem;
 }
 
-.comment-list .comment-body p {
-  margin-top: 3rem;
+.comment-list .comment-box p {
+  margin-bottom: 0;
 }
 
-@media (max-width: 768px) {
-  .comment-list .comment-body p {
-    margin-top: 1rem;
-    margin-bottom: 0;
-  }
+.comment-list .comment-box .comment-awaiting-moderation {
+  margin-bottom: 0.5rem;
 }
 
-.comment-list .comment-body .reply {
+.comment-list .comment-box .comment-meta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.comment-list .comment-box .comment-meta img.avatar {
+  border-radius: 50%;
+}
+
+.comment-list .comment-box .comment-meta .fn {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.comment-list .comment-box .comment-meta .fn a {
+  color: #000;
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.comment-list .comment-box .comment-meta .comment-author-time {
+  color: #7b7b7b;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.comment-list .comment-box .comment-meta .comment-author-time a {
+  color: #0170b9;
+}
+
+.comment-list .comment-box .comment-reply {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1072,69 +1117,15 @@
           justify-content: flex-end;
 }
 
-.comment-list .comment-body .reply a {
+.comment-list .comment-box .comment-reply a {
   color: #000;
-  text-decoration: none;
   padding: 0.5rem 1rem;
   background-color: #c4c4c4;
-}
-
-.comment-list .comment-body .comment-author img {
-  position: absolute;
-  width: 9%;
-  border-radius: 50%;
-}
-
-.comment-list .comment-body .comment-author .says {
-  display: none;
-}
-
-.comment-list .comment-body .comment-author .fn {
-  padding-left: 100px;
-}
-
-@media (max-width: 768px) {
-  .comment-list .comment-body .comment-author .fn {
-    padding-left: 50px;
-  }
-}
-
-.comment-list .comment-body .comment-author .fn a {
-  color: #000;
   text-decoration: none;
-  font-size: 1rem;
-  font-weight: 700;
-  font-style: normal;
-  margin-bottom: 0.5rem;
-}
-
-.comment-list .comment-body .comment-meta {
-  padding-left: 100px;
-  margin: 0.5rem 0;
-}
-
-@media (max-width: 768px) {
-  .comment-list .comment-body .comment-meta {
-    padding-left: 50px;
-  }
-}
-
-.comment-list .comment-body .comment-meta a {
-  color: #7b7b7b;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 700;
-  font-style: normal;
-  margin-bottom: 0.5rem;
 }
 
 .comment-respond {
   margin-top: 1rem;
-}
-
-.comment-reply-title a {
-  color: #000;
-  text-decoration: none;
 }
 
 .comment-form-comment {
@@ -1232,13 +1223,7 @@
 }
 
 .comment-awaiting-moderation {
-  padding-left: 100px;
-}
-
-@media (max-width: 768px) {
-  .comment-awaiting-moderation {
-    padding-left: 50px;
-  }
+  margin-bottom: 1rem !important;
 }
 
 .required {
@@ -1258,6 +1243,10 @@ aside .wp-block-pullquote p {
 aside .wp-block-pullquote .cite {
   font-weight: 700;
   font-size: 1.063rem;
+}
+
+aside a {
+  color: #0170b9;
 }
 
 aside h1,
@@ -1322,8 +1311,12 @@ aside .wp-block-quote cite {
   font-weight: bold;
 }
 
+aside .widget {
+  margin-top: 1rem;
+}
+
 aside .wp-block-table {
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 
 aside .wp-block-table table {

@@ -13,6 +13,10 @@ aside {
 		}
 	}
 
+	a {
+		color: #0170b9;
+	}
+
 	h1,
 	h2,
 	h3,
@@ -75,8 +79,12 @@ aside {
 		}
 	}
 
+	.widget {
+		margin-top: 1rem;
+	}
+
 	.wp-block-table {
-		margin-bottom: 1rem;
+		margin: 1rem 0;
 
 		table {
 			border-collapse: collapse;
