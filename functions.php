@@ -18,6 +18,7 @@ add_filter( 'excerpt_more', 'change_excerpt_end_bracket' ); //Change excerpt end
 add_action( 'widgets_init', 'grg_sidebar' ); //sidebar
 
 // Options
+include( get_theme_file_path( '/settings-functions/options-controls.php' ) );
 
 
 /**
