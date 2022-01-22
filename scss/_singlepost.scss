@@ -201,6 +201,12 @@
 		padding: 1rem 0;
 		border-top: 1px solid #aaaaaa;
 
+		@media (max-width: 768px) {
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+		}
+
 		.pagination-prev-post {
 			float: left;
 			background-color: #c4c4c4;
@@ -305,6 +311,12 @@
 		height: 200px;
 		object-fit: cover;
 		margin-bottom: 0;
+	}
+}
+
+.comment-section {
+	@media (max-width: 768px) {
+		border-bottom: 1px solid #aaaaaa;
 	}
 }
 
