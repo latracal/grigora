@@ -17,6 +17,9 @@ add_action( 'after_setup_theme', 'grigora_custom_logo_setup' );
 add_filter( 'excerpt_more', 'change_excerpt_end_bracket' ); //Change excerpt end to ...
 add_action( 'widgets_init', 'grg_sidebar' ); //sidebar
 
+// Options
+
+
 /**
  * Disable the emoji's
  */
