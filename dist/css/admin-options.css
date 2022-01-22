@@ -50,7 +50,7 @@
   border-radius: 2px;
 }
 
-.checkbox {
+.checkbox-custom {
   position: relative;
   width: 100%;
   height: 100%;
@@ -114,15 +114,15 @@
   z-index: 1;
 }
 
-#button-8 .checkbox:checked + .knobs:before {
+#button-8 .checkbox-custom:checked + .knobs:before {
   opacity: 0;
 }
 
-#button-8 .checkbox:checked + .knobs:after {
+#button-8 .checkbox-custom:checked + .knobs:after {
   opacity: 1;
 }
 
-#button-8 .checkbox:checked + .knobs span {
+#button-8 .checkbox-custom:checked + .knobs span {
   background-color: #fcebeb;
   transform: scale(4);
 }

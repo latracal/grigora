@@ -25,7 +25,7 @@ if ( ! function_exists( 'grigora_options_page_elements' ) ) {
     function grigora_options_page_elements() {?>
         <div class="button-cover">
             <div class="button-box r" id="button-8">
-                <input type="checkbox" class="checkbox">
+                <input type="checkbox" class="checkbox-custom">
                 <div class="knobs">
                     <span></span>
                 </div>
