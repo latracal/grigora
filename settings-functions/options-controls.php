@@ -1,11 +1,8 @@
 <?php
 
-
-
-
 if ( ! function_exists( 'girgora_options_menu' ) ) {
     function girgora_options_menu() {
-        add_theme_page( 'Grigora Options', 'Grigora Options', 'manage_options', 'grigora-options', 'grigora_options_page' );
+        add_theme_page( 'grigora-options', 'Grigora Options', 'manage_options', 'grigora-options', 'grigora_options_page' );
     }
 }
 
@@ -17,21 +14,168 @@ if ( ! function_exists( 'grigora_options_page' ) ) {
             wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
         }
         echo '<div class="admin-container">';
+        settings_errors();
+        ?>
+        <form action="options.php" method="post">
 
-        grigora_options_page_elements();
-
-        echo '</div>';
+        <?php
+            settings_fields("grigora_customizer_section");
+            do_settings_fields("grigora-options", "grigora_customizer_section");
+            submit_button();
+        ?>
+        </form>
+        <form action="options.php" method="post">
+        <?php
+            settings_fields("grigora_performance_section");
+            do_settings_fields("grigora-options", "grigora_performance_section");
+            submit_button();
+        ?>
+        </form>
+        </div>
+        <?php
     }
 }
 
-if ( ! function_exists( 'grigora_options_page_elements' ) ) {
-    function grigora_options_page_elements() {?>
-        hello
-    <?php }
+add_action( 'admin_menu', 'girgora_options_menu' );
+ 
+function grigora_customize_settings_section() {
+ 	add_settings_section(
+		'grigora_customizer_section',
+		'Customizer Options',
+		'grigora_customizer_section_callback_function',
+		'grigora-options'
+	);
+
+ 	add_settings_field(
+		'grigora_customizer_section_colors',
+		'Colors',
+		'grigora_customizer_section_colors_callback_function',
+		'grigora-options',
+		'grigora_customizer_section'
+	);
+
+ 	register_setting( 'grigora_customizer_section', 'grigora_customizer_section_colors' );
+
+    add_settings_field(
+		'grigora_customizer_section_background',
+		'Background',
+		'grigora_customizer_section_colors_callback_function',
+		'grigora-options',
+		'grigora_customizer_section'
+	);
+
+ 	register_setting( 'grigora_customizer_section', 'grigora_customizer_section_background' );
+
+    add_settings_field(
+		'grigora_customizer_section_typography',
+		'Typography',
+		'grigora_customizer_section_typography_callback_function',
+		'grigora-options',
+		'grigora_customizer_section'
+	);
+
+ 	register_setting( 'grigora_customizer_section', 'grigora_customizer_section_typography' );
+
+    add_settings_field(
+		'grigora_customizer_section_spacing',
+		'Spacing',
+		'grigora_customizer_section_spacing_callback_function',
+		'grigora-options',
+		'grigora_customizer_section'
+	);
+
+ 	register_setting( 'grigora_customizer_section', 'grigora_customizer_section_spacing' );
+
+    add_settings_field(
+		'grigora_customizer_section_blog',
+		'Blog Layout',
+		'grigora_customizer_section_blog_callback_function',
+		'grigora-options',
+		'grigora_customizer_section'
+	);
+
+ 	register_setting( 'grigora_customizer_section', 'grigora_customizer_section_blog' );
+
+    add_settings_field(
+		'grigora_customizer_section_toc',
+		'Table Of Contents',
+		'grigora_customizer_section_toc_callback_function',
+		'grigora-options',
+		'grigora_customizer_section'
+	);
+
+ 	register_setting( 'grigora_customizer_section', 'grigora_customizer_section_toc' );
+
+    add_settings_field(
+		'grigora_customizer_section_scroll',
+		'Scroll To Top',
+		'grigora_customizer_section_scroll_callback_function',
+		'grigora-options',
+		'grigora_customizer_section'
+	);
+
+    register_setting( 'grigora_customizer_section', 'grigora_customizer_section_scroll' );
+
+ }
+ 
+ add_action( 'admin_init', 'grigora_customize_settings_section' );
+ 
+ function grigora_performance_settings_section() {
+    add_settings_section(
+       'grigora_performance_section',
+       'Performance',
+       'grigora_performance_section_callback_function',
+       'grigora-options'
+   );
+
+    add_settings_field(
+       'grigora_performance_section_emoji',
+       'Disable Emojis',
+       'grigora_performance_section_emoji_callback_function',
+       'grigora-options',
+       'grigora_performance_section'
+   );
+
+    register_setting( 'grigora_performance_section', 'grigora_performance_section_emoji' );
+
 }
 
-add_action( 'admin_menu', 'girgora_options_menu' );
+add_action( 'admin_init', 'grigora_performance_settings_section' );
 
-include( get_theme_file_path( '/settings-functions/customizer-options/register-items.php' ) );
 
-?>
+function grigora_customizer_section_callback_function() {
+ 	echo '<p>Customizer Settings Text</p>';
+ }
+
+ function grigora_performance_section_callback_function() {
+    echo '<p>Performance Settings Text</p>';
+}
+ 
+function grigora_customizer_section_colors_callback_function() {
+ 	echo '<input name="grigora_customizer_section_colors" id="grigora_customizer_section_colors" type="checkbox" value="1" class="code" ' . checked( 1, get_option( 'grigora_customizer_section_colors' ), false ) . ' />';
+ }
+ function grigora_customizer_section_background_callback_function() {
+    echo '<input name="grigora_customizer_section_background" id="grigora_customizer_section_background" type="checkbox" value="1" class="code" ' . checked( 1, get_option( 'grigora_customizer_section_background' ), false ) . ' />';
+}
+function grigora_customizer_section_typography_callback_function() {
+    echo '<input name="grigora_customizer_section_typography" id="grigora_customizer_section_typography" type="checkbox" value="1" class="code" ' . checked( 1, get_option( 'grigora_customizer_section_typography' ), false ) . ' />';
+}
+function grigora_customizer_section_spacing_callback_function() {
+    echo '<input name="grigora_customizer_section_spacing" id="grigora_customizer_section_spacing" type="checkbox" value="1" class="code" ' . checked( 1, get_option( 'grigora_customizer_section_spacing' ), false ) . ' />';
+}
+function grigora_customizer_section_blog_callback_function() {
+    echo '<input name="grigora_customizer_section_blog" id="grigora_customizer_section_blog" type="checkbox" value="1" class="code" ' . checked( 1, get_option( 'grigora_customizer_section_blog' ), false ) . ' />';
+}
+function grigora_customizer_section_toc_callback_function() {
+    echo '<input name="grigora_customizer_section_toc" id="grigora_customizer_section_toc" type="checkbox" value="1" class="code" ' . checked( 1, get_option( 'grigora_customizer_section_toc' ), false ) . ' />';
+}
+function grigora_customizer_section_scroll_callback_function() {
+    echo '<input name="grigora_customizer_section_scroll" id="grigora_customizer_section_scroll" type="checkbox" value="1" class="code" ' . checked( 1, get_option( 'grigora_customizer_section_scroll' ), false ) . ' />';
+}
+ 
+function grigora_performance_section_emoji_callback_function() {
+    echo '<input name="grigora_performance_section_emoji" id="grigora_performance_section_emoji" type="checkbox" value="1" class="code" ' . checked( 1, get_option( 'grigora_performance_section_emoji' ), false ) . ' />';
+}
+ 
+ ?>
+
