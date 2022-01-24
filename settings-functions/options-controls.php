@@ -188,26 +188,26 @@ function grigora_customizer_section_colors_callback_function() {
  	echo '<input name="grigora_customizer_section_colors" id="grigora_customizer_section_colors" type="checkbox" value="1" class="code" ' . checked( 1, get_option( 'grigora_customizer_section_colors' ), false ) . ' /><span class="slide circle"></span>';
  }
  function grigora_customizer_section_background_callback_function() {
-    echo '<input name="grigora_customizer_section_background" id="grigora_customizer_section_background" type="checkbox" value="1" class="code" ' . checked( 1, get_option( 'grigora_customizer_section_background' ), false ) . ' />';
+    echo '<input name="grigora_customizer_section_background" id="grigora_customizer_section_background" type="checkbox" value="1" class="code" ' . checked( 1, get_option( 'grigora_customizer_section_background' ), false ) . ' /><span class="slide circle"></span>';
 }
 function grigora_customizer_section_typography_callback_function() {
-    echo '<input name="grigora_customizer_section_typography" id="grigora_customizer_section_typography" type="checkbox" value="1" class="code" ' . checked( 1, get_option( 'grigora_customizer_section_typography' ), false ) . ' />';
+    echo '<input name="grigora_customizer_section_typography" id="grigora_customizer_section_typography" type="checkbox" value="1" class="code" ' . checked( 1, get_option( 'grigora_customizer_section_typography' ), false ) . ' /><span class="slide circle"></span>';
 }
 function grigora_customizer_section_spacing_callback_function() {
-    echo '<input name="grigora_customizer_section_spacing" id="grigora_customizer_section_spacing" type="checkbox" value="1" class="code" ' . checked( 1, get_option( 'grigora_customizer_section_spacing' ), false ) . ' />';
+    echo '<input name="grigora_customizer_section_spacing" id="grigora_customizer_section_spacing" type="checkbox" value="1" class="code" ' . checked( 1, get_option( 'grigora_customizer_section_spacing' ), false ) . ' /><span class="slide circle"></span>';
 }
 function grigora_customizer_section_blog_callback_function() {
-    echo '<input name="grigora_customizer_section_blog" id="grigora_customizer_section_blog" type="checkbox" value="1" class="code" ' . checked( 1, get_option( 'grigora_customizer_section_blog' ), false ) . ' />';
+    echo '<input name="grigora_customizer_section_blog" id="grigora_customizer_section_blog" type="checkbox" value="1" class="code" ' . checked( 1, get_option( 'grigora_customizer_section_blog' ), false ) . ' /><span class="slide circle"></span>';
 }
 function grigora_customizer_section_toc_callback_function() {
-    echo '<input name="grigora_customizer_section_toc" id="grigora_customizer_section_toc" type="checkbox" value="1" class="code" ' . checked( 1, get_option( 'grigora_customizer_section_toc' ), false ) . ' />';
+    echo '<input name="grigora_customizer_section_toc" id="grigora_customizer_section_toc" type="checkbox" value="1" class="code" ' . checked( 1, get_option( 'grigora_customizer_section_toc' ), false ) . ' /><span class="slide circle"></span>';
 }
 function grigora_customizer_section_scroll_callback_function() {
-    echo '<input name="grigora_customizer_section_scroll" id="grigora_customizer_section_scroll" type="checkbox" value="1" class="code" ' . checked( 1, get_option( 'grigora_customizer_section_scroll' ), false ) . ' />';
+    echo '<input name="grigora_customizer_section_scroll" id="grigora_customizer_section_scroll" type="checkbox" value="1" class="code" ' . checked( 1, get_option( 'grigora_customizer_section_scroll' ), false ) . ' /><span class="slide circle"></span>';
 }
  
 function grigora_performance_section_emoji_callback_function() {
-    echo '<input name="grigora_performance_section_emoji" id="grigora_performance_section_emoji" type="checkbox" value="1" class="code" ' . checked( 1, get_option( 'grigora_performance_section_emoji' ), false ) . ' />';
+    echo '<input name="grigora_performance_section_emoji" id="grigora_performance_section_emoji" type="checkbox" value="1" class="code" ' . checked( 1, get_option( 'grigora_performance_section_emoji' ), false ) . ' /><span class="slide circle"></span>';
 }
  
  ?>

@@ -163,6 +163,7 @@
 				display: inline-block;
 				width: 60px;
 				height: 34px;
+				margin-left: auto;
 
 				.code {
 					opacity: 0;
@@ -186,6 +187,7 @@
 					transition: 0.4s;
 
 					&::before {
+						color: black;
 						position: absolute;
 						content: '';
 						height: 26px;
