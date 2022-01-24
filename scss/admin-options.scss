@@ -164,46 +164,111 @@
 			padding: 1rem 0;
 			border-bottom: 1px solid #000000;
 
+			// .settings-form-row-callback {
+			// 	position: relative;
+			// 	display: inline-block;
+			// 	width: 60px;
+			// 	height: 34px;
+			// 	margin-left: auto;
+
+			// 	.code {
+			// 		opacity: 0;
+			// 		width: 100%;
+			// 		height: 100%;
+
+			// 		&:checked + .slide:before {
+			// 			transform: translateX(26px);
+			// 		}
+			// 	}
+
+			// 	.slide {
+			// 		position: absolute;
+			// 		cursor: pointer;
+			// 		top: 0;
+			// 		left: 0;
+			// 		right: 0;
+			// 		bottom: 0;
+			// 		background-color: #ebf7fc;
+			// 		border-radius: 2rem;
+			// 		transition: 0.4s;
+
+			// 		&::before {
+			// 			color: black;
+			// 			position: absolute;
+			// 			content: '';
+			// 			height: 26px;
+			// 			width: 26px;
+			// 			left: 4px;
+			// 			bottom: 4px;
+			// 			background-color: white;
+			// 			border-radius: 50%;
+			// 			transition: 0.4s;
+			// 		}
+			// 	}
+			// }
+
 			.settings-form-row-callback {
 				position: relative;
-				display: inline-block;
-				width: 60px;
-				height: 34px;
+				top: 50%;
+				width: 74px;
+				height: 36px;
+				border-radius: 100px;
 				margin-left: auto;
+				overflow: hidden;
 
-				.code {
+				.checkbox {
+					position: relative;
+					width: 100%;
+					height: 100%;
+					padding: 0;
+					margin: 0;
 					opacity: 0;
-					width: 0;
-					height: 0;
+					cursor: pointer;
+					z-index: 3;
 
-					&:checked + .slide:before {
-						transform: translateX(26px);
+					&:checked + knobs:before {
+						content: 'NO';
+						left: 42px;
+						background-color: #f44336;
+					}
+
+					&:checked ~ .layer {
+						background-color: #fcebeb;
 					}
 				}
 
-				.slide {
+				.knob {
 					position: absolute;
-					cursor: pointer;
 					top: 0;
-					left: 0;
 					right: 0;
 					bottom: 0;
-					background-color: #ebf7fc;
-					border-radius: 2rem;
-					transition: 0.4s;
+					left: 0;
+					z-index: 2;
+					transition: 0.3s ease all;
 
 					&::before {
-						color: black;
+						content: 'YES';
 						position: absolute;
-						content: '';
-						height: 26px;
-						width: 26px;
+						top: 4px;
 						left: 4px;
-						bottom: 4px;
-						background-color: white;
+						width: 20px;
+						height: 10px;
+						color: #fff;
+						font-size: 10px;
+						font-weight: bold;
+						text-align: center;
+						line-height: 1;
+						padding: 9px 4px;
+						background-color: #03a9f4;
 						border-radius: 50%;
-						transition: 0.4s;
 					}
+				}
+
+				.layer {
+					width: 100%;
+					background-color: #ebf7fc;
+					transition: 0.3s ease all;
+					z-index: 1;
 				}
 			}
 		}
