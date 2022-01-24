@@ -17,11 +17,13 @@ function custom_do_settings_fields($page, $section) {
     foreach ( (array) $wp_settings_fields[$page][$section] as $field ) {
         echo '<div class="settings-form-row">';
             echo '<div class="settings-form-row-label">';
-                if ( !empty($field['args']['label_for']) )
+                if ( !empty($field['args']['label_for']) ){
                     echo '<p><label for="' . $field['args']['label_for'] . '">' .
-                        $field['title'] . '</label><br />';
-                else
+                        $field['title'] . '</label><br />';                   
+                }
+                else{
                     echo '<p>' . $field['title'] . '<br />';
+                }
             echo '</div>';
             echo '<div class="settings-form-row-callback">';
                 call_user_func($field['callback'], $field['args']);
@@ -42,26 +44,28 @@ if ( ! function_exists( 'grigora_options_page' ) ) {
         echo '<div class="admin-container">';
         settings_errors();
         ?>
-        <form action="options.php" method="post">
-            <h2>Customizer</h2>
-            <p>Customizer Info Text</p>
-        <?php
+<div class="setting-title">
+    <h1>Grigora</h1>
+</div>
+<form action="options.php" method="post" class="customizer">
+    <h2>Customizer Options</h2>
+    <?php
             settings_fields("grigora_customizer_section");
             custom_do_settings_fields("grigora-options", "grigora_customizer_section");
             submit_button();
         ?>
-        </form>
-        <form action="options.php" method="post">
-            <h2>Performance</h2>
-            <p>Performance Info Text</p>
-        <?php
+</form>
+<form action="options.php" method="post" class="customizer">
+    <h2>Performance</h2>
+    <p>Performance Info Text</p>
+    <?php
             settings_fields("grigora_performance_section");
             custom_do_settings_fields("grigora-options", "grigora_performance_section");
             submit_button();
         ?>
-        </form>
-        </div>
-        <?php
+</form>
+</div>
+<?php
     }
 }
 
@@ -181,7 +185,7 @@ function grigora_customizer_section_callback_function() {
 }
  
 function grigora_customizer_section_colors_callback_function() {
- 	echo '<input name="grigora_customizer_section_colors" id="grigora_customizer_section_colors" type="checkbox" value="1" class="code" ' . checked( 1, get_option( 'grigora_customizer_section_colors' ), false ) . ' />';
+ 	echo '<input name="grigora_customizer_section_colors" id="grigora_customizer_section_colors" type="checkbox" value="1" class="code" ' . checked( 1, get_option( 'grigora_customizer_section_colors' ), false ) . ' /><span class="slide circle"></span>';
  }
  function grigora_customizer_section_background_callback_function() {
     echo '<input name="grigora_customizer_section_background" id="grigora_customizer_section_background" type="checkbox" value="1" class="code" ' . checked( 1, get_option( 'grigora_customizer_section_background' ), false ) . ' />';
@@ -207,4 +211,3 @@ function grigora_performance_section_emoji_callback_function() {
 }
  
  ?>
-

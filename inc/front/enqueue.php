@@ -10,7 +10,6 @@ function ltr_enqueue(){
     //use false as laster parameter to load script in footer
 	wp_register_script('ltr_scripts1', $uri . '/js/app.js', [], $ver, true);
 	
-
     // load default jquery provided by wordpress
 	// wp_enqueue_script( 'jquery' );	
 	wp_enqueue_script('ltr_scripts1');
