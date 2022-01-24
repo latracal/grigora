@@ -153,6 +153,10 @@
   border-bottom: 1px solid #000000;
 }
 
+.admin-container .customizer .section-title {
+  font-size: 1.5rem;
+}
+
 .admin-container .customizer .options {
   display: -webkit-box;
   display: -ms-flexbox;

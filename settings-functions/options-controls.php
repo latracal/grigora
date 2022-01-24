@@ -48,7 +48,7 @@ if ( ! function_exists( 'grigora_options_page' ) ) {
     <h1>Grigora</h1>
 </div>
 <form action="options.php" method="post" class="customizer">
-    <h2>Customizer Options</h2>
+    <h2 class="section-title">Customizer Options</h2>
     <?php
             settings_fields("grigora_customizer_section");
             custom_do_settings_fields("grigora-options", "grigora_customizer_section");
@@ -56,7 +56,7 @@ if ( ! function_exists( 'grigora_options_page' ) ) {
         ?>
 </form>
 <form action="options.php" method="post" class="customizer">
-    <h2>Performance</h2>
+    <h2 class="section-title">Performance</h2>
     <p>Performance Info Text</p>
     <?php
             settings_fields("grigora_performance_section");
