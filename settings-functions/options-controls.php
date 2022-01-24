@@ -6,6 +6,32 @@ if ( ! function_exists( 'girgora_options_menu' ) ) {
     }
 }
 
+function custom_do_settings_fields($page, $section) {
+    global $wp_settings_fields;
+
+    if ( !isset($wp_settings_fields) ||
+         !isset($wp_settings_fields[$page]) ||
+         !isset($wp_settings_fields[$page][$section]) )
+        return;
+
+    foreach ( (array) $wp_settings_fields[$page][$section] as $field ) {
+        echo '<div class="settings-form-row">';
+            echo '<div class="settings-form-row-label">';
+                if ( !empty($field['args']['label_for']) )
+                    echo '<p><label for="' . $field['args']['label_for'] . '">' .
+                        $field['title'] . '</label><br />';
+                else
+                    echo '<p>' . $field['title'] . '<br />';
+            echo '</div>';
+            echo '<div class="settings-form-row-callback">';
+                call_user_func($field['callback'], $field['args']);
+            echo '</div>';
+        echo '</p></div>';
+    }
+}
+
+// add_filter( 'do_settings_fields' , 'custom_do_settings_fields' );
+
 if ( ! function_exists( 'grigora_options_page' ) ) {
     function grigora_options_page() {
         wp_enqueue_style( 'theme-options', get_template_directory_uri() . '/dist/css/admin-options.css' );
@@ -21,16 +47,16 @@ if ( ! function_exists( 'grigora_options_page' ) ) {
             <p>Customizer Info Text</p>
         <?php
             settings_fields("grigora_customizer_section");
-            do_settings_fields("grigora-options", "grigora_customizer_section");
+            custom_do_settings_fields("grigora-options", "grigora_customizer_section");
             submit_button();
         ?>
         </form>
         <form action="options.php" method="post">
             <h2>Performance</h2>
-            <p>Customizer Info Text</p>
+            <p>Performance Info Text</p>
         <?php
             settings_fields("grigora_performance_section");
-            do_settings_fields("grigora-options", "grigora_performance_section");
+            custom_do_settings_fields("grigora-options", "grigora_performance_section");
             submit_button();
         ?>
         </form>
@@ -62,7 +88,7 @@ function grigora_customize_settings_section() {
     add_settings_field(
 		'grigora_customizer_section_background',
 		'Background',
-		'grigora_customizer_section_colors_callback_function',
+		'grigora_customizer_section_background_callback_function',
 		'grigora-options',
 		'grigora_customizer_section'
 	);
