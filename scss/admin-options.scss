@@ -69,13 +69,16 @@
 		}
 	}
 
+	.disabled {
+		pointer-events: none;
+		opacity: 0.5;
+	}
+
 	.customizer {
 		display: none;
 		background-color: #fff;
 		padding: 0.5rem 2rem;
 		margin-bottom: 1rem;
-		pointer-events: none;
-		opacity: 0.5;
 
 		.option-title {
 			margin: 1rem 0;
