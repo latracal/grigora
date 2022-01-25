@@ -71,7 +71,6 @@ if ( ! function_exists( 'grigora_options_page' ) ) {
         </form>
         <form action="options.php" method="post" class="customizer <?php echo (!is_grigora_pro_active() ? 'disabled' : '') ?>" id="performance">
             <h2 class="section-title">Performance</h2>
-            <p>Performance Info Text</p>
             <?php
             settings_fields("grigora_performance_section");
             custom_do_settings_fields("grigora-options", "grigora_performance_section");
