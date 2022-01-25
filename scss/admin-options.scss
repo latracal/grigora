@@ -1,11 +1,47 @@
+#wpcontent,
+#wpfooter {
+	margin-right: 1rem;
+}
+
 .admin-container {
 	.setting-title {
 		background-color: #fff;
-		padding: 1rem;
+		padding: 1rem 2rem;
 		margin: 1rem 0;
 	}
 
+	.grigora-settings {
+		display: flex;
+		flex-direction: row;
+
+		.tab {
+			display: flex;
+			flex-direction: column;
+			width: 30%;
+
+			.tab-btn {
+				cursor: pointer;
+				text-align: start;
+				font-size: 1rem;
+				font-weight: 700;
+				padding: 1rem;
+				border: none;
+				background-color: #e4e4e4;
+			}
+
+			.active {
+				border: 1px solid #d5d84a;
+				background-color: #fff;
+			}
+		}
+
+		.tab-content {
+			width: 70%;
+		}
+	}
+
 	.customizer {
+		display: none;
 		background-color: #fff;
 		padding: 0.5rem 2rem;
 		margin-bottom: 1rem;

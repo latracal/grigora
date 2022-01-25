@@ -47,23 +47,32 @@ if ( ! function_exists( 'grigora_options_page' ) ) {
 <div class="setting-title">
     <h1>Grigora</h1>
 </div>
-<form action="options.php" method="post" class="customizer">
-    <h2 class="section-title">Customizer Options</h2>
-    <?php
+<div class="grigora-settings">
+    <div class="tab">
+        <button class="tab-btn" onclick="controlName(event, 'c-options')" id="default">Customizer
+            Options</button>
+        <button class="tab-btn" onclick="controlName(event, 'performance')">Performance</button>
+    </div>
+    <div class="tab-content">
+        <form action="options.php" method="post" class="customizer" id="c-options">
+            <h2 class="section-title">Customizer Options</h2>
+            <?php
             settings_fields("grigora_customizer_section");
             custom_do_settings_fields("grigora-options", "grigora_customizer_section");
             submit_button();
         ?>
-</form>
-<form action="options.php" method="post" class="customizer">
-    <h2 class="section-title">Performance</h2>
-    <p>Performance Info Text</p>
-    <?php
+        </form>
+        <form action="options.php" method="post" class="customizer" id="performance">
+            <h2 class="section-title">Performance</h2>
+            <p>Performance Info Text</p>
+            <?php
             settings_fields("grigora_performance_section");
             custom_do_settings_fields("grigora-options", "grigora_performance_section");
             submit_button();
         ?>
-</form>
+        </form>
+    </div>
+</div>
 </div>
 <?php
     }
