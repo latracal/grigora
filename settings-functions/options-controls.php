@@ -61,7 +61,7 @@ if ( ! function_exists( 'grigora_options_page' ) ) {
         <button class="tab-btn" onclick="controlName(event, 'performance')">Performance</button>
     </div>
     <div class="tab-content">
-        <form action="options.php" method="post" class="customizer <?php echo (!is_grigora_pro_active() ? 'disabled' : '') ?>" id="c-options">
+        <form action="options.php" method="post" class="customizer <?php echo (is_grigora_pro_active() ? '' : 'disabled') ?>" id="c-options">
             <h2 class="section-title">Customizer Options</h2>
             <?php
             settings_fields("grigora_customizer_section");
@@ -69,7 +69,7 @@ if ( ! function_exists( 'grigora_options_page' ) ) {
             submit_button();
         ?>
         </form>
-        <form action="options.php" method="post" class="customizer <?php echo (!is_grigora_pro_active() ? 'disabled' : '') ?>" id="performance">
+        <form action="options.php" method="post" class="customizer <?php echo (!is_grigora_pro_active() ? '' : 'disabled') ?>" id="performance">
             <h2 class="section-title">Performance</h2>
             <?php
             settings_fields("grigora_performance_section");
