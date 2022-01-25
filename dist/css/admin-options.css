@@ -27,7 +27,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 30%;
+  width: 25%;
 }
 
 .admin-container .grigora-settings .tab .tab-btn {
@@ -46,7 +46,11 @@
 }
 
 .admin-container .grigora-settings .tab-content {
-  width: 70%;
+  width: 50%;
+}
+
+.admin-container .grigora-settings .other {
+  width: 25%;
 }
 
 .admin-container .customizer {

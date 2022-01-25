@@ -17,7 +17,7 @@
 		.tab {
 			display: flex;
 			flex-direction: column;
-			width: 30%;
+			width: 25%;
 
 			.tab-btn {
 				cursor: pointer;
@@ -36,7 +36,11 @@
 		}
 
 		.tab-content {
-			width: 70%;
+			width: 50%;
+		}
+
+		.other {
+			width: 25%;
 		}
 	}
 

@@ -72,6 +72,9 @@ if ( ! function_exists( 'grigora_options_page' ) ) {
         ?>
         </form>
     </div>
+    <div class="other">
+
+    </div>
 </div>
 </div>
 <?php
