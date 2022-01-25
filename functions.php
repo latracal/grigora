@@ -17,8 +17,6 @@ add_theme_support( 'post-thumbnails' ); // add support for featured image
 add_action( 'after_setup_theme', 'grigora_custom_logo_setup' );
 add_filter( 'excerpt_more', 'change_excerpt_end_bracket' ); //Change excerpt end to ...
 add_action( 'widgets_init', 'grg_sidebar' ); //sidebar
-add_action( 'customize_register', 'grg_customize_register' );
-add_action( 'wp_head', 'grg_customize_css' );
 
 // Options
 include( get_theme_file_path( '/settings-functions/options-controls.php' ) );
