@@ -87,11 +87,6 @@
   width: 25%;
 }
 
-.admin-container .disabled {
-  pointer-events: none;
-  opacity: 0.5;
-}
-
 .admin-container .customizer {
   display: none;
   background-color: #fff;
@@ -119,6 +114,25 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.admin-container .customizer:nth-child(1) .settings-form-row .settings-form-row-callback .checkbox:checked + .knob:before {
+  content: 'YES';
+  left: 42px;
+  background-color: #03a9f4;
+}
+
+.admin-container .customizer:nth-child(1) .settings-form-row .settings-form-row-callback .checkbox:checked ~ .layer {
+  background-color: #ebf7fc;
+}
+
+.admin-container .customizer:nth-child(1) .settings-form-row .settings-form-row-callback .knob::before {
+  content: 'No';
+  background-color: #f44336;
+}
+
+.admin-container .customizer:nth-child(1) .settings-form-row .settings-form-row-callback .layer {
+  background-color: #fcebeb;
 }
 
 .admin-container .customizer .settings-form-row {

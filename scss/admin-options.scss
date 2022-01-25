@@ -69,10 +69,10 @@
 		}
 	}
 
-	.disabled {
-		pointer-events: none;
-		opacity: 0.5;
-	}
+	// .disabled {
+	// 	pointer-events: none;
+	// 	opacity: 0.5;
+	// }
 
 	.customizer {
 		display: none;
@@ -95,6 +95,35 @@
 		.options {
 			display: flex;
 			flex-direction: column;
+		}
+
+		&:nth-child(1) {
+			.settings-form-row {
+				.settings-form-row-callback {
+					.checkbox {
+						&:checked + .knob:before {
+							content: 'YES';
+							left: 42px;
+							background-color: #03a9f4;
+						}
+
+						&:checked ~ .layer {
+							background-color: #ebf7fc;
+						}
+					}
+
+					.knob {
+						&::before {
+							content: 'No';
+							background-color: #f44336;
+						}
+					}
+
+					.layer {
+						background-color: #fcebeb;
+					}
+				}
+			}
 		}
 
 		.settings-form-row {
