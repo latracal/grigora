@@ -6,6 +6,10 @@ if ( ! function_exists( 'girgora_options_menu' ) ) {
     }
 }
 
+function is_grigora_pro_active(){
+    return function_exists("grigora_pro_active");
+}
+
 function custom_do_settings_fields($page, $section) {
     global $wp_settings_fields;
 
