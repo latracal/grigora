@@ -6,6 +6,10 @@ if ( ! function_exists( 'girgora_options_menu' ) ) {
     }
 }
 
+function is_grigora_pro_active(){
+    return function_exists("grigora_pro_active");
+}
+
 function custom_do_settings_fields($page, $section) {
     global $wp_settings_fields;
 
@@ -47,6 +51,11 @@ if ( ! function_exists( 'grigora_options_page' ) ) {
 <div class="setting-title">
     <h1>Grigora</h1>
 </div>
+<?php 
+    if ( !is_grigora_pro_active() ) {
+        echo '<div class="grigora-pro-notice"><div class="grigora-pro-notice-text">Activate All Powerful Options By Purchasing Girgora Pro </div><div class="grigora-pro-notice-button">Buy Now</div></div>';
+    }
+?>
 <div class="grigora-settings">
     <div class="tab">
         <button class="tab-btn" onclick="controlName(event, 'c-options')" id="default">Customizer
@@ -54,7 +63,7 @@ if ( ! function_exists( 'grigora_options_page' ) ) {
         <button class="tab-btn" onclick="controlName(event, 'performance')">Performance</button>
     </div>
     <div class="tab-content">
-        <form action="options.php" method="post" class="customizer" id="c-options">
+        <form action="options.php" method="post" class="customizer <?php echo (!is_grigora_pro_active() ? 'disabled' : '') ?>" id="c-options">
             <h2 class="section-title">Customizer Options</h2>
             <?php
             settings_fields("grigora_customizer_section");
