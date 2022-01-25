@@ -47,6 +47,10 @@ if ( ! function_exists( 'grigora_options_page' ) ) {
 <div class="setting-title">
     <h1>Grigora</h1>
 </div>
+<div class="pro-notification">
+    <p>Activate All Powerful Options By Purchasing Girgora Pro </p>
+    <button class="pro-btn">Buy Now</button>
+</div>
 <div class="grigora-settings">
     <div class="tab">
         <button class="tab-btn" onclick="controlName(event, 'c-options')" id="default">Customizer
@@ -64,7 +68,6 @@ if ( ! function_exists( 'grigora_options_page' ) ) {
         </form>
         <form action="options.php" method="post" class="customizer" id="performance">
             <h2 class="section-title">Performance</h2>
-            <p>Performance Info Text</p>
             <?php
             settings_fields("grigora_performance_section");
             custom_do_settings_fields("grigora-options", "grigora_performance_section");

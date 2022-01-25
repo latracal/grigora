@@ -9,6 +9,39 @@
   margin: 1rem 0;
 }
 
+.admin-container .pro-notification {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  background-color: #fff;
+}
+
+.admin-container .pro-notification p {
+  color: #000;
+  font-weight: 700;
+}
+
+.admin-container .pro-notification .pro-btn {
+  color: #fff;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  background-color: #1ac55e;
+  border: none;
+  border-radius: 0.25rem;
+}
+
 .admin-container .grigora-settings {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -58,6 +91,8 @@
   background-color: #fff;
   padding: 0.5rem 2rem;
   margin-bottom: 1rem;
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 .admin-container .customizer .option-title {
@@ -88,6 +123,10 @@
           align-items: center;
   padding: 1rem 0;
   border-bottom: 1px solid #000000;
+}
+
+.admin-container .customizer .settings-form-row:last-child {
+  border-bottom: none;
 }
 
 .admin-container .customizer .settings-form-row .settings-form-row-callback {
