@@ -36,8 +36,6 @@ function custom_do_settings_fields($page, $section) {
     }
 }
 
-// add_filter( 'do_settings_fields' , 'custom_do_settings_fields' );
-
 if ( ! function_exists( 'grigora_options_page' ) ) {
     function grigora_options_page() {
         wp_enqueue_style( 'theme-options', get_template_directory_uri() . '/dist/css/admin-options.css' );
@@ -53,7 +51,7 @@ if ( ! function_exists( 'grigora_options_page' ) ) {
 </div>
 <?php 
     if ( !is_grigora_pro_active() ) {
-        echo '<div class="grigora-pro-notice"><div class="grigora-pro-notice-text">Activate All Powerful Options By Purchasing Girgora Pro </div><div class="grigora-pro-notice-button">Buy Now</div></div>';
+        echo '<div class="pro-notification"><p>Activate All Powerful Options By Purchasing Girgora Pro </p><button class="pro-btn">Buy Now</button></div>';
     }
 ?>
 <div class="grigora-settings">
@@ -71,7 +69,7 @@ if ( ! function_exists( 'grigora_options_page' ) ) {
             submit_button();
         ?>
         </form>
-        <form action="options.php" method="post" class="customizer" id="performance">
+        <form action="options.php" method="post" class="customizer <?php echo (!is_grigora_pro_active() ? 'disabled' : '') ?>" id="performance">
             <h2 class="section-title">Performance</h2>
             <p>Performance Info Text</p>
             <?php
