@@ -1,6 +1,5 @@
 <?php
 
-
 if ( ! function_exists( 'grigora_get_defaults' ) ) {
 	function grigora_get_defaults() {
 		return apply_filters(
@@ -30,6 +29,7 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 	function grigora_color_defaults() {
 			return array(
 				'grg_bg-color' => '#fff',
+				'grg_header_bg-color' => '#000',
 			);
 	}
 }
