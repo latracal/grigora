@@ -40,7 +40,12 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 				'grg_anchor-text-hover-color' => '#0170b9',
 				'grg_btn-color' => '#c4c4c4',
 				'grg_btn-text-color' => '#000',				
-				'grg_header-tag-color' => '#000',				
+				'grg_h1-tag-color' => '#000',				
+				'grg_h2-tag-color' => '#000',				
+				'grg_h3-tag-color' => '#000',				
+				'grg_h4-tag-color' => '#000',				
+				'grg_h5-tag-color' => '#000',				
+				'grg_h6-tag-color' => '#000',				
 			);
 	}
 }
