@@ -69,10 +69,10 @@
 		}
 	}
 
-	.disabled {
-		pointer-events: none;
-		opacity: 0.5;
-	}
+	// .disabled {
+	// 	pointer-events: none;
+	// 	opacity: 0.5;
+	// }
 
 	.customizer {
 		display: none;
@@ -85,7 +85,7 @@
 			border-bottom: 1px solid #000000;
 		}
 
-		.section-title {
+		h2 {
 			font-size: 1.5rem;
 			padding: 1rem 0;
 			margin: 0;
@@ -97,23 +97,25 @@
 			flex-direction: column;
 		}
 
-		.settings-form-row {
-			display: flex;
-			align-items: center;
-			padding: 1rem 0;
-			border-bottom: 1px solid #000000;
+		.form-table {
+			tr {
+				border-bottom: 1px solid #000000;
 
-			&:nth-last-child(2) {
-				border-bottom: none;
+				&:last-child {
+					border-bottom: none;
+				}
 			}
 
-			.settings-form-row-callback {
+			td {
 				position: relative;
+				display: table;
 				top: 50%;
 				width: 74px;
 				height: 36px;
 				border-radius: 100px;
+				margin-top: 0.7rem;
 				margin-left: auto;
+				margin-bottom: 0;
 				overflow: hidden;
 
 				.checkbox {
