@@ -10,33 +10,18 @@ function is_grigora_pro_active(){
     return function_exists("grigora_pro_active");
 }
 
-function custom_do_settings_fields($page, $section) {
-    global $wp_settings_fields;
 
-    if ( !isset($wp_settings_fields) ||
-         !isset($wp_settings_fields[$page]) ||
-         !isset($wp_settings_fields[$page][$section]) )
-        return;
+function grigora_get_option( $option ) {
 
-    foreach ( (array) $wp_settings_fields[$page][$section] as $field ) {
-        echo '<div class="settings-form-row">';
-            echo '<div class="settings-form-row-label">';
-                if ( !empty($field['args']['label_for']) ){
-                    echo '<p><label for="' . $field['args']['label_for'] . '">' .
-                        $field['title'] . '</label><br />';                   
-                }
-                else{
-                    echo '<p>' . $field['title'] . '<br />';
-                }
-            echo '</div>';
-            echo '<div class="settings-form-row-callback">';
-                call_user_func($field['callback'], $field['args']);
-            echo '</div>';
-        echo '</p></div>';
-    }
+	$defaults = grigora_get_defaults();
+
+	$options = wp_parse_args(
+		get_option( 'grigora_settings', array() ),
+		$defaults
+	);
+
+	return $options[$option];
 }
-
-// add_filter( 'do_settings_fields' , 'custom_do_settings_fields' );
 
 if ( ! function_exists( 'grigora_options_page' ) ) {
     function grigora_options_page() {
