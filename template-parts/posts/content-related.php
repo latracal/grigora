@@ -1,6 +1,6 @@
 <div>
     <?php
-        if ( has_post_thumbnail($r->ID)) {
+        if ( has_post_thumbnail($post->ID)) {
     ?>
     <a href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
     <?php
