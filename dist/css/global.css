@@ -1512,4 +1512,19 @@ p {
 .not-found h4 {
   font-size: 1.125rem;
 }
+
+main {
+  position: relative;
+}
+
+.to-top {
+  position: fixed;
+  right: 2rem;
+  bottom: 3rem;
+}
+
+.to-top svg {
+  width: 35px;
+  height: 35px;
+}
 /*# sourceMappingURL=global.css.map */

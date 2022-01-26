@@ -20,6 +20,7 @@ add_action( 'widgets_init', 'grg_sidebar' ); //sidebar
 // Options
 include( get_theme_file_path( '/settings-functions/defaults.php' ) );
 include( get_theme_file_path( '/settings-functions/options-controls.php' ) );
+include( get_theme_file_path( '/settings-functions/back-to-top.php' ) );
 
 
 /**

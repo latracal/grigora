@@ -10,7 +10,6 @@ function is_grigora_pro_active(){
     return function_exists("grigora_pro_active");
 }
 
-
 function custom_do_settings_sections( $page ) {
     global $wp_settings_sections, $wp_settings_fields;
  
@@ -19,47 +18,50 @@ function custom_do_settings_sections( $page ) {
     }
  
     foreach ( (array) $wp_settings_sections[ $page ] as $section ) {
-        echo "<div class='{$section['id']}'> id='{$section['id']}'";
-        if ( $section['title'] ) {
-            echo "<h2>{$section['title']}</h2>\n";
-        }
- 
-        if ( $section['callback'] ) {
-            call_user_func( $section['callback'], $section );
-        }
- 
-        if ( ! isset( $wp_settings_fields ) || ! isset( $wp_settings_fields[ $page ] ) || ! isset( $wp_settings_fields[ $page ][ $section['id'] ] ) ) {
-            continue;
-        }
-        echo '<table class="form-table" role="presentation">';
-        do_settings_fields( $page, $section['id'] );
-        echo '</table>';
-        echo '</div>';
-    }
+        echo "<div class='{$section['id']} customizer ". (is_grigora_pro_active() ? '' : 'disabled') ."'
+id='{$section['id']}'>
+";
+if ( $section['title'] ) {
+echo "<h2>{$section['title']}</h2>\n";
+}
+
+if ( $section['callback'] ) {
+call_user_func( $section['callback'], $section );
+}
+
+if ( ! isset( $wp_settings_fields ) || ! isset( $wp_settings_fields[ $page ] ) || ! isset( $wp_settings_fields[ $page ][
+$section['id'] ] ) ) {
+continue;
+}
+echo '<table class="form-table" role="presentation">';
+    do_settings_fields( $page, $section['id'] );
+    echo '</table>';
+echo '</div>';
+}
 }
 
 function grigora_get_option( $option ) {
 
-	$defaults = grigora_get_defaults();
+$defaults = grigora_get_defaults();
 
-	$options = wp_parse_args(
-		get_option( 'grigora_settings', array() ),
-		$defaults
-	);
+$options = wp_parse_args(
+get_option( 'grigora_settings', array() ),
+$defaults
+);
 
-	return $options[$option];
+return $options[$option];
 }
 
 if ( ! function_exists( 'grigora_options_page' ) ) {
-    function grigora_options_page() {
-        wp_enqueue_style( 'theme-options', get_template_directory_uri() . '/dist/css/admin-options.css' );
-        wp_enqueue_script( 'theme-options', get_template_directory_uri() . '/js/admin-options.js' ); 
-        if ( !current_user_can( 'manage_options' ) )  {
-            wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
-        }
-        echo '<div class="admin-container">';
-        settings_errors();
-        ?>
+function grigora_options_page() {
+wp_enqueue_style( 'theme-options', get_template_directory_uri() . '/dist/css/admin-options.css' );
+wp_enqueue_script( 'theme-options', get_template_directory_uri() . '/js/admin-options.js' );
+if ( !current_user_can( 'manage_options' ) ) {
+wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
+}
+echo '<div class="admin-container">';
+    settings_errors();
+    ?>
 <div class="setting-title">
     <h1>Grigora</h1>
 </div>
@@ -70,13 +72,12 @@ if ( ! function_exists( 'grigora_options_page' ) ) {
 ?>
 <div class="grigora-settings">
     <div class="tab">
-        <button class="tab-btn" onclick="controlName(event, 'c-options')" id="default">Customizer
+        <button class="tab-btn" onclick="controlName(event, 'grigora_customizer_section')" id="default">Customizer
             Options</button>
-        <button class="tab-btn" onclick="controlName(event, 'performance')">Performance</button>
+        <button class="tab-btn" onclick="controlName(event, 'grigora_performance_section')">Performance</button>
     </div>
     <div class="tab-content">
-        <form action="options.php" method="post"
-            class="customizer <?php echo (is_grigora_pro_active() ? '' : 'disabled') ?>">
+        <form action="options.php" method="post" class=" <?php echo (is_grigora_pro_active() ? '' : 'disabled') ?>">
 
             <?php
             settings_fields("grigora_settings");

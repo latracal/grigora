@@ -87,6 +87,11 @@
   width: 25%;
 }
 
+.admin-container .disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
 .admin-container .customizer {
   display: none;
   background-color: #fff;

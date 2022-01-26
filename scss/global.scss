@@ -54,3 +54,18 @@ p {
 		font-size: 1.125rem;
 	}
 }
+
+main {
+	position: relative;
+}
+
+.to-top {
+	position: fixed;
+	right: 2rem;
+	bottom: 3rem;
+
+	svg {
+		width: 35px;
+		height: 35px;
+	}
+}
