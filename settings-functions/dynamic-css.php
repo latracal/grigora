@@ -32,7 +32,8 @@ body {
 
 .navbar .menu-container .menu,
 .navbar .menu-container .search-btn .search-box,
-.navbar .menu-container .search-btn .search-box .search-field {
+.navbar .menu-container .search-btn .search-box .search-field,
+.navbar .menu-container .menu .menu-item .sub-menu {
     background-color: <?php if($colors_flag) {
         echo get_theme_mod('grg_header_menu_bg-color', $defaults['grg_header_menu_bg-color']);
     }
