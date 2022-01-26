@@ -240,6 +240,19 @@ main h6 a,
 
     ?>;
 }
+
+.post-content .breadcrumb,
+.post-content .breadcrumb a {
+    color: <?php if($colors_flag) {
+        echo get_theme_mod('grg_breadcrumb-color', $defaults['grg_breadcrumb-color']);
+    }
+
+    else {
+        echo $defaults['grg_breadcrumb-color'];
+    }
+
+    ?>;
+}
 </style>
 <?php
 } 

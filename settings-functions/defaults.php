@@ -46,6 +46,7 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 				'grg_h4-tag-color' => '#000',				
 				'grg_h5-tag-color' => '#000',				
 				'grg_h6-tag-color' => '#000',				
+				'grg_breadcrumb-color' => '#454545',				
 			);
 	}
 }
