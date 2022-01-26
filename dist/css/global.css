@@ -820,6 +820,47 @@
   text-decoration: none;
 }
 
+.post-content .social {
+  margin-bottom: 1rem;
+}
+
+.post-content .social a {
+  margin-right: 0.5rem;
+}
+
+.post-content .social a svg {
+  width: 20px;
+  height: 20px;
+}
+
+.post-content .social a:nth-child(1) {
+  color: #24a1f2;
+}
+
+.post-content .social a:nth-child(2) {
+  color: #3b5998;
+}
+
+.post-content .social a:nth-child(3) {
+  color: #1777b6;
+}
+
+.post-content .social a:nth-child(4) {
+  color: #ca3828;
+}
+
+.post-content .social a:nth-child(5) {
+  color: #479425;
+}
+
+.post-content .social a:nth-child(6) {
+  color: #d34836;
+}
+
+.post-content .social a:nth-child(7) {
+  color: #2a2a2c;
+}
+
 .post-content .wp-block-quote {
   font-weight: bold;
   font-style: italic;

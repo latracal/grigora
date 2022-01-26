@@ -97,6 +97,47 @@
 		}
 	}
 
+	.social {
+		margin-bottom: 1rem;
+
+		a {
+			margin-right: 0.5rem;
+
+			svg {
+				width: 20px;
+				height: 20px;
+			}
+
+			&:nth-child(1) {
+				color: #24a1f2;
+			}
+
+			&:nth-child(2) {
+				color: #3b5998;
+			}
+
+			&:nth-child(3) {
+				color: #1777b6;
+			}
+
+			&:nth-child(4) {
+				color: #ca3828;
+			}
+
+			&:nth-child(5) {
+				color: #479425;
+			}
+
+			&:nth-child(6) {
+				color: #d34836;
+			}
+
+			&:nth-child(7) {
+				color: #2a2a2c;
+			}
+		}
+	}
+
 	.wp-block-quote {
 		font-weight: bold;
 		font-style: italic;
