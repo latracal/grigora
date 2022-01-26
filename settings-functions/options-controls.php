@@ -11,6 +11,33 @@ function is_grigora_pro_active(){
 }
 
 
+function custom_do_settings_sections( $page ) {
+    global $wp_settings_sections, $wp_settings_fields;
+ 
+    if ( ! isset( $wp_settings_sections[ $page ] ) ) {
+        return;
+    }
+ 
+    foreach ( (array) $wp_settings_sections[ $page ] as $section ) {
+        echo "<div class='{$section['id']}'>";
+        if ( $section['title'] ) {
+            echo "<h2>{$section['title']}</h2>\n";
+        }
+ 
+        if ( $section['callback'] ) {
+            call_user_func( $section['callback'], $section );
+        }
+ 
+        if ( ! isset( $wp_settings_fields ) || ! isset( $wp_settings_fields[ $page ] ) || ! isset( $wp_settings_fields[ $page ][ $section['id'] ] ) ) {
+            continue;
+        }
+        echo '<table class="form-table" role="presentation">';
+        do_settings_fields( $page, $section['id'] );
+        echo '</table>';
+        echo '</div>';
+    }
+}
+
 function grigora_get_option( $option ) {
 
 	$defaults = grigora_get_defaults();
@@ -53,14 +80,13 @@ if ( ! function_exists( 'grigora_options_page' ) ) {
 
             <?php
             settings_fields("grigora_settings");
-            do_settings_sections("grigora-options");
+            custom_do_settings_sections("grigora-options");
             submit_button();
         ?>
         </form>
         <div class="other">
-
-        </div>
-    </div>
+</div>
+</div>
 </div>
 <?php
     }
