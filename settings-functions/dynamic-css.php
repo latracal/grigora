@@ -158,24 +158,84 @@ main a:hover,
 }
 
 main h1,
-main h2,
-main h3,
-main h4,
-main h5,
-main h6,
 main h1 a,
-main h2 a,
-main h3 a,
-main h4 a,
-main h5 a,
-main h6 a,
 .container .article .post-container .post .post-desc .post-title a {
     color: <?php if($colors_flag) {
-        echo get_theme_mod('grg_header-tag-color', $defaults['grg_header-tag-color']);
+        echo get_theme_mod('grg_h1-tag-color', $defaults['grg_h1-tag-color']);
     }
 
     else {
-        echo $defaults['grg_header-tag-color'];
+        echo $defaults['grg_h1-tag-color'];
+    }
+
+    ?>;
+}
+
+main h2,
+main h2 a,
+.container .article .post-container .post .post-desc .post-title a {
+    color: <?php if($colors_flag) {
+        echo get_theme_mod('grg_h2-tag-color', $defaults['grg_h2-tag-color']);
+    }
+
+    else {
+        echo $defaults['grg_h2-tag-color'];
+    }
+
+    ?>;
+}
+
+main h3,
+main h3 a,
+.container .article .post-container .post .post-desc .post-title a {
+    color: <?php if($colors_flag) {
+        echo get_theme_mod('grg_h3-tag-color', $defaults['grg_h3-tag-color']);
+    }
+
+    else {
+        echo $defaults['grg_h3-tag-color'];
+    }
+
+    ?>;
+}
+
+main h4,
+main h4 a,
+.container .article .post-container .post .post-desc .post-title a {
+    color: <?php if($colors_flag) {
+        echo get_theme_mod('grg_h4-tag-color', $defaults['grg_h4-tag-color']);
+    }
+
+    else {
+        echo $defaults['grg_h4-tag-color'];
+    }
+
+    ?>;
+}
+
+main h5,
+main h5 a,
+.container .article .post-container .post .post-desc .post-title a {
+    color: <?php if($colors_flag) {
+        echo get_theme_mod('grg_h5-tag-color', $defaults['grg_h5-tag-color']);
+    }
+
+    else {
+        echo $defaults['grg_h5-tag-color'];
+    }
+
+    ?>;
+}
+
+main h6,
+main h6 a,
+.container .article .post-container .post .post-desc .post-title a {
+    color: <?php if($colors_flag) {
+        echo get_theme_mod('grg_h6-tag-color', $defaults['grg_h6-tag-color']);
+    }
+
+    else {
+        echo $defaults['grg_h6-tag-color'];
     }
 
     ?>;
