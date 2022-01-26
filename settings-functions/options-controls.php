@@ -76,7 +76,7 @@ if ( ! function_exists( 'grigora_options_page' ) ) {
     </div>
     <div class="tab-content">
         <form action="options.php" method="post"
-            class="customizer <?php echo (is_grigora_pro_active() ? '' : 'disabled') ?>" id="c-options">
+            class="customizer <?php echo (is_grigora_pro_active() ? '' : 'disabled') ?>">
 
             <?php
             settings_fields("grigora_settings");
@@ -85,8 +85,8 @@ if ( ! function_exists( 'grigora_options_page' ) ) {
         ?>
         </form>
         <div class="other">
-</div>
-</div>
+        </div>
+    </div>
 </div>
 <?php
     }
