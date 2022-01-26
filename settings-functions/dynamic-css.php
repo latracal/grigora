@@ -92,6 +92,7 @@ body {
     ?>;
 }
 
+.container .article .post-container .post .post-desc p,
 p,
 ul,
 ol {
