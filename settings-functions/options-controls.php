@@ -19,7 +19,7 @@ function custom_do_settings_sections( $page ) {
     }
  
     foreach ( (array) $wp_settings_sections[ $page ] as $section ) {
-        echo "<div class='{$section['id']}'>";
+        echo "<div class='{$section['id']}'> id='{$section['id']}'";
         if ( $section['title'] ) {
             echo "<h2>{$section['title']}</h2>\n";
         }
