@@ -60,6 +60,12 @@ if ( !current_user_can( 'manage_options' ) ) {
 wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
 }
 echo '<div class="admin-container">';
+    // echo grigora_get_option("color");
+    // echo grigora_get_option("background");
+    // echo grigora_get_option("typography");
+    // echo grigora_get_option("spacing");
+    // echo grigora_get_option("blog");
+    // checked( 1, grigora_get_option( 'grigora_settings' ), true );
     settings_errors();
     ?>
 <div class="setting-title">
@@ -252,61 +258,61 @@ function grigora_performance_section_callback_function() {
 }
 
 function grigora_customizer_section_colors_callback_function() {
- 	echo '<input name="grigora_settings[color]" id="grigora_settings[color]" type="checkbox" value="1" class="checkbox" ' . checked( 1, get_option( 'grigora_settings' )['color'], false ) . ' /><span class="knob"></span><span class="layer"></span>';
+ 	echo '<input name="grigora_settings[color]" id="grigora_settings[color]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'color' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
 }
 
 function grigora_customizer_section_background_callback_function() {
-    echo '<input name="grigora_settings[background]" id="grigora_settings[background]" type="checkbox" value="1" class="checkbox" ' . checked( 1, get_option( 'grigora_settings' )['background'], false ) . ' /><span class="knob"></span><span class="layer"></span>';
+    echo '<input name="grigora_settings[background]" id="grigora_settings[background]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'background' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
 }
 
 function grigora_customizer_section_typography_callback_function() {
-    echo '<input name="grigora_settings[typography]" id="grigora_settings[typography]" type="checkbox" value="1" class="checkbox" ' . checked( 1, get_option( 'grigora_settings' )['typography'], false ) . ' /><span class="knob"></span><span class="layer"></span>';
+    echo '<input name="grigora_settings[typography]" id="grigora_settings[typography]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'typography' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
 }
 
 function grigora_customizer_section_spacing_callback_function() {
-    echo '<input name="grigora_settings[spacing]" id="grigora_settings[spacing]" type="checkbox" value="1" class="checkbox" ' . checked( 1, get_option( 'grigora_settings' )['spacing'], false ) . ' /><span class="knob"></span><span class="layer"></span>';
+    echo '<input name="grigora_settings[spacing]" id="grigora_settings[spacing]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'spacing' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
 }
 
 function grigora_customizer_section_blog_callback_function() {
-    echo '<input name="grigora_settings[blog]" id="grigora_settings[blog]" type="checkbox" value="1" class="checkbox" ' . checked( 1, get_option( 'grigora_settings' )['blog'], false ) . ' /><span class="knob"></span><span class="layer"></span>';
+    echo '<input name="grigora_settings[blog]" id="grigora_settings[blog]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'blog' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
 }
 
 function grigora_customizer_section_toc_callback_function() {
-    echo '<input name="grigora_settings[toc]" id="grigora_settings[toc]" type="checkbox" value="1" class="checkbox" ' . checked( 1, get_option( 'grigora_settings' )['toc'], false ) . ' /><span class="knob"></span><span class="layer"></span>';
+    echo '<input name="grigora_settings[toc]" id="grigora_settings[toc]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'toc' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
 }
 
 function grigora_customizer_section_scroll_callback_function() {
-    echo '<input name="grigora_settings[scroll]" id="grigora_settings[scroll]" type="checkbox" value="1" class="checkbox" ' . checked( 1, get_option( 'grigora_settings' )['scroll'], false ) . ' /><span class="knob"></span><span class="layer"></span>';
+    echo '<input name="grigora_settings[scroll]" id="grigora_settings[scroll]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'scroll' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
 }
 
 function grigora_customizer_section_popup_callback_function() {
-    echo '<input name="grigora_settings[popup]" id="grigora_settings[popup]" type="checkbox" value="1" class="checkbox" ' . checked( 1, get_option( 'grigora_settings' )['popup'], false ) . ' /><span class="knob"></span><span class="layer"></span>';
+    echo '<input name="grigora_settings[popup]" id="grigora_settings[popup]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'popup' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
 }
 
 function grigora_customizer_section_procontable_callback_function() {
-    echo '<input name="grigora_settings[procontable]" id="grigora_settings[procontable]" type="checkbox" value="1" class="checkbox" ' . checked( 1, get_option( 'grigora_settings' )['procontable'], false ) . ' /><span class="knob"></span><span class="layer"></span>';
+    echo '<input name="grigora_settings[procontable]" id="grigora_settings[procontable]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'procontable' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
 }
 
 function grigora_performance_section_emoji_callback_function() {
-    echo '<input name="grigora_settings[emoji]" id="grigora_settings[emoji]" type="checkbox" value="1" class="checkbox" ' . checked( 1, get_option( 'grigora_settings' )['emoji'], false ) . ' /><span class="knob"></span><span class="layer"></span>';
+    echo '<input name="grigora_settings[emoji]" id="grigora_settings[emoji]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'emoji' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
 }
 
 function grigora_performance_section_embeds_callback_function() {
-    echo '<input name="grigora_settings[embeds]" id="grigora_settings[embeds]" type="checkbox" value="1" class="checkbox" ' . checked( 1, get_option( 'grigora_settings' )['embeds'], false ) . ' /><span class="knob"></span><span class="layer"></span>';
+    echo '<input name="grigora_settings[embeds]" id="grigora_settings[embeds]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'embeds' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
 }
 
 function grigora_performance_section_xmlrpc_callback_function() {
-    echo '<input name="grigora_settings[xmlrpc]" id="grigora_settings[xmlrpc]" type="checkbox" value="1" class="checkbox" ' . checked( 1, get_option( 'grigora_settings' )['xmlrpc'], false ) . ' /><span class="knob"></span><span class="layer"></span>';
+    echo '<input name="grigora_settings[xmlrpc]" id="grigora_settings[xmlrpc]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'xmlrpc' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
 }
 
 function grigora_performance_section_jquery_callback_function() {
-    echo '<input name="grigora_settings[jquery]" id="grigora_settings[jquery]" type="checkbox" value="1" class="checkbox" ' . checked( 1, get_option( 'grigora_settings' )['jquery'], false ) . ' /><span class="knob"></span><span class="layer"></span>';
+    echo '<input name="grigora_settings[jquery]" id="grigora_settings[jquery]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'jquery' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
 }
 
 function grigora_performance_section_dashicons_callback_function() {
-    echo '<input name="grigora_settings[dashicons]" id="grigora_settings[dashicons]" type="checkbox" value="1" class="checkbox" ' . checked( 1, get_option( 'grigora_settings' )['dashicons'], false ) . ' /><span class="knob"></span><span class="layer"></span>';
+    echo '<input name="grigora_settings[dashicons]" id="grigora_settings[dashicons]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'dashicons' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
 }
 
 function grigora_performance_section_hidewpversion_callback_function() {
-    echo '<input name="grigora_settings[hidewpversion]" id="grigora_settings[hidewpversion]" type="checkbox" value="1" class="checkbox" ' . checked( 1, get_option( 'grigora_settings' )['hidewpversion'], false ) . ' /><span class="knob"></span><span class="layer"></span>';
+    echo '<input name="grigora_settings[hidewpversion]" id="grigora_settings[hidewpversion]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'hidewpversion' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
 }

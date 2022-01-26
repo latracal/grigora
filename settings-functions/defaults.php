@@ -25,3 +25,11 @@ if ( ! function_exists( 'grigora_get_defaults' ) ) {
 		);
 	}
 }
+
+if ( ! function_exists( 'grigora_color_defaults' ) ) {
+	function grigora_color_defaults() {
+			return array(
+				'grg_bg-color' => '#fff',
+			);
+	}
+}
