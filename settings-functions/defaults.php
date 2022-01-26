@@ -28,8 +28,19 @@ if ( ! function_exists( 'grigora_get_defaults' ) ) {
 if ( ! function_exists( 'grigora_color_defaults' ) ) {
 	function grigora_color_defaults() {
 			return array(
-				'grg_bg-color' => '#fff',
-				'grg_header_bg-color' => '#000',
+				'grg_bg-color' => '#f2f2f2',
+				'grg_header_bg-color' => '#e9e9e9',
+				'grg_header_menu_bg-color' => '#c4c4c4',
+				'grg_header_text-color' => '#000',
+				'grg_footer_menu_bg-color' => '#e9e9e9',
+				'grg_footer_bg-color' => '#c4c4c4',
+				'grg_footer_text-color' => '#000',
+				'grg_text-color' => '#000',
+				'grg_anchor-text-color' => '#0170b9',
+				'grg_anchor-text-hover-color' => '#0170b9',
+				'grg_btn-color' => '#c4c4c4',
+				'grg_btn-text-color' => '#000',				
+				'grg_header-tag-color' => '#000',				
 			);
 	}
 }

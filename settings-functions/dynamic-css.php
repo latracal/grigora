@@ -122,11 +122,11 @@ main a,
 main a:hover,
 .post-content p a:hover {
     color: <?php if($colors_flag) {
-        echo get_theme_mod('grg_anchor-text-color', $defaults['grg_anchor-text-color']);
+        echo get_theme_mod('grg_anchor-text-hover-color', $defaults['grg_anchor-text-hover-color']);
     }
 
     else {
-        echo $defaults['grg_anchor-text-color'];
+        echo $defaults['grg_anchor-text-hover-color'];
     }
 
     ?>;
