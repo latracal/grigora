@@ -168,6 +168,12 @@ function grg_dynamic_customize_css() {
         ?>;
     }
 
+    .to-top .arrow {
+        border: solid <?php echo get_theme_mod('grg_scroll_icon_colors', $defaults['grg_scroll_icon_colors']);
+        ?>;
+        border-width: 0 3px 3px 0;
+    }
+
     <?php
 }
 
@@ -327,9 +333,15 @@ else {
         ?>;
     }
 
-    .to-top svg {
-        color: <?php echo $defaults['grg_scroll_colors'];
+    .to-top {
+        background-color: <?php echo $defaults['grg_scroll_colors'];
         ?>;
+    }
+
+    .to-top .arrow {
+        border: solid <?php echo $defaults['grg_scroll_icon_colors'];
+        ?>;
+        border-width: 0 3px 3px 0;
     }
 
     <?php
