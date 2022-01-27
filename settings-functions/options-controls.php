@@ -154,7 +154,7 @@ function grigora_customize_settings_section() {
 
     add_settings_field(
 		'grigora_customizer_section_spacing',
-		'Spacing',
+		'Spacing/Layout',
 		'grigora_customizer_section_spacing_callback_function',
 		'grigora-options',
 		'grigora_customizer_section'
