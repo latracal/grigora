@@ -212,12 +212,12 @@ function grg_dynamic_customize_css() {
     else {
         ?>.container .article {
             width: 100%;
-            border-right: <?php echo get_theme_mod('grg_sidebar-alignment', $defaults['grg_sidebar-alignment']);
+            border-right: <?php echo get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment']);
             ?>;
         }
 
         aside {
-            display: <?php echo get_theme_mod('grg_sidebar-alignment', $defaults['grg_sidebar-alignment']);
+            display: <?php echo get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment']);
             ?>;
         }
 
@@ -225,7 +225,7 @@ function grg_dynamic_customize_css() {
     }
 
     ?>.container {
-        max-width: <?php echo get_theme_mod('grg_container-width', $defaults['grg_container-width']);
+        max-width: <?php echo get_theme_mod('grg_container-width', $spacing_defaults['grg_container-width']);
         ?>px;
 
     }
@@ -423,12 +423,12 @@ else {
     }
 
     .container {
-        flex-direction: <?php echo $defaults['grg_sidebar-alignment'];
+        flex-direction: <?php echo $spacing_defaults['grg_sidebar-alignment'];
         ?>;
     }
 
     .container {
-        max-width: <?php echo $defaults['grg_container-width'];
+        max-width: <?php echo $spacing_defaults['grg_container-width'];
         ?>px;
 
     }
