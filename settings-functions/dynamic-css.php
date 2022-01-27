@@ -200,9 +200,9 @@ function grg_dynamic_customize_css() {
 
     /*Spacing and Layout*/
 
-    <?php if(get_theme_mod('grg_sidebar-alignment', $defaults['grg_sidebar-alignment'])=='row'|| get_theme_mod('grg_sidebar-alignment', $defaults['grg_sidebar-alignment'])=='row-reverse') {
+    <?php if(get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment'])=='row'|| get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment'])=='row-reverse') {
         ?>.container {
-            flex-direction: <?php echo get_theme_mod('grg_sidebar-alignment', $defaults['grg_sidebar-alignment']);
+            flex-direction: <?php echo get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment']);
             ?>;
         }
 
