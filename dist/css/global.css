@@ -277,6 +277,7 @@
   position: absolute;
   right: 1rem;
   bottom: 0.8rem;
+  z-index: 99;
 }
 
 @media (max-width: 768px) {
