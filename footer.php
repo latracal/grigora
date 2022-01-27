@@ -1,3 +1,5 @@
+<?php to_top_scroll(); ?>
+
 </main>
 <footer>
     <div class="footer">

@@ -1,7 +1,7 @@
 <?php
 
 // Setup
-define( 'ltr_DEV_MODE', true );
+define( 'grg_DEV_MODE', true );
 
 // Includes
 include( get_theme_file_path( '/inc/front/enqueue.php' ) );
@@ -21,8 +21,6 @@ add_action( 'widgets_init', 'grg_sidebar' ); //sidebar
 include( get_theme_file_path( '/settings-functions/defaults.php' ) );
 include( get_theme_file_path( '/settings-functions/options-controls.php' ) );
 include( get_theme_file_path( '/settings-functions/dynamic-css.php' ) );
-include( get_theme_file_path( '/settings-functions/back-to-top.php' ) );
-
 
 /**
  * Disable the emoji's
