@@ -75,5 +75,20 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 			'grg_container-bottom-padding'=> '0',		
 			'grg_container-left-padding'=> '0',		
 		);
-}
+	}
+
+	function grigora_scroll_defaults() {
+		return array(
+			'grg_scrollborder' => 0,
+			'grg_scrolliconsize' => 15,
+			'grg_scroll-position' => 'right',
+			'grg_scroll-display' => 'both'
+		);
+	}
+
+	function grigora_typography_defaults() {
+		return array(
+			"grg_typography_body_font" => "Sans Serif",
+		);
+	}
 }

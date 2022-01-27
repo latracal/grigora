@@ -437,8 +437,6 @@ else {
 }
 
 ?>
-</style>
-<style>
 <?php if($spacing_flag) {
     ?>
     /*Spacing and Layout*/

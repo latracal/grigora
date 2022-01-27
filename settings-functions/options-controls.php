@@ -117,9 +117,51 @@ function grigora_set_default_colors(){
     }
 }
 
+function grigora_set_default_spacing(){
+    if (!grigora_get_option("spacingdefaultsset")){
+        $defaults = grigora_spacing_defaults();
+        $mods = get_theme_mods();
+
+        foreach($defaults as $k => $value){
+            if(!$mods[$k]){
+                set_theme_mod($k, $value);
+            }
+        }
+
+        $my_options = get_option('grigora_settings');
+        if(!$my_options){
+            $my_options = array();
+        }
+        $my_options['spacingdefaultsset'] = 1;
+        update_option('grigora_settings', $my_options);
+    }
+}
+
+function grigora_set_default_scroll(){
+    if (!grigora_get_option("scrolldefaultsset")){
+        $defaults = grigora_scroll_defaults();
+        $mods = get_theme_mods();
+
+        foreach($defaults as $k => $value){
+            if(!$mods[$k]){
+                set_theme_mod($k, $value);
+            }
+        }
+
+        $my_options = get_option('grigora_settings');
+        if(!$my_options){
+            $my_options = array();
+        }
+        $my_options['scrolldefaultsset'] = 1;
+        update_option('grigora_settings', $my_options);
+    }
+}
+
 function grigora_customize_settings_section() {
     
     grigora_set_default_colors();
+    grigora_set_default_spacing();
+    grigora_set_default_scroll();
 
  	add_settings_section(
 		'grigora_customizer_section',
