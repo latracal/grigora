@@ -4,6 +4,10 @@
 function grg_dynamic_customize_css() {
     $defaults = grigora_color_defaults();
     $colors_flag = grigora_get_option("color");
+
+    $spacing_defaults = grigora_spacing_defaults();
+    $spacing_flag = grigora_get_option("spacing");
+    
     ?>
 <style type="text/css">
 <?php if($colors_flag) {
@@ -192,6 +196,12 @@ function grg_dynamic_customize_css() {
         border: solid <?php echo get_theme_mod('grg_scroll_icon_colors', $defaults['grg_scroll_icon_colors']);
         ?>;
         border-width: 0 3px 3px 0;
+    }
+
+    /*Spacing and Layout*/
+    .container {
+        flex-direction: <?php echo get_theme_mod('grg_sidebar-alignment', $defaults['grg_sidebar-alignment']);
+        ?>;
     }
 
     <?php

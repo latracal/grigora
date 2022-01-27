@@ -63,4 +63,10 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 				'grg_scroll_icon_colors' => '#000',				
 			);
 	}
+
+	function grigora_spacing_defaults() {
+		return array(
+			'grg_sidebar-alignment' => 'row',				
+		);
+}
 }
