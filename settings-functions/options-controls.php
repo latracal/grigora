@@ -109,6 +109,9 @@ function grigora_set_default_colors(){
         }
 
         $my_options = get_option('grigora_settings');
+        if(!$my_options){
+            $my_options = array();
+        }
         $my_options['colordefaultsset'] = 1;
         update_option('grigora_settings', $my_options);
     }
