@@ -488,6 +488,30 @@ else {
         ?>px;
 
     }
+
+    .container {
+        padding-top: <?php echo get_theme_mod('grg_container-top-padding', $spacing_defaults['grg_container-top-padding']);
+        ?>px;
+
+    }
+
+    .container {
+        padding-right: <?php echo get_theme_mod('grg_container-right-padding', $spacing_defaults['grg_container-right-padding']);
+        ?>px;
+
+    }
+
+    .container {
+        padding-bottom: <?php echo get_theme_mod('grg_container-bottom-padding', $spacing_defaults['grg_container-bottom-padding']);
+        ?>px;
+
+    }
+
+    .container {
+        padding-left: <?php echo get_theme_mod('grg_container-left-padding', $spacing_defaults['grg_container-left-padding']);
+        ?>px;
+
+    }
 }
 
 <?php
@@ -501,6 +525,30 @@ else {
 
     .container {
         max-width: <?php echo $spacing_defaults['grg_container-width'];
+        ?>px;
+
+    }
+
+    .container {
+        padding-top: <?php echo $spacing_defaults['grg_container-top-padding'];
+        ?>px;
+
+    }
+
+    .container {
+        padding-right: <?php echo $spacing_defaults['grg_container-right-padding'];
+        ?>px;
+
+    }
+
+    .container {
+        padding-bottom: <?php echo $spacing_defaults['grg_container-bottom-padding'];
+        ?>px;
+
+    }
+
+    .container {
+        padding-left: <?php echo $spacing_defaults['grg_container-left-padding'];
         ?>px;
 
     }
