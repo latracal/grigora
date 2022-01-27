@@ -522,6 +522,11 @@ else {
         width: calc(100% - <?php echo get_theme_mod('grg_sidebar-width', $spacing_defaults['grg_sidebar-width']);
                 ?>%);
     }
+
+    .navbar {
+        height: <?php echo get_theme_mod('grg_header-height', $spacing_defaults['grg_header-height']);
+        ?>px;
+    }
 }
 
 <?php
@@ -572,6 +577,11 @@ else {
     .container .article {
         width: calc(100% - <?php echo $spacing_defaults['grg_sidebar-width'];
                 ?>%);
+    }
+
+    .navbar {
+        height: <?php echo $spacing_defaults['grg_header-height'];
+        ?>%;
     }
 
     <?php
