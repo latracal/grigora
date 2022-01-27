@@ -438,6 +438,78 @@ else {
 
 ?>
 </style>
+<style>
+<?php if($spacing_flag) {
+    ?>
+    /*Spacing and Layout*/
+
+    <?php if(get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment'])=='row') {
+        ?>.container {
+            flex-direction: <?php echo get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment']);
+            ?>;
+
+        }
+
+        <?php
+    }
+
+    else if(get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment'])=='row-reverse') {
+        ?>.container {
+            flex-direction: <?php echo get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment']);
+            ?>;
+
+        }
+
+        .container .article {
+            border-right: none;
+            border-left: 1px solid #aaaaaa;
+        }
+
+        <?php
+    }
+
+    else {
+        ?>.container .article {
+            width: 100%;
+            border-right: <?php echo get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment']);
+            ?>;
+        }
+
+        aside {
+            display: <?php echo get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment']);
+            ?>;
+        }
+
+        <?php
+    }
+
+    ?>.container {
+        max-width: <?php echo get_theme_mod('grg_container-width', $spacing_defaults['grg_container-width']);
+        ?>px;
+
+    }
+}
+
+<?php
+}
+
+else {
+    ?>.container {
+        flex-direction: <?php echo $spacing_defaults['grg_sidebar-alignment'];
+        ?>;
+    }
+
+    .container {
+        max-width: <?php echo $spacing_defaults['grg_container-width'];
+        ?>px;
+
+    }
+
+    <?php
+}
+
+?>
+</style>
 <?php
 } 
 
