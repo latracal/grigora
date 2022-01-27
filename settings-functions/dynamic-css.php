@@ -199,12 +199,29 @@ function grg_dynamic_customize_css() {
     }
 
     /*Spacing and Layout*/
-    .container {
-        flex-direction: <?php echo get_theme_mod('grg_sidebar-alignment', $defaults['grg_sidebar-alignment']);
-        ?>;
+
+    <?php if(get_theme_mod('grg_sidebar-alignment', $defaults['grg_sidebar-alignment'])=='Right'|| get_theme_mod('grg_sidebar-alignment', $defaults['grg_sidebar-alignment'])=='Left') {
+        ?>.container {
+            flex-direction: <?php echo get_theme_mod('grg_sidebar-alignment', $defaults['grg_sidebar-alignment']);
+            ?>;
+        }
+
+        <?php
     }
 
-    <?php
+    else {
+        ?>aside {
+            display: <?php echo get_theme_mod('grg_sidebar-alignment', $defaults['grg_sidebar-alignment']);
+            ?>;
+        }
+
+        <?php
+    }
+
+    ?>
+}
+
+<?php
 }
 
 else {
