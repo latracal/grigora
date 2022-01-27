@@ -138,6 +138,26 @@ function grg_dynamic_customize_css() {
         ?>;
     }
 
+    .comment-list .comment-box .comment-meta .comment-author-time {
+        color: <?php echo get_theme_mod('grg_comment_date_colors', $defaults['grg_comment_date_colors']);
+        ?>;
+    }
+
+    .comment-list .comment-box .comment-reply a {
+        background-color: <?php echo get_theme_mod('grg_comment_reply_colors', $defaults['grg_comment_reply_colors']);
+        ?>;
+    }
+
+    .comment-list .comment-box .comment-reply a {
+        color: <?php echo get_theme_mod('grg_comment_reply_text_colors', $defaults['grg_comment_reply_text_colors']);
+        ?>;
+    }
+
+    .comment-list .comment-box .comment-meta .fn a {
+        color: <?php echo get_theme_mod('grg_comment_title_colors', $defaults['grg_comment_title_colors']);
+        ?>;
+    }
+
     .container .article .pagination .next,
     .container .article .pagination .prev,
     .post-content .post-pagination .pagination-prev-post,
@@ -306,6 +326,27 @@ else {
 
     .comment-list .comment-box p {
         color: <?php echo $defaults['grg_comment_text_colors'];
+        ?>;
+    }
+
+    .comment-list .comment-box .comment-meta .comment-author-time {
+        color: <?php echo $defaults['grg_comment_date_colors'];
+        ?>;
+
+    }
+
+    .comment-list .comment-box .comment-reply a {
+        background-color: <?php echo $defaults['grg_comment_reply_colors'];
+        ?>;
+    }
+
+    .comment-list .comment-box .comment-reply a {
+        color: <?php echo $defaults['grg_comment_reply_text_colors'];
+        ?>;
+    }
+
+    .comment-list .comment-box .comment-meta .fn a {
+        color: <?php echo $defaults['grg_comment_title_colors'];
         ?>;
     }
 
