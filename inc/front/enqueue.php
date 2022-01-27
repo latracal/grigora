@@ -2,7 +2,7 @@
 
 function ltr_enqueue(){
 	$uri = get_theme_file_uri();
-	$ver = ltr_DEV_MODE ? time() : true;
+	$ver = grg_DEV_MODE ? time() : true;
 	
 	//endueue style sheet to header
 	wp_enqueue_style('ltr_style', $uri . '/dist/css/global.css', [], $ver);	

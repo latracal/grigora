@@ -24,8 +24,5 @@
     <?php get_sidebar(); ?>
 
 </div>
-<button onclick="topFunction()" class="to-top" id="totop">
-    <div class="arrow"></div>
-</button>
 
 <?php get_footer(); ?>
