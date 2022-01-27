@@ -17,11 +17,19 @@ function grg_dynamic_customize_css() {
         ?>;
     }
 
-    .navbar .menu-container .menu,
-    .navbar .menu-container .search-btn .search-box,
-    .navbar .menu-container .search-btn .search-box .search-field,
-    .navbar .menu-container .menu .menu-item .sub-menu {
+    .navbar .menu-container .menu {
         background-color: <?php echo get_theme_mod('grg_header_menu_bg-color', $defaults['grg_header_menu_bg-color']);
+        ?>;
+    }
+
+    .navbar .menu-container .menu .menu-item .sub-menu {
+        background-color: <?php echo get_theme_mod('grg_header_submenu_bg-color', $defaults['grg_header_submenu_bg-color']);
+        ?>;
+    }
+
+    .navbar .menu-container .search-btn .search-box,
+    .navbar .menu-container .search-btn .search-box .search-field {
+        background-color: <?php echo get_theme_mod('grg_header_searchbox_bg-color', $defaults['grg_header_searchbox_bg-color']);
         ?>;
     }
 
@@ -126,12 +134,14 @@ function grg_dynamic_customize_css() {
     }
 
     .comment-list .comment-box p {
-        color: <?php echo get_theme_mod('grg_colors_comments', $defaults['grg_colors_comments']);
+        color: <?php echo get_theme_mod('grg_comment_text_colors', $defaults['grg_comment_text_colors']);
         ?>;
     }
 
     .container .article .pagination .next,
-    .container .article .pagination .prev {
+    .container .article .pagination .prev,
+    .post-content .post-pagination .pagination-prev-post,
+    .post-content .post-pagination .pagination-next-post {
         background-color: <?php echo get_theme_mod('grg_post_nav_colors', $defaults['grg_post_nav_colors']);
         ?>;
     }
@@ -172,11 +182,19 @@ else {
         ?>;
     }
 
-    .navbar .menu-container .menu,
-    .navbar .menu-container .search-btn .search-box,
-    .navbar .menu-container .search-btn .search-box .search-field,
-    .navbar .menu-container .menu .menu-item .sub-menu {
+    .navbar .menu-container .menu {
         background-color: <?php echo $defaults['grg_header_menu_bg-color'];
+        ?>;
+    }
+
+    .navbar .menu-container .menu .menu-item .sub-menu {
+        background-color: <?php echo $defaults['grg_header_submenu_bg-color'];
+        ?>;
+    }
+
+    .navbar .menu-container .search-btn .search-box,
+    .navbar .menu-container .search-btn .search-box .search-field {
+        background-color: <?php echo $defaults['grg_header_searchbox_bg-color'];
         ?>;
     }
 
@@ -281,7 +299,7 @@ else {
     }
 
     .comment-list .comment-box p {
-        color: <?php echo $defaults['grg_comments_colors'];
+        color: <?php echo $defaults['grg_comment_text_colors'];
         ?>;
     }
 
