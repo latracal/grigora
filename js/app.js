@@ -74,8 +74,8 @@ w = screen.width;
 
 const parents = document.getElementsByClassName('menu-item-has-children');
 
-for(var i = 0; i < parents.length; i++) {
-	parents[i].addEventListener("click", toggleSubMenu, false);
+for (var i = 0; i < parents.length; i++) {
+	parents[i].addEventListener('click', toggleSubMenu, false);
 }
 
 function toggleSubMenu(event) {
@@ -84,11 +84,32 @@ function toggleSubMenu(event) {
 	console.log(child.style.display);
 
 	if (w < 768) {
-		if(child.style.display == 'none' || child.style.display == ''){
+		if (child.style.display == 'none' || child.style.display == '') {
 			child.style.display = 'block';
-		}
-		else{
+		} else {
 			child.style.display = 'none';
 		}
 	}
+}
+
+var totop = document.getElementById('totop');
+
+window.onscroll = function () {
+	scrollFunction();
+};
+
+function scrollFunction() {
+	if (
+		document.body.scrollTop > 150 ||
+		document.documentElement.scrollTop > 150
+	) {
+		totop.style.display = 'block';
+	} else {
+		totop.style.display = 'none';
+	}
+}
+
+function topFunction() {
+	document.body.scrollTop = 0;
+	document.documentElement.scrollTop = 0;
 }

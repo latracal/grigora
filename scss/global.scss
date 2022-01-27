@@ -10,6 +10,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -60,12 +61,20 @@ main {
 }
 
 .to-top {
+	cursor: pointer;
+	display: none;
 	position: fixed;
 	right: 2rem;
 	bottom: 3rem;
+	padding: 0.7rem 1rem;
+	border: none;
+	background-color: #c4c4c4;
 
-	svg {
-		width: 35px;
-		height: 35px;
+	.arrow {
+		border: solid black;
+		border-width: 0 3px 3px 0;
+		display: inline-block;
+		padding: 3px;
+		transform: rotate(-135deg);
 	}
 }
