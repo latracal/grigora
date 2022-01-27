@@ -66,7 +66,7 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 
 	function grigora_spacing_defaults() {
 		return array(
-			'grg_sidebar-alignment' => 'row',				
+			'grg_sidebar-alignment' => 'Right',				
 		);
 }
 }
