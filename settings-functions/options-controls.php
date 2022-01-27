@@ -280,6 +280,14 @@ function grigora_customize_settings_section() {
     );
 
     add_settings_field(
+        'grigora_performance_section_jquerymigrate',
+        'Disable Jquery Migrate',
+        'grigora_performance_section_jquerymigrate_callback_function',
+        'grigora-options',
+        'grigora_performance_section'
+    );
+
+    add_settings_field(
         'grigora_performance_section_jquery',
         'Disable Jquery',
         'grigora_performance_section_jquery_callback_function',
@@ -291,14 +299,6 @@ function grigora_customize_settings_section() {
         'grigora_performance_section_dashicons',
         'Disable Dashicons',
         'grigora_performance_section_dashicons_callback_function',
-        'grigora-options',
-        'grigora_performance_section'
-    );
-
-    add_settings_field(
-        'grigora_performance_section_hidewpversion',
-        'Hide WP Version',
-        'grigora_performance_section_hidewpversion_callback_function',
         'grigora-options',
         'grigora_performance_section'
     );
@@ -363,14 +363,14 @@ function grigora_performance_section_xmlrpc_callback_function() {
     echo '<input name="grigora_settings[xmlrpc]" id="grigora_settings[xmlrpc]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'xmlrpc' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
 }
 
+function grigora_performance_section_jquerymigrate_callback_function() {
+    echo '<input name="grigora_settings[jquerymigrate]" id="grigora_settings[jquerymigrate]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'jquerymigrate' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
+}
+
 function grigora_performance_section_jquery_callback_function() {
     echo '<input name="grigora_settings[jquery]" id="grigora_settings[jquery]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'jquery' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
 }
 
 function grigora_performance_section_dashicons_callback_function() {
     echo '<input name="grigora_settings[dashicons]" id="grigora_settings[dashicons]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'dashicons' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
-}
-
-function grigora_performance_section_hidewpversion_callback_function() {
-    echo '<input name="grigora_settings[hidewpversion]" id="grigora_settings[hidewpversion]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'hidewpversion' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
 }
