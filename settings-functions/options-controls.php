@@ -60,12 +60,6 @@ if ( !current_user_can( 'manage_options' ) ) {
 wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
 }
 echo '<div class="admin-container">';
-    // echo grigora_get_option("color");
-    // echo grigora_get_option("background");
-    // echo grigora_get_option("typography");
-    // echo grigora_get_option("spacing");
-    // echo grigora_get_option("blog");
-    // checked( 1, grigora_get_option( 'grigora_settings' ), true );
     settings_errors();
     ?>
 <div class="setting-title">
@@ -103,7 +97,26 @@ add_action( 'admin_menu', 'girgora_options_menu' );
 
 register_setting( 'grigora_settings', 'grigora_settings' );
 
+function grigora_set_default_colors(){
+    if (!grigora_get_option("colordefaultsset")){
+        $defaults = grigora_color_defaults();
+        $mods = get_theme_mods();
+
+        foreach($defaults as $k => $value){
+            if(!$mods[$k]){
+                set_theme_mod($k, $value);
+            }
+        }
+
+        $my_options = get_option('grigora_settings');
+        $my_options['colordefaultsset'] = 1;
+        update_option('grigora_settings', $my_options);
+    }
+}
+
 function grigora_customize_settings_section() {
+    
+    grigora_set_default_colors();
 
  	add_settings_section(
 		'grigora_customizer_section',

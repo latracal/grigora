@@ -20,6 +20,7 @@ if ( ! function_exists( 'grigora_get_defaults' ) ) {
 				'jquery' => 0,
 				'dashicons' => 0,
 				'hidewpversion' => 0,
+				'colordefaultsset' => 0,
 			)
 		);
 	}
