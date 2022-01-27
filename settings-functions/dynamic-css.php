@@ -210,7 +210,14 @@ function grg_dynamic_customize_css() {
     }
 
     else {
-        ?>aside {
+        ?>.container .article {
+            width: 100%;
+            border-right: <?php echo get_theme_mod('grg_sidebar-alignment', $defaults['grg_sidebar-alignment']);
+            ?>;
+        }
+
+
+        aside {
             display: <?php echo get_theme_mod('grg_sidebar-alignment', $defaults['grg_sidebar-alignment']);
             ?>;
         }
