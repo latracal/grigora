@@ -224,7 +224,11 @@ function grg_dynamic_customize_css() {
         <?php
     }
 
-    ?>
+    ?>.container {
+        max-width: <?php echo get_theme_mod('grg_container-width', $defaults['grg_container-width']);
+        ?>px;
+
+    }
 }
 
 <?php
@@ -421,6 +425,12 @@ else {
     .container {
         flex-direction: <?php echo $defaults['grg_sidebar-alignment'];
         ?>;
+    }
+
+    .container {
+        max-width: <?php echo $defaults['grg_container-width'];
+        ?>px;
+
     }
 
     <?php
