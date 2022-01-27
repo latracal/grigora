@@ -512,6 +512,16 @@ else {
         ?>px;
 
     }
+
+    .container aside {
+        width: <?php echo get_theme_mod('grg_sidebar-width', $spacing_defaults['grg_sidebar-width']);
+        ?>%;
+    }
+
+    .container .article {
+        width: calc(100% - <?php echo get_theme_mod('grg_sidebar-width', $spacing_defaults['grg_sidebar-width']);
+                ?>%);
+    }
 }
 
 <?php
@@ -551,6 +561,17 @@ else {
         padding-left: <?php echo $spacing_defaults['grg_container-left-padding'];
         ?>px;
 
+    }
+
+
+    .container aside {
+        width: <?php echo $spacing_defaults['grg_sidebar-width'];
+        ?>%;
+    }
+
+    .container .article {
+        width: calc(100% - <?php echo $spacing_defaults['grg_sidebar-width'];
+                ?>%);
     }
 
     <?php
