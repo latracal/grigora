@@ -163,8 +163,8 @@ function grg_dynamic_customize_css() {
         ?>;
     }
 
-    .to-top svg {
-        color: <?php echo get_theme_mod('grg_scroll_colors', $defaults['grg_scroll_colors']);
+    .to-top {
+        background-color: <?php echo get_theme_mod('grg_scroll_colors', $defaults['grg_scroll_colors']);
         ?>;
     }
 
