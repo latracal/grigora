@@ -86,9 +86,50 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 		);
 	}
 
+	function grigora_typography_defaults_fonts() {
+		return array(
+			"grg_typography_body_font" => "Open Sans",
+			"grg_typography_site_title_font" => "Open Sans",
+			"grg_typography_site_title_font" => "Open Sans",
+			"grg_typography_site_desc_font" => "Open Sans",
+			"grg_typography_site_menu_font" => "Open Sans",
+			"grg_typography_button_font" => "Open Sans",
+			"grg_typography_h1_font" => "Open Sans",
+			"grg_typography_h2_font" => "Open Sans",
+			"grg_typography_h3_font" => "Open Sans",
+			"grg_typography_h4_font" => "Open Sans",
+			"grg_typography_h5_font" => "Open Sans",
+			"grg_typography_h6_font" => "Open Sans",
+			"grg_typography_footer_font" => "Open Sans",
+		);
+	}
+
 	function grigora_typography_defaults() {
 		return array(
-			"grg_typography_body_font" => "Sans Serif",
+			"grg_typography_body_weight" => "500",
+			"grg_typography_body_font_size" => "18",
+			"grg_typography_site_title_weight" => "700",
+			"grg_typography_site_title_size" => "30",
+			"grg_typography_site_desc_weight" => "500",
+			"grg_typography_site_desc_size" => "25",
+			"grg_typography_site_menu_weight" => "500",
+			"grg_typography_site_menu_size" => "18",
+			"grg_typography_button_weight" => "500",
+			"grg_typography_button_size" => "18",
+			"grg_typography_h1_weight" => "700",
+			"grg_typography_h1_size" => "25",
+			"grg_typography_h2_weight" => "700",
+			"grg_typography_h2_size" => "24",
+			"grg_typography_h3_weight" => "700",
+			"grg_typography_h3_size" => "23",
+			"grg_typography_h4_weight" => "700",
+			"grg_typography_h4_size" => "22",
+			"grg_typography_h5_weight" => "700",
+			"grg_typography_h5_size" => "21",
+			"grg_typography_h6_weight" => "700",
+			"grg_typography_h6_size" => "20",
+			"grg_typography_footer_weight" => "500",
+			"grg_typography_footer_size" => "18",
 		);
 	}
 }
