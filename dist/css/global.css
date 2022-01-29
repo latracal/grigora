@@ -141,6 +141,10 @@
   top: 78%;
 }
 
+.navbar .menu-container {
+  position: relative;
+}
+
 .navbar .menu-container ul {
   list-style: none;
 }
