@@ -9,7 +9,8 @@ function grg_dynamic_customize_css() {
     $spacing_flag = grigora_get_option("spacing");
   
     $typography_defaults = grigora_typography_defaults();
-    $typography_flag = grigora_get_option("typography");
+    $typography_fonts_defaults = grigora_typography_defaults_fonts();
+    $typography_flag = grigora_get_option("typography");    
     
     ?>
 <style type="text/css">
@@ -585,13 +586,23 @@ else {
 }
 
 ?><?php if($typography_flag) {
-    ?>main {
-        font-family: <?php echo get_theme_mod('grg_typography_body_font', $typography_defaults['grg_typography_body_font']);
+    ?>body {
+        font-family: <?php echo get_theme_mod('grg_typography_body_font', $typography_fonts_defaults['grg_typography_body_font']);
         ?>;
     }
 
-    main {
+    main p {
         font-weight: <?php echo get_theme_mod('grg_typography_body_weight', $typography_defaults['grg_typography_body_weight']);
+        ?>;
+    }
+
+    main p {
+        font-size: <?php echo get_theme_mod('grg_typography_body_font_size', $typography_defaults['grg_typography_body_font_size']);
+        ?>px;
+    }
+
+    main {
+        text-transform: <?php echo get_theme_mod('grg_typography_body_font_transform', $typography_defaults['grg_typography_body_font_transform']);
         ?>;
     }
 
@@ -599,13 +610,23 @@ else {
 }
 
 else {
-    ?>main {
-        font-family: <?php echo $typography_defaults['grg_typography_body_font'];
+    ?>body {
+        font-family: <?php echo $typography_fonts_defaults['grg_typography_body_font'];
+        ?>;
+    }
+
+    main p {
+        font-weight: <?php echo $typography_defaults['grg_typography_body_weight'];
+        ?>px;
+    }
+
+    main p {
+        font-size: <?php echo $typography_defaults['grg_typography_body_font_size'];
         ?>;
     }
 
     main {
-        font-weight: <?php echo $typography_defaults['grg_typography_body_weight'];
+        text-transform: <?php echo $typography_defaults['grg_typography_body_font_transform'];
         ?>;
     }
 
