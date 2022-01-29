@@ -907,12 +907,22 @@ else {
         ?> !important;
     }
 
+    .feature-img {
+        text-align: <?php echo get_theme_mod('grg_blog_single_featuredim_align', $typography_fonts_defaults['grg_blog_single_featuredim_align']);
+        ?>;
+    }
+
     <?php
 }
 
 else {
     ?>.post-header {
         flex-direction: <?php echo $typography_defaults['grg_blog_single_featuredim_loc'];
+        ?>;
+    }
+
+    .feature-img {
+        text-align: <?php echo $typography_defaults['grg_blog_single_featuredim_align'];
         ?>;
     }
 

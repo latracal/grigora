@@ -78,7 +78,9 @@
                 </span>
                 <?php } ?>
             </div>
-            <?php the_post_thumbnail(); ?>
+            <div class="feature-img">
+                <?php the_post_thumbnail(); ?>
+            </div>
         </div>
         <?php the_content(); ?>
         <?php if( get_theme_mod( 'grg_blog_single_category' ) )
