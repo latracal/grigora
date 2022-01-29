@@ -131,6 +131,18 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 			"grg_typography_h6_size" => "20",
 			"grg_typography_footer_weight" => "500",
 			"grg_typography_footer_size" => "18",
+			"grg_typography_body_font_transform" => "none",
+			"grg_typography_site_title_transform" => "none",
+			"grg_typography_site_desc_transform" => "none",
+			"grg_typography_site_menu_transform" => "none",
+			"grg_typography_button_transform" => "none",
+			"grg_typography_h1_transform" => "none",
+			"grg_typography_h2_transform" => "none",
+			"grg_typography_h3_transform" => "none",
+			"grg_typography_h4_transform" => "none",
+			"grg_typography_h5_transform" => "none",
+			"grg_typography_h6_transform" => "none",
+			"grg_typography_footer_transform" => "none",
 		);
 	}
 
