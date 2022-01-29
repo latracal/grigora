@@ -593,9 +593,6 @@ else {
     main p {
         font-weight: <?php echo get_theme_mod('grg_typography_body_weight', $typography_defaults['grg_typography_body_weight']);
         ?>;
-    }
-
-    main p {
         font-size: <?php echo get_theme_mod('grg_typography_body_font_size', $typography_defaults['grg_typography_body_font_size']);
         ?>px;
     }
@@ -608,19 +605,10 @@ else {
     .navbar .title h1 {
         font-family: <?php echo get_theme_mod('grg_typography_site_title_font', $typography_fonts_defaults['grg_typography_site_title_font']);
         ?>;
-    }
-
-    .navbar .title h1 {
         font-weight: <?php echo get_theme_mod('grg_typography_site_title_weight', $typography_defaults['grg_typography_site_title_weight']);
         ?>;
-    }
-
-    .navbar .title h1 {
         font-size: <?php echo get_theme_mod('grg_typography_site_title_size', $typography_defaults['grg_typography_site_title_size']);
         ?>px;
-    }
-
-    .navbar .title h1 {
         text-transform: <?php echo get_theme_mod('grg_typography_site_title_transform', $typography_defaults['grg_typography_site_title_transform']);
         ?>;
     }
@@ -628,21 +616,111 @@ else {
     .navbar .title h2 {
         font-family: <?php echo get_theme_mod('grg_typography_site_desc_font', $typography_fonts_defaults['grg_typography_site_desc_font']);
         ?>;
-    }
-
-    .navbar .title h2 {
         font-weight: <?php echo get_theme_mod('grg_typography_site_desc_weight', $typography_defaults['grg_typography_site_desc_weight']);
+        ?>;
+        font-size: <?php echo get_theme_mod('grg_typography_site_desc_size', $typography_defaults['grg_typography_site_desc_size']);
+        ?>px;
+        text-transform: <?php echo get_theme_mod('grg_typography_site_desc_transform', $typography_defaults['grg_typography_site_desc_transform']);
         ?>;
     }
 
-    .navbar .title h2 {
-        font-size: <?php echo get_theme_mod('grg_typography_site_desc_size', $typography_defaults['grg_typography_site_desc_size']);
+    .navbar .menu-container .menu {
+        font-family: <?php echo get_theme_mod('grg_typography_site_menu_font', $typography_fonts_defaults['grg_typography_site_menu_font']);
+        ?>;
+        font-weight: <?php echo get_theme_mod('grg_typography_site_menu_weight', $typography_defaults['grg_typography_site_menu_weight']);
+        ?>;
+        font-size: <?php echo get_theme_mod('grg_typography_site_menu_size', $typography_defaults['grg_typography_site_menu_size']);
+        ?>px;
+        text-transform: <?php echo get_theme_mod('grg_typography_site_menu_transform', $typography_defaults['grg_typography_site_menu_transform']);
+        ?>;
+    }
+
+    .read-btn {
+        font-family: <?php echo get_theme_mod('grg_typography_button_font', $typography_fonts_defaults['grg_typography_button_font']);
+        ?>;
+        font-weight: <?php echo get_theme_mod('grg_typography_button_weight', $typography_defaults['grg_typography_button_weight']);
+        ?>;
+        font-size: <?php echo get_theme_mod('grg_typography_button_size', $typography_defaults['grg_typography_button_size']);
+        ?>px;
+        text-transform: <?php echo get_theme_mod('grg_typography_button_transform', $typography_defaults['grg_typography_button_transform']);
+        ?>;
+    }
+
+    h1 {
+        font-family: <?php echo get_theme_mod('grg_typography_h1_font', $typography_fonts_defaults['grg_typography_h1_font']);
+        ?>;
+        font-weight: <?php echo get_theme_mod('grg_typography_h1_weight', $typography_defaults['grg_typography_h1_weight']);
+        ?>;
+        text-transform: <?php echo get_theme_mod('grg_typography_h1_transform', $typography_defaults['grg_typography_h1_transform']);
+        ?>;
+        font-size: <?php echo get_theme_mod('grg_typography_h1_size', $typography_defaults['grg_typography_h1_size']);
         ?>px;
     }
 
-    .navbar .title h2 {
-        text-transform: <?php echo get_theme_mod('grg_typography_site_desc_transform', $typography_defaults['grg_typography_site_desc_transform']);
+    h2 {
+        font-family: <?php echo get_theme_mod('grg_typography_h2_font', $typography_fonts_defaults['grg_typography_h2_font']);
         ?>;
+        font-weight: <?php echo get_theme_mod('grg_typography_h2_weight', $typography_defaults['grg_typography_h2_weight']);
+        ?>;
+        text-transform: <?php echo get_theme_mod('grg_typography_h2_transform', $typography_defaults['grg_typography_h2_transform']);
+        ?>;
+        font-size: <?php echo get_theme_mod('grg_typography_h2_size', $typography_defaults['grg_typography_h2_size']);
+        ?>px;
+    }
+
+    h3 {
+        font-family: <?php echo get_theme_mod('grg_typography_h3_font', $typography_fonts_defaults['grg_typography_h3_font']);
+        ?>;
+        font-weight: <?php echo get_theme_mod('grg_typography_h3_weight', $typography_defaults['grg_typography_h3_weight']);
+        ?>;
+        text-transform: <?php echo get_theme_mod('grg_typography_h3_transform', $typography_defaults['grg_typography_h3_transform']);
+        ?>;
+        font-size: <?php echo get_theme_mod('grg_typography_h3_size', $typography_defaults['grg_typography_h3_size']);
+        ?>px;
+    }
+
+    h4 {
+        font-family: <?php echo get_theme_mod('grg_typography_h4_font', $typography_fonts_defaults['grg_typography_h4_font']);
+        ?>;
+        font-weight: <?php echo get_theme_mod('grg_typography_h4_weight', $typography_defaults['grg_typography_h4_weight']);
+        ?>;
+        text-transform: <?php echo get_theme_mod('grg_typography_h4_transform', $typography_defaults['grg_typography_h4_transform']);
+        ?>;
+        font-size: <?php echo get_theme_mod('grg_typography_h4_size', $typography_defaults['grg_typography_h4_size']);
+        ?>px;
+    }
+
+    h5 {
+        font-family: <?php echo get_theme_mod('grg_typography_h5_font', $typography_fonts_defaults['grg_typography_h5_font']);
+        ?>;
+        font-weight: <?php echo get_theme_mod('grg_typography_h5_weight', $typography_defaults['grg_typography_h5_weight']);
+        ?>;
+        text-transform: <?php echo get_theme_mod('grg_typography_h5_transform', $typography_defaults['grg_typography_h5_transform']);
+        ?>;
+        font-size: <?php echo get_theme_mod('grg_typography_h5_size', $typography_defaults['grg_typography_h5_size']);
+        ?>px;
+    }
+
+    h6 {
+        font-family: <?php echo get_theme_mod('grg_typography_h6_font', $typography_fonts_defaults['grg_typography_h6_font']);
+        ?>;
+        font-weight: <?php echo get_theme_mod('grg_typography_h6_weight', $typography_defaults['grg_typography_h6_weight']);
+        ?>;
+        text-transform: <?php echo get_theme_mod('grg_typography_h6_transform', $typography_defaults['grg_typography_h6_transform']);
+        ?>;
+        font-size: <?php echo get_theme_mod('grg_typography_h6_size', $typography_defaults['grg_typography_h6_size']);
+        ?>px;
+    }
+
+    .footer {
+        font-family: <?php echo get_theme_mod('grg_typography_footer_font', $typography_fonts_defaults['grg_typography_footer_font']);
+        ?>;
+        font-weight: <?php echo get_theme_mod('grg_typography_footer_weight', $typography_defaults['grg_typography_footer_weight']);
+        ?>;
+        text-transform: <?php echo get_theme_mod('grg_typography_footer_transform', $typography_defaults['grg_typography_footer_transform']);
+        ?>;
+        font-size: <?php echo get_theme_mod('grg_typography_footer_size', $typography_defaults['grg_typography_footer_size']);
+        ?>px;
     }
 
     <?php
@@ -657,9 +735,6 @@ else {
     main p {
         font-weight: <?php echo $typography_defaults['grg_typography_body_weight'];
         ?>px;
-    }
-
-    main p {
         font-size: <?php echo $typography_defaults['grg_typography_body_font_size'];
         ?>;
     }
@@ -672,20 +747,10 @@ else {
     .navbar .title h1 {
         font-family: <?php echo $typography_fonts_defaults['grg_typography_site_title_font'];
         ?>;
-    }
-
-    .navbar .title h1 {
         font-weight: <?php echo $typography_defaults['grg_typography_site_title_weight'];
         ?>;
-    }
-
-    .navbar .title h1 {
         font-size: <?php echo $typography_defaults['grg_typography_site_title_size'];
         ?>px;
-    }
-
-
-    .navbar .title h1 {
         text-transform: <?php echo $typography_defaults['grg_typography_site_title_transform'];
         ?>;
     }
@@ -693,22 +758,111 @@ else {
     .navbar .title h2 {
         font-family: <?php echo $typography_fonts_defaults['grg_typography_site_desc_font'];
         ?>;
-    }
-
-    .navbar .title h2 {
         font-weight: <?php echo $typography_defaults['grg_typography_site_desc_weight'];
+        ?>;
+        font-size: <?php echo $typography_defaults['grg_typography_site_desc_size'];
+        ?>px;
+        text-transform: <?php echo $typography_defaults['grg_typography_site_desc_transform'];
         ?>;
     }
 
-    .navbar .title h2 {
-        font-size: <?php echo $typography_defaults['grg_typography_site_desc_size'];
+    .navbar .menu-container .menu {
+        font-family: <?php echo $typography_fonts_defaults['grg_typography_site_menu_font'];
+        ?>;
+        font-weight: <?php echo $typography_defaults['grg_typography_site_menu_weight'];
+        ?>;
+        font-size: <?php echo $typography_defaults['grg_typography_site_menu_size'];
+        ?>px;
+        text-transform: <?php echo $typography_defaults['grg_typography_site_menu_transform'];
+        ?>;
+    }
+
+    .read-btn {
+        font-family: <?php echo $typography_defaults['grg_typography_button_font'];
+        ?>;
+        font-weight: <?php echo $typography_defaults['grg_typography_button_weight'];
+        ?>;
+        font-size: <?php echo $typography_defaults['grg_typography_button_size'];
+        ?>px;
+        text-transform: <?php echo $typography_defaults['grg_typography_button_transform'];
+        ?>;
+    }
+
+    h1 {
+        font-family: <?php echo $typography_defaults['grg_typography_h1_font'];
+        ?>;
+        font-weight: <?php echo $typography_defaults['grg_typography_h1_weight'];
+        ?>;
+        text-transform: <?php echo $typography_defaults['grg_typography_h1_transform'];
+        ?>;
+        font-size: <?php echo $typography_defaults['grg_typography_h1_size'];
         ?>px;
     }
 
-
-    .navbar .title h2 {
-        text-transform: <?php echo $typography_defaults['grg_typography_site_desc_transform'];
+    h2 {
+        font-family: <?php echo $typography_defaults['grg_typography_h2_font'];
         ?>;
+        font-weight: <?php echo $typography_defaults['grg_typography_h2_weight'];
+        ?>;
+        text-transform: <?php echo $typography_defaults['grg_typography_h2_transform'];
+        ?>;
+        font-size: <?php echo $typography_defaults['grg_typography_h2_size'];
+        ?>px;
+    }
+
+    h3 {
+        font-family: <?php echo $typography_defaults['grg_typography_h3_font'];
+        ?>;
+        font-weight: <?php echo $typography_defaults['grg_typography_h3_weight'];
+        ?>;
+        text-transform: <?php echo $typography_defaults['grg_typography_h3_transform'];
+        ?>;
+        font-size: <?php echo $typography_defaults['grg_typography_h3_size'];
+        ?>px;
+    }
+
+    h4 {
+        font-family: <?php echo $typography_defaults['grg_typography_h4_font'];
+        ?>;
+        font-weight: <?php echo $typography_defaults['grg_typography_h4_weight'];
+        ?>;
+        text-transform: <?php echo $typography_defaults['grg_typography_h4_transform'];
+        ?>;
+        font-size: <?php echo $typography_defaults['grg_typography_h4_size'];
+        ?>px;
+    }
+
+    h5 {
+        font-family: <?php echo $typography_defaults['grg_typography_h5_font'];
+        ?>;
+        font-weight: <?php echo $typography_defaults['grg_typography_h5_weight'];
+        ?>;
+        text-transform: <?php echo $typography_defaults['grg_typography_h5_transform'];
+        ?>;
+        font-size: <?php echo $typography_defaults['grg_typography_h5_size'];
+        ?>px;
+    }
+
+    h6 {
+        font-family: <?php echo $typography_defaults['grg_typography_h6_font'];
+        ?>;
+        font-weight: <?php echo $typography_defaults['grg_typography_h6_weight'];
+        ?>;
+        text-transform: <?php echo $typography_defaults['grg_typography_h6_transform'];
+        ?>;
+        font-size: <?php echo $typography_defaults['grg_typography_h6_size'];
+        ?>px;
+    }
+
+    .footer {
+        font-family: <?php echo $typography_defaults['grg_typography_footer_font'];
+        ?>;
+        font-weight: <?php echo $typography_defaults['grg_typography_footer_weight'];
+        ?>;
+        text-transform: <?php echo $typography_defaults['grg_typography_footer_transform'];
+        ?>;
+        font-size: <?php echo $typography_defaults['grg_typography_footer_size'];
+        ?>px;
     }
 
     <?php
