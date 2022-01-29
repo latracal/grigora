@@ -934,31 +934,28 @@ else {
 
 ?><?php if($scroll_flag) {
     ?>.to-top {
-        border: <?php echo get_theme_mod('grg_scrollborder', $scroll_defaults['grg_scrollborder']) ?>px solid #aaaaaa;
+        border-radius: <?php echo get_theme_mod('grg_scrollborder', $scroll_defaults['grg_scrollborder']);
+        ?>px;
     }
 
-    <?php if(get_theme_mod('grg_scroll-position', $scroll_defaults['grg_scroll-position'])=="2") {
+    <?php if(get_theme_mod('grg_scroll-position', $scroll_defaults['grg_scroll-position'])=='2') {
         ?>.to-top {
-            left: <?php echo get_theme_mod('grg_scroll-position', $scroll_defaults['grg_scroll-position']) ?>rem;
-            <?php
-        }
-
-        else {
-            ?>.to-top {
-                right: 2rem;
-            }
+            left: <?php echo get_theme_mod('grg_scroll-position', $scroll_defaults['grg_scroll-position']);
+            ?>rem;
         }
 
         <?php
     }
 
-    ?>.arrow {
-        border-width: 0 <?php echo get_theme_mod('grg_scrolliconsize', $scroll_defaults['grg_scrolliconsize']) ?>px <?php echo get_theme_mod('grg_scrolliconsize', $scroll_defaults['grg_scrolliconsize']) ?>px 0 !important;
+    else {
+        ?>.to-top {
+            right: 2rem;
+        }
 
-        padding: <?php echo get_theme_mod('grg_scrolliconsize', $scroll_defaults['grg_scrolliconsize']) ?>px !important;
+        <?php
     }
 
-    <?php if(get_theme_mod('grg_scroll-display', $scroll_defaults['grg_scroll-display'])=="mobile") {
+    ?><?php if(get_theme_mod('grg_scroll-display', $scroll_defaults['grg_scroll-display'])=='mobile') {
         ?>@media(min-width:768px) {
             .to-top {
                 display: none !important;
@@ -968,8 +965,7 @@ else {
         <?php
     }
 
-    else if(get_theme_mod('grg_scroll-display', $scroll_defaults['grg_scroll-display'])=="display") {
-
+    elseif(get_theme_mod('grg_scroll-display', $scroll_defaults['grg_scroll-display'])=='display') {
         ?>@media(max-width:768px) {
             .to-top {
                 display: none !important;
@@ -980,48 +976,49 @@ else {
     }
 
     else {
-
         ?>.to-top {
+
             display: block !important;
         }
 
         <?php
     }
 
-    ?><?php
+    ?>.arrow {
+        border-width: 0 <?php echo get_theme_mod('grg_scrolliconsize', $scroll_defaults['grg_scrolliconsize']);
+        ?>px <?php echo get_theme_mod('grg_scrolliconsize', $scroll_defaults['grg_scrolliconsize']);
+        ?>px 0 !important;
+        padding: <?php echo get_theme_mod('grg_scrolliconsize', $scroll_defaults['grg_scrolliconsize']);
+        ?>px !important;
+    }
+
+    <?php
 }
 
 else {
     ?>.to-top {
-        border: <?php echo $scroll_defaults['grg_scrollborder'];
-        ?>px solid #aaaaaa;
+        border-radius: <?php echo $scroll_defaults['grg_scrollborder'];
+        ?>px;
     }
 
-    <?php if(get_theme_mod('grg_scroll-position', $scroll_defaults['grg_scroll-position'])=="2") {
+    <?php if(get_theme_mod('grg_scroll-position', $scroll_defaults['grg_scroll-position'])=='2') {
         ?>.to-top {
             left: <?php echo $scroll_defaults['grg_scroll-position'];
             ?>rem;
-            <?php
-        }
-
-        else {
-            ?>.to-top {
-                right: 2rem;
-            }
         }
 
         <?php
     }
 
-    ?>.arrow {
-        border-width: 0 <?php echo $scroll_defaults['grg_scrolliconsize'];
-        ?>px <?php echo $scroll_defaults['grg_scrolliconsize'];
-        ?>px 0 !important;
-        padding: <?php echo $scroll_defaults['grg_scrolliconsize'];
-        ?>px !important;
+    else {
+        ?>.to-top {
+            right: 2rem;
+        }
+
+        <?php
     }
 
-    <?php if(get_theme_mod('grg_scroll-display', $scroll_defaults['grg_scroll-display'])=="mobile") {
+    ?><?php if(get_theme_mod('grg_scroll-display', $scroll_defaults['grg_scroll-display'])=='mobile') {
         ?>@media(min-width:768px) {
             .to-top {
                 display: none !important;
@@ -1031,8 +1028,7 @@ else {
         <?php
     }
 
-    else if(get_theme_mod('grg_scroll-display', $scroll_defaults['grg_scroll-display'])=="display") {
-
+    elseif(get_theme_mod('grg_scroll-display', $scroll_defaults['grg_scroll-display'])=='display') {
         ?>@media(max-width:768px) {
             .to-top {
                 display: none !important;
@@ -1043,15 +1039,23 @@ else {
     }
 
     else {
-
         ?>.to-top {
+
             display: block !important;
         }
 
         <?php
     }
 
-    ?><?php
+    ?>.arrow {
+        border-width: 0 <?php echo $scroll_defaults['grg_scroll-position'];
+        ?>px <?php echo $scroll_defaults['grg_scroll-position'];
+        ?>px 0 !important;
+        padding: <?php echo $scroll_defaults['grg_scroll-position'];
+        ?>px !important;
+    }
+
+    <?php
 }
 
 ?>
