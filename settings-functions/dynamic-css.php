@@ -210,6 +210,12 @@ function grg_dynamic_customize_css() {
             ?>;
         }
 
+        @media(max-width:768px) {
+            .container {
+                flex-direction: column !important;
+            }
+        }
+
         <?php
     }
 
@@ -515,9 +521,21 @@ else {
         ?>%;
     }
 
+    @media(max-width:768px) {
+        .container aside {
+            width: 100%;
+        }
+    }
+
     .container .article {
         width: calc(100% - <?php echo get_theme_mod('grg_sidebar-width', $spacing_defaults['grg_sidebar-width']);
                 ?>%);
+    }
+
+    @media(max-width:768px) {
+        .container .article {
+            width: 100%;
+        }
     }
 
     .navbar {

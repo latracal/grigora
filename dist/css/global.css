@@ -55,7 +55,8 @@
 
 @media (max-width: 768px) {
   .navbar .title {
-    width: 17rem;
+    width: 100%;
+    padding: 0 3rem;
   }
 }
 
@@ -396,6 +397,7 @@
   list-style: none;
   background-color: #e9e9e9;
   width: 100%;
+  padding: 0.5rem 0;
   gap: 2rem;
 }
 
@@ -405,6 +407,7 @@
 }
 
 .footer .copyrights {
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -420,6 +423,7 @@
           align-items: center;
   background-color: #c4c4c4;
   width: 100%;
+  padding: 0.5rem 0;
 }
 
 .container {

@@ -30,7 +30,8 @@
 		word-break: break-all;
 
 		@media (max-width: 768px) {
-			width: 17rem;
+			width: 100%;
+			padding: 0 3rem;
 		}
 
 		a {
