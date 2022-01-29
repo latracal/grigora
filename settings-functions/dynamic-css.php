@@ -903,12 +903,12 @@ else {
 
 ?><?php if($blog_flag) {
     ?>.post-header {
-        flex-direction: <?php echo get_theme_mod('grg_blog_single_featuredim_loc', $typography_defaults['grg_blog_single_featuredim_loc']);
+        flex-direction: <?php echo get_theme_mod('grg_blog_single_featuredim_loc', $blog_defaults['grg_blog_single_featuredim_loc']);
         ?> !important;
     }
 
     .feature-img {
-        text-align: <?php echo get_theme_mod('grg_blog_single_featuredim_align', $typography_defaults['grg_blog_single_featuredim_align']);
+        text-align: <?php echo get_theme_mod('grg_blog_single_featuredim_align', $blog_defaults['grg_blog_single_featuredim_align']);
         ?>;
     }
 
@@ -917,12 +917,12 @@ else {
 
 else {
     ?>.post-header {
-        flex-direction: <?php echo $typography_defaults['grg_blog_single_featuredim_loc'];
+        flex-direction: <?php echo $blog_defaults['grg_blog_single_featuredim_loc'];
         ?>;
     }
 
     .feature-img {
-        text-align: <?php echo $typography_defaults['grg_blog_single_featuredim_align'];
+        text-align: <?php echo $blog_defaults['grg_blog_single_featuredim_align'];
         ?>;
     }
 
