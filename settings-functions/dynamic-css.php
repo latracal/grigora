@@ -7,6 +7,9 @@ function grg_dynamic_customize_css() {
 
     $spacing_defaults = grigora_spacing_defaults();
     $spacing_flag = grigora_get_option("spacing");
+  
+    $typography_defaults = grigora_typography_defaults();
+    $typography_flag = grigora_get_option("typography");
     
     ?>
 <style type="text/css">
@@ -436,12 +439,8 @@ else {
     <?php
 }
 
-?>
-<?php if($spacing_flag) {
-    ?>
-    /*Spacing and Layout*/
-
-    <?php if(get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment'])=='row') {
+?><?php if($spacing_flag) {
+    ?><?php if(get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment'])=='row') {
         ?>.container {
             flex-direction: <?php echo get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment']);
             ?>;
@@ -580,6 +579,34 @@ else {
     .navbar {
         height: <?php echo $spacing_defaults['grg_header-height'];
         ?>%;
+    }
+
+    <?php
+}
+
+?><?php if($typography_flag) {
+    ?>main {
+        font-family: <?php echo get_theme_mod('grg_typography_body_font', $typography_defaults['grg_typography_body_font']);
+        ?>;
+    }
+
+    main {
+        font-weight: <?php echo get_theme_mod('grg_typography_body_weight', $typography_defaults['grg_typography_body_weight']);
+        ?>;
+    }
+
+    <?php
+}
+
+else {
+    ?>main {
+        font-family: <?php echo $typography_defaults['grg_typography_body_font'];
+        ?>;
+    }
+
+    main {
+        font-weight: <?php echo $typography_defaults['grg_typography_body_weight'];
+        ?>;
     }
 
     <?php
