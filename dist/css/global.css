@@ -50,6 +50,13 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 10px 0;
+  word-break: break-all;
+}
+
+@media (max-width: 768px) {
+  .navbar .title {
+    width: 17rem;
+  }
 }
 
 .navbar .title a {

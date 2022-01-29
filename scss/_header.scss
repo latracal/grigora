@@ -27,6 +27,11 @@
 		flex-direction: column;
 		align-items: center;
 		padding: 10px 0;
+		word-break: break-all;
+
+		@media (max-width: 768px) {
+			width: 17rem;
+		}
 
 		a {
 			color: #000;
