@@ -233,9 +233,8 @@ function grg_dynamic_customize_css() {
         ?>px;
 
     }
-}
 
-<?php
+    <?php
 }
 
 else {
@@ -525,9 +524,9 @@ else {
         height: <?php echo get_theme_mod('grg_header-height', $spacing_defaults['grg_header-height']);
         ?>px;
     }
-}
 
-<?php
+
+    <?php
 }
 
 else {
@@ -606,6 +605,46 @@ else {
         ?>;
     }
 
+    .navbar .title h1 {
+        font-family: <?php echo get_theme_mod('grg_typography_site_title_font', $typography_fonts_defaults['grg_typography_site_title_font']);
+        ?>;
+    }
+
+    .navbar .title h1 {
+        font-weight: <?php echo get_theme_mod('grg_typography_site_title_weight', $typography_defaults['grg_typography_site_title_weight']);
+        ?>;
+    }
+
+    .navbar .title h1 {
+        font-size: <?php echo get_theme_mod('grg_typography_site_title_size', $typography_defaults['grg_typography_site_title_size']);
+        ?>px;
+    }
+
+    .navbar .title h1 {
+        text-transform: <?php echo get_theme_mod('grg_typography_site_title_transform', $typography_defaults['grg_typography_site_title_transform']);
+        ?>;
+    }
+
+    .navbar .title h2 {
+        font-family: <?php echo get_theme_mod('grg_typography_site_desc_font', $typography_fonts_defaults['grg_typography_site_desc_font']);
+        ?>;
+    }
+
+    .navbar .title h2 {
+        font-weight: <?php echo get_theme_mod('grg_typography_site_desc_weight', $typography_defaults['grg_typography_site_desc_weight']);
+        ?>;
+    }
+
+    .navbar .title h2 {
+        font-size: <?php echo get_theme_mod('grg_typography_site_desc_size', $typography_defaults['grg_typography_site_desc_size']);
+        ?>px;
+    }
+
+    .navbar .title h2 {
+        text-transform: <?php echo get_theme_mod('grg_typography_site_desc_transform', $typography_defaults['grg_typography_site_desc_transform']);
+        ?>;
+    }
+
     <?php
 }
 
@@ -630,6 +669,48 @@ else {
         ?>;
     }
 
+    .navbar .title h1 {
+        font-family: <?php echo $typography_fonts_defaults['grg_typography_site_title_font'];
+        ?>;
+    }
+
+    .navbar .title h1 {
+        font-weight: <?php echo $typography_defaults['grg_typography_site_title_weight'];
+        ?>;
+    }
+
+    .navbar .title h1 {
+        font-size: <?php echo $typography_defaults['grg_typography_site_title_size'];
+        ?>px;
+    }
+
+
+    .navbar .title h1 {
+        text-transform: <?php echo $typography_defaults['grg_typography_site_title_transform'];
+        ?>;
+    }
+
+    .navbar .title h2 {
+        font-family: <?php echo $typography_fonts_defaults['grg_typography_site_desc_font'];
+        ?>;
+    }
+
+    .navbar .title h2 {
+        font-weight: <?php echo $typography_defaults['grg_typography_site_desc_weight'];
+        ?>;
+    }
+
+    .navbar .title h2 {
+        font-size: <?php echo $typography_defaults['grg_typography_site_desc_size'];
+        ?>px;
+    }
+
+
+    .navbar .title h2 {
+        text-transform: <?php echo $typography_defaults['grg_typography_site_desc_transform'];
+        ?>;
+    }
+
     <?php
 }
 
@@ -637,5 +718,5 @@ else {
 </style>
 <?php
 } 
-
 add_action( 'wp_head', 'grg_dynamic_customize_css' );
+?>

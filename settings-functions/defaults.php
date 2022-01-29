@@ -91,7 +91,7 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 		return array(
 			"grg_typography_body_font" => "Open Sans",
 			"grg_typography_site_title_font" => "Open Sans",
-			"grg_typography_site_title_font" => "Open Sans",
+			// "grg_typography_site_title_font" => "Open Sans",
 			"grg_typography_site_desc_font" => "Open Sans",
 			"grg_typography_site_menu_font" => "Open Sans",
 			"grg_typography_button_font" => "Open Sans",
