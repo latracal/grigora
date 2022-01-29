@@ -611,7 +611,9 @@
   display: flex;
 }
 
-.container .article .post-container .post .post-desc .meta h5 {
+.container .article .post-container .post .post-desc .meta span {
+  font-size: 13px;
+  font-weight: 700;
   margin-bottom: 1rem;
 }
 
