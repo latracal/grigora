@@ -80,9 +80,9 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 
 	function grigora_scroll_defaults() {
 		return array(
-			'grg_scrollborder' => 0,
-			'grg_scrolliconsize' => 15,
-			'grg_scroll-position' => 'right',
+			'grg_scrollborder' => '0',
+			'grg_scrolliconsize' => '3',
+			'grg_scroll-position' => 'left',
 			'grg_scroll-display' => 'both'
 		);
 	}
