@@ -2,7 +2,6 @@
 
 <?php if ( have_posts() ) : ?>
 
-<!-- Start of the main loop. -->
 <?php while ( have_posts() ) : the_post(); ?>
 
 <div class="container">
@@ -36,7 +35,7 @@
                                
             }
 
-            ?> on
+            ?><?php if(get_theme_mod( 'grg_blog_single_date_display' ) && get_theme_mod( 'grg_blog_single_author_display' )){ ?> on <?php } ?>
                     <?php } ?>
                     <?php if( get_theme_mod( 'grg_blog_single_date_display' ) ) { ?>
                     <?php echo get_the_date(); ?>
