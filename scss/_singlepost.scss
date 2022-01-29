@@ -25,6 +25,16 @@
 		}
 	}
 
+	.post-header {
+		display: flex;
+		flex-direction: column;
+
+		.top {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
 	img {
 		width: 100%;
 		height: auto;
@@ -279,6 +289,7 @@
 	align-items: center;
 	width: 100%;
 	padding: 1rem 0;
+	margin-bottom: 1rem;
 	border-top: 1px solid #aaaaaa;
 	border-bottom: 1px solid #aaaaaa;
 
@@ -330,7 +341,7 @@
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 1rem;
-	padding: 3rem 0;
+	padding: 2rem 0 3rem 0;
 	margin-bottom: 3rem;
 	border-bottom: 1px solid #aaaaaa;
 

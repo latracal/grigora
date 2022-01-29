@@ -12,6 +12,9 @@ function grg_dynamic_customize_css() {
     $typography_fonts_defaults = grigora_typography_defaults_fonts();
     $typography_flag = grigora_get_option("typography");    
     
+    $blog_defaults = grigora_blog_defaults();
+    $blog_flag = grigora_get_option("blog");
+
     ?>
 <style type="text/css">
 <?php if($colors_flag) {
@@ -893,6 +896,24 @@ else {
         ?>;
         font-size: <?php echo $typography_defaults['grg_typography_footer_size'];
         ?>px;
+    }
+
+    <?php
+}
+
+?><?php if($blog_flag) {
+    ?>.post-header {
+        flex-direction: <?php echo get_theme_mod('grg_blog_single_featuredim_loc', $typography_fonts_defaults['grg_blog_single_featuredim_loc']);
+        ?> !important;
+    }
+
+    <?php
+}
+
+else {
+    ?>.post-header {
+        flex-direction: <?php echo $typography_defaults['grg_blog_single_featuredim_loc'];
+        ?>;
     }
 
     <?php
