@@ -17,6 +17,7 @@ if ( ! function_exists( 'grigora_get_defaults' ) ) {
 				'emoji' => 0,
 				'embeds' => 0,
 				'xmlrpc' => 0,
+				'jquerymigrate' => 0,
 				'jquery' => 0,
 				'dashicons' => 0,
 				'hidewpversion' => 0,
@@ -130,6 +131,27 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 			"grg_typography_h6_size" => "20",
 			"grg_typography_footer_weight" => "500",
 			"grg_typography_footer_size" => "18",
+		);
+	}
+
+	function grigora_blog_defaults(){
+		return array(
+			"grg_blog_archive_excerpt_words" => 55,
+			"grg_blog_archive_read_more_display" => 1,
+			"grg_blog_archive_read_more" => "Read More",
+			"grg_blog_archive_date_display" => 1,
+			"grg_blog_archive_author_display" => 1,
+			"grg_blog_archive_image_display" => 1,
+			"grg_blog_single_author_display" => 1,
+			"grg_blog_single_date_display" => 1,
+			"grg_blog_single_social_share" => 1,
+			"grg_blog_single_category" => 1,
+			"grg_blog_single_tag" => 1,
+			"grg_blog_single_author_box" => 1,
+			"grg_blog_single_related_posts" => 1,
+			"grg_blog_single_postnav" => 1,
+			"grg_blog_single_featuredim_loc" => "Below Title",
+			"grg_blog_single_featuredim_align" => "Center",
 		);
 	}
 }

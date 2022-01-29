@@ -197,6 +197,26 @@ function grigora_set_default_typography(){
     }
 }
 
+function grigora_set_default_blog(){
+    if (!grigora_get_option("blogdefaultsset")){
+        $defaults = grigora_blog_defaults();
+        $mods = get_theme_mods();
+
+        foreach($defaults as $k => $value){
+            if(!$mods[$k]){
+                set_theme_mod($k, $value);
+            }
+        }
+
+        $my_options = get_option('grigora_settings');
+        if(!$my_options){
+            $my_options = array();
+        }
+        $my_options['blogdefaultsset'] = 1;
+        update_option('grigora_settings', $my_options);
+    }
+}
+
 function grigora_customize_settings_section() {
     
     grigora_set_default_colors();
@@ -204,6 +224,7 @@ function grigora_customize_settings_section() {
     grigora_set_default_scroll();
     grigora_set_default_typography_font();
     grigora_set_default_typography();
+    grigora_set_default_blog();
 
  	add_settings_section(
 		'grigora_customizer_section',

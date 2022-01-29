@@ -15,7 +15,7 @@
             if ( ! empty( $categories ) ) {
             echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
             }
-        ?>><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a>
+        ?>> <?php the_title(); ?>
         </div>
         <h1 class="post-title"><?php the_title(); ?></h1>
         <span class="post-meta">Published by
