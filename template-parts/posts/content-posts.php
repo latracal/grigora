@@ -25,9 +25,7 @@
             }
             ?>
         </div>
-        <p><?php if(get_theme_mod('grg_blog_archive_excerpt_words')){
-            echo get_the_excerpt();
-        } ?></p>
+        <p><?php echo get_the_excerpt(); ?></p>
         <?php
         if( get_theme_mod( 'grg_blog_archive_read_more_display' ) ){?>
         <a href="<?php echo get_permalink(); ?>"
