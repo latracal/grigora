@@ -600,7 +600,7 @@ else {
 
     .navbar {
         min-height: <?php echo $spacing_defaults['grg_header-height'];
-        ?>%;
+        ?>px;
     }
 
     <?php
