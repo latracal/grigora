@@ -1,4 +1,3 @@
-<div class="grigora-body">
 <?php get_header(); ?>
 
 <?php
@@ -16,4 +15,3 @@
 ?>
 
 <?php get_footer(); ?>
-</div>
