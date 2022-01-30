@@ -467,8 +467,8 @@ else {
 
         }
 
-        .container .article {
-            border-right: none;
+        .container .post-content {
+            border-right: 0;
             border-left: 1px solid #aaaaaa;
         }
 
@@ -476,7 +476,7 @@ else {
     }
 
     else {
-        ?>.container .article {
+        ?>.container .post-content {
             width: 100%;
             border-right: <?php echo get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment']);
             ?>;
@@ -529,11 +529,6 @@ else {
         .container aside {
             width: 100%;
         }
-    }
-
-    .container .article {
-        width: calc(100% - <?php echo get_theme_mod('grg_sidebar-width', $spacing_defaults['grg_sidebar-width']);
-                ?>%);
     }
 
     @media(max-width:768px) {
@@ -591,11 +586,6 @@ else {
     .container aside {
         width: <?php echo $spacing_defaults['grg_sidebar-width'];
         ?>%;
-    }
-
-    .container .article {
-        width: calc(100% - <?php echo $spacing_defaults['grg_sidebar-width'];
-                ?>%);
     }
 
     .navbar {
