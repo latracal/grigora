@@ -93,23 +93,26 @@ function toggleSubMenu(event) {
 }
 
 var totop = document.getElementById('totop');
-
-window.onscroll = function () {
-	scrollFunction();
-};
-
-function scrollFunction() {
-	if (
-		document.body.scrollTop > 150 ||
-		document.documentElement.scrollTop > 150
-	) {
-		totop.style.display = 'block';
-	} else {
-		totop.style.display = 'none';
+if(totop){
+	function scrollFunction() {
+		if (
+			document.body.scrollTop > 150 ||
+			document.documentElement.scrollTop > 150
+		) {
+			totop.style.display = 'block';
+		} else {
+			totop.style.display = 'none';
+		}
 	}
+
+	scrollFunction();
+
+	window.onscroll = function () {
+		scrollFunction();
+	};
 }
 
-function topFunction() {
-	document.body.scrollTop = 0;
-	document.documentElement.scrollTop = 0;
-}
+
+
+
+

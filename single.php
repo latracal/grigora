@@ -1,9 +1,10 @@
-<?php get_header(); ?>
+
 
 <?php if ( have_posts() ) : ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
-
+<div class="grigora-body">
+<?php get_header(); ?>
 <div class="container">
 
     <section class="post-content">
@@ -170,3 +171,4 @@
 <?php endif; ?>
 
 <?php get_footer( ); ?>
+        </div>

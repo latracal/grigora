@@ -202,10 +202,9 @@ function grg_dynamic_customize_css() {
         ?>;
     }
 
-    .to-top .arrow {
-        border: solid <?php echo get_theme_mod('grg_scroll_icon_colors', $defaults['grg_scroll_icon_colors']);
+    .to-top .up-arrow {
+        fill: <?php echo get_theme_mod('grg_scroll_icon_colors', $defaults['grg_scroll_icon_colors']);
         ?>;
-        border-width: 0 3px 3px 0;
     }
 
     /*Spacing and Layout*/
@@ -431,10 +430,9 @@ else {
         ?>;
     }
 
-    .to-top .arrow {
-        border: solid <?php echo $defaults['grg_scroll_icon_colors'];
+    .to-top .up-arrow {
+        fill: <?php echo $defaults['grg_scroll_icon_colors'];
         ?>;
-        border-width: 0 3px 3px 0;
     }
 
     .container {
@@ -545,7 +543,7 @@ else {
     }
 
     .navbar {
-        height: <?php echo get_theme_mod('grg_header-height', $spacing_defaults['grg_header-height']);
+        min-height: <?php echo get_theme_mod('grg_header-height', $spacing_defaults['grg_header-height']);
         ?>px;
     }
 
@@ -601,7 +599,7 @@ else {
     }
 
     .navbar {
-        height: <?php echo $spacing_defaults['grg_header-height'];
+        min-height: <?php echo $spacing_defaults['grg_header-height'];
         ?>%;
     }
 
@@ -978,19 +976,13 @@ else {
     else {
         ?>.to-top {
 
-            display: block !important;
+            display: block;
         }
 
         <?php
     }
 
-    ?>.arrow {
-        border-width: 0 <?php echo get_theme_mod('grg_scrolliconsize', $scroll_defaults['grg_scrolliconsize']);
-        ?>px <?php echo get_theme_mod('grg_scrolliconsize', $scroll_defaults['grg_scrolliconsize']);
-        ?>px 0 !important;
-        padding: <?php echo get_theme_mod('grg_scrolliconsize', $scroll_defaults['grg_scrolliconsize']);
-        ?>px !important;
-    }
+    ?>
 
     <?php
 }
@@ -1041,19 +1033,13 @@ else {
     else {
         ?>.to-top {
 
-            display: block !important;
+            display: block;
         }
 
         <?php
     }
 
-    ?>.arrow {
-        border-width: 0 <?php echo $scroll_defaults['grg_scroll-position'];
-        ?>px <?php echo $scroll_defaults['grg_scroll-position'];
-        ?>px 0 !important;
-        padding: <?php echo $scroll_defaults['grg_scroll-position'];
-        ?>px !important;
-    }
+    ?>
 
     <?php
 }
