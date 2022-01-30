@@ -90,6 +90,8 @@
   -ms-flex-align: center;
   align-items: center;
   padding: 10px 0;
+  flex: 1;
+  justify-content: center;
 }
 
 .navbar .logo img {
