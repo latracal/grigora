@@ -89,19 +89,18 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 
 	function grigora_typography_defaults_fonts() {
 		return array(
-			"grg_typography_body_font" => "Open Sans",
-			"grg_typography_site_title_font" => "Open Sans",
-			// "grg_typography_site_title_font" => "Open Sans",
-			"grg_typography_site_desc_font" => "Open Sans",
-			"grg_typography_site_menu_font" => "Open Sans",
-			"grg_typography_button_font" => "Open Sans",
-			"grg_typography_h1_font" => "Open Sans",
-			"grg_typography_h2_font" => "Open Sans",
-			"grg_typography_h3_font" => "Open Sans",
-			"grg_typography_h4_font" => "Open Sans",
-			"grg_typography_h5_font" => "Open Sans",
-			"grg_typography_h6_font" => "Open Sans",
-			"grg_typography_footer_font" => "Open Sans",
+			"grg_typography_body_font" => "Verdana",
+			"grg_typography_site_title_font" => "Arial",
+			"grg_typography_site_desc_font" => "Arial",
+			"grg_typography_site_menu_font" => "Verdana",
+			"grg_typography_button_font" => "Verdana",
+			"grg_typography_h1_font" => "Arial",
+			"grg_typography_h2_font" => "Arial",
+			"grg_typography_h3_font" => "Arial",
+			"grg_typography_h4_font" => "Arial",
+			"grg_typography_h5_font" => "Arial",
+			"grg_typography_h6_font" => "Arial",
+			"grg_typography_footer_font" => "Verdana",
 		);
 	}
 

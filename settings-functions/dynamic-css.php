@@ -796,7 +796,7 @@ else {
     }
 
     .read-btn {
-        font-family: <?php echo $typography_defaults['grg_typography_button_font'];
+        font-family: <?php echo $typography_fonts_defaults['grg_typography_button_font'];
         ?>;
         font-weight: <?php echo $typography_defaults['grg_typography_button_weight'];
         ?>;
@@ -808,7 +808,7 @@ else {
 
     .post-content h1,
     aside h1 {
-        font-family: <?php echo $typography_defaults['grg_typography_h1_font'];
+        font-family: <?php echo $typography_fonts_defaults['grg_typography_h1_font'];
         ?>;
         font-weight: <?php echo $typography_defaults['grg_typography_h1_weight'];
         ?>;
@@ -820,7 +820,7 @@ else {
 
     .post-content h2,
     aside h2 {
-        font-family: <?php echo $typography_defaults['grg_typography_h2_font'];
+        font-family: <?php echo $typography_fonts_defaults['grg_typography_h2_font'];
         ?>;
         font-weight: <?php echo $typography_defaults['grg_typography_h2_weight'];
         ?>;
@@ -832,7 +832,7 @@ else {
 
     .post-content h3,
     aside h3 {
-        font-family: <?php echo $typography_defaults['grg_typography_h3_font'];
+        font-family: <?php echo $typography_fonts_defaults['grg_typography_h3_font'];
         ?>;
         font-weight: <?php echo $typography_defaults['grg_typography_h3_weight'];
         ?>;
@@ -844,7 +844,7 @@ else {
 
     .post-content h4,
     aside h4 {
-        font-family: <?php echo $typography_defaults['grg_typography_h4_font'];
+        font-family: <?php echo $typography_fonts_defaults['grg_typography_h4_font'];
         ?>;
         font-weight: <?php echo $typography_defaults['grg_typography_h4_weight'];
         ?>;
@@ -856,7 +856,7 @@ else {
 
     .post-content h5,
     aside h5 {
-        font-family: <?php echo $typography_defaults['grg_typography_h5_font'];
+        font-family: <?php echo $typography_fonts_defaults['grg_typography_h5_font'];
         ?>;
         font-weight: <?php echo $typography_defaults['grg_typography_h5_weight'];
         ?>;
@@ -868,7 +868,7 @@ else {
 
     .post-content h6,
     aside h6 {
-        font-family: <?php echo $typography_defaults['grg_typography_h6_font'];
+        font-family: <?php echo $typography_fonts_defaults['grg_typography_h6_font'];
         ?>;
         font-weight: <?php echo $typography_defaults['grg_typography_h6_weight'];
         ?>;
@@ -879,7 +879,7 @@ else {
     }
 
     .footer {
-        font-family: <?php echo $typography_defaults['grg_typography_footer_font'];
+        font-family: <?php echo $typography_fonts_defaults['grg_typography_footer_font'];
         ?>;
         font-weight: <?php echo $typography_defaults['grg_typography_footer_weight'];
         ?>;
