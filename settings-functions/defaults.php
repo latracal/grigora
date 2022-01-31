@@ -83,7 +83,8 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 			'grg_container-top-padding'=> '0',		
 			'grg_container-right-padding'=> '0',		
 			'grg_container-bottom-padding'=> '0',		
-			'grg_container-left-padding'=> '0',		
+			'grg_container-left-padding'=> '0',
+			'grg_footer_text' => 'Copyright © 2022 | [blog_name] | Built with&nbsp;<a href="https://wpgrigora.com/">Grigora</a>'
 		);
 	}
 

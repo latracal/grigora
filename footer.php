@@ -20,7 +20,14 @@
         ?>
 
         <div class="copyrights">
-            Copyright © 2022 | Grigora Theme
+            <?php if(is_grigora_pro_active()){
+                echo do_shortcode(get_theme_mod("grigora_footer_text", grigora_spacing_defaults()['grg_footer_text']));
+            }
+            else { ?>
+                <?php echo do_shortcode('Copyright © 2022 | [blog_name] | Built with&nbsp;<a href="https://wpgrigora.com/">Grigora</a>') ?>
+            <?php }
+            
+            ?>
         </div>
     </div>
 </footer>

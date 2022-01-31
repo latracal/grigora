@@ -121,15 +121,18 @@ function topFunction() {
 const tocToggle = document.querySelector('.toggle-toc');
 const heading = document.querySelector('.heading');
 
-tocToggle.addEventListener('click', function () {
-	if (heading.classList.contains('show-links')) {
-		heading.classList.remove('show-links');
-		document.querySelector('.toggle-toc').innerHTML = 'hide';
-	} else {
-		heading.classList.add('show-links');
-		document.querySelector('.toggle-toc').innerHTML = 'show';
-	}
-});
+if(tocToggle){
+	tocToggle.addEventListener('click', function () {
+		if (heading.classList.contains('show-links')) {
+			heading.classList.remove('show-links');
+			document.querySelector('.toggle-toc').innerHTML = 'hide';
+		} else {
+			heading.classList.add('show-links');
+			document.querySelector('.toggle-toc').innerHTML = 'show';
+		}
+	});
+}
+
 
 /*cookie*/
 const cookieToggle = document.querySelector('.cookie-btn');
