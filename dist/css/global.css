@@ -1595,6 +1595,7 @@ main {
 
 .grigora-table-of-contents .toggle-toc {
   cursor: pointer;
+  color: #0170b9;
 }
 
 .grigora-table-of-contents .heading {
