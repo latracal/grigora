@@ -26,7 +26,7 @@
 }
 
 .navbar .menu-item-has-children a::after {
-  content: "";
+  content: '';
   border: solid #000;
   border-width: 0 2px 2px 0;
   display: inline-block;
@@ -152,6 +152,12 @@
 
 .navbar .menu-container {
   position: relative;
+}
+
+@media (max-width: 768px) {
+  .navbar .menu-container {
+    position: static;
+  }
 }
 
 .navbar .menu-container ul {
@@ -1584,7 +1590,6 @@ main {
 }
 
 .grigora-table-of-contents .grigora-toc-headline {
-  cursor: pointer;
   font-weight: 700;
 }
 
