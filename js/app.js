@@ -112,6 +112,11 @@ if (totop) {
 	};
 }
 
+function topFunction() {
+	document.body.scrollTop = 0;
+	document.documentElement.scrollTop = 0;
+}
+
 /*toc*/
 const tocToggle = document.querySelector('.toggle-toc');
 const heading = document.querySelector('.heading');

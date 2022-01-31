@@ -68,6 +68,7 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 				'grg_colors_toc_links'=> '#0170b9',
 				'grg_colors_toc_links_hover'=> '#0170b9',
 				'grg_colors_toc_links_visited'	=> '#0170b9',	
+				'grg_colors_toc_toggle'	=> '#0170b9',	
 			);
 	}
 
