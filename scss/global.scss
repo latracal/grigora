@@ -98,3 +98,19 @@ main {
 .show-links {
 	display: none;
 }
+
+.cookie {
+	position: fixed;
+	display: flex;
+	flex-direction: row;
+	bottom: 0;
+	padding: 1rem 2rem;
+	background-color: #fff;
+	gap: 1rem;
+
+	.cookie-btn {
+		cursor: pointer;
+		border: none;
+		padding: 1rem;
+	}
+}

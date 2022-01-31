@@ -130,3 +130,11 @@ tocToggle.addEventListener('click', function () {
 		document.querySelector('.toggle-toc').innerHTML = 'show';
 	}
 });
+
+/*cookie*/
+const cookieToggle = document.querySelector('.cookie-btn');
+const notice = document.querySelector('.cookie');
+
+cookieToggle.addEventListener('click', function () {
+	notice.style.display = 'none';
+});

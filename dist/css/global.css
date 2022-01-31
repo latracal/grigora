@@ -1609,4 +1609,25 @@ main {
 .show-links {
   display: none;
 }
+
+.cookie {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  bottom: 0;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  gap: 1rem;
+}
+
+.cookie .cookie-btn {
+  cursor: pointer;
+  border: none;
+  padding: 1rem;
+}
 /*# sourceMappingURL=global.css.map */
