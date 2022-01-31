@@ -230,6 +230,11 @@ function grg_dynamic_customize_css() {
         ?>;
     }
 
+    .grigora-table-of-contents a:visited {
+        color: <?php echo get_theme_mod('grg_colors_toc_links_visited', $defaults['grg_colors_toc_links_visited']);
+        ?>;
+    }
+
     <?php
 }
 
@@ -450,6 +455,11 @@ else {
 
     .grigora-table-of-contents a:hover {
         color: <?php echo $spacing_defaults['grg_colors_toc_links_hover'];
+        ?>;
+    }
+
+    .grigora-table-of-contents a:visited {
+        color: <?php echo $spacing_defaults['grg_colors_toc_links_visited'];
         ?>;
     }
 
