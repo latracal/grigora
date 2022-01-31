@@ -12,6 +12,7 @@ if ( ! function_exists( 'grigora_get_defaults' ) ) {
 				'blog' => 0,
 				'toc' => 0,
 				'scroll' => 0,
+				'cookie' => 0,
 				'popup' => 0,
 				'procontable' => 0,
 				'emoji' => 0,
