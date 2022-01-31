@@ -6,7 +6,7 @@
 	max-width: 1366px;
 
 	@media (max-width: 768px) {
-		flex-direction: column;
+		flex-direction: column !important;
 	}
 
 	.article {

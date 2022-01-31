@@ -112,15 +112,16 @@ if (totop) {
 	};
 }
 
-function topFunction() {
-	document.body.scrollTop = 0;
-	document.documentElement.scrollTop = 0;
-}
-
 /*toc*/
 const tocToggle = document.querySelector('.toggle-toc');
 const heading = document.querySelector('.heading');
 
 tocToggle.addEventListener('click', function () {
-	heading.classList.toggle('show-links');
+	if (heading.classList.contains('show-links')) {
+		heading.classList.remove('show-links');
+		document.querySelector('.toggle-toc').innerHTML = 'hide';
+	} else {
+		heading.classList.add('show-links');
+		document.querySelector('.toggle-toc').innerHTML = 'show';
+	}
 });
