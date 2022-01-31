@@ -61,7 +61,13 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 				'grg_post_nav_colors' => '#c4c4c4',				
 				'grg_post_nav_text_colors' => '#000',				
 				'grg_scroll_colors' => '#c4c4c4',				
-				'grg_scroll_icon_colors' => '#000',				
+				'grg_scroll_icon_colors' => '#000',		
+				'grg_colors_toc_background'=> '#fff',
+				'grg_colors_toc_border'=> '#aaaaaa',
+				'grg_colors_toc_title'=> '#000',
+				'grg_colors_toc_links'=> '#0170b9',
+				'grg_colors_toc_links_hover'=> '#0170b9',
+				'grg_colors_toc_links_visited'	=> '#0170b9',	
 			);
 	}
 
