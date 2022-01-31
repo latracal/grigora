@@ -93,7 +93,7 @@ function toggleSubMenu(event) {
 }
 
 var totop = document.getElementById('totop');
-if(totop){
+if (totop) {
 	function scrollFunction() {
 		if (
 			document.body.scrollTop > 150 ||
@@ -112,7 +112,10 @@ if(totop){
 	};
 }
 
+/*toc*/
+const tocToggle = document.querySelector('.toggle-toc');
+const heading = document.querySelector('.heading');
 
-
-
-
+tocToggle.addEventListener('click', function () {
+	heading.classList.toggle('show-links');
+});
