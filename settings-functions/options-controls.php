@@ -467,7 +467,7 @@ function grigora_importexport_section_export_callback_function() {
 }
 
 function grigora_importexport_section_import_callback_function() {
-    echo '';
+    echo '<input type="file">';
 }
 
 add_action( 'admin_post_grigora_export', 'grigora_admin_export_data' );

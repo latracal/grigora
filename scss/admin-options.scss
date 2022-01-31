@@ -74,6 +74,13 @@
 		opacity: 0.5;
 	}
 
+	.grigora_importexport_section.customizer {
+		.form-table td {
+			width: 125px;
+			border-radius: 0;
+		}
+	}
+
 	.customizer {
 		display: none;
 		background-color: #fff;
