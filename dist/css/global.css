@@ -454,10 +454,10 @@
 
 @media (max-width: 768px) {
   .container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
   }
 }
 
@@ -1595,7 +1595,7 @@ main {
 
 .grigora-table-of-contents .toggle-toc {
   cursor: pointer;
-  padding-left: 0.5rem;
+  color: #0170b9;
 }
 
 .grigora-table-of-contents .heading {
