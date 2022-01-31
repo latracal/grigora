@@ -207,42 +207,27 @@ function grg_dynamic_customize_css() {
         ?>;
     }
 
-    /*Spacing and Layout*/
-
-    <?php if(get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment'])=='row'|| get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment'])=='row-reverse') {
-        ?>.container {
-            flex-direction: <?php echo get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment']);
-            ?>;
-        }
-
-        @media(max-width:768px) {
-            .container {
-                flex-direction: column !important;
-            }
-        }
-
-        <?php
+    .grigora-table-of-contents {
+        background-color: <?php echo get_theme_mod('grg_colors_toc_background', $defaults['grg_colors_toc_background']);
+        ?>;
+        border: 1px solid <?php echo get_theme_mod('grg_colors_toc_border', $defaults['grg_colors_toc_border']);
+        ?>;
     }
 
-    else {
-        ?>.container .article {
-            width: 100%;
-            border-right: <?php echo get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment']);
-            ?>;
-        }
 
-        aside {
-            display: <?php echo get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment']);
-            ?>;
-        }
-
-        <?php
+    .grigora-toc-headline {
+        color: <?php echo get_theme_mod('grg_colors_toc_title', $defaults['grg_colors_toc_title']);
+        ?>;
     }
 
-    ?>.container {
-        max-width: <?php echo get_theme_mod('grg_container-width', $spacing_defaults['grg_container-width']);
-        ?>px;
+    .grigora-table-of-contents a {
+        color: <?php echo get_theme_mod('grg_colors_toc_links', $defaults['grg_colors_toc_links']);
+        ?>;
+    }
 
+    .grigora-table-of-contents a:hover {
+        color: <?php echo get_theme_mod('grg_colors_toc_links_hover', $defaults['grg_colors_toc_links_hover']);
+        ?>;
     }
 
     <?php
@@ -444,6 +429,28 @@ else {
         max-width: <?php echo $spacing_defaults['grg_container-width'];
         ?>px;
 
+    }
+
+    .grigora-table-of-contents {
+        background-color: <?php echo $spacing_defaults['grg_colors_toc_background'];
+        ?>;
+        border: 1px solid <?php echo $spacing_defaults['grg_colors_toc_border'];
+        ?>;
+    }
+
+    .grigora-toc-headline {
+        color: <?php echo $spacing_defaults['grg_colors_toc_title'];
+        ?>;
+    }
+
+    .grigora-table-of-contents a {
+        color: <?php echo $spacing_defaults['grg_colors_toc_links'];
+        ?>;
+    }
+
+    .grigora-table-of-contents a:hover {
+        color: <?php echo $spacing_defaults['grg_colors_toc_links_hover'];
+        ?>;
     }
 
     <?php
@@ -972,9 +979,7 @@ else {
         <?php
     }
 
-    ?>
-
-    <?php
+    ?><?php
 }
 
 else {
@@ -1029,9 +1034,7 @@ else {
         <?php
     }
 
-    ?>
-
-    <?php
+    ?><?php
 }
 
 ?>
