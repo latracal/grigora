@@ -285,6 +285,14 @@ function grigora_customize_settings_section() {
 	);
 
     add_settings_field(
+		'grigora_customizer_section_cookie',
+		'Cookie Notice',
+		'grigora_customizer_section_cookie_callback_function',
+		'grigora-options',
+		'grigora_customizer_section'
+	);
+
+    add_settings_field(
 		'grigora_customizer_section_popup',
 		'Pop Ups',
 		'grigora_customizer_section_popup_callback_function',
@@ -426,6 +434,10 @@ function grigora_customizer_section_toc_callback_function() {
 
 function grigora_customizer_section_scroll_callback_function() {
     echo '<input name="grigora_settings[scroll]" id="grigora_settings[scroll]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'scroll' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
+}
+
+function grigora_customizer_section_cookie_callback_function() {
+    echo '<input name="grigora_settings[cookie]" id="grigora_settings[cookie]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'cookie' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
 }
 
 function grigora_customizer_section_popup_callback_function() {
