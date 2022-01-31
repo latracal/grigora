@@ -13,7 +13,7 @@ if (grigora_get_option("typography") && function_exists('google_fonts')){
         foreach ($mods as $key => $font) {
             $font_request = $font_request.google_fonts()[$font].'|';
         }
-        $font_request = $font_request.'&display=swap';
+        $font_request = $font_request.'&display=fallback';
         wp_enqueue_style( 'grigora-google-fonts', $font_request, false ); 
     }
          
