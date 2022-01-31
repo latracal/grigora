@@ -75,7 +75,8 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 		return array(
 			'grg_header-height' => '155',		
 			'grg_sidebar-alignment' => 'Right',		
-			'grg_sidebar-width' => '30',		
+			'grg_sidebar-width' => '30',	
+			'grg_sidebar-padding' => 15,
 			'grg_container-width'=> '1366',		
 			'grg_container-top-padding'=> '0',		
 			'grg_container-right-padding'=> '0',		

@@ -75,6 +75,7 @@ echo '<div class="admin-container">';
         <button class="tab-btn" onclick="controlName(event, 'grigora_customizer_section')" id="default">Customizer
             Options</button>
         <button class="tab-btn" onclick="controlName(event, 'grigora_performance_section')">Performance</button>
+        <button class="tab-btn" onclick="controlName(event, 'grigora_importexport_section')">Import & Export</button>
     </div>
     <div class="tab-content">
         <form action="options.php" method="post" class=" <?php echo (is_grigora_pro_active() ? '' : 'disabled') ?>">
@@ -92,6 +93,13 @@ echo '<div class="admin-container">';
 <?php
     }
 }
+
+grigora_set_default_colors();
+grigora_set_default_spacing();
+grigora_set_default_scroll();
+grigora_set_default_typography_font();
+grigora_set_default_typography();
+grigora_set_default_blog();
 
 add_action( 'admin_menu', 'girgora_options_menu' );
 
@@ -219,12 +227,7 @@ function grigora_set_default_blog(){
 
 function grigora_customize_settings_section() {
     
-    grigora_set_default_colors();
-    grigora_set_default_spacing();
-    grigora_set_default_scroll();
-    grigora_set_default_typography_font();
-    grigora_set_default_typography();
-    grigora_set_default_blog();
+
 
  	add_settings_section(
 		'grigora_customizer_section',
@@ -362,12 +365,43 @@ function grigora_customize_settings_section() {
 
 add_action( 'admin_init', 'grigora_performance_settings_section' );
 
+function grigora_importexport_settings_section(){
+    add_settings_section(
+        'grigora_importexport_section',
+        'Import & Export',
+        'grigora_importexport_section_callback_function',
+        'grigora-options'
+    );
+
+    add_settings_field(
+        'grigora_importexport_section_export',
+        'Export',
+        'grigora_importexport_section_export_callback_function',
+        'grigora-options',
+        'grigora_importexport_section'
+    );
+
+    add_settings_field(
+        'grigora_importexport_section_import',
+        'Import',
+        'grigora_importexport_section_import_callback_function',
+        'grigora-options',
+        'grigora_importexport_section'
+    );
+}
+
+add_action( 'admin_init', 'grigora_importexport_settings_section' );
+
 function grigora_customizer_section_callback_function() {
- 	echo '<p>Customizer Settings Text</p>';
+ 	echo '<p>Customize your theme!</p>';
  }
 
 function grigora_performance_section_callback_function() {
-    echo '<p>Performance Settings Text</p>';
+    echo '<p>Make your website fast by removing unnecessary imports!</p>';
+}
+
+function grigora_importexport_section_callback_function() {
+    echo '<p>Save and Restore your Grigora Settings in One Click!</p>';
 }
 
 function grigora_customizer_section_colors_callback_function() {
@@ -425,3 +459,44 @@ function grigora_performance_section_jquery_callback_function() {
 function grigora_performance_section_dashicons_callback_function() {
     echo '<input name="grigora_settings[dashicons]" id="grigora_settings[dashicons]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'dashicons' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
 }
+
+function grigora_importexport_section_export_callback_function() {
+    $url = get_admin_url( null, 'admin-post.php?' );
+    $url = $url."action=grigora_export&_wpnonce=".wp_create_nonce( 'grigora_export' );
+    echo '<div class=""grigora-export-button"><a href="'.$url.'">Download Settings</a></div>';
+}
+
+function grigora_importexport_section_import_callback_function() {
+    echo '';
+}
+
+add_action( 'admin_post_grigora_export', 'grigora_admin_export_data' );
+
+function grigora_admin_export_data() {
+    if( isset($_GET["_wpnonce"])&&$_GET["_wpnonce"] ) {
+        if ( ! wp_verify_nonce( $_GET["_wpnonce"], 'grigora_export' ) ) {
+            wp_die( __( 'The link you followed has expired.', 'grigora' ) ); 
+        } else {
+            header('Content-disposition: attachment; filename=grigora_export.json');
+            header('Content-type: application/json');
+            $grg_options = get_option("grigora_settings");
+            $theme_mods = get_theme_mods();
+            if(!$grg_options){
+                $grg_options = array();
+            }
+            if(!$theme_mods){
+                $theme_mods = array();
+            }
+            $export = array(
+                "grg_options" => $grg_options,
+                "theme_mods" => $theme_mods,
+            );
+            $json = json_encode($export);
+            echo $json;
+        }
+        exit();
+       }
+       exit();
+}
+
+?>

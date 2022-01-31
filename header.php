@@ -17,7 +17,7 @@
     <header>
         <nav class="navbar">
             <?php 
-
+            print_r(get_custom_logo());
             if(has_custom_logo()){
                 ?>
             <div class="logo">
