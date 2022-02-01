@@ -310,7 +310,7 @@ function grigora_customize_settings_section() {
 
     add_settings_field(
 		'grigora_customizer_section_popup',
-		'Pop Ups',
+		'Pop Ups (Upcoming)',
 		'grigora_customizer_section_popup_callback_function',
 		'grigora-options',
 		'grigora_customizer_section'
@@ -318,7 +318,7 @@ function grigora_customize_settings_section() {
 
     add_settings_field(
 		'grigora_customizer_section_procontable',
-		'Pros Cons Table',
+		'Pros Cons Table (Upcoming)',
 		'grigora_customizer_section_procontable_callback_function',
 		'grigora-options',
 		'grigora_customizer_section'
@@ -431,11 +431,13 @@ function grigora_customizer_section_cookie_callback_function() {
 }
 
 function grigora_customizer_section_popup_callback_function() {
-    echo '<input name="grigora_settings[popup]" id="grigora_settings[popup]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'popup' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
+    // echo '<input name="grigora_settings[popup]" id="grigora_settings[popup]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'popup' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
+    // echo 'Upcoming';
 }
 
 function grigora_customizer_section_procontable_callback_function() {
-    echo '<input name="grigora_settings[procontable]" id="grigora_settings[procontable]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'procontable' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
+    // echo '<input name="grigora_settings[procontable]" id="grigora_settings[procontable]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'procontable' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
+    // echo 'Upcoming';
 }
 
 function grigora_performance_section_emoji_callback_function() {
