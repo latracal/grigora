@@ -20,7 +20,7 @@
             <div class="top">
                 <h1 class="post-title"><?php the_title(); ?></h1>
                 <span class="post-meta">
-                    <?php if( get_theme_mod( 'grg_blog_single_author_display' ) )
+                    <?php if( get_theme_mod( 'grg_blog_single_author_display', grigora_blog_defaults()['grg_blog_single_author_display'] ) )
         {
             ?>Published by
                     <?php 
@@ -35,12 +35,12 @@
                                
             }
 
-            ?><?php if(get_theme_mod( 'grg_blog_single_date_display' ) && get_theme_mod( 'grg_blog_single_author_display' )){ ?> on <?php } ?>
+            ?><?php if(get_theme_mod( 'grg_blog_single_date_display', grigora_blog_defaults()['grg_blog_single_date_display'] ) && get_theme_mod( 'grg_blog_single_author_display', grigora_blog_defaults()['grg_blog_single_author_display'] )){ ?> on <?php } ?>
                     <?php } ?>
-                    <?php if( get_theme_mod( 'grg_blog_single_date_display' ) ) { ?>
+                    <?php if( get_theme_mod( 'grg_blog_single_date_display' , grigora_blog_defaults()['grg_blog_single_date_display']) ) { ?>
                     <?php echo get_the_date(); ?>
                     <?php } ?></span>
-                <?php if( get_theme_mod( 'grg_blog_single_social_share' ) )
+                <?php if( get_theme_mod( 'grg_blog_single_social_share', grigora_blog_defaults()['grg_blog_single_social_share'] ) )
         {
             ?>
                 <span class="social">
@@ -82,7 +82,7 @@
             </div>
         </div>
         <?php the_content(); ?>
-        <?php if( get_theme_mod( 'grg_blog_single_category' ) )
+        <?php if( get_theme_mod( 'grg_blog_single_category' , grigora_blog_defaults()['grg_blog_single_category']) )
         {
             ?>
         <span class="cat">Posted in
@@ -94,7 +94,7 @@
         </span>
         <?php } ?>
         <?php
-        if( get_theme_mod( 'grg_blog_single_tag' ) ){
+        if( get_theme_mod( 'grg_blog_single_tag', grigora_blog_defaults()['grg_blog_single_tag'] ) ){
 
             if(has_tag()){ 
                 ?>
@@ -110,14 +110,14 @@
         }
         ?>
         <?php
-        if( get_theme_mod( 'grg_blog_single_postnav' ) ){ ?>
+        if( get_theme_mod( 'grg_blog_single_postnav', grigora_blog_defaults()['grg_blog_single_postnav'] ) ){ ?>
         <div class="post-pagination">
             <?php previous_post_link('<div class="pagination-prev-post"> %link </div>', '← %title'); ?>
             <?php next_post_link('<div class="pagination-next-post"> %link </div>', '%title →'); ?>
         </div>
         <?php } ?>
         <?php
-        if( get_theme_mod( 'grg_blog_single_author_box' ) ){ ?>
+        if( get_theme_mod( 'grg_blog_single_author_box', grigora_blog_defaults()['grg_blog_single_author_box'] ) ){ ?>
         <div class="author-desc">
             <div class="avatar"><a
                     href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?></a>
@@ -139,7 +139,7 @@
         </div>
         <?php } ?>
         <?php
-        if( get_theme_mod( 'grg_blog_single_related_posts' ) ){ ?>
+        if( get_theme_mod( 'grg_blog_single_related_posts', grigora_blog_defaults()['grg_blog_single_related_posts'] ) ){ ?>
         <div class="related-posts">
             <?php
                 $related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 3, 'post__not_in' => array($post->ID) ) );
