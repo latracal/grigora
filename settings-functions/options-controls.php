@@ -353,13 +353,13 @@ function grigora_customize_settings_section() {
         'grigora_performance_section'
     );
 
-    add_settings_field(
-        'grigora_performance_section_xmlrpc',
-        'Disable XML RPC',
-        'grigora_performance_section_xmlrpc_callback_function',
-        'grigora-options',
-        'grigora_performance_section'
-    );
+    // add_settings_field(
+    //     'grigora_performance_section_xmlrpc',
+    //     'Disable XML RPC',
+    //     'grigora_performance_section_xmlrpc_callback_function',
+    //     'grigora-options',
+    //     'grigora_performance_section'
+    // );
 
     add_settings_field(
         'grigora_performance_section_jquerymigrate',
@@ -448,9 +448,9 @@ function grigora_performance_section_embeds_callback_function() {
     echo '<input name="grigora_settings[embeds]" id="grigora_settings[embeds]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'embeds' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
 }
 
-function grigora_performance_section_xmlrpc_callback_function() {
-    echo '<input name="grigora_settings[xmlrpc]" id="grigora_settings[xmlrpc]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'xmlrpc' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
-}
+// function grigora_performance_section_xmlrpc_callback_function() {
+//     echo '<input name="grigora_settings[xmlrpc]" id="grigora_settings[xmlrpc]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'xmlrpc' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
+// }
 
 function grigora_performance_section_jquerymigrate_callback_function() {
     echo '<input name="grigora_settings[jquerymigrate]" id="grigora_settings[jquerymigrate]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'jquerymigrate' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
