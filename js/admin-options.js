@@ -15,4 +15,24 @@ function controlName(evt, control) {
 	evt.currentTarget.className += ' active';
 }
 
+
 document.getElementById('default').click();
+
+
+button = document.getElementsByClassName("submit")[0];
+tab = document.getElementsByClassName("IE-tab")[0];
+tabparent = document.getElementsByClassName("tab")[0];
+
+function togglesubmit(event) {
+	if(tab.classList.contains("active")){
+		button.style.display = 'none';
+	}
+	else{
+		button.style.display = 'block';
+	}
+}
+
+if(tabparent){
+	tabparent.addEventListener('click', togglesubmit, false)
+}
+
