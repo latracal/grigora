@@ -133,11 +133,52 @@ if(tocToggle){
 	});
 }
 
-
+function setCookie(name,value,days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+function eraseCookie(name) {   
+    document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
 /*cookie*/
 const cookieToggle = document.querySelector('.cookie-btn');
 const notice = document.querySelector('.cookie');
 
-cookieToggle.addEventListener('click', function () {
-	notice.style.display = 'none';
-});
+if(notice){
+	var x = getCookie('grg_cookie_flag');
+	if (x) {
+		if(x!="1"){
+			notice.style.display = 'flex';
+			cookieToggle.addEventListener('click', function () {
+				notice.style.display = 'none';
+				setCookie('grg_cookie_flag','1',30);
+			});
+		}
+	}
+	else{
+		notice.style.display = 'flex';
+		cookieToggle.addEventListener('click', function () {
+			notice.style.display = 'none';
+			setCookie('grg_cookie_flag','1',30);
+		});
+	}
+	
+
+}
+
+
