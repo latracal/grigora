@@ -499,6 +499,11 @@ else {
             border-left: 1px solid #aaaaaa;
         }
 
+        .container .article {
+            border-right: 0;
+            border-left: 1px solid #aaaaaa;
+        }
+
         <?php
     }
 
@@ -508,6 +513,13 @@ else {
             border-right: <?php echo get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment']);
             ?>;
         }
+
+        .container .article {
+            width: 100%;
+            border-right: <?php echo get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment']);
+            ?>;
+        }
+
 
         aside {
             display: <?php echo get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment']);
