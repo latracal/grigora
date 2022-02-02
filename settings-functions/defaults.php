@@ -23,6 +23,7 @@ if ( ! function_exists( 'grigora_get_defaults' ) ) {
 				'dashicons' => 0,
 				'hidewpversion' => 0,
 				'minify' => 0,
+				'dynamicexternal' => 0,
 				'colordefaultsset' => 0,
 			)
 		);

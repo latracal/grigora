@@ -344,6 +344,15 @@ function grigora_customize_settings_section() {
         'grigora-options',
         'grigora_performance_section'
     );
+
+    add_settings_field(
+        'grigora_performance_section_dynamicexternal',
+        'Dynamic CSS in External File',
+        'grigora_performance_section_dynamicexternal_callback_function',
+        'grigora-options',
+        'grigora_performance_section'
+    );
+
     add_settings_field(
        'grigora_performance_section_emoji',
        'Disable Emojis',
@@ -448,6 +457,9 @@ function grigora_customizer_section_procontable_callback_function() {
 }
 function grigora_performance_section_minify_callback_function() {
     echo '<input name="grigora_settings[minify]" id="grigora_settings[minify]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'minify' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
+}
+function grigora_performance_section_dynamicexternal_callback_function() {
+    echo '<input name="grigora_settings[dynamicexternal]" id="grigora_settings[dynamicexternal]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'dynamicexternal' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
 }
 function grigora_performance_section_emoji_callback_function() {
     echo '<input name="grigora_settings[emoji]" id="grigora_settings[emoji]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'emoji' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
