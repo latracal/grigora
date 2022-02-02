@@ -1101,4 +1101,47 @@ else{ ?>
 <?php
 }
 add_action( 'wp_head', 'grg_dynamic_customize_css' );
+
+if (grigora_get_option('minify') && class_exists('MatthiasMullie\Minify\CSS')){
+    function generate_global_minified_css(){
+        $uri = get_theme_file_uri();
+        $ver = grg_DEV_MODE ? time() : true;
+        $unminified = get_theme_file_path( '/dist/css/global.css' );
+        $minified = get_theme_file_path( '/dist/css/global.min.css' );
+        if (!file_exists($unminified)) {
+            return;
+            }
+            else if(!$myfile = fopen($unminified, 'r')) {
+            return;
+            }
+            else {
+            $unminified_css = fread($myfile,filesize($unminified));
+            fclose($myfile);
+            $minifier = new MatthiasMullie\Minify\CSS($unminified_css);
+            $minified_css = $minifier->minify();
+            if(!$myfile2 = fopen($minified, 'w+ ')){
+                return;
+            }
+            else{
+                fwrite($myfile2, $minified_css);
+                fclose($myfile2);
+            }
+        }
+    }
+
+    function grg_enqueue_min_global_css(){
+        $uri = get_theme_file_uri();
+        $ver = grg_DEV_MODE ? time() : true;
+        $minified = get_theme_file_path( '/dist/css/global.min.css' );
+        if(file_exists($minified)){
+            wp_dequeue_style( 'grg_global_style' );
+            wp_enqueue_style('grg_global_min_style', $uri . '/dist/css/global.min.css', [], $ver);
+        }
+    }
+
+    add_action('wp_enqueue_scripts', 'grg_enqueue_min_global_css');
+
+}
+
+
 ?>
