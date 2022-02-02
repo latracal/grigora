@@ -1540,34 +1540,34 @@ else {
     }
 
     .grigora-table-of-contents {
-        background-color: ".$spacing_defaults['grg_colors_toc_background'].";
+        background-color: ".$defaults['grg_colors_toc_background'].";
         
-        border: 1px solid ".$spacing_defaults['grg_colors_toc_border'].";
+        border: 1px solid ".$defaults['grg_colors_toc_border'].";
         
     }
 
     .grigora-toc-headline {
-        color: ".$spacing_defaults['grg_colors_toc_title'].";
+        color: ".$defaults['grg_colors_toc_title'].";
         
     }
 
     .grigora-table-of-contents a {
-        color: ".$spacing_defaults['grg_colors_toc_links'].";
+        color: ".$defaults['grg_colors_toc_links'].";
         
     }
 
     .grigora-table-of-contents a:hover {
-        color: ".$spacing_defaults['grg_colors_toc_links_hover'].";
+        color: ".$defaults['grg_colors_toc_links_hover'].";
         
     }
 
     .grigora-table-of-contents a:visited {
-        color: ".$spacing_defaults['grg_colors_toc_links_visited'].";
+        color: ".$defaults['grg_colors_toc_links_visited'].";
         
     }
 
     .grigora-table-of-contents .toggle-toc {
-        color: ".$spacing_defaults['grg_colors_toc_toggle'].";
+        color: ".$defaults['grg_colors_toc_toggle'].";
         
     }";
 
