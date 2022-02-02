@@ -1633,11 +1633,28 @@ main {
   background-color: #fff;
   gap: 1rem;
   border-top: 1px solid #aaaaaa;
+  font-size: 17px;
+}
+
+@media (max-width: 768px) {
+  .cookie {
+    font-size: 14px;
+  }
 }
 
 .cookie .cookie-btn {
   cursor: pointer;
   border: none;
   padding: 1rem;
+  margin-right: 100px;
+  margin-left: 50px;
 }
+
+@media (max-width: 768px) {
+  .cookie .cookie-btn {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+}
+
 /*# sourceMappingURL=global.css.map */

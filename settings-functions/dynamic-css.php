@@ -18,6 +18,8 @@ function grg_dynamic_customize_css() {
     $scroll_defaults = grigora_scroll_defaults();
     $scroll_flag = grigora_get_option("scroll");
 
+    $cookie_flag = grigora_get_option("cookie");
+
     ?>
 <style type="text/css">
 <?php if($colors_flag) {
@@ -1069,9 +1071,34 @@ else {
     ?><?php
 }
 
+if($cookie_flag) { ?>
+    .cookie {
+        background-color: <?php echo get_theme_mod('grg_colors_cookie_background', $defaults['grg_colors_cookie_background']); ?>;
+    }
+    .cookie .notice-text {
+        color: <?php echo get_theme_mod('grg_colors_cookie_text', $defaults['grg_colors_cookie_text']); ?>;
+    }
+    .cookie .cookie-btn {
+        color: <?php echo get_theme_mod('grg_colors_cookie_button_text', $defaults['grg_colors_cookie_button_text']); ?>;
+        background-color: <?php echo get_theme_mod('grg_colors_cookie_button_background', $defaults['grg_colors_cookie_button_background']); ?>;
+    }
+<?php }
+else{ ?>
+    .cookie {
+        background-color: <?php echo  $defaults['grg_colors_cookie_background']; ?>;
+    }
+    .cookie .notice-text {
+        color: <?php echo $defaults['grg_colors_cookie_text']; ?>;
+    }
+    .cookie .cookie-btn {
+        color: <?php $defaults['grg_colors_cookie_button_text']; ?>;
+        background-color: <?php $defaults['grg_colors_cookie_button_background']; ?>;
+    }
+<?php }
+
 ?>
 </style>
 <?php
-} 
+}
 add_action( 'wp_head', 'grg_dynamic_customize_css' );
 ?>
