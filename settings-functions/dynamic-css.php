@@ -25,28 +25,29 @@ function grg_dynamic_customize_css_var() {
         background-color: ".get_theme_mod('grg_bg-color', $defaults['grg_bg-color']).";
     } ".
 
-    ".navbar {
+    ".navbar, .mobile-header .top-part {
         background-color: ".get_theme_mod('grg_header_bg-color', $defaults['grg_header_bg-color']).";
     } ".
 
-    ".navbar .menu-container .menu {
+    ".navbar .menu-container .menu, .mobile-header .menu-container .menu {
         background-color: ".get_theme_mod('grg_header_menu_bg-color', $defaults['grg_header_menu_bg-color']).";
 
     }
 
-    .navbar .menu-container .menu .menu-item .sub-menu {
+    .navbar .menu-container .menu .menu-item .sub-menu, .mobile-header .menu-container .menu .menu-item .sub-menu {
+        
         background-color: ".get_theme_mod('grg_header_submenu_bg-color', $defaults['grg_header_submenu_bg-color']).";
 
     }
 
     .navbar .menu-container .search-btn .search-box,
-    .navbar .menu-container .search-btn .search-box .search-field {
+    .navbar .menu-container .search-btn .search-box .search-field, .mobile-header .search-box, .mobile-header .search-box .search-field {
         background-color: ".get_theme_mod('grg_header_searchbox_bg-color', $defaults['grg_header_searchbox_bg-color']).";
 
     }
 
     .navbar .title a,
-    .navbar .menu-container .menu a {
+    .navbar .menu-container .menu a, .mobile-header .top-part .title a, .mobile-header .menu-container .menu a {
         color: ".get_theme_mod('grg_header_text-color', $defaults['grg_header_text-color']).";
 
     }
@@ -252,24 +253,24 @@ else {
         
     }
 
-    .navbar .menu-container .menu {
+    .navbar .menu-container .menu, , .mobile-header .menu-container .menu {
         background-color: ".$defaults['grg_header_menu_bg-color'].";
         
     }
 
-    .navbar .menu-container .menu .menu-item .sub-menu {
+    .navbar .menu-container .menu .menu-item .sub-menu, .mobile-header .menu-container .menu .menu-item .sub-menu {
         background-color: ".$defaults['grg_header_submenu_bg-color'].";
         
     }
 
     .navbar .menu-container .search-btn .search-box,
-    .navbar .menu-container .search-btn .search-box .search-field {
+    .navbar .menu-container .search-btn .search-box .search-field, .mobile-header .search-box, .mobile-header .search-box .search-field {
         background-color: ".$defaults['grg_header_searchbox_bg-color'].";
         
     }
 
     .navbar .title a,
-    .navbar .menu-container .menu a {
+    .navbar .menu-container .menu a, .mobile-header .top-part .title a, .mobile-header .menu-container .menu a {
         color: ".$defaults['grg_header_text-color'].";
         
     }
@@ -565,7 +566,7 @@ if($spacing_flag) {
         }
     }
 
-    .navbar {
+    .navbar, .mobile-header .top-part {
         min-height: ".get_theme_mod('grg_header-height', $spacing_defaults['grg_header-height'])."px;
     }";
 
@@ -609,11 +610,11 @@ else {
         width: ".$spacing_defaults['grg_sidebar-width']."%;
     }
 
-    .navbar {
+    .navbar, .mobile-header .top-part{
         min-height: ".$spacing_defaults['grg_header-height']."px;
     }";
 
-
+    
 }
 
 if($typography_flag) {
@@ -633,7 +634,7 @@ if($typography_flag) {
         
     }
 
-    .navbar .title h1 {
+    .navbar .title h1, .mobile-header .top-part .title h1 {
         font-family: ".get_theme_mod('grg_typography_site_title_font', $typography_fonts_defaults['grg_typography_site_title_font']).";
         
         font-weight: ".get_theme_mod('grg_typography_site_title_weight', $typography_defaults['grg_typography_site_title_weight']).";
@@ -643,7 +644,7 @@ if($typography_flag) {
         
     }
 
-    .navbar .title h2 {
+    .navbar .title h2, .mobile-header .top-part .title h2 {
         font-family: ".get_theme_mod('grg_typography_site_desc_font', $typography_fonts_defaults['grg_typography_site_desc_font']).";
         
         font-weight: ".get_theme_mod('grg_typography_site_desc_weight', $typography_defaults['grg_typography_site_desc_weight']).";
@@ -1044,18 +1045,20 @@ return $out;
 
 function grg_enqueue_dynamic_css() {
     ?>
-    <style id="grg-dynamic-inline-css">
-        <?php if (grigora_get_option('minify') && class_exists('MatthiasMullie\Minify\CSS')){
-                $minifier = new MatthiasMullie\Minify\CSS(grg_dynamic_customize_css_var());
-                $minified_css = $minifier->minify();
-                echo $minified_css;
-            }
-            else{
-                echo grg_dynamic_customize_css_var();
-            }
-            ?>
-    </style>
-    <?php
+<style id="grg-dynamic-inline-css">
+<?php if (grigora_get_option('minify') && class_exists('MatthiasMullie\Minify\CSS')) {
+    $minifier=new MatthiasMullie\Minify\CSS(grg_dynamic_customize_css_var());
+    $minified_css=$minifier->minify();
+    echo $minified_css;
+}
+
+else {
+    echo grg_dynamic_customize_css_var();
+}
+
+?>
+</style>
+<?php
 }
 
 
