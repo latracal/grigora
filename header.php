@@ -63,7 +63,7 @@
                     ]);
                 }
                 else{
-                    // todo here
+                    // todo
                 }
 
                 ?>
@@ -79,6 +79,7 @@
         </nav>
         <nav class="mobile-header">
             <div class="top-part">
+                <?php if( has_nav_menu( 'primary' ) ) { ?>
                 <div class="menu-toggle-btn" id="menu-toggle-btn">
                     <div class="menu-toggle-icon">
                         <span class="menu-toggle-line line top"></span>
@@ -86,6 +87,7 @@
                         <span class="menu-toggle-line line bottom"></span>
                     </div>
                 </div>
+                <?php } ?>
                 <?php 
             if(has_custom_logo()){
                 ?>

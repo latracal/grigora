@@ -212,23 +212,11 @@ body {
         
     }
 
-    .container .post-content {
-            width: 100%;
-            border-right: Right;
+    .container {
+            flex-direction: row;
             
-        }
 
-        .container .article {
-            width: 100%;
-            border-right: Right;
-            
-        }
-
-
-        aside {
-            display: Right;
-            
-        } .container {
+        }.container {
         max-width: 1366px;
 
     }
@@ -409,7 +397,7 @@ body {
         text-align: center;
         
     } .to-top {
-        border-radius: 0px;
+        border-radius: 5px;
     } .to-top {
             right: 2rem;
         } .to-top {
