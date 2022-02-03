@@ -1052,6 +1052,12 @@
   padding: 0.25rem 1rem;
   border-radius: 0.25rem;
   float: left;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.container .article .pagination .prev:hover {
+  background-color: #aaaaaa;
 }
 
 .container .article .pagination .next {
@@ -1060,6 +1066,12 @@
   padding: 0.25rem 1rem;
   border-radius: 0.25rem;
   float: right;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.container .article .pagination .next:hover {
+  background-color: #aaaaaa;
 }
 
 .container aside {
@@ -1100,6 +1112,15 @@
     padding: 0 1rem;
     width: 100%;
   }
+}
+
+.post-content .has-vivid-red-background-color {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.post-content .has-vivid-red-background-color:hover {
+  background-color: #aaaaaa !important;
 }
 
 .post-content .breadcrumb {
@@ -1340,7 +1361,7 @@
 }
 
 .post-content .cat-name::after {
-  content: ",";
+  content: ',';
 }
 
 .post-content .cat-name:last-child::after {
@@ -1370,6 +1391,12 @@
   background-color: #c4c4c4;
   padding: 0.5rem;
   border-radius: 0.25rem;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.post-content .post-pagination .pagination-prev-post:hover {
+  background-color: #aaaaaa;
 }
 
 .post-content .post-pagination .pagination-next-post {
@@ -1377,6 +1404,12 @@
   background-color: #c4c4c4;
   padding: 0.5rem;
   border-radius: 0.25rem;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.post-content .post-pagination .pagination-next-post:hover {
+  background-color: #aaaaaa;
 }
 
 @media (max-width: 768px) {
@@ -1699,6 +1732,15 @@
 
 .comment-reply-title #cancel-comment-reply-link {
   color: #0170b9;
+}
+
+.comment-list .comment-box .comment-reply a {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.comment-list .comment-box .comment-reply a:hover {
+  background-color: #aaaaaa;
 }
 
 aside .wp-block-pullquote {

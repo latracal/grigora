@@ -217,6 +217,11 @@
 				padding: 0.25rem 1rem;
 				border-radius: 0.25rem;
 				float: left;
+				transition: all 0.3s ease-out;
+
+				&:hover {
+					background-color: #aaaaaa;
+				}
 			}
 
 			.next {
@@ -225,6 +230,11 @@
 				padding: 0.25rem 1rem;
 				border-radius: 0.25rem;
 				float: right;
+				transition: all 0.3s ease-out;
+
+				&:hover {
+					background-color: #aaaaaa;
+				}
 			}
 		}
 	}
