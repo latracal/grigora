@@ -1183,7 +1183,7 @@ if(grigora_get_option('dynamicexternal') && !current_user_can('manage_options'))
     }
 }
 else{
-    
+    add_action( 'wp_head', 'grg_enqueue_dynamic_css' );
 }
 
 if(current_user_can('manage_options')){
