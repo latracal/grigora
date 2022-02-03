@@ -1,136 +1,143 @@
 body {
-        background-color: white;
-    } .navbar {
-        background-color: #e9e9e9;
-    } .navbar .menu-container .menu {
-        background-color: #c4c4c4;
+        background-color: #f2f2f2;
+        
+    }
 
+    .navbar {
+        background-color: #e9e9e9;
+        
+    }
+
+    .navbar .menu-container .menu {
+        background-color: #c4c4c4;
+        
     }
 
     .navbar .menu-container .menu .menu-item .sub-menu {
         background-color: #c4c4c4;
-
+        
     }
 
     .navbar .menu-container .search-btn .search-box,
     .navbar .menu-container .search-btn .search-box .search-field {
         background-color: #c4c4c4;
-
+        
     }
 
     .navbar .title a,
     .navbar .menu-container .menu a {
         color: #000;
-
+        
     }
 
     .footer .footer-menu {
         background-color: #e9e9e9;
-
+        
     }
 
     .footer .copyrights {
         background-color: #c4c4c4;
-
+        
     }
 
     .footer .footer-menu a,
     .footer .copyrights {
         color: #000;
-
+        
     }
 
     .container .article .post-container .post .post-desc p,
     p,
     ul,
     ol {
-        color: #9f5151;
-
+        color: #000;
+        
     }
 
     main a,
     .post-content p a {
         color: #0170b9;
-
+        
     }
 
     main a:hover,
     .post-content p a:hover {
         color: #0170b9;
-
+        
     }
 
     .read-btn {
         background-color: #c4c4c4;
-
+        
     }
 
     .container .article .post-container .post .post-desc a {
         color: #000;
-
+        
     }
 
     main h1,
     main h1 a,
     .container .article .post-container .post .post-desc .post-title a {
         color: #000;
-
+        
     }
 
     main h2,
     main h2 a,
     .container .article .post-container .post .post-desc .post-title a {
         color: #000;
-
+        
     }
 
     main h3,
     main h3 a,
     .container .article .post-container .post .post-desc .post-title a {
         color: #000;
-
+        
     }
 
     main h4,
     main h4 a,
     .container .article .post-container .post .post-desc .post-title a {
         color: #000;
-
+        
     }
 
     main h5,
     main h5 a,
     .container .article .post-container .post .post-desc .post-title a {
         color: #000;
-
+        
     }
 
     main h6,
     main h6 a,
     .container .article .post-container .post .post-desc .post-title a {
         color: #000;
-
+        
     }
 
     .post-content .breadcrumb,
     .post-content .breadcrumb a {
         color: #454545;
-
+        
     }
 
     .comment-list .comment-box p {
         color: #000;
-
+        
     }
 
     .comment-list .comment-box .comment-meta .comment-author-time {
         color: #7b7b7b;
+        
 
     }
 
     .comment-list .comment-box .comment-reply a {
         background-color: #c4c4c4;
-
+        
     }
 
     .comment-list .comment-box .comment-reply a {
@@ -144,19 +151,18 @@ body {
     }
 
     .container .article .pagination .next,
-    .container .article .pagination .prev,
-    .post-content .post-pagination .pagination-prev-post,
-    .post-content .post-pagination .pagination-next-post {
+    .container .article .pagination .prev {
         background-color: #c4c4c4;
         
+
     }
 
     .container .article .pagination .nav-links a,
     span.current {
         color: #000;
         
-
     }
+
 
     .related-posts a {
         color: #000;
@@ -169,53 +175,72 @@ body {
     }
 
     .to-top {
-        background-color: #dd9933;
+        background-color: #c4c4c4;
         
     }
 
     .to-top .up-arrow {
-        fill: #1e73be;
+        fill: #000;
         
+    }
+
+    .container {
+        flex-direction: Right;
+        
+    }
+
+    .container {
+        max-width: 1366px;
+
     }
 
     .grigora-table-of-contents {
-        background-color: #757575;
+        background-color: #fff;
         
-        border: 1px solid #8224e3;
+        border: 1px solid #aaaaaa;
         
     }
 
-
     .grigora-toc-headline {
-        color: #e5e5e5;
+        color: #000;
         
     }
 
     .grigora-table-of-contents a {
-        color: #ad01ba;
+        color: #0170b9;
         
     }
 
     .grigora-table-of-contents a:hover {
-        color: #3ae202;
+        color: #0170b9;
         
     }
 
     .grigora-table-of-contents a:visited {
-        color: #e00000;
+        color: #0170b9;
         
     }
 
     .grigora-table-of-contents .toggle-toc {
         color: #0170b9;
         
-    }
-
-    .container {
-            flex-direction: row;
+    }.container .post-content {
+            width: 100%;
+            border-right: Right;
             
+        }
 
-        }.container {
+        .container .article {
+            width: 100%;
+            border-right: Right;
+            
+        }
+
+
+        aside {
+            display: Right;
+            
+        } .container {
         max-width: 1366px;
 
     }
@@ -241,7 +266,7 @@ body {
     }
 
     .container aside {
-        width: 33%;
+        width: 30%;
     }
 
     @media(max-width:768px) {
@@ -257,7 +282,7 @@ body {
     }
 
     .navbar {
-        min-height: 29px;
+        min-height: 155px;
     }body {
         font-family: Verdana;
         
@@ -396,7 +421,7 @@ body {
         text-align: center;
         
     } .to-top {
-        border-radius: 36px;
+        border-radius: 0px;
     } .to-top {
             right: 2rem;
         } .to-top {

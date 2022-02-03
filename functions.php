@@ -1,7 +1,7 @@
 <?php
 
 // Setup
-define( 'grg_DEV_MODE', true );
+define( 'grg_DEV_MODE', false );
 
 // Includes
 include( get_theme_file_path( '/inc/front/enqueue.php' ) );

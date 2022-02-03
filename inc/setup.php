@@ -17,3 +17,5 @@ function grigora_custom_logo_setup() {
 function change_excerpt_end_bracket( $more ) {
     return '&#46;&#46;&#46;';
 }
+
+add_option("grg_dynamic_cache_ver", 1);

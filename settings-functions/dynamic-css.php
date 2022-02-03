@@ -1098,45 +1098,57 @@ if (grigora_get_option('minify') && class_exists('MatthiasMullie\Minify\CSS')){
         }
     }
 
+    add_action( 'init', 'generate_global_minified_css' );
     add_action('wp_enqueue_scripts', 'grg_enqueue_min_global_css');
 
 }
 
-if(grigora_get_option('dynamicexternal') && !current_user_can('manage_options')){
-    function generate_dynamic_minified_css(){
-        $uri = get_theme_file_uri();
-        $ver = grg_DEV_MODE ? time() : true;
-        $unminified_css = grg_dynamic_customize_css_var();
-        $minified = get_theme_file_path( '/dist/css/dynamic.min.css' );
-        $minifier = new MatthiasMullie\Minify\CSS($unminified_css);
-        $minified_css = $minifier->minify();
-        if(!$myfile2 = fopen($minified, 'w+ ')){
-            return;
-        }
-        else{
-            fwrite($myfile2, $minified_css);
-            fclose($myfile2);
-        }
-    }
+function increment_dynamic_css_cache_ver(){
+    $cache_ver = get_option("grg_dynamic_cache_ver", 1);
+    $cache_ver++;
+    update_option( 'grg_dynamic_cache_ver', $cache_ver );
+}
 
-    function generate_dynamic_css(){
-        $uri = get_theme_file_uri();
-        $ver = grg_DEV_MODE ? time() : true;
-        $unminified_css = grg_dynamic_customize_css_var();
-        $unminified = get_theme_file_path( '/dist/css/dynamic.css' );
-        if(!$myfile2 = fopen($unminified, 'w+ ')){
-            return;
-        }
-        else{
-            fwrite($myfile2, $unminified_css);
-            fclose($myfile2);
-        }
+function generate_dynamic_minified_css(){
+    $uri = get_theme_file_uri();
+    $unminified_css = grg_dynamic_customize_css_var();
+    $minified = get_theme_file_path( '/dist/css/dynamic.min.css' );
+    $minifier = new MatthiasMullie\Minify\CSS($unminified_css);
+    $minified_css = $minifier->minify();
+    if(!$myfile2 = fopen($minified, 'w+ ')){
+        return;
     }
+    else{
+        fwrite($myfile2, $minified_css);
+        fclose($myfile2);
+        increment_dynamic_css_cache_ver();
+    }
+}
+
+function generate_dynamic_css(){
+    $uri = get_theme_file_uri();
+    $unminified_css = grg_dynamic_customize_css_var();
+    $unminified = get_theme_file_path( '/dist/css/dynamic.css' );
+    if(!$myfile2 = fopen($unminified, 'w+ ')){
+        return;
+    }
+    else{
+        fwrite($myfile2, $unminified_css);
+        fclose($myfile2);
+        increment_dynamic_css_cache_ver();
+    }
+}
+
+function grg_regenerate_dynamic_css($old, $new) {
+    generate_dynamic_minified_css();
+    generate_dynamic_css();
+}
+
+if(grigora_get_option('dynamicexternal') && !current_user_can('manage_options')){
 
     function grg_enqueue_dynamic_css_file(){
-        // generate_dynamic_css();
         $uri = get_theme_file_uri();
-        $ver = grg_DEV_MODE ? time() : true;
+        $ver = grg_DEV_MODE ? time() : get_option("grg_dynamic_cache_ver", 1);
         $file1 = get_theme_file_path( '/dist/css/dynamic.css' );
         if(file_exists($file1)){
             wp_enqueue_style('grg_dynamic_style', $uri . '/dist/css/dynamic.css', [], $ver);
@@ -1144,14 +1156,11 @@ if(grigora_get_option('dynamicexternal') && !current_user_can('manage_options'))
     }
 
     function grg_enqueue_dynamic_minified_css_file(){
-        if(class_exists('MatthiasMullie\Minify\CSS')){
-            // generate_dynamic_minified_css();
-            $uri = get_theme_file_uri();
-            $ver = grg_DEV_MODE ? time() : true;
-            $file1 = get_theme_file_path( '/dist/css/dynamic.min.css' );
-            if(file_exists($file1)){
-                wp_enqueue_style('grg_dynamic_min_style', $uri . '/dist/css/dynamic.min.css', [], $ver);
-            }
+        $uri = get_theme_file_uri();
+        $ver = grg_DEV_MODE ? time() : get_option("grg_dynamic_cache_ver", 1);
+        $file1 = get_theme_file_path( '/dist/css/dynamic.min.css' );
+        if(file_exists($file1)){
+            wp_enqueue_style('grg_dynamic_min_style', $uri . '/dist/css/dynamic.min.css', [], $ver);
         }
     }
 
@@ -1165,6 +1174,17 @@ if(grigora_get_option('dynamicexternal') && !current_user_can('manage_options'))
 else{
     add_action( 'wp_head', 'grg_enqueue_dynamic_css' );
 }
+
+if(current_user_can('manage_options')){
+    $theme_slug = get_option( 'stylesheet' );
+    
+    add_action('update_option_grigora_settings','grg_regenerate_dynamic_css', 10, 2);
+    add_action('add_option_grigora_settings','grg_regenerate_dynamic_css', 10, 2);
+    add_action("update_option_theme_mods_$theme_slug",'grg_regenerate_dynamic_css', 10, 2);
+    add_action("add_option_theme_mods_$theme_slug",'grg_regenerate_dynamic_css', 10, 2);
+}
+
+
 
 
 ?>
