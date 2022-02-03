@@ -1154,30 +1154,35 @@ if(grigora_get_option('dynamicexternal') && !current_user_can('manage_options'))
     function grg_enqueue_dynamic_css_file(){
         $uri = get_theme_file_uri();
         $ver = grg_DEV_MODE ? time() : get_option("grg_dynamic_cache_ver", 1);
-        $file1 = get_theme_file_path( '/dist/css/dynamic.css' );
-        if(file_exists($file1)){
-            wp_enqueue_style('grg_dynamic_style', $uri . '/dist/css/dynamic.css', [], $ver);
-        }
+        wp_enqueue_style('grg_dynamic_style', $uri . '/dist/css/dynamic.css', [], $ver);
     }
 
     function grg_enqueue_dynamic_minified_css_file(){
         $uri = get_theme_file_uri();
         $ver = grg_DEV_MODE ? time() : get_option("grg_dynamic_cache_ver", 1);
-        $file1 = get_theme_file_path( '/dist/css/dynamic.min.css' );
-        if(file_exists($file1)){
-            wp_enqueue_style('grg_dynamic_min_style', $uri . '/dist/css/dynamic.min.css', [], $ver);
-        }
+        wp_enqueue_style('grg_dynamic_min_style', $uri . '/dist/css/dynamic.min.css', [], $ver);
     }
 
     if(grigora_get_option('minify')){
-        add_action('wp_enqueue_scripts', 'grg_enqueue_dynamic_minified_css_file');
+        if(file_exists(get_theme_file_path( '/dist/css/dynamic.min.css' ))){
+            add_action('wp_enqueue_scripts', 'grg_enqueue_dynamic_minified_css_file');
+        }
+        else{
+            add_action( 'wp_head', 'grg_enqueue_dynamic_css' );
+        }
+        
     }
     else{
-        add_action('wp_enqueue_scripts', 'grg_enqueue_dynamic_css_file');
+        if(file_exists(get_theme_file_path( '/dist/css/dynamic.css' ))){
+            add_action('wp_enqueue_scripts', 'grg_enqueue_dynamic_css_file');
+        }
+        else{
+            add_action( 'wp_head', 'grg_enqueue_dynamic_css' );
+        }
     }
 }
 else{
-    add_action( 'wp_head', 'grg_enqueue_dynamic_css' );
+    
 }
 
 if(current_user_can('manage_options')){
