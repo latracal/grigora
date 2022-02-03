@@ -71,27 +71,64 @@ searchbtn.addEventListener('click', togglesearch, false);
 menubtn.addEventListener('click', togglemenu, false);
 
 //submenu toggle in mobile
-w = screen.width;
+const mobileheader = document.getElementsByClassName('mobile-header')[0];
+const mobilesearchbtn = mobileheader.getElementsByClassName('search-btn')[0];
+const mobilemenubtn = mobileheader.getElementsByClassName('menu-toggle-btn')[0];
+mobilesearchbtn.addEventListener('click', togglemobilesearch, false);
+mobilemenubtn.addEventListener('click', togglemobilemenu, false);
 
-const parents = document.getElementsByClassName('menu-item-has-children');
-
-for (var i = 0; i < parents.length; i++) {
-	parents[i].addEventListener('click', toggleSubMenu, false);
-}
-
-function toggleSubMenu(event) {
-	var targetElement = event.target || event.srcElement;
-	var child = targetElement.getElementsByClassName('sub-menu')[0];
-	console.log(child.style.display);
-
-	if (w < 768) {
-		if (child.style.display == 'none' || child.style.display == '') {
-			child.style.display = 'block';
-		} else {
-			child.style.display = 'none';
-		}
+function togglemobilesearch(event){
+	const searchform = mobileheader.getElementsByClassName('search-form')[0];
+	const menucontainer = mobileheader.getElementsByClassName('menu-container')[0];
+	const menuobjects = menucontainer.getElementsByClassName('menu');
+	if(menuobjects.length > 0){
+		menuobjects[0].classList.add('hide');
 	}
+	if(searchform.style.display == 'none'){
+		searchform.style.display = 'block';
+	}
+	else{
+		searchform.style.display = 'none';
+	}
+
 }
+
+function togglemobilemenu(event){
+	const menucontainer = mobileheader.getElementsByClassName('menu-container')[0];
+	const menuobjects = menucontainer.getElementsByClassName('menu')[0];
+	const searchform = mobileheader.getElementsByClassName('search-form')[0];
+	searchform.style.display = 'none';
+	if(menuobjects.classList.contains('hide')){
+		menuobjects.classList.remove('hide');
+	}
+	else{
+		menuobjects.classList.add('hide');
+	}
+
+}
+
+// w = screen.width;
+
+// const parents = document.getElementsByClassName('menu-item-has-children');
+
+
+// for (var i = 0; i < parents.length; i++) {
+// 	parents[i].addEventListener('click', toggleSubMenu, false);
+// }
+
+// function toggleSubMenu(event) {
+// 	var targetElement = event.target || event.srcElement;
+// 	var child = targetElement.getElementsByClassName('sub-menu')[0];
+// 	console.log(child.style.display);
+
+// 	if (w < 768) {
+// 		if (child.style.display == 'none' || child.style.display == '') {
+// 			child.style.display = 'block';
+// 		} else {
+// 			child.style.display = 'none';
+// 		}
+// 	}
+// }
 
 var totop = document.getElementById('totop');
 if (totop) {
