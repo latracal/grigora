@@ -339,7 +339,7 @@ function grigora_customize_settings_section() {
 
    add_settings_field(
         'grigora_performance_section_minify',
-        'Minify CSS/JS',
+        'Minify CSS',
         'grigora_performance_section_minify_callback_function',
         'grigora-options',
         'grigora_performance_section'

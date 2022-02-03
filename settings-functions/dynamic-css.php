@@ -1113,18 +1113,20 @@ function increment_dynamic_css_cache_ver(){
 }
 
 function generate_dynamic_minified_css(){
-    $uri = get_theme_file_uri();
-    $unminified_css = grg_dynamic_customize_css_var();
-    $minified = get_theme_file_path( '/dist/css/dynamic.min.css' );
-    $minifier = new MatthiasMullie\Minify\CSS($unminified_css);
-    $minified_css = $minifier->minify();
-    if(!$myfile2 = fopen($minified, 'w+ ')){
-        return;
-    }
-    else{
-        fwrite($myfile2, $minified_css);
-        fclose($myfile2);
-        increment_dynamic_css_cache_ver();
+    if(class_exists('MatthiasMullie\Minify\CSS')){
+        $uri = get_theme_file_uri();
+        $unminified_css = grg_dynamic_customize_css_var();
+        $minified = get_theme_file_path( '/dist/css/dynamic.min.css' );
+        $minifier = new MatthiasMullie\Minify\CSS($unminified_css);
+        $minified_css = $minifier->minify();
+        if(!$myfile2 = fopen($minified, 'w+ ')){
+            return;
+        }
+        else{
+            fwrite($myfile2, $minified_css);
+            fclose($myfile2);
+            increment_dynamic_css_cache_ver();
+        }
     }
 }
 
