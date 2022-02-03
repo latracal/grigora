@@ -8,6 +8,7 @@ var searchbtnsvg = document.querySelector('.search-btn-svg');
 var searchinput = document.getElementsByClassName('search-field')[0];
 var searchfield = document.querySelector('.search-field');
 var searcharrowbutton = document.querySelector('.search-icon');
+
 /*navbar*/
 const menu = document.querySelector('.menu');
 var menubtn = document.querySelector('.menu-toggle-btn');
@@ -121,7 +122,7 @@ function topFunction() {
 const tocToggle = document.querySelector('.toggle-toc');
 const heading = document.querySelector('.heading');
 
-if(tocToggle){
+if (tocToggle) {
 	tocToggle.addEventListener('click', function () {
 		if (heading.classList.contains('show-links')) {
 			heading.classList.remove('show-links');
@@ -133,52 +134,48 @@ if(tocToggle){
 	});
 }
 
-function setCookie(name,value,days) {
-    var expires = "";
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days*24*60*60*1000));
-        expires = "; expires=" + date.toUTCString();
-    }
-    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+function setCookie(name, value, days) {
+	var expires = '';
+	if (days) {
+		var date = new Date();
+		date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+		expires = '; expires=' + date.toUTCString();
+	}
+	document.cookie = name + '=' + (value || '') + expires + '; path=/';
 }
 function getCookie(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0;i < ca.length;i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1,c.length);
-        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-    }
-    return null;
+	var nameEQ = name + '=';
+	var ca = document.cookie.split(';');
+	for (var i = 0; i < ca.length; i++) {
+		var c = ca[i];
+		while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+	}
+	return null;
 }
-function eraseCookie(name) {   
-    document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+function eraseCookie(name) {
+	document.cookie =
+		name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
 /*cookie*/
 const cookieToggle = document.querySelector('.cookie-btn');
 const notice = document.querySelector('.cookie');
 
-if(notice){
+if (notice) {
 	var x = getCookie('grg_cookie_flag');
 	if (x) {
-		if(x!="1"){
+		if (x != '1') {
 			notice.style.display = 'flex';
 			cookieToggle.addEventListener('click', function () {
 				notice.style.display = 'none';
-				setCookie('grg_cookie_flag','1',30);
+				setCookie('grg_cookie_flag', '1', 30);
 			});
 		}
-	}
-	else{
+	} else {
 		notice.style.display = 'flex';
 		cookieToggle.addEventListener('click', function () {
 			notice.style.display = 'none';
-			setCookie('grg_cookie_flag','1',30);
+			setCookie('grg_cookie_flag', '1', 30);
 		});
 	}
-	
-
 }
-
-
