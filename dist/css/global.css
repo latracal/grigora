@@ -1057,7 +1057,7 @@
 }
 
 .container .article .pagination .prev:hover {
-  background-color: #aaaaaa;
+  opacity: 0.8;
 }
 
 .container .article .pagination .next {
@@ -1071,7 +1071,7 @@
 }
 
 .container .article .pagination .next:hover {
-  background-color: #aaaaaa;
+  opacity: 0.8;
 }
 
 .container aside {
@@ -1114,13 +1114,13 @@
   }
 }
 
-.post-content .has-vivid-red-background-color {
+.post-content .wp-block-button a {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 
-.post-content .has-vivid-red-background-color:hover {
-  background-color: #aaaaaa !important;
+.post-content .wp-block-button a:hover {
+  opacity: 0.8;
 }
 
 .post-content .breadcrumb {
@@ -1396,7 +1396,7 @@
 }
 
 .post-content .post-pagination .pagination-prev-post:hover {
-  background-color: #aaaaaa;
+  opacity: 0.8;
 }
 
 .post-content .post-pagination .pagination-next-post {
@@ -1409,7 +1409,7 @@
 }
 
 .post-content .post-pagination .pagination-next-post:hover {
-  background-color: #aaaaaa;
+  opacity: 0.8;
 }
 
 @media (max-width: 768px) {
@@ -1740,7 +1740,7 @@
 }
 
 .comment-list .comment-box .comment-reply a:hover {
-  background-color: #aaaaaa;
+  opacity: 0.8;
 }
 
 aside .wp-block-pullquote {
@@ -1912,7 +1912,7 @@ p {
 }
 
 .read-btn:hover {
-  background-color: #aaaaaa;
+  opacity: 0.8;
 }
 
 .post-title {
