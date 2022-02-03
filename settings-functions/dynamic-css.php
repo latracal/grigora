@@ -20,6 +20,7 @@ function grg_dynamic_customize_css_var() {
 
     $cookie_flag = grigora_get_option("cookie");
     $out = "";
+    
     if($colors_flag) {
         $out = $out."body {
         background-color: ".get_theme_mod('grg_bg-color', $defaults['grg_bg-color']).";

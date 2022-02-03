@@ -79,38 +79,38 @@
         </nav>
         <nav class="mobile-header">
             <div class="top-part">
-            <div class="menu-toggle-btn" id="menu-toggle-btn">
-                <div class="menu-toggle-icon">
-                    <span class="menu-toggle-line line top"></span>
-                    <span class="menu-toggle-line line middle"></span>
-                    <span class="menu-toggle-line line bottom"></span>
+                <div class="menu-toggle-btn" id="menu-toggle-btn">
+                    <div class="menu-toggle-icon">
+                        <span class="menu-toggle-line line top"></span>
+                        <span class="menu-toggle-line line middle"></span>
+                        <span class="menu-toggle-line line bottom"></span>
+                    </div>
                 </div>
-            </div>
-            <?php 
+                <?php 
             if(has_custom_logo()){
                 ?>
-            <div class="logo">
-                <?php
+                <div class="logo">
+                    <?php
                     if ( function_exists( 'the_custom_logo' ) ) {
                     the_custom_logo();
                     }
                 ?>
-            </div>
-            <?php
+                </div>
+                <?php
             } else { 
             ?>
-            <div class="title">
-                <a href="<?php echo get_home_url(); ?>">
-                    <h1><?php echo get_bloginfo( 'name' ); ?></h1>
-                </a>
-                <a href="<?php echo get_home_url(); ?>">
-                    <h2>
-                        <?php echo get_bloginfo( 'description' ); ?>
-                    </h2>
-                </a>
-            </div>
+                <div class="title">
+                    <a href="<?php echo get_home_url(); ?>">
+                        <h1><?php echo get_bloginfo( 'name' ); ?></h1>
+                    </a>
+                    <a href="<?php echo get_home_url(); ?>">
+                        <h2>
+                            <?php echo get_bloginfo( 'description' ); ?>
+                        </h2>
+                    </a>
+                </div>
 
-            <?php
+                <?php
             }
             ?>
 
