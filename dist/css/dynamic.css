@@ -8,24 +8,24 @@ body {
         
     }
 
-    .navbar .menu-container .menu {
+    .navbar .menu-container .menu, , .mobile-header .menu-container .menu {
         background-color: #c4c4c4;
         
     }
 
-    .navbar .menu-container .menu .menu-item .sub-menu {
+    .navbar .menu-container .menu .menu-item .sub-menu, .mobile-header .menu-container .menu .menu-item .sub-menu {
         background-color: #c4c4c4;
         
     }
 
     .navbar .menu-container .search-btn .search-box,
-    .navbar .menu-container .search-btn .search-box .search-field {
+    .navbar .menu-container .search-btn .search-box .search-field, .mobile-header .search-box, .mobile-header .search-box .search-field {
         background-color: #c4c4c4;
         
     }
 
     .navbar .title a,
-    .navbar .menu-container .menu a {
+    .navbar .menu-container .menu a, .mobile-header .top-part .title a, .mobile-header .menu-container .menu a {
         color: #000;
         
     }
@@ -281,7 +281,7 @@ body {
         }
     }
 
-    .navbar {
+    .navbar, .mobile-header .top-part {
         min-height: 155px;
     }body {
         font-family: Verdana;
