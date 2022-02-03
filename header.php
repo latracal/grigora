@@ -53,7 +53,6 @@
             </div>
             <div class="menu-container">
                 <?php
-
                 if( has_nav_menu( 'primary' ) ){
                     wp_nav_menu([
                         'theme_location' => 'primary',
@@ -62,6 +61,9 @@
                         'fallback_cb' => false,
                         'depth' => 2,
                     ]);
+                }
+                else{
+                    // todo here
                 }
 
                 ?>

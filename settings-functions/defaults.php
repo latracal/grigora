@@ -82,7 +82,7 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 	function grigora_spacing_defaults() {
 		return array(
 			'grg_header-height' => '155',		
-			'grg_sidebar-alignment' => 'Right',		
+			'grg_sidebar-alignment' => 'row',		
 			'grg_sidebar-width' => '30',	
 			'grg_sidebar-padding' => 15,
 			'grg_container-width'=> '1366',		
@@ -103,9 +103,9 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 
 	function grigora_scroll_defaults() {
 		return array(
-			'grg_scrollborder' => '0',
-			'grg_scrolliconsize' => '3',
-			'grg_scroll-position' => 'left',
+			'grg_scrollborder' => '5',
+			'grg_scrolliconsize' => '13',
+			'grg_scroll-position' => 'right',
 			'grg_scroll-display' => 'both'
 		);
 	}

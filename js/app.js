@@ -15,7 +15,9 @@ var menubtn = document.querySelector('.menu-toggle-btn');
 var menuicon = document.querySelector('.menu-toggle-icon');
 
 function togglesearch(event) {
-	menu.classList.add('hide');
+	if(menu){
+		menu.classList.add('hide');
+	}
 	if (searchinput.contains(event.target)) {
 		return;
 	}
@@ -95,16 +97,17 @@ function togglemobilesearch(event){
 
 function togglemobilemenu(event){
 	const menucontainer = mobileheader.getElementsByClassName('menu-container')[0];
-	const menuobjects = menucontainer.getElementsByClassName('menu')[0];
+	const menuobjects = menucontainer.getElementsByClassName('menu');
 	const searchform = mobileheader.getElementsByClassName('search-form')[0];
 	searchform.style.display = 'none';
-	if(menuobjects.classList.contains('hide')){
-		menuobjects.classList.remove('hide');
+	if(menuobjects.length>0){
+		if(menuobjects[0].classList.contains('hide')){
+			menuobjects[0].classList.remove('hide');
+		}
+		else{
+			menuobjects[0].classList.add('hide');
+		}
 	}
-	else{
-		menuobjects.classList.add('hide');
-	}
-
 }
 
 // w = screen.width;
