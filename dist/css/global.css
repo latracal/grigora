@@ -1865,6 +1865,12 @@ p {
   background-color: #c4c4c4;
   padding: 0.25rem 1rem;
   border-radius: 0.25rem;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.read-btn:hover {
+  background-color: #aaaaaa;
 }
 
 .post-title {
