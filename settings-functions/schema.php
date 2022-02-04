@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * Set default blog theme mods
+ *
+ * @since  1.000
+ * 
+ * @param $type type of schema
+ * 
+ * @return array schema parameters
+ */
 function grg_get_schema_tag($type){
     if ($type=="footer"){
         return array(

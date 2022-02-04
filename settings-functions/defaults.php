@@ -7,7 +7,7 @@ if ( ! function_exists( 'grigora_get_defaults' ) ) {
 	 * 
 	 * @since  1.000
 	 * 
-	 * @return default values
+	 * @return array values
 	 */
 	
 	function grigora_get_defaults() {
@@ -46,7 +46,7 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 	 * 
 	 * @since  1.000
 	 * 
-	 * @return default color values
+	 * @return array color values
 	 */
 
 	function grigora_color_defaults() {
@@ -102,7 +102,7 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 	 * 
 	 * @since  1.000
 	 * 
-	 * @return default spacing values
+	 * @return array spacing values
 	 */
 
 	function grigora_spacing_defaults() {
@@ -132,7 +132,7 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 	 * 
 	 * @since  1.000
 	 * 
-	 * @return default scroll values
+	 * @return array scroll values
 	 */
 
 	function grigora_scroll_defaults() {
@@ -149,7 +149,7 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 	 * 
 	 * @since  1.000
 	 * 
-	 * @return default typography font values
+	 * @return array typography font values
 	 */
 
 	function grigora_typography_defaults_fonts() {
@@ -174,7 +174,7 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 	 * 
 	 * @since  1.000
 	 * 
-	 * @return default typography values
+	 * @return array typography values
 	 */
 
 	function grigora_typography_defaults() {
@@ -223,7 +223,7 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 	 * 
 	 * @since  1.000
 	 * 
-	 * @return default blogpage values
+	 * @return array blogpage values
 	 */
 
 	function grigora_blog_defaults(){

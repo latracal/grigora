@@ -3,11 +3,10 @@
 if (grigora_get_option("typography") && function_exists('google_fonts')){
 
     /**
-     * Add Google font to the customize settings
+     * Import used Google Fonts
      *
      * @since  1.000
      * 
-     * @return fonts
      */
 
     function grigora_add_google_fonts() {

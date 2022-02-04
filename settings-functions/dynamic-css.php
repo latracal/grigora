@@ -7,7 +7,7 @@
  * 
  * @since  1.000
  * 
- * @return css values
+ * @return str Dynamic CSS String
  */
 
 function grg_dynamic_customize_css_var() {
@@ -1086,29 +1086,39 @@ return $out;
 
 }
 
-
+/**
+ * Echo the minified or unminified version of Dynamic CSS
+ * 
+ * @since  1.000
+ * 
+ */
 function grg_enqueue_dynamic_css() {
     ?>
-<style id="grg-dynamic-inline-css">
-<?php if (grigora_get_option('minify') && class_exists('MatthiasMullie\Minify\CSS')) {
-    $minifier=new MatthiasMullie\Minify\CSS(grg_dynamic_customize_css_var());
-    $minified_css=$minifier->minify();
-    echo $minified_css;
-}
-
-else {
-    echo grg_dynamic_customize_css_var();
-}
-
-?>
-</style>
-<?php
+    <style id="grg-dynamic-inline-css">
+    <?php if (grigora_get_option('minify') && class_exists('MatthiasMullie\Minify\CSS')) {
+        $minifier=new MatthiasMullie\Minify\CSS(grg_dynamic_customize_css_var());
+        $minified_css=$minifier->minify();
+        echo $minified_css;
+    }
+    else {
+        echo grg_dynamic_customize_css_var();
+    }
+    ?>
+    </style>
+    <?php
 }
 
 
 
 
 if (grigora_get_option('minify') && class_exists('MatthiasMullie\Minify\CSS')){
+    /**
+     * Generate Minified Global CSS and Enqueue Function
+     * Requires file write permissions
+     * 
+     * @since  1.000
+     * 
+     */
     function generate_global_minified_css(){
         $uri = get_theme_file_uri();
         $ver = grg_DEV_MODE ? time() : true;
@@ -1135,6 +1145,13 @@ if (grigora_get_option('minify') && class_exists('MatthiasMullie\Minify\CSS')){
         }
     }
 
+    /**
+     * Enqueue Global CSS
+     * 
+     * @since  1.000
+     * 
+     */
+
     function grg_enqueue_min_global_css(){
         $uri = get_theme_file_uri();
         $ver = grg_DEV_MODE ? time() : true;
@@ -1150,12 +1167,26 @@ if (grigora_get_option('minify') && class_exists('MatthiasMullie\Minify\CSS')){
 
 }
 
+
+/**
+ * Increment the cache version to reset the dynamic css cache
+ * 
+ * @since  1.000
+ * 
+ */
 function increment_dynamic_css_cache_ver(){
     $cache_ver = get_option("grg_dynamic_cache_ver", 1);
     $cache_ver++;
     update_option( 'grg_dynamic_cache_ver', $cache_ver );
 }
 
+/**
+ * Generate Minified Dynamic CSS External File
+ * Requires Write Permissions
+ * 
+ * @since  1.000
+ * 
+ */
 function generate_dynamic_minified_css(){
     if(class_exists('MatthiasMullie\Minify\CSS')){
         $uri = get_theme_file_uri();
@@ -1174,6 +1205,13 @@ function generate_dynamic_minified_css(){
     }
 }
 
+/**
+ * Generate Unminified Dynamic CSS External File
+ * Requires Write Permissions
+ * 
+ * @since  1.000
+ * 
+ */
 function generate_dynamic_css(){
     $uri = get_theme_file_uri();
     $unminified_css = grg_dynamic_customize_css_var();
@@ -1188,19 +1226,37 @@ function generate_dynamic_css(){
     }
 }
 
+/**
+ * Regenerate Dynamic CSS External Files.
+ * 
+ * @since  1.000
+ * 
+ */
 function grg_regenerate_dynamic_css($old, $new) {
     generate_dynamic_minified_css();
     generate_dynamic_css();
 }
 
 if(grigora_get_option('dynamicexternal') && !current_user_can('manage_options')){
-
+    /**
+     * Enqueue Unminified Dynamic CSS File
+     * 
+     * @since  1.000
+     * 
+     */
     function grg_enqueue_dynamic_css_file(){
         $uri = get_theme_file_uri();
         $ver = grg_DEV_MODE ? time() : get_option("grg_dynamic_cache_ver", 1);
         wp_enqueue_style('grg_dynamic_style', $uri . '/dist/css/dynamic.css', [], $ver);
     }
-
+    
+    /**
+     *
+     * Enqueue Minified Dynamic CSS File
+     * 
+     * @since  1.000
+     * 
+     */
     function grg_enqueue_dynamic_minified_css_file(){
         $uri = get_theme_file_uri();
         $ver = grg_DEV_MODE ? time() : get_option("grg_dynamic_cache_ver", 1);
@@ -1229,9 +1285,12 @@ else{
     add_action( 'wp_head', 'grg_enqueue_dynamic_css' );
 }
 
+/**
+ * Call Regenerate Function Everytime Settings are Updated.
+ * 
+ */
 if(current_user_can('manage_options')){
-    $theme_slug = get_option( 'stylesheet' );
-    
+    $theme_slug = get_option( 'stylesheet' );    
     add_action('update_option_grigora_settings','grg_regenerate_dynamic_css', 10, 2);
     add_action('add_option_grigora_settings','grg_regenerate_dynamic_css', 10, 2);
     add_action("update_option_theme_mods_$theme_slug",'grg_regenerate_dynamic_css', 10, 2);

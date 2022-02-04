@@ -92,9 +92,7 @@ if ( ! function_exists( 'grigora_options_page' ) ) {
  *
  * @since  1.000
  * 
- * @return true if the plugin is active
  */
-
 function grigora_options_page() {
 wp_enqueue_style( 'theme-options', get_template_directory_uri() . '/dist/css/admin-options.css' );
 wp_enqueue_script( 'theme-options', get_template_directory_uri() . '/js/admin-options.js' );
@@ -172,13 +170,11 @@ add_action( 'admin_menu', 'girgora_options_menu' );
 register_setting( 'grigora_settings', 'grigora_settings' );
 
 /**
- * get the default values from the defauls.php file 
+ * Set default color theme mods
  *
  * @since  1.000
  * 
- * @return color_defaults
  */
-
 function grigora_set_default_colors(){
     if (!grigora_get_option("colordefaultsset")){
         $defaults = grigora_color_defaults();
@@ -200,13 +196,11 @@ function grigora_set_default_colors(){
 }
 
 /**
- * get the default values from the defauls.php file 
+ * Set default spacing layout theme mods
  *
  * @since  1.000
  * 
- * @return spacing_defaults
  */
-
 function grigora_set_default_spacing(){
     if (!grigora_get_option("spacingdefaultsset")){
         $defaults = grigora_spacing_defaults();
@@ -228,13 +222,11 @@ function grigora_set_default_spacing(){
 }
 
 /**
- * get the default values from the defauls.php file 
+ * Set default scroll theme mods
  *
  * @since  1.000
  * 
- * @return scroll_defaults
  */
-
 function grigora_set_default_scroll(){
     if (!grigora_get_option("scrolldefaultsset")){
         $defaults = grigora_scroll_defaults();
@@ -256,13 +248,11 @@ function grigora_set_default_scroll(){
 }
 
 /**
- * get the default values from the defauls.php file 
+ * Set default typography fonts
  *
  * @since  1.000
  * 
- * @return typography_font_defaults
  */
-
 function grigora_set_default_typography_font(){
     if (!grigora_get_option("typographyfontdefaultsset")){
         $defaults = grigora_typography_defaults_fonts();
@@ -284,13 +274,11 @@ function grigora_set_default_typography_font(){
 }
 
 /**
- * get the default values from the defauls.php file 
+ * Set typography defaults
  *
  * @since  1.000
  * 
- * @return typography_defaults
  */
-
 function grigora_set_default_typography(){
     if (!grigora_get_option("typographydefaultsset")){
         $defaults = grigora_typography_defaults();
@@ -312,11 +300,10 @@ function grigora_set_default_typography(){
 }
 
 /**
- * get the default values from the defauls.php file 
+ * Set default blog theme mods
  *
  * @since  1.000
  * 
- * @return blog_defaults
  */
 
 function grigora_set_default_blog(){
@@ -340,12 +327,11 @@ function grigora_set_default_blog(){
 }
 
 /**
- * renders customizer setting in div having specific class name for each individual setting in
+ * Renders customizer setting in div having specific class name for each individual setting in
  * customizer options.
  *
  * @since  1.000
  * 
- * @return div with custom class
  */
 
 function grigora_customize_settings_section() {
@@ -436,8 +422,7 @@ function grigora_customize_settings_section() {
  add_action( 'admin_init', 'grigora_customize_settings_section' );
  
 /**
- * renders customizer setting in div having specific class name for each individual setting in
- * performance options.
+ * Renders customizer setting in div having specific class name for each individual setting
  *
  * @since  1.000
  * 
@@ -625,7 +610,7 @@ add_action( 'admin_post_grigora_export', 'grigora_admin_export_data' );
  *
  * @since  1.000
  * 
- * @return backup
+ * @return JSON export file
  */
 
 function grigora_admin_export_data() {
@@ -663,7 +648,6 @@ add_action( 'admin_post_grigora_import', 'grigora_admin_import_data' );
  *
  * @since  1.000
  * 
- * @return import file
  */
 
 function grigora_admin_import_data() {
