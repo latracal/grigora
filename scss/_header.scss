@@ -2,7 +2,7 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: center;
 	background-color: #e9e9e9;
 
 	@media (max-width: 768px) {
@@ -102,207 +102,207 @@
 			top: 78%;
 		}
 	}
+}
 
-	.menu-container {
+.menu-container {
+	position: relative;
+
+	@media (max-width: 768px) {
+		position: static;
+	}
+
+	ul {
+		list-style: none;
+	}
+
+	.hide {
+		@media (max-width: 768px) {
+			display: none !important;
+		}
+	}
+
+	.menu {
 		position: relative;
+		font-size: $nav-item-font-size;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		width: 100%;
+		background-color: #c4c4c4;
+		z-index: 99;
 
 		@media (max-width: 768px) {
-			position: static;
-		}
-
-		ul {
-			list-style: none;
-		}
-
-		.hide {
-			@media (max-width: 768px) {
-				display: none !important;
-			}
-		}
-
-		.menu {
-			position: relative;
-			font-size: $nav-item-font-size;
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
+			position: absolute;
+			flex-direction: column;
+			top: 8.6rem;
+			left: 0;
 			width: 100%;
-			background-color: #c4c4c4;
-			z-index: 99;
+			padding: 0;
+		}
 
+		li {
 			@media (max-width: 768px) {
-				position: absolute;
-				flex-direction: column;
-				top: 8.6rem;
-				left: 0;
-				width: 100%;
-				padding: 0;
+				margin: 0 0.5rem;
+				border-bottom: 1px solid #888888;
 			}
 
-			li {
+			&:last-child {
 				@media (max-width: 768px) {
-					margin: 0 0.5rem;
-					border-bottom: 1px solid #888888;
+					border-bottom: none;
+				}
+			}
+		}
+
+		a {
+			display: inline-block;
+			color: #000;
+			text-decoration: none;
+			padding: 0.8rem 1rem;
+			border-bottom: 3px solid transparent;
+
+			@media (max-width: 768px) {
+				padding: 0.5rem;
+
+				&:hover {
+					border-bottom: none !important;
+				}
+			}
+
+			&:hover {
+				border-bottom: 3px solid #000;
+			}
+		}
+
+		.menu-item {
+			position: relative;
+
+			&:hover a {
+				border-bottom: 3px solid #000;
+			}
+
+			&:hover .sub-menu {
+				display: block;
+			}
+
+			.sub-menu {
+				display: none;
+				position: absolute;
+				width: 100%;
+				min-width: 10rem;
+				background-color: #e9e9e9;
+				z-index: 99;
+
+				@media (max-width: 768px) {
+					position: relative;
+					top: 0;
+					width: 100%;
+					background-color: #c4c4c4;
 				}
 
-				&:last-child {
+				li {
+					padding: 0;
+
+					&:first-child {
+						@media (max-width: 768px) {
+							border-top: 1px solid #888888;
+						}
+					}
+
 					@media (max-width: 768px) {
+						margin: 0;
+					}
+				}
+
+				a {
+					display: block;
+					padding: 0.5rem 1rem;
+					border: none;
+
+					&::after {
+						content: none;
+					}
+					@media (max-width: 768px) {
+						margin: 0 1rem;
+					}
+
+					&:hover {
 						border-bottom: none;
 					}
 				}
 			}
+		}
+	}
 
-			a {
-				display: inline-block;
-				color: #000;
-				text-decoration: none;
-				padding: 0.8rem 1rem;
-				border-bottom: 3px solid transparent;
+	.s-hide {
+		display: none !important;
+	}
 
-				@media (max-width: 768px) {
-					padding: 0.5rem;
+	.search-btn {
+		display: block;
+		position: absolute;
+		right: 1rem;
+		bottom: 50%;
+		transform: translate(0%, 50%);
+		z-index: 99;
 
-					&:hover {
-						border-bottom: none !important;
-					}
-				}
+		@media (max-width: 768px) {
+		}
 
-				&:hover {
-					border-bottom: 3px solid #000;
-				}
-			}
+		svg {
+			width: 20px;
+			height: 20px;
+		}
 
-			.menu-item {
-				position: relative;
+		.toggle {
+			border: none;
+			background-color: transparent;
 
-				&:hover a {
-					border-bottom: 3px solid #000;
-				}
-
-				&:hover .sub-menu {
-					display: block;
-				}
-
-				.sub-menu {
-					display: none;
-					position: absolute;
-					width: 100%;
-					min-width: 10rem;
-					background-color: #e9e9e9;
-					z-index: 99;
-
-					@media (max-width: 768px) {
-						position: relative;
-						top: 0;
-						width: 100%;
-						background-color: #c4c4c4;
-					}
-
-					li {
-						padding: 0;
-
-						&:first-child {
-							@media (max-width: 768px) {
-								border-top: 1px solid #888888;
-							}
-						}
-
-						@media (max-width: 768px) {
-							margin: 0;
-						}
-					}
-
-					a {
-						display: block;
-						padding: 0.5rem 1rem;
-						border: none;
-
-						&::after {
-							content: none;
-						}
-						@media (max-width: 768px) {
-							margin: 0 1rem;
-						}
-
-						&:hover {
-							border-bottom: none;
-						}
-					}
-				}
+			&:hover {
+				cursor: pointer;
 			}
 		}
 
-		.s-hide {
-			display: none !important;
-		}
-
-		.search-btn {
-			display: block;
+		.search-box {
 			position: absolute;
-			right: 1rem;
-			bottom: 50%;
-			transform: translate(0%, 50%);
-			z-index: 99;
+			display: flex;
+			flex-direction: row;
+			top: 37px;
+			right: 0;
+			padding: 0.5rem;
+			background-color: #e9e9e9;
+			gap: 0.5rem;
 
 			@media (max-width: 768px) {
+				top: 80px;
+				right: -1rem;
+				width: 100vw;
 			}
 
-			svg {
-				width: 20px;
-				height: 20px;
+			.search-field {
+				font-size: 1rem;
+				outline: none;
+				padding: 0.5rem;
+				background-color: #e9e9e9;
+				border-top: none;
+				border-left: none;
+				border-right: none;
+				width: 15rem;
+
+				@media (max-width: 768px) {
+					width: 100%;
+				}
+
+				&::-webkit-input-placeholder {
+					font-size: 16px;
+				}
 			}
 
-			.toggle {
+			.search-icon {
 				border: none;
 				background-color: transparent;
 
 				&:hover {
 					cursor: pointer;
-				}
-			}
-
-			.search-box {
-				position: absolute;
-				display: flex;
-				flex-direction: row;
-				top: 37px;
-				right: 0;
-				padding: 0.5rem;
-				background-color: #e9e9e9;
-				gap: 0.5rem;
-
-				@media (max-width: 768px) {
-					top: 80px;
-					right: -1rem;
-					width: 100vw;
-				}
-
-				.search-field {
-					font-size: 1rem;
-					outline: none;
-					padding: 0.5rem;
-					background-color: #e9e9e9;
-					border-top: none;
-					border-left: none;
-					border-right: none;
-					width: 15rem;
-
-					@media (max-width: 768px) {
-						width: 100%;
-					}
-
-					&::-webkit-input-placeholder {
-						font-size: 16px;
-					}
-				}
-
-				.search-icon {
-					border: none;
-					background-color: transparent;
-
-					&:hover {
-						cursor: pointer;
-					}
 				}
 			}
 		}
