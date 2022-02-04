@@ -306,6 +306,12 @@
   z-index: 99;
 }
 
+@media (max-width: 768px) {
+  .menu-container .search-btn {
+    display: none;
+  }
+}
+
 .menu-container .search-btn svg {
   width: 20px;
   height: 20px;
