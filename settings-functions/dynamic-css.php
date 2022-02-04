@@ -1046,6 +1046,7 @@ if(!has_nav_menu( 'primary' )){
 
     .navbar{
         justify-content: center;
+        min-height:115px;
     }
     
     ";
