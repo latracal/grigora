@@ -53,6 +53,11 @@ function grg_dynamic_customize_css_var() {
 
     }
 
+    .menu-container .menu-item-has-children a::after {
+        border:solid ".get_theme_mod('grg_header_text-color', $defaults['grg_header_text-color']).";
+        border-width: 0 2px 2px 0 !important;
+    }
+
     .footer .footer-menu {
         background-color: ".get_theme_mod('grg_footer_menu_bg-color', $defaults['grg_footer_menu_bg-color']).";
 
@@ -89,12 +94,12 @@ function grg_dynamic_customize_css_var() {
 
     }
 
-    .read-btn, .container .article .pagination .next, .container .article .pagination .prev {
+    .read-btn, .container .article .pagination .next, .container .article .pagination .prev, .form-submit .submit {
         background-color: ".get_theme_mod('grg_btn-color', $defaults['grg_btn-color'])." !important;
 
     }
 
-    .container .article .pagination .next.page-numbers,.container .article .pagination .prev.page-numbers{
+    .container .article .pagination .next.page-numbers,.container .article .pagination .prev.page-numbers, .form-submit .submit{
         color: ".get_theme_mod('grg_btn-text-color', $defaults['grg_btn-text-color']).";
     }
     
@@ -280,8 +285,13 @@ else {
     }
 
     .navbar .title a,
-    .menu-container .menu a, .mobile-header .top-part .title a, .mobile-header .menu-container .menu a, .menu-container .search-btn svg {
+    .menu-container .menu a, .mobile-header .top-part .title a, .mobile-header .menu-container .menu a, .menu-container .search-btn svg{
         color: ".$defaults['grg_header_text-color'].";        
+    }
+   
+    .menu-container .menu-item-has-children a::after{
+        border:solid ".$defaults['grg_header_text-color'].";
+        border-width: 0 2px 2px 0 !important;        
     }
 
     .footer .footer-menu {
@@ -320,12 +330,12 @@ else {
         
     }
 
-    .read-btn, .container .article .pagination .next, .container .article .pagination .prev {
+    .read-btn, .container .article .pagination .next, .container .article .pagination .prev,.form-submit .submit {
         background-color: ".$defaults['grg_btn-color']." !important;
         
     }
 
-    .container .article .pagination .next.page-numbers,.container .article .pagination .prev.page-numbers{
+    .container .article .pagination .next.page-numbers,.container .article .pagination .prev.page-numbers, .form-submit .submit{
         color: ".$defaults['grg_btn-text-color'].";
     }
     
