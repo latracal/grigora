@@ -48,7 +48,7 @@ function grg_dynamic_customize_css_var() {
     }
 
     .navbar .title a,
-    .navbar .menu-container .menu a, .mobile-header .top-part .title a, .mobile-header .menu-container .menu a {
+    .menu-container .menu a, .mobile-header .top-part .title a, .mobile-header .menu-container .menu a, .menu-container .search-btn svg {
         color: ".get_theme_mod('grg_header_text-color', $defaults['grg_header_text-color']).";
 
     }
@@ -263,7 +263,7 @@ else {
         
     }
 
-    .menu-container .menu, , .mobile-header .menu-container .menu {
+    .menu-container .menu, .mobile-header .menu-container .menu {
         background-color: ".$defaults['grg_header_menu_bg-color'].";
         
     }
@@ -280,9 +280,8 @@ else {
     }
 
     .navbar .title a,
-    .navbar .menu-container .menu a, .mobile-header .top-part .title a, .mobile-header .menu-container .menu a {
-        color: ".$defaults['grg_header_text-color'].";
-        
+    .menu-container .menu a, .mobile-header .top-part .title a, .mobile-header .menu-container .menu a, .menu-container .search-btn svg {
+        color: ".$defaults['grg_header_text-color'].";        
     }
 
     .footer .footer-menu {
