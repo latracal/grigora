@@ -1374,7 +1374,7 @@
 }
 
 .post-content .cat-name::after {
-  content: ",";
+  content: ',';
 }
 
 .post-content .cat-name:last-child::after {
@@ -1548,6 +1548,12 @@
   .comment-section {
     border-bottom: 1px solid #aaaaaa;
   }
+}
+
+.comment-form textarea,
+.comment-form input {
+  background-color: transparent !important;
+  border: 1px solid #aaaaaa !important;
 }
 
 .comment-list {
@@ -1933,6 +1939,7 @@ p {
 }
 
 .form-submit .submit {
+  background-color: #c4c4c4 !important;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
