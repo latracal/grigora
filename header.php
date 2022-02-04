@@ -13,7 +13,8 @@
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body itemtype="<?php echo grg_get_schema_tag('body')['itemtype'] ?>"
+        itemscope="<?php echo grg_get_schema_tag('body')['itemscope'] ?>">
     <header itemtype="<?php echo grg_get_schema_tag('header')['itemtype'] ?>"
         itemscope="<?php echo grg_get_schema_tag('header')['itemscope'] ?>">
         <nav>

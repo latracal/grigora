@@ -258,16 +258,16 @@ body {
     }
 
     .navbar, .mobile-header .top-part {
-        min-height: 186px;
+        min-height: 20px;
     }body {
         font-family: Verdana;
         
     }
 
     main p {
-        font-weight: 500px;
-        font-size: 18;
+        font-weight: 500;
         
+        font-size: 18px;
     }
 
     main {
@@ -275,7 +275,7 @@ body {
         
     }
 
-    .navbar .title h1 {
+    .navbar .title h1, .mobile-header .top-part .title h1 {
         font-family: Arial;
         
         font-weight: 700;
@@ -285,7 +285,7 @@ body {
         
     }
 
-    .navbar .title h2 {
+    .navbar .title h2, .mobile-header .top-part .title h2 {
         font-family: Arial;
         
         font-weight: 500;
