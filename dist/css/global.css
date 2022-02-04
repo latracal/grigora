@@ -743,6 +743,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -753,12 +755,25 @@
   background-color: #e9e9e9;
   width: 100%;
   padding: 0.5rem 0;
-  gap: 2rem;
 }
 
 .footer .footer-menu a {
   color: #000;
   text-decoration: none;
+  padding: 0.5rem;
+}
+
+.footer .footer-menu li {
+  padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .footer .footer-menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .footer .copyrights {
