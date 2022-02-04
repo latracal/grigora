@@ -8,19 +8,9 @@
 	@media (max-width: 768px) {
 		display: none;
 	}
+
 	.site-title-hidden {
 		display: none;
-	}
-
-	.menu-item-has-children a::after {
-		content: '';
-		border: solid #000;
-		border-width: 0 2px 2px 0;
-		display: inline-block;
-		padding: 3px;
-		transform: rotate(45deg);
-		margin-bottom: 3px;
-		margin-left: 8px;
 	}
 
 	.title {
@@ -122,6 +112,17 @@
 		@media (max-width: 768px) {
 			display: none !important;
 		}
+	}
+
+	.menu-item-has-children a::after {
+		content: '';
+		border: solid #000;
+		border-width: 0 2px 2px 0;
+		display: inline-block;
+		padding: 3px;
+		transform: rotate(45deg);
+		margin-bottom: 3px;
+		margin-left: 8px;
 	}
 
 	.menu {

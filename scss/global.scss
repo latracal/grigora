@@ -35,6 +35,14 @@ p {
 	}
 }
 
+.form-submit .submit {
+	transition: all 0.3s ease-out;
+
+	&:hover {
+		filter: brightness(0.8);
+	}
+}
+
 .post-title {
 	font-size: 1.313rem;
 }

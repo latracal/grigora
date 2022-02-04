@@ -78,22 +78,26 @@ function grg_dynamic_customize_css_var() {
     }
 
     main a,
-    .post-content p a {
+    .post-content p a, .post-content .cat-name {
         color: ".get_theme_mod('grg_anchor-text-color', $defaults['grg_anchor-text-color']).";
 
     }
 
     main a:hover,
-    .post-content p a:hover {
+    .post-content p a:hover, .post-content .cat-name:hover{
         color: ".get_theme_mod('grg_anchor-text-hover-color', $defaults['grg_anchor-text-hover-color']).";
 
     }
 
-    .read-btn {
-        background-color: ".get_theme_mod('grg_btn-color', $defaults['grg_btn-color']).";
+    .read-btn, .container .article .pagination .next, .container .article .pagination .prev {
+        background-color: ".get_theme_mod('grg_btn-color', $defaults['grg_btn-color'])." !important;
 
     }
 
+    .container .article .pagination .next.page-numbers,.container .article .pagination .prev.page-numbers{
+        color: ".get_theme_mod('grg_btn-text-color', $defaults['grg_btn-text-color']).";
+    }
+    
     .container .article .post-container .post .post-desc a {
         color: ".get_theme_mod('grg_btn-text-color', $defaults['grg_btn-text-color']).";
 
@@ -178,6 +182,11 @@ function grg_dynamic_customize_css_var() {
     .post-content .post-pagination .pagination-next-post {
         background-color: ".get_theme_mod('grg_post_nav_colors', $defaults['grg_post_nav_colors']).";
         
+    }
+
+    .post-content .post-pagination .pagination-prev-post a,
+    .post-content .post-pagination .pagination-next-post a {
+        color: ".get_theme_mod('grg_post_nav_text_colors', $defaults['grg_post_nav_text_colors']).";        
     }
 
     .container .article .pagination .nav-links a,
@@ -301,21 +310,26 @@ else {
     }
 
     main a,
-    .post-content p a {
+    .post-content p a, .post-content .cat-name  {
         color: ".$defaults['grg_anchor-text-color'].";
         
     }
 
     main a:hover,
-    .post-content p a:hover {
+    .post-content p a:hover, .post-content .cat-name:hover {
         color: ".$defaults['grg_anchor-text-hover-color'].";
         
     }
 
-    .read-btn {
-        background-color: ".$defaults['grg_btn-color'].";
+    .read-btn, .container .article .pagination .next, .container .article .pagination .prev {
+        background-color: ".$defaults['grg_btn-color']." !important;
         
     }
+
+    .container .article .pagination .next.page-numbers,.container .article .pagination .prev.page-numbers{
+        color: ".$defaults['grg_btn-text-color'].";
+    }
+    
 
     .container .article .post-container .post .post-desc a {
         color: ".$defaults['grg_btn-text-color'].";
@@ -401,6 +415,11 @@ else {
         background-color: ".$defaults['grg_post_nav_colors'].";
         
 
+    }
+
+    .post-content .post-pagination .pagination-prev-post a,
+    .post-content .post-pagination .pagination-next-post a {
+        color: ".$defaults['grg_post_nav_text_colors'].";        
     }
 
     .container .article .pagination .nav-links a,
