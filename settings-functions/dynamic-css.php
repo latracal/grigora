@@ -1039,14 +1039,9 @@ else{
     }";
 }
 if(!has_nav_menu( 'primary' )){
-    $out=$out." .navbar .menu-container .search-btn {
+    $out=$out." .menu-container .search-btn {
         -webkit-transform: translate(0%, -50%);
         transform: translate(0%, -50%);
-    }
-
-    .navbar{
-        justify-content: center;
-        min-height:115px;
     }
     
     ";
