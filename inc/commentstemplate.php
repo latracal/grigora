@@ -3,7 +3,12 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-
+/**
+ * Render Comments Section on Blog Post
+ *
+ * @since  1.000
+ * 
+ */
 if ( ! function_exists( 'grigora_comment' ) ) {
     function grigora_comment($comment, $args, $depth){
         if ( 'pingback' === $comment->comment_type || 'trackback' === $comment->comment_type ) : ?>

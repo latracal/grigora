@@ -124,5 +124,3 @@ function grg_get_schema_tag($type){
 
     }
 }
-
-// todo itemprops

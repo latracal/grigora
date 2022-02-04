@@ -1,5 +1,12 @@
 <?php
 
+
+/**
+ * Enqueue basic global css and main js
+ *
+ * @since  1.000
+ * 
+ */
 function grg_global_enqueue(){
 	$uri = get_theme_file_uri();
 	$ver = grg_DEV_MODE ? time() : true;

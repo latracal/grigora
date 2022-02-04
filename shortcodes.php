@@ -1,13 +1,37 @@
 <?php
 
+/**
+ * Shortcode for blogname
+ *
+ * @since  1.000
+ * 
+ * @return str blogname
+ * 
+ */
 function grg_blogname( $atts ) {
     return get_bloginfo('name');
 }
 
+/**
+ * Shortcode for copyright symbol
+ *
+ * @since  1.000
+ * 
+ * @return str copyright symbol
+ * 
+ */
 function grg_copysym( $atts ) {
     return "©";
 }
 
+/**
+ * Shortcode for current year
+ *
+ * @since  1.000
+ * 
+ * @return str year
+ * 
+ */
 function grg_curr_year( $atts ) {
     return date('Y');
 }
