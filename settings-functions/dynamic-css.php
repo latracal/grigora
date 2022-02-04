@@ -30,19 +30,19 @@ function grg_dynamic_customize_css_var() {
         background-color: ".get_theme_mod('grg_header_bg-color', $defaults['grg_header_bg-color']).";
     } ".
 
-    ".navbar .menu-container .menu, .mobile-header .menu-container .menu {
+    ".menu-container .menu, .mobile-header .menu-container .menu {
         background-color: ".get_theme_mod('grg_header_menu_bg-color', $defaults['grg_header_menu_bg-color']).";
 
     }
 
-    .navbar .menu-container .menu .menu-item .sub-menu, .mobile-header .menu-container .menu .menu-item .sub-menu {
+    .menu-container .menu .menu-item .sub-menu, .mobile-header .menu-container .menu .menu-item .sub-menu {
         
         background-color: ".get_theme_mod('grg_header_submenu_bg-color', $defaults['grg_header_submenu_bg-color']).";
 
     }
 
-    .navbar .menu-container .search-btn .search-box,
-    .navbar .menu-container .search-btn .search-box .search-field, .mobile-header .search-box, .mobile-header .search-box .search-field {
+    .menu-container .search-btn .search-box,
+    .menu-container .search-btn .search-box .search-field, .mobile-header .search-box, .mobile-header .search-box .search-field {
         background-color: ".get_theme_mod('grg_header_searchbox_bg-color', $defaults['grg_header_searchbox_bg-color']).";
 
     }
@@ -263,18 +263,18 @@ else {
         
     }
 
-    .navbar .menu-container .menu, , .mobile-header .menu-container .menu {
+    .menu-container .menu, , .mobile-header .menu-container .menu {
         background-color: ".$defaults['grg_header_menu_bg-color'].";
         
     }
 
-    .navbar .menu-container .menu .menu-item .sub-menu, .mobile-header .menu-container .menu .menu-item .sub-menu {
+    .menu-container .menu .menu-item .sub-menu, .mobile-header .menu-container .menu .menu-item .sub-menu {
         background-color: ".$defaults['grg_header_submenu_bg-color'].";
         
     }
 
-    .navbar .menu-container .search-btn .search-box,
-    .navbar .menu-container .search-btn .search-box .search-field, .mobile-header .search-box, .mobile-header .search-box .search-field {
+    .menu-container .search-btn .search-box,
+    .menu-container .search-btn .search-box .search-field, .mobile-header .search-box, .mobile-header .search-box .search-field {
         background-color: ".$defaults['grg_header_searchbox_bg-color'].";
         
     }
@@ -674,7 +674,7 @@ if($typography_flag) {
         
     }
 
-    .navbar .menu-container .menu {
+    .menu-container .menu {
         font-family: ".get_theme_mod('grg_typography_site_menu_font', $typography_fonts_defaults['grg_typography_site_menu_font']).";
         
         font-weight: ".get_theme_mod('grg_typography_site_menu_weight', $typography_defaults['grg_typography_site_menu_weight']).";
@@ -810,7 +810,7 @@ else {
         
     }
 
-    .navbar .menu-container .menu {
+    .menu-container .menu {
         font-family: ".$typography_fonts_defaults['grg_typography_site_menu_font'].";
         
         font-weight: ".$typography_defaults['grg_typography_site_menu_weight'].";
