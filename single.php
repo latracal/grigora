@@ -43,7 +43,7 @@
             ?><?php if(get_theme_mod( 'grg_blog_single_date_display', grigora_blog_defaults()['grg_blog_single_date_display'] ) && get_theme_mod( 'grg_blog_single_author_display', grigora_blog_defaults()['grg_blog_single_author_display'] )){ ?> on <?php } ?>
                     <?php } ?>
                     <?php if( get_theme_mod( 'grg_blog_single_date_display' , grigora_blog_defaults()['grg_blog_single_date_display']) ) { ?>
-                    <?php echo get_the_date(); ?>
+                    <time datetime="<?php echo get_the_date('c'); ?>" itemprop="<?php echo grg_get_schema_tag('creativeworkdate')['itemprop']; ?>"><?php echo get_the_date(); ?></time>
                     <?php } ?></span>
                 <?php if( get_theme_mod( 'grg_blog_single_social_share', grigora_blog_defaults()['grg_blog_single_social_share'] ) )
         {

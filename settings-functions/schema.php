@@ -25,6 +25,12 @@ function grg_get_schema_tag($type){
             "itemscope" => "itemscope"
         );
     }
+    elseif($type=="comment"){
+        return array(
+            "itemtype" => "https://schema.org/Comment",
+            "itemscope" => "itemscope"
+        );
+    }
     elseif($type=="author"){
         return array(
             "itemtype" => "https://schema.org/Person",
@@ -80,6 +86,11 @@ function grg_get_schema_tag($type){
     elseif($type=="creativeworkimage"){
         return array(
             "itemprop" => "image",
+        );
+    }
+    elseif($type=="creativeworkdate"){
+        return array(
+            "itemprop" => "datePublished",
         );
     }
     elseif($type=="body"){
