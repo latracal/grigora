@@ -1,6 +1,15 @@
 <?php
 
 if ( ! function_exists( 'grigora_get_defaults' ) ) {
+
+	/**
+	 * Predefined default values that will used in customizer settings.
+	 * 
+	 * @since  1.000
+	 * 
+	 * @return default values
+	 */
+	
 	function grigora_get_defaults() {
 		return apply_filters(
 			'grigora_option_defaults',
@@ -31,6 +40,15 @@ if ( ! function_exists( 'grigora_get_defaults' ) ) {
 }
 
 if ( ! function_exists( 'grigora_color_defaults' ) ) {
+	
+	/**
+	 * Predefined default color values that will used in customizer settings.
+	 * 
+	 * @since  1.000
+	 * 
+	 * @return default color values
+	 */
+
 	function grigora_color_defaults() {
 			return array(
 				'grg_bg-color' => '#f2f2f2',
@@ -79,6 +97,14 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 			);
 	}
 
+	/**
+	 * Predefined default spacing values that will used in customizer settings.
+	 * 
+	 * @since  1.000
+	 * 
+	 * @return default spacing values
+	 */
+
 	function grigora_spacing_defaults() {
 		return array(
 			'grg_header-height' => '155',		
@@ -101,6 +127,14 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 		);
 	}
 
+	/**
+	 * Predefined default scroll values that will used in customizer settings.
+	 * 
+	 * @since  1.000
+	 * 
+	 * @return default scroll values
+	 */
+
 	function grigora_scroll_defaults() {
 		return array(
 			'grg_scrollborder' => '5',
@@ -109,6 +143,14 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 			'grg_scroll-display' => 'both'
 		);
 	}
+
+	/**
+	 * Predefined default typography font values that will used in customizer settings.
+	 * 
+	 * @since  1.000
+	 * 
+	 * @return default typography font values
+	 */
 
 	function grigora_typography_defaults_fonts() {
 		return array(
@@ -126,6 +168,14 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 			"grg_typography_footer_font" => "Verdana",
 		);
 	}
+
+	/**
+	 * Predefined default typography values that will used in customizer settings.
+	 * 
+	 * @since  1.000
+	 * 
+	 * @return default typography values
+	 */
 
 	function grigora_typography_defaults() {
 		return array(
@@ -167,6 +217,14 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 			"grg_typography_footer_transform" => "none",
 		);
 	}
+
+	/**
+	 * Predefined default blogpage values that will used in customizer settings.
+	 * 
+	 * @since  1.000
+	 * 
+	 * @return default blogpage values
+	 */
 
 	function grigora_blog_defaults(){
 		return array(
