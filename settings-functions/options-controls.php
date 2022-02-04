@@ -659,7 +659,7 @@ function grigora_admin_export_data() {
 add_action( 'admin_post_grigora_import', 'grigora_admin_import_data' );
 
 /**
- * allows to upload the jason format exported file to restore the settings
+ * allows to upload the json format exported file to restore the settings
  *
  * @since  1.000
  * 

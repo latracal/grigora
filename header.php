@@ -15,7 +15,7 @@
 
 <body itemtype="<?php echo grg_get_schema_tag('body')['itemtype'] ?>"
         itemscope="<?php echo grg_get_schema_tag('body')['itemscope'] ?>">
-    <header itemtype="<?php echo grg_get_schema_tag('header')['itemtype'] ?>"
+    <header id="masthead" itemtype="<?php echo grg_get_schema_tag('header')['itemtype'] ?>"
         itemscope="<?php echo grg_get_schema_tag('header')['itemscope'] ?>">
         <nav>
             <div class="navbar">
@@ -28,6 +28,9 @@
                         <?php
                     if ( function_exists( 'the_custom_logo' ) ) {
                     the_custom_logo();
+                    echo '<span class="site-title-hidden" itemprop="name">
+                        '.get_bloginfo( 'name' ).'
+                    </span>';
                     }
                 ?>
                     </div>
@@ -64,7 +67,7 @@
             <div class="menu-container">
                 <?php
                 if( has_nav_menu( 'primary' ) ){
-                    echo '<div itemtype="'.grg_get_schema_tag('navigation')['itemtype'].'" itemscope="'.grg_get_schema_tag('navigation')['itemscope'].'">';
+                    echo '<div id="site-navigation" itemtype="'.grg_get_schema_tag('navigation')['itemtype'].'" itemscope="'.grg_get_schema_tag('navigation')['itemscope'].'">';
                     wp_nav_menu([
                         'theme_location' => 'primary',
                         'container' => false,
@@ -105,6 +108,9 @@
                         <?php
                     if ( function_exists( 'the_custom_logo' ) ) {
                     the_custom_logo();
+                    echo '<span class="site-title-hidden" itemprop="name">
+                    '.get_bloginfo( 'name' ).'
+                    </span>';
                     }
                 ?>
                     </div>
@@ -141,7 +147,7 @@
             <div class="menu-container">
                 <?php
                 if( has_nav_menu( 'primary' ) ){
-                    echo '<div itemtype="'.grg_get_schema_tag('navigation')['itemtype'].'" itemscope="'.grg_get_schema_tag('navigation')['itemscope'].'">';
+                    echo '<div id="site-navigation" itemtype="'.grg_get_schema_tag('navigation')['itemtype'].'" itemscope="'.grg_get_schema_tag('navigation')['itemscope'].'">';
                     wp_nav_menu([
                         'theme_location' => 'primary',
                         'container' => false,

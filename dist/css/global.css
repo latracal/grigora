@@ -19,6 +19,9 @@
   }
 }
 
+.navbar .site-title-hidden {
+  display: none;
+}
 .navbar .menu-item-has-children a::after {
   content: "";
   border: solid #000;
