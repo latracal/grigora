@@ -24,6 +24,7 @@ include( get_theme_file_path( '/settings-functions/options-controls.php' ) );
 include( get_theme_file_path( '/settings-functions/fonts-loading.php' ) );
 include( get_theme_file_path( '/settings-functions/dynamic-css.php' ) );
 include( get_theme_file_path( '/settings-functions/blog.php' ) );
+include( get_theme_file_path( '/settings-functions/schema.php' ) );
 
 
 

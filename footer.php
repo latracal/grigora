@@ -2,7 +2,7 @@
 <?php if(grigora_get_option("cookie") && function_exists("cookie_notice")){cookie_notice();} ?>
 
 </main>
-<footer>
+<footer itemtype="<?php echo grg_get_schema_tag('footer')['itemtype'] ?>" itemscope="<?php echo grg_get_schema_tag('footer')['itemscope'] ?>" >
     <div class="footer">
 
         <?php

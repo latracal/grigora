@@ -24,16 +24,21 @@
         {
             ?>Published by
                     <?php 
+                    $author_schema = grg_get_schema_tag("author");
+                    $authorurl_schema = grg_get_schema_tag("authorurl");
+                    $authorname_schema = grg_get_schema_tag("authorname");
 
+            echo "<span class='".$author_schema['class']."' itemtype='".$author_schema['itemtype']."' itemscope='".$author_schema['itemscope']."' itemprop='".$author_schema['itemprop']."'>";
             if (empty( get_the_author_meta('first_name') ) && empty( get_the_author_meta('last_name') ) ){
-                                
-                echo '<a href="'. esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) .'">'.nl2br(get_the_author_meta('display_name')).'</a>';
-               
+                $author_str = nl2br(get_the_author_meta('display_name'));
             }else{
-                
-                echo '<a href="'. esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) .'">'.nl2br(get_the_author_meta('first_name'))." ". nl2br(get_the_author_meta('last_name')) .'</a>';
-                               
+                $author_str = nl2br(get_the_author_meta('first_name'))." ". nl2br(get_the_author_meta('last_name'));
             }
+                                
+            echo '<a title="View all posts by '.$author_str.'" href="'. esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) .'" rel="author" class="'.$authorurl_schema['class'].'" itemprop="'.$authorurl_schema['itemprop'].'">';
+            echo '<span class="'.$authorname_schema['class'].'" itemprop="'.$authorname_schema['itemprop'].'">'.$author_str.'</span>';
+            echo '</a>';
+            echo "</span>"
 
             ?><?php if(get_theme_mod( 'grg_blog_single_date_display', grigora_blog_defaults()['grg_blog_single_date_display'] ) && get_theme_mod( 'grg_blog_single_author_display', grigora_blog_defaults()['grg_blog_single_author_display'] )){ ?> on <?php } ?>
                     <?php } ?>

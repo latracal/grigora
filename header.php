@@ -14,8 +14,9 @@
 </head>
 
 <body>
-    <header>
+    <header itemtype="<?php echo grg_get_schema_tag('header')['itemtype'] ?>" itemscope="<?php echo grg_get_schema_tag('header')['itemscope'] ?>">
         <nav class="navbar">
+            <div class="site-branding"  itemtype="<?php echo grg_get_schema_tag('organization')['itemtype'] ?>" itemscope="<?php echo grg_get_schema_tag('organization')['itemscope'] ?>">
             <?php 
             if(has_custom_logo()){
                 ?>
@@ -30,9 +31,11 @@
             } else { 
             ?>
             <div class="title">
-                <a href="<?php echo get_home_url(); ?>">
+                <div class="site-title" itemprop="<?php echo grg_get_schema_tag('organizationname')['itemprop'] ?>">
+                <a href="<?php echo get_home_url(); ?>" itemprop="<?php echo grg_get_schema_tag('organizationurl')['itemprop'] ?>"  rel="home">
                     <h1><?php echo get_bloginfo( 'name' ); ?></h1>
                 </a>
+                </div>
                 <a href="<?php echo get_home_url(); ?>">
                     <h2>
                         <?php echo get_bloginfo( 'description' ); ?>
@@ -43,7 +46,7 @@
             <?php
             }
             ?>
-
+            </div>
             <div class="menu-toggle-btn" id="menu-toggle-btn">
                 <div class="menu-toggle-icon">
                     <span class="menu-toggle-line line top"></span>
@@ -54,6 +57,7 @@
             <div class="menu-container">
                 <?php
                 if( has_nav_menu( 'primary' ) ){
+                    echo '<div itemtype="'.grg_get_schema_tag('navigation')['itemtype'].'" itemscope="'.grg_get_schema_tag('navigation')['itemscope'].'">';
                     wp_nav_menu([
                         'theme_location' => 'primary',
                         'container' => false,
@@ -61,11 +65,8 @@
                         'fallback_cb' => false,
                         'depth' => 2,
                     ]);
+                    echo "</div>";
                 }
-                else{
-                    // todo
-                }
-
                 ?>
                 <div class="search-btn">
                     <button class="toggle search-btn-obj"><svg class="search-btn-svg" xmlns="http://www.w3.org/2000/svg"
@@ -78,6 +79,7 @@
             </div>
         </nav>
         <nav class="mobile-header">
+        <div class="site-branding"  itemtype="<?php echo grg_get_schema_tag('organization')['itemtype'] ?>" itemscope="<?php echo grg_get_schema_tag('organization')['itemscope'] ?>">
             <div class="top-part">
                 <?php if( has_nav_menu( 'primary' ) ) { ?>
                 <div class="menu-toggle-btn" id="menu-toggle-btn">
@@ -102,20 +104,20 @@
             } else { 
             ?>
                 <div class="title">
-                    <a href="<?php echo get_home_url(); ?>">
+                    <div class="site-title" itemprop="<?php echo grg_get_schema_tag('organizationname')['itemprop'] ?>">
+                    <a href="<?php echo get_home_url(); ?>" itemprop="<?php echo grg_get_schema_tag('organizationurl')['itemprop'] ?>"  rel="home">
                         <h1><?php echo get_bloginfo( 'name' ); ?></h1>
                     </a>
+                    </div>
                     <a href="<?php echo get_home_url(); ?>">
                         <h2>
                             <?php echo get_bloginfo( 'description' ); ?>
                         </h2>
                     </a>
                 </div>
-
                 <?php
             }
             ?>
-
                 <div class="search-btn">
                     <button class="toggle search-btn-obj"><svg class="search-btn-svg" xmlns="http://www.w3.org/2000/svg"
                             width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
@@ -124,9 +126,11 @@
                         </svg></button>
                 </div>
             </div>
+            </div>
             <div class="menu-container">
                 <?php
                 if( has_nav_menu( 'primary' ) ){
+                    echo '<div itemtype="'.grg_get_schema_tag('navigation')['itemtype'].'" itemscope="'.grg_get_schema_tag('navigation')['itemscope'].'">';
                     wp_nav_menu([
                         'theme_location' => 'primary',
                         'container' => false,
@@ -134,6 +138,7 @@
                         'fallback_cb' => false,
                         'depth' => 2,
                     ]);
+                    echo "</div>";
                 }
                 ?>
             </div>

@@ -33,10 +33,32 @@ function grg_get_schema_tag($type){
             "class" => "vcard author",
         );
     }
+    elseif($type=="authorurl"){
+        return array(
+            "itemprop" => "url",
+            "class" => "fn url n",
+        );
+    }
+    elseif($type=="authorname"){
+        return array(
+            "itemprop" => "name",
+            "class" => "author-name",
+        );
+    }
     elseif($type=="organization"){
         return array(
             "itemtype" => "https://schema.org/Organization",
             "itemscope" => "itemscope",
+        );
+    }
+    elseif($type=="organizationurl"){
+        return array(
+            "itemprop" => "url",
+        );
+    }
+    elseif($type=="organizationname"){
+        return array(
+            "itemprop" => "name",
         );
     }
     elseif($type=="creativework"){
