@@ -14,7 +14,7 @@
 </head>
 
 <body itemtype="<?php echo grg_get_schema_tag('body')['itemtype'] ?>"
-        itemscope="<?php echo grg_get_schema_tag('body')['itemscope'] ?>">
+    itemscope="<?php echo grg_get_schema_tag('body')['itemscope'] ?>">
     <header id="masthead" itemtype="<?php echo grg_get_schema_tag('header')['itemtype'] ?>"
         itemscope="<?php echo grg_get_schema_tag('header')['itemscope'] ?>">
         <nav>
