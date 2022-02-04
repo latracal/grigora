@@ -1,14 +1,35 @@
 <?php
 
-if ( ! function_exists( 'girgora_options_menu' ) ) {
+/**
+* Grigora Options in Appearance Menu
+*/
+
+if ( ! function_exists( 'girgora_options_menu' ) ) { 
     function girgora_options_menu() {
         add_theme_page( 'grigora-options', 'Grigora Options', 'manage_options', 'grigora-options', 'grigora_options_page' );
     }
 }
 
-function is_grigora_pro_active(){
+/**
+ * Checks the state of Grigora plugin pro
+ *
+ * @since  1.000
+ *
+ * @return true if pro is active
+ */
+
+function is_grigora_pro_active(){   
     return function_exists("grigora_pro_active");
 }
+
+/**
+ * Render setting options in a custom div
+ *
+ * @since  1.000
+ * 
+ * @param $page list of setting field
+ * @return render
+ */
 
 function custom_do_settings_sections( $page ) {
     global $wp_settings_sections, $wp_settings_fields;
@@ -40,6 +61,15 @@ echo '</div>';
 }
 }
 
+/**
+ * Get the default setting values
+ *
+ * @since  1.000
+ * 
+ * @param $option list of default values
+ * @return defaults
+ */
+
 function grigora_get_option( $option ) {
 
 $defaults = grigora_get_defaults();
@@ -53,6 +83,18 @@ return $options[$option];
 }
 
 if ( ! function_exists( 'grigora_options_page' ) ) {
+
+/**
+ * Render Grigora Options Page layout
+ * enqueue necessary css and js file that required for the options page.
+ * If the Grigora Pro Plugin is not active. It will show a notification regarding purchasing the
+ * plugin
+ *
+ * @since  1.000
+ * 
+ * @return true if the plugin is active
+ */
+
 function grigora_options_page() {
 wp_enqueue_style( 'theme-options', get_template_directory_uri() . '/dist/css/admin-options.css' );
 wp_enqueue_script( 'theme-options', get_template_directory_uri() . '/js/admin-options.js' );
@@ -75,7 +117,8 @@ echo '<div class="admin-container">';
         <button class="tab-btn" onclick="controlName(event, 'grigora_customizer_section')" id="default">Customizer
             Options</button>
         <button class="tab-btn" onclick="controlName(event, 'grigora_performance_section')">Performance</button>
-        <button class="tab-btn IE-tab" onclick="controlName(event, 'grigora_importexport_section')">Import & Export</button>
+        <button class="tab-btn IE-tab" onclick="controlName(event, 'grigora_importexport_section')">Import &
+            Export</button>
     </div>
     <div class="tab-content">
         <form action="options.php" method="post" class=" <?php echo (is_grigora_pro_active() ? '' : 'disabled') ?>">
@@ -86,18 +129,25 @@ echo '<div class="admin-container">';
             submit_button();
         ?>
         </form>
-        <form enctype="multipart/form-data" action="<?php echo get_admin_url( null, 'admin-post.php' ) ?>" method="post" class="IETab <?php echo (is_grigora_pro_active() ? '' : 'disabled') ?>">
+        <form enctype="multipart/form-data" action="<?php echo get_admin_url( null, 'admin-post.php' ) ?>" method="post"
+            class="IETab <?php echo (is_grigora_pro_active() ? '' : 'disabled') ?>">
             <div class="grigora_importexport_section customizer " id="grigora_importexport_section">
                 <h2>Import &amp; Export</h2>
                 <input type="hidden" name="action" value="grigora_import">
                 <p>Save and Restore your Grigora Settings in One Click!</p>
-                <table class="form-table" role="presentation"><tbody><tr><th scope="row">Export</th>
-                <td><?php grigora_importexport_section_export_callback_function(); ?></td>
-            </tr><tr>
-                <th scope="row">Import</th>
-                <td><?php grigora_importexport_section_import_callback_function(); ?></td>
-            </tr></tbody></table>
-                    <?php
+                <table class="form-table" role="presentation">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Export</th>
+                            <td><?php grigora_importexport_section_export_callback_function(); ?></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Import</th>
+                            <td><?php grigora_importexport_section_import_callback_function(); ?></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <?php
                     submit_button();
                 ?>
             </div>
@@ -121,6 +171,14 @@ add_action( 'admin_menu', 'girgora_options_menu' );
 
 register_setting( 'grigora_settings', 'grigora_settings' );
 
+/**
+ * get the default values from the defauls.php file 
+ *
+ * @since  1.000
+ * 
+ * @return color_defaults
+ */
+
 function grigora_set_default_colors(){
     if (!grigora_get_option("colordefaultsset")){
         $defaults = grigora_color_defaults();
@@ -140,6 +198,14 @@ function grigora_set_default_colors(){
         update_option('grigora_settings', $my_options);
     }
 }
+
+/**
+ * get the default values from the defauls.php file 
+ *
+ * @since  1.000
+ * 
+ * @return spacing_defaults
+ */
 
 function grigora_set_default_spacing(){
     if (!grigora_get_option("spacingdefaultsset")){
@@ -161,6 +227,14 @@ function grigora_set_default_spacing(){
     }
 }
 
+/**
+ * get the default values from the defauls.php file 
+ *
+ * @since  1.000
+ * 
+ * @return scroll_defaults
+ */
+
 function grigora_set_default_scroll(){
     if (!grigora_get_option("scrolldefaultsset")){
         $defaults = grigora_scroll_defaults();
@@ -180,6 +254,14 @@ function grigora_set_default_scroll(){
         update_option('grigora_settings', $my_options);
     }
 }
+
+/**
+ * get the default values from the defauls.php file 
+ *
+ * @since  1.000
+ * 
+ * @return typography_font_defaults
+ */
 
 function grigora_set_default_typography_font(){
     if (!grigora_get_option("typographyfontdefaultsset")){
@@ -201,6 +283,14 @@ function grigora_set_default_typography_font(){
     }
 }
 
+/**
+ * get the default values from the defauls.php file 
+ *
+ * @since  1.000
+ * 
+ * @return typography_defaults
+ */
+
 function grigora_set_default_typography(){
     if (!grigora_get_option("typographydefaultsset")){
         $defaults = grigora_typography_defaults();
@@ -221,6 +311,14 @@ function grigora_set_default_typography(){
     }
 }
 
+/**
+ * get the default values from the defauls.php file 
+ *
+ * @since  1.000
+ * 
+ * @return blog_defaults
+ */
+
 function grigora_set_default_blog(){
     if (!grigora_get_option("blogdefaultsset")){
         $defaults = grigora_blog_defaults();
@@ -240,6 +338,15 @@ function grigora_set_default_blog(){
         update_option('grigora_settings', $my_options);
     }
 }
+
+/**
+ * renders customizer setting in div having specific class name for each individual setting in
+ * customizer options.
+ *
+ * @since  1.000
+ * 
+ * @return div with custom class
+ */
 
 function grigora_customize_settings_section() {
     
@@ -328,6 +435,15 @@ function grigora_customize_settings_section() {
  
  add_action( 'admin_init', 'grigora_customize_settings_section' );
  
+/**
+ * renders customizer setting in div having specific class name for each individual setting in
+ * performance options.
+ *
+ * @since  1.000
+ * 
+ * @return div with custom class
+ */
+
  function grigora_performance_settings_section() {
 
     add_settings_section(
@@ -405,6 +521,13 @@ function grigora_customize_settings_section() {
 
 add_action( 'admin_init', 'grigora_performance_settings_section' );
 
+/**
+ * renders necessary field such as lable and input fields
+ *
+ * @since  1.000
+ * 
+ * @return label and input fields
+ */
 
 function grigora_customizer_section_callback_function() {
  	echo '<p>Customize your theme!</p>';
@@ -497,6 +620,14 @@ function grigora_importexport_section_import_callback_function() {
 
 add_action( 'admin_post_grigora_export', 'grigora_admin_export_data' );
 
+/**
+ * exports setting backup file in json format
+ *
+ * @since  1.000
+ * 
+ * @return backup
+ */
+
 function grigora_admin_export_data() {
     if( isset($_GET["_wpnonce"])&&$_GET["_wpnonce"] ) {
         if ( ! wp_verify_nonce( $_GET["_wpnonce"], 'grigora_export' ) ) {
@@ -526,6 +657,14 @@ function grigora_admin_export_data() {
 
 
 add_action( 'admin_post_grigora_import', 'grigora_admin_import_data' );
+
+/**
+ * allows to upload the jason format exported file to restore the settings
+ *
+ * @since  1.000
+ * 
+ * @return import file
+ */
 
 function grigora_admin_import_data() {
     if(isset($_POST["submit"])) {
