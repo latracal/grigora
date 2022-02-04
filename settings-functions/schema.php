@@ -67,6 +67,21 @@ function grg_get_schema_tag($type){
             "itemscope" => "itemscope",
         );
     }
+    elseif($type=="creativeworkheadline"){
+        return array(
+            "itemprop" => "headline",
+        );
+    }
+    elseif($type=="creativeworktext"){
+        return array(
+            "itemprop" => "text",
+        );
+    }
+    elseif($type=="creativeworkimage"){
+        return array(
+            "itemprop" => "image",
+        );
+    }
     elseif($type=="body"){
         if(is_home() || is_archive() || is_attachment() || is_tax() || is_single()){
             return array(

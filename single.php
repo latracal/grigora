@@ -5,8 +5,8 @@
 <?php while ( have_posts() ) : the_post(); ?>
 
 <div class="container">
-
     <section class="post-content">
+    <article class="single-post" itemtype="<?php echo grg_get_schema_tag('creativework')['itemtype'] ?>" itemscope="<?php echo grg_get_schema_tag('creativework')['itemscope'] ?>">
         <div class="breadcrumb">
             <a href="<?php echo home_url(); ?>">Home</a>><?php
             $categories = get_the_category();
@@ -18,7 +18,7 @@
         </div>
         <div class="post-header">
             <div class="top">
-                <h1 class="post-title"><?php the_title(); ?></h1>
+                <h1 class="post-title" itemprop="<?php echo grg_get_schema_tag('creativeworkheadline')['itemprop'] ?>" ><?php the_title(); ?></h1>
                 <span class="post-meta">
                     <?php if( get_theme_mod( 'grg_blog_single_author_display', grigora_blog_defaults()['grg_blog_single_author_display'] ) )
         {
@@ -83,10 +83,12 @@
                 <?php } ?>
             </div>
             <div class="feature-img">
-                <?php the_post_thumbnail(); ?>
+                <?php the_post_thumbnail('full', array( 'itemprop' => grg_get_schema_tag('creativeworkimage')['itemprop'] )); ?>
             </div>
         </div>
+        <div class="single-post-content" itemprop="<?php echo grg_get_schema_tag('creativeworktext')['itemprop'] ?>" >
         <?php the_content(); ?>
+        </div>
         <?php if( get_theme_mod( 'grg_blog_single_category' , grigora_blog_defaults()['grg_blog_single_category']) )
         {
             ?>
@@ -114,6 +116,7 @@
             }
         }
         ?>
+        </article>
         <?php
         if( get_theme_mod( 'grg_blog_single_postnav', grigora_blog_defaults()['grg_blog_single_postnav'] ) ){ ?>
         <div class="post-pagination">
