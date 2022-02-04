@@ -186,7 +186,7 @@
   z-index: 99;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 0 2rem;
+  padding: 0 4rem;
 }
 
 @media (max-width: 768px) {
@@ -781,19 +781,6 @@
 
 .footer .copyrights {
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background-color: #c4c4c4;
   width: 100%;
   padding: 0.5rem 0;

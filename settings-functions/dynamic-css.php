@@ -83,15 +83,13 @@ function grg_dynamic_customize_css_var() {
     }
 
     main a,
-    .post-content p a, .post-content .cat-name {
+    .post-content p a, .post-content .cat-name, footer .copyrights a{
         color: ".get_theme_mod('grg_anchor-text-color', $defaults['grg_anchor-text-color']).";
-
     }
 
     main a:hover,
-    .post-content p a:hover, .post-content .cat-name:hover{
+    .post-content p a:hover, .post-content .cat-name:hover, footer .copyrights a:hover {
         color: ".get_theme_mod('grg_anchor-text-hover-color', $defaults['grg_anchor-text-hover-color']).";
-
     }
 
     .read-btn, .container .article .pagination .next, .container .article .pagination .prev, .form-submit .submit {
@@ -319,13 +317,13 @@ else {
     }
 
     main a,
-    .post-content p a, .post-content .cat-name  {
+    .post-content p a, .post-content .cat-name, footer .copyrights a {
         color: ".$defaults['grg_anchor-text-color'].";
         
     }
 
     main a:hover,
-    .post-content p a:hover, .post-content .cat-name:hover {
+    .post-content p a:hover, .post-content .cat-name:hover, footer .copyrights a:hover {
         color: ".$defaults['grg_anchor-text-hover-color'].";
         
     }
