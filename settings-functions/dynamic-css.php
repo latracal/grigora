@@ -1082,6 +1082,10 @@ if(!has_nav_menu( 'primary' )){
     ";
 }
 
+if(function_exists("grigora_wcm_css")){
+    $out = $out.grigora_wcm_css();
+}
+
 return $out;
 
 }
