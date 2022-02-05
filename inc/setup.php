@@ -68,3 +68,7 @@ function grg_custom_logo() {
         );
     return $html;   
 }
+
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+  }	 
