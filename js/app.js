@@ -114,28 +114,30 @@ function togglemobilemenu(event){
 	}
 }
 
-// w = screen.width;
+w = screen.width;
 
-// const parents = document.getElementsByClassName('menu-item-has-children');
+const parents = document.getElementsByClassName('menu-item-has-children');
 
 
-// for (var i = 0; i < parents.length; i++) {
-// 	parents[i].addEventListener('click', toggleSubMenu, false);
-// }
+for (var i = 0; i < parents.length; i++) {
+	parents[i].addEventListener('click', toggleSubMenu, false);
+}
 
-// function toggleSubMenu(event) {
-// 	var targetElement = event.target || event.srcElement;
-// 	var child = targetElement.getElementsByClassName('sub-menu')[0];
-// 	console.log(child.style.display);
+function toggleSubMenu(event) {
+	var targetElement = event.target || event.srcElement;
+	var child = targetElement.getElementsByClassName('sub-menu')[0];
 
-// 	if (w < 768) {
-// 		if (child.style.display == 'none' || child.style.display == '') {
-// 			child.style.display = 'block';
-// 		} else {
-// 			child.style.display = 'none';
-// 		}
-// 	}
-// }
+	if (w < 768) {
+		if (child.style.display == 'none' || child.style.display == '') {
+			child.style.display = 'block';
+		} else if(child.style.display == 'block'){
+			child.style.display = 'none';
+		}
+		else {
+			child.style.display = 'none';
+		}
+	}
+}
 
 var totop = document.getElementById('totop');
 if (totop) {
