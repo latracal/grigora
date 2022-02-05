@@ -68,51 +68,58 @@ function togglemenu(event) {
 		menu.classList.add('hide');
 	}
 }
+if(searchbtn){
+	searchbtn.addEventListener('click', togglesearch, false);
+}
+if(menubtn){
+	menubtn.addEventListener('click', togglemenu, false);
 
-searchbtn.addEventListener('click', togglesearch, false);
-menubtn.addEventListener('click', togglemenu, false);
+}
 
 //submenu toggle in mobile
 const mobileheader = document.getElementsByClassName('mobile-header')[0];
-const mobilesearchbtn = mobileheader.getElementsByClassName('search-btn')[0];
-const mobilemenubtn = mobileheader.getElementsByClassName('menu-toggle-btn')[0];
-
-mobilesearchbtn.addEventListener('click', togglemobilesearch, false);
-if(mobilemenubtn){
-	mobilemenubtn.addEventListener('click', togglemobilemenu, false);
-}
-
-
-function togglemobilesearch(event){
-	const searchform = mobileheader.getElementsByClassName('search-box')[0];
-	const menucontainer = mobileheader.getElementsByClassName('menu-container')[0];
-	const menuobjects = menucontainer.getElementsByClassName('menu');
-	if(menuobjects.length > 0){
-		menuobjects[0].classList.add('hide');
+if(mobileheader){
+	const mobilesearchbtn = mobileheader.getElementsByClassName('search-btn')[0];
+	const mobilemenubtn = mobileheader.getElementsByClassName('menu-toggle-btn')[0];
+	
+	mobilesearchbtn.addEventListener('click', togglemobilesearch, false);
+	if(mobilemenubtn){
+		mobilemenubtn.addEventListener('click', togglemobilemenu, false);
 	}
-	if(searchform.classList.contains('s-hide')){
-		searchform.classList.remove('s-hide');
-	}
-	else{
-		searchform.classList.add('s-hide');
-	}
-
-}
-
-function togglemobilemenu(event){
-	const menucontainer = mobileheader.getElementsByClassName('menu-container')[0];
-	const menuobjects = menucontainer.getElementsByClassName('menu');
-	const searchform = mobileheader.getElementsByClassName('search-box')[0];
-	searchform.classList.add('s-hide');
-	if(menuobjects.length>0){
-		if(menuobjects[0].classList.contains('hide')){
-			menuobjects[0].classList.remove('hide');
-		}
-		else{
+	
+	
+	function togglemobilesearch(event){
+		const searchform = mobileheader.getElementsByClassName('search-box')[0];
+		const menucontainer = mobileheader.getElementsByClassName('menu-container')[0];
+		const menuobjects = menucontainer.getElementsByClassName('menu');
+		if(menuobjects.length > 0){
 			menuobjects[0].classList.add('hide');
 		}
+		if(searchform.classList.contains('s-hide')){
+			searchform.classList.remove('s-hide');
+		}
+		else{
+			searchform.classList.add('s-hide');
+		}
+	
+	}
+	
+	function togglemobilemenu(event){
+		const menucontainer = mobileheader.getElementsByClassName('menu-container')[0];
+		const menuobjects = menucontainer.getElementsByClassName('menu');
+		const searchform = mobileheader.getElementsByClassName('search-box')[0];
+		searchform.classList.add('s-hide');
+		if(menuobjects.length>0){
+			if(menuobjects[0].classList.contains('hide')){
+				menuobjects[0].classList.remove('hide');
+			}
+			else{
+				menuobjects[0].classList.add('hide');
+			}
+		}
 	}
 }
+
 
 w = screen.width;
 
