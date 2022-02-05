@@ -659,7 +659,7 @@ if($typography_flag) {
         
     }
 
-    main p, .post-content p {
+    main p,.post-content p, .post-content li, .post-content .wp-block-quote p, .post-content .wp-block-quote cite, .post-content .wp-block-preformatted, .post-content .wp-block-code, .post-content .wp-block-table table, .wp-block-pullquote p, .wp-block-pullquote cite {
         font-weight: ".get_theme_mod('grg_typography_body_weight', $typography_defaults['grg_typography_body_weight']).";
         
         font-size: ".get_theme_mod('grg_typography_body_font_size', $typography_defaults['grg_typography_body_font_size'])."px;
@@ -795,7 +795,7 @@ else {
         
     }
 
-    main p,.post-content p {
+    main p,.post-content p, .post-content li, .post-content .wp-block-quote p, .post-content .wp-block-quote cite, .post-content .wp-block-preformatted, .post-content .wp-block-code, .post-content .wp-block-table table, .wp-block-pullquote p, .wp-block-pullquote cite {
         font-weight: ".$typography_defaults['grg_typography_body_weight']."px;
         font-size: ".$typography_defaults['grg_typography_body_font_size'].";
         
