@@ -722,7 +722,7 @@ if($typography_flag) {
     }
 
     .post-content h2,
-    aside h2 {
+    aside h2, .post-title {
         font-family: ".get_theme_mod('grg_typography_h2_font', $typography_fonts_defaults['grg_typography_h2_font']).", sans-serif;
         
         font-weight: ".get_theme_mod('grg_typography_h2_weight', $typography_defaults['grg_typography_h2_weight']).";

@@ -9,7 +9,7 @@
         }
     ?>
     <div class="post-desc">
-        <h3 class="post-title"><a href="<?php echo get_permalink(); ?>"><?php echo the_title(); ?></a></h3>
+        <h2 class="post-title"><a href="<?php echo get_permalink(); ?>"><?php echo the_title(); ?></a></h2>
         <div class="meta">
             <?php
         if( get_theme_mod( 'grg_blog_archive_author_display', grigora_blog_defaults()['grg_blog_archive_author_display'] ) ){
@@ -20,13 +20,13 @@
         }
         if(get_theme_mod( 'grg_blog_archive_author_display', grigora_blog_defaults()['grg_blog_archive_author_display'] ) && get_theme_mod( 'grg_blog_archive_date_display', grigora_blog_defaults()['grg_blog_archive_date_display'] )){
             ?>
-        &nbsp;-&nbsp;
-        <?php }
+            &nbsp;-&nbsp;
+            <?php }
         ?>
-        
-        <?php
+
+            <?php
             if( get_theme_mod( 'grg_blog_archive_date_display', grigora_blog_defaults()['grg_blog_archive_date_display'] ) ){?>
-            
+
             <span><?php echo get_the_date(); ?></span>
             <?php
         }
