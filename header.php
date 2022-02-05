@@ -13,7 +13,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body itemtype="<?php echo grg_get_schema_tag('body')['itemtype'] ?>"
+<body <?php body_class(); ?> itemtype="<?php echo grg_get_schema_tag('body')['itemtype'] ?>"
     itemscope="<?php echo grg_get_schema_tag('body')['itemscope'] ?>">
     <header id="masthead" itemtype="<?php echo grg_get_schema_tag('header')['itemtype'] ?>"
         itemscope="<?php echo grg_get_schema_tag('header')['itemscope'] ?>">

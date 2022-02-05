@@ -68,23 +68,3 @@ function grg_custom_logo() {
         );
     return $html;   
 }
-
-function woocommerce_support() {
-    add_theme_support( 'woocommerce' );
-}	 
-
-function wcm_container_open(){
-    echo '<div class="wcm-page">';
-}
-
-function wcm_container_close(){
-    echo '</div>';
-}
-
-function wcm_product_open(){
-    echo '<div class="wcm-product">';
-}
-
-function wcm_product_close(){
-    echo '</div>';
-}
