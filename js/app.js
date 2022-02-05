@@ -84,17 +84,17 @@ if(mobilemenubtn){
 
 
 function togglemobilesearch(event){
-	const searchform = mobileheader.getElementsByClassName('search-form')[0];
+	const searchform = mobileheader.getElementsByClassName('search-box')[0];
 	const menucontainer = mobileheader.getElementsByClassName('menu-container')[0];
 	const menuobjects = menucontainer.getElementsByClassName('menu');
 	if(menuobjects.length > 0){
 		menuobjects[0].classList.add('hide');
 	}
-	if(searchform.style.display == 'none'){
-		searchform.style.display = 'block';
+	if(searchform.classList.contains('s-hide')){
+		searchform.classList.remove('s-hide');
 	}
 	else{
-		searchform.style.display = 'none';
+		searchform.classList.add('s-hide');
 	}
 
 }
@@ -102,8 +102,8 @@ function togglemobilesearch(event){
 function togglemobilemenu(event){
 	const menucontainer = mobileheader.getElementsByClassName('menu-container')[0];
 	const menuobjects = menucontainer.getElementsByClassName('menu');
-	const searchform = mobileheader.getElementsByClassName('search-form')[0];
-	searchform.style.display = 'none';
+	const searchform = mobileheader.getElementsByClassName('search-box')[0];
+	searchform.classList.add('s-hide');
 	if(menuobjects.length>0){
 		if(menuobjects[0].classList.contains('hide')){
 			menuobjects[0].classList.remove('hide');

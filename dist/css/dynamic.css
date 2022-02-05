@@ -55,15 +55,13 @@ body {
     }
 
     main a,
-    .post-content p a, .post-content .cat-name {
+    .post-content p a, .post-content .cat-name, footer .copyrights a{
         color: #0170b9;
-
     }
 
     main a:hover,
-    .post-content p a:hover, .post-content .cat-name:hover{
+    .post-content p a:hover, .post-content .cat-name:hover, footer .copyrights a:hover {
         color: #0170b9;
-
     }
 
     .read-btn, .container .article .pagination .next, .container .article .pagination .prev, .form-submit .submit {
