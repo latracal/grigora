@@ -659,7 +659,7 @@ if($typography_flag) {
         
     }
 
-    main p {
+    main p, .post-content p {
         font-weight: ".get_theme_mod('grg_typography_body_weight', $typography_defaults['grg_typography_body_weight']).";
         
         font-size: ".get_theme_mod('grg_typography_body_font_size', $typography_defaults['grg_typography_body_font_size'])."px;
@@ -795,7 +795,7 @@ else {
         
     }
 
-    main p {
+    main p,.post-content p {
         font-weight: ".$typography_defaults['grg_typography_body_weight']."px;
         font-size: ".$typography_defaults['grg_typography_body_font_size'].";
         
