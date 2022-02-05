@@ -1,12 +1,30 @@
-.woocommerce {
-	form .form-row input.input-text,
-	form .form-row textarea {
-		border: 1px solid #aaaaaa;
-		border-radius: 3px;
-		padding: 0.5rem;
+.wcm-page {
+	display: flex;
+	margin: 3rem auto;
+	max-width: 1366px;
+
+	ul {
+		list-style: none;
 	}
 
-	.woocommerce-ordering select {
-		padding: 0.5rem;
+	.content-area {
+		width: 70%;
+
+		// p.woocommerce-result-count {
+		// 	float: left;
+		// }
+
+		// form.woocommerce-ordering {
+		// 	float: right;
+		// }
+
+		.page-numbers {
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+	aside {
+		width: 30%;
 	}
 }

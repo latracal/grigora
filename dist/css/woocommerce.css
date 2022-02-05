@@ -1,11 +1,29 @@
-.woocommerce form .form-row input.input-text,
-.woocommerce form .form-row textarea {
-  border: 1px solid #aaaaaa;
-  border-radius: 3px;
-  padding: 0.5rem;
+.wcm-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 3rem auto;
+  max-width: 1366px;
 }
 
-.woocommerce .woocommerce-ordering select {
-  padding: 0.5rem;
+.wcm-page ul {
+  list-style: none;
+}
+
+.wcm-page .content-area {
+  width: 70%;
+}
+
+.wcm-page .content-area .page-numbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wcm-page aside {
+  width: 30%;
 }
 /*# sourceMappingURL=woocommerce.css.map */
