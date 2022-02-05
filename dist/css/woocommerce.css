@@ -1,1 +1,11 @@
-/* No CSS *//*# sourceMappingURL=woocommerce.css.map */
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea {
+  border: 1px solid #aaaaaa;
+  border-radius: 3px;
+  padding: 0.5rem;
+}
+
+.woocommerce .woocommerce-ordering select {
+  padding: 0.5rem;
+}
+/*# sourceMappingURL=woocommerce.css.map */

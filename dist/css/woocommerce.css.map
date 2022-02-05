@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AACC,YADW,CACX,IAAI,CAAC,SAAS,CAAC,KAAK,AAAA,WAAW;AADhC,YAAY,CAEX,IAAI,CAAC,SAAS,CAAC,QAAQ,CAAC;EACvB,MAAM,EAAE,iBAAiB;EACzB,aAAa,EAAE,GAAG;EAClB,OAAO,EAAE,MAAM;CACf;;AANF,AAQC,YARW,CAQX,qBAAqB,CAAC,MAAM,CAAC;EAC5B,OAAO,EAAE,MAAM;CACf",
     "sources": [
         "../../scss/woocommerce.scss"
     ],

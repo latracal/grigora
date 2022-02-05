@@ -1,2 +1,12 @@
 .woocommerce {
+	form .form-row input.input-text,
+	form .form-row textarea {
+		border: 1px solid #aaaaaa;
+		border-radius: 3px;
+		padding: 0.5rem;
+	}
+
+	.woocommerce-ordering select {
+		padding: 0.5rem;
+	}
 }
