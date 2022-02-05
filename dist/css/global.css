@@ -295,10 +295,6 @@
   border-bottom: none;
 }
 
-.menu-container .s-hide {
-  display: none !important;
-}
-
 .menu-container .search-btn {
   display: block;
   position: absolute;
@@ -329,7 +325,7 @@
   cursor: pointer;
 }
 
-.menu-container .search-btn .search-box {
+.menu-container .search-box {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -346,14 +342,14 @@
 }
 
 @media (max-width: 768px) {
-  .menu-container .search-btn .search-box {
+  .menu-container .search-box {
     top: 80px;
     right: -1rem;
     width: 100vw;
   }
 }
 
-.menu-container .search-btn .search-box .search-field {
+.menu-container .search-box .search-field {
   font-size: 1rem;
   outline: none;
   padding: 0.5rem;
@@ -365,21 +361,83 @@
 }
 
 @media (max-width: 768px) {
-  .menu-container .search-btn .search-box .search-field {
+  .menu-container .search-box .search-field {
     width: 100%;
   }
 }
 
-.menu-container .search-btn .search-box .search-field::-webkit-input-placeholder {
+.menu-container .search-box .search-field::-webkit-input-placeholder {
   font-size: 16px;
 }
 
-.menu-container .search-btn .search-box .search-icon {
+.menu-container .search-box .search-icon {
   border: none;
   background-color: transparent;
 }
 
-.menu-container .search-btn .search-box .search-icon:hover {
+.menu-container .search-box .search-icon:hover {
+  cursor: pointer;
+}
+
+.s-hide {
+  display: none !important;
+}
+
+.search-box {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  right: 0;
+  padding: 0.5rem;
+  background-color: #e9e9e9;
+  gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .search-box {
+    top: 80px;
+    right: -1rem;
+    width: 100vw;
+  }
+}
+
+.search-box svg {
+  width: 20px;
+  height: 20px;
+}
+
+.search-box .search-field {
+  font-size: 1rem;
+  outline: none;
+  padding: 0.5rem;
+  background-color: #e9e9e9;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 15rem;
+}
+
+@media (max-width: 768px) {
+  .search-box .search-field {
+    width: 100%;
+  }
+}
+
+.search-box .search-field::-webkit-input-placeholder {
+  font-size: 16px;
+}
+
+.search-box .search-icon {
+  border: none;
+  background-color: transparent;
+}
+
+.search-box .search-icon:hover {
   cursor: pointer;
 }
 
