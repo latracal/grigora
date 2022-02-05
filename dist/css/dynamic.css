@@ -276,10 +276,10 @@ body {
         
     }
 
-    main p {
+    main p,.post-content p, .post-content li, .post-content .wp-block-quote p, .post-content .wp-block-quote cite, .post-content .wp-block-preformatted, .post-content .wp-block-code, .post-content .wp-block-table table, .wp-block-pullquote p, .wp-block-pullquote cite {
         font-weight: 500;
         
-        font-size: 18px;
+        font-size: 15px;
     }
 
     main {
