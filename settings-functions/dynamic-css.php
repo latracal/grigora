@@ -655,7 +655,7 @@ else {
 
 if($typography_flag) {
     $out=$out."body {
-        font-family: ".get_theme_mod('grg_typography_body_font', $typography_fonts_defaults['grg_typography_body_font']).";
+        font-family: ".get_theme_mod('grg_typography_body_font', $typography_fonts_defaults['grg_typography_body_font']).", sans-serif;
         
     }
 
@@ -671,7 +671,7 @@ if($typography_flag) {
     }
 
     .navbar .title h1, .mobile-header .top-part .title h1 {
-        font-family: ".get_theme_mod('grg_typography_site_title_font', $typography_fonts_defaults['grg_typography_site_title_font']).";
+        font-family: ".get_theme_mod('grg_typography_site_title_font', $typography_fonts_defaults['grg_typography_site_title_font']).", sans-serif;
         
         font-weight: ".get_theme_mod('grg_typography_site_title_weight', $typography_defaults['grg_typography_site_title_weight']).";
         
@@ -681,7 +681,7 @@ if($typography_flag) {
     }
 
     .navbar .title h2, .mobile-header .top-part .title h2 {
-        font-family: ".get_theme_mod('grg_typography_site_desc_font', $typography_fonts_defaults['grg_typography_site_desc_font']).";
+        font-family: ".get_theme_mod('grg_typography_site_desc_font', $typography_fonts_defaults['grg_typography_site_desc_font']).", sans-serif;
         
         font-weight: ".get_theme_mod('grg_typography_site_desc_weight', $typography_defaults['grg_typography_site_desc_weight']).";
         
@@ -691,7 +691,7 @@ if($typography_flag) {
     }
 
     .menu-container .menu {
-        font-family: ".get_theme_mod('grg_typography_site_menu_font', $typography_fonts_defaults['grg_typography_site_menu_font']).";
+        font-family: ".get_theme_mod('grg_typography_site_menu_font', $typography_fonts_defaults['grg_typography_site_menu_font']).", sans-serif;
         
         font-weight: ".get_theme_mod('grg_typography_site_menu_weight', $typography_defaults['grg_typography_site_menu_weight']).";
         
@@ -701,7 +701,7 @@ if($typography_flag) {
     }
 
     .read-btn {
-        font-family: ".get_theme_mod('grg_typography_button_font', $typography_fonts_defaults['grg_typography_button_font']).";
+        font-family: ".get_theme_mod('grg_typography_button_font', $typography_fonts_defaults['grg_typography_button_font']).", sans-serif;
         
         font-weight: ".get_theme_mod('grg_typography_button_weight', $typography_defaults['grg_typography_button_weight']).";
         
@@ -712,7 +712,7 @@ if($typography_flag) {
 
     .post-content h1,
     aside h1 {
-        font-family: ".get_theme_mod('grg_typography_h1_font', $typography_fonts_defaults['grg_typography_h1_font']).";
+        font-family: ".get_theme_mod('grg_typography_h1_font', $typography_fonts_defaults['grg_typography_h1_font']).", sans-serif;
         
         font-weight: ".get_theme_mod('grg_typography_h1_weight', $typography_defaults['grg_typography_h1_weight']).";
         
@@ -723,7 +723,7 @@ if($typography_flag) {
 
     .post-content h2,
     aside h2 {
-        font-family: ".get_theme_mod('grg_typography_h2_font', $typography_fonts_defaults['grg_typography_h2_font']).";
+        font-family: ".get_theme_mod('grg_typography_h2_font', $typography_fonts_defaults['grg_typography_h2_font']).", sans-serif;
         
         font-weight: ".get_theme_mod('grg_typography_h2_weight', $typography_defaults['grg_typography_h2_weight']).";
         
@@ -734,7 +734,7 @@ if($typography_flag) {
 
     .post-content h3,
     aside h3 {
-        font-family: ".get_theme_mod('grg_typography_h3_font', $typography_fonts_defaults['grg_typography_h3_font']).";
+        font-family: ".get_theme_mod('grg_typography_h3_font', $typography_fonts_defaults['grg_typography_h3_font']).", sans-serif;
         
         font-weight: ".get_theme_mod('grg_typography_h3_weight', $typography_defaults['grg_typography_h3_weight']).";
         
@@ -745,7 +745,7 @@ if($typography_flag) {
 
     .post-content h4,
     aside h4 {
-        font-family: ".get_theme_mod('grg_typography_h4_font', $typography_fonts_defaults['grg_typography_h4_font']).";
+        font-family: ".get_theme_mod('grg_typography_h4_font', $typography_fonts_defaults['grg_typography_h4_font']).", sans-serif;
         
         font-weight: ".get_theme_mod('grg_typography_h4_weight', $typography_defaults['grg_typography_h4_weight']).";
         
@@ -756,7 +756,7 @@ if($typography_flag) {
 
     .post-content h5,
     aside h5 {
-        font-family: ".get_theme_mod('grg_typography_h5_font', $typography_fonts_defaults['grg_typography_h5_font']).";
+        font-family: ".get_theme_mod('grg_typography_h5_font', $typography_fonts_defaults['grg_typography_h5_font']).", sans-serif;
         
         font-weight: ".get_theme_mod('grg_typography_h5_weight', $typography_defaults['grg_typography_h5_weight']).";
         
@@ -767,7 +767,7 @@ if($typography_flag) {
 
     .post-content h6,
     aside h6 {
-        font-family: ".get_theme_mod('grg_typography_h6_font', $typography_fonts_defaults['grg_typography_h6_font']).";
+        font-family: ".get_theme_mod('grg_typography_h6_font', $typography_fonts_defaults['grg_typography_h6_font']).", sans-serif;
         
         font-weight: ".get_theme_mod('grg_typography_h6_weight', $typography_defaults['grg_typography_h6_weight']).";
         
@@ -777,7 +777,7 @@ if($typography_flag) {
     }
 
     .footer {
-        font-family: ".get_theme_mod('grg_typography_footer_font', $typography_fonts_defaults['grg_typography_footer_font']).";
+        font-family: ".get_theme_mod('grg_typography_footer_font', $typography_fonts_defaults['grg_typography_footer_font']).", sans-serif;
         
         font-weight: ".get_theme_mod('grg_typography_footer_weight', $typography_defaults['grg_typography_footer_weight']).";
         
@@ -791,7 +791,7 @@ if($typography_flag) {
 
 else {
     $out=$out."body {
-        font-family: ".$typography_fonts_defaults['grg_typography_body_font'].";
+        font-family: ".$typography_fonts_defaults['grg_typography_body_font'].", sans-serif;
         
     }
 
@@ -807,7 +807,7 @@ else {
     }
 
     .navbar .title h1 {
-        font-family: ".$typography_fonts_defaults['grg_typography_site_title_font'].";
+        font-family: ".$typography_fonts_defaults['grg_typography_site_title_font'].", sans-serif;
         
         font-weight: ".$typography_defaults['grg_typography_site_title_weight'].";
         
@@ -817,7 +817,7 @@ else {
     }
 
     .navbar .title h2 {
-        font-family: ".$typography_fonts_defaults['grg_typography_site_desc_font'].";
+        font-family: ".$typography_fonts_defaults['grg_typography_site_desc_font'].", sans-serif;
         
         font-weight: ".$typography_defaults['grg_typography_site_desc_weight'].";
         
@@ -827,7 +827,7 @@ else {
     }
 
     .menu-container .menu {
-        font-family: ".$typography_fonts_defaults['grg_typography_site_menu_font'].";
+        font-family: ".$typography_fonts_defaults['grg_typography_site_menu_font'].", sans-serif;
         
         font-weight: ".$typography_defaults['grg_typography_site_menu_weight'].";
         
@@ -837,7 +837,7 @@ else {
     }
 
     .read-btn {
-        font-family: ".$typography_fonts_defaults['grg_typography_button_font'].";
+        font-family: ".$typography_fonts_defaults['grg_typography_button_font'].", sans-serif;
         
         font-weight: ".$typography_defaults['grg_typography_button_weight'].";
         
@@ -848,7 +848,7 @@ else {
 
     .post-content h1,
     aside h1 {
-        font-family: ".$typography_fonts_defaults['grg_typography_h1_font'].";
+        font-family: ".$typography_fonts_defaults['grg_typography_h1_font'].", sans-serif;
         
         font-weight: ".$typography_defaults['grg_typography_h1_weight'].";
         
@@ -859,7 +859,7 @@ else {
 
     .post-content h2,
     aside h2 {
-        font-family: ".$typography_fonts_defaults['grg_typography_h2_font'].";
+        font-family: ".$typography_fonts_defaults['grg_typography_h2_font'].", sans-serif;
         
         font-weight: ".$typography_defaults['grg_typography_h2_weight'].";
         
@@ -870,7 +870,7 @@ else {
 
     .post-content h3,
     aside h3 {
-        font-family: ".$typography_fonts_defaults['grg_typography_h3_font'].";
+        font-family: ".$typography_fonts_defaults['grg_typography_h3_font'].", sans-serif;
         
         font-weight: ".$typography_defaults['grg_typography_h3_weight'].";
         
@@ -881,7 +881,7 @@ else {
 
     .post-content h4,
     aside h4 {
-        font-family: ".$typography_fonts_defaults['grg_typography_h4_font'].";
+        font-family: ".$typography_fonts_defaults['grg_typography_h4_font'].", sans-serif;
         
         font-weight: ".$typography_defaults['grg_typography_h4_weight'].";
         
@@ -892,7 +892,7 @@ else {
 
     .post-content h5,
     aside h5 {
-        font-family: ".$typography_fonts_defaults['grg_typography_h5_font'].";
+        font-family: ".$typography_fonts_defaults['grg_typography_h5_font'].", sans-serif;
         
         font-weight: ".$typography_defaults['grg_typography_h5_weight'].";
         
@@ -903,7 +903,7 @@ else {
 
     .post-content h6,
     aside h6 {
-        font-family: ".$typography_fonts_defaults['grg_typography_h6_font'].";
+        font-family: ".$typography_fonts_defaults['grg_typography_h6_font'].", sans-serif;
         
         font-weight: ".$typography_defaults['grg_typography_h6_weight'].";
         
@@ -913,7 +913,7 @@ else {
     }
 
     .footer {
-        font-family: ".$typography_fonts_defaults['grg_typography_footer_font'].";
+        font-family: ".$typography_fonts_defaults['grg_typography_footer_font'].", sans-serif;
         
         font-weight: ".$typography_defaults['grg_typography_footer_weight'].";
         
@@ -1094,18 +1094,20 @@ return $out;
  */
 function grg_enqueue_dynamic_css() {
     ?>
-    <style id="grg-dynamic-inline-css">
-    <?php if (grigora_get_option('minify') && class_exists('MatthiasMullie\Minify\CSS')) {
-        $minifier=new MatthiasMullie\Minify\CSS(grg_dynamic_customize_css_var());
-        $minified_css=$minifier->minify();
-        echo $minified_css;
-    }
-    else {
-        echo grg_dynamic_customize_css_var();
-    }
-    ?>
-    </style>
-    <?php
+<style id="grg-dynamic-inline-css">
+<?php if (grigora_get_option('minify') && class_exists('MatthiasMullie\Minify\CSS')) {
+    $minifier=new MatthiasMullie\Minify\CSS(grg_dynamic_customize_css_var());
+    $minified_css=$minifier->minify();
+    echo $minified_css;
+}
+
+else {
+    echo grg_dynamic_customize_css_var();
+}
+
+?>
+</style>
+<?php
 }
 
 
