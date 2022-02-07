@@ -561,6 +561,29 @@ if($spacing_flag) {
 
     }
 
+    if(get_theme_mod('grg_header_style', $spacing_defaults['grg_header_style'])=='style2'){
+        $out=$out.".desktop-nav{
+            flex-direction:row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .desktop-nav .menu-container .menu{
+            background-color:transparent;
+        }
+
+        .desktop-nav .menu-container .menu{
+            padding: 0 4rem 0 0;
+        }
+        ";
+    }else{
+        $out=$out.".desktop-nav{
+            display: flex;
+            flex-direction: column;
+        }";
+    }
+
     $out=$out.".container {
         max-width: ".get_theme_mod('grg_container-width', $spacing_defaults['grg_container-width'])."px;
 

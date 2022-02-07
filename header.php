@@ -11,7 +11,7 @@
     itemscope="<?php echo grg_get_schema_tag('body')['itemscope'] ?>">
     <header id="masthead" itemtype="<?php echo grg_get_schema_tag('header')['itemtype'] ?>"
         itemscope="<?php echo grg_get_schema_tag('header')['itemscope'] ?>">
-        <nav>
+        <nav class="desktop-nav">
             <div class="navbar">
                 <div class="site-branding" itemtype="<?php echo grg_get_schema_tag('organization')['itemtype'] ?>"
                     itemscope="<?php echo grg_get_schema_tag('organization')['itemscope'] ?>">
@@ -49,13 +49,6 @@
                     <?php
             }
             ?>
-                </div>
-            </div>
-            <div class="menu-toggle-btn" id="menu-toggle-btn">
-                <div class="menu-toggle-icon">
-                    <span class="menu-toggle-line line top"></span>
-                    <span class="menu-toggle-line line middle"></span>
-                    <span class="menu-toggle-line line bottom"></span>
                 </div>
             </div>
             <div class="menu-container">
