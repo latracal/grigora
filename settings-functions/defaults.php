@@ -57,6 +57,7 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 				'grg_header_submenu_bg-color' => '#c4c4c4',
 				'grg_header_searchbox_bg-color' => '#c4c4c4',
 				'grg_header_text-color' => '#000',
+				'grg_menu_text-color' => '#000',
 				'grg_footer_menu_bg-color' => '#e9e9e9',
 				'grg_footer_bg-color' => '#c4c4c4',
 				'grg_footer_text-color' => '#000',

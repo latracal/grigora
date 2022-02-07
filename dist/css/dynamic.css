@@ -2,7 +2,7 @@ body {
         background-color: #f2f2f2;
     } .navbar, .mobile-header .top-part {
         background-color: #f6b26b;
-    } .mobile-header .menu-container .menu {
+    } .menu-container .menu, .mobile-header .menu-container .menu {
         background-color: #e06666;
 
     }
@@ -224,38 +224,12 @@ body {
         
     }
 
-    .container .post-content {
-            width: 100%;
-            border-right: none;
+    .container {
+            flex-direction: row;
             
-        }
 
-        .container .article {
-            width: 100%;
-            border-right: none;
-            
-        }
-
-
-        aside {
-            display: none;
-            
-        } .desktop-nav{
-            flex-direction:row;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
-        
-        .desktop-nav .menu-container .menu{
-            background-color:transparent;
-        }
-
-        .desktop-nav .menu-container .menu{
-            padding: 0 4rem 0 0;
-        }
-        .container {
-        max-width: 885px;
+        }.container {
+        max-width: 1408px;
 
     }
 
@@ -297,17 +271,7 @@ body {
 
     .navbar, .mobile-header .top-part {
         min-height: 20px;
-    }
-
-    .navbar .logo img{
-        height: 141px;
-    }
-   
-    .mobile-header .logo img{
-        height: 89px;
-    }
-
-    body {
+    }body {
         font-family: Arial, sans-serif;
         
     }
@@ -461,45 +425,3 @@ body {
         color: #fff; 
         background-color: #025640; 
     }
-    .orderby{
-        padding: .5rem;
-        border:1px solid #aaaaaa;
-        background-color: #fff;
-    }
-
-    .woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea{
-        padding: .5rem;
-        border:1px solid #aaaaaa;
-    }
-
-    .woocommerce-MyAccount-navigation ul{
-        border:1px solid #aaaaaa;
-        border-radius:5px;
-    }
-
-    li.woocommerce-MyAccount-navigation-link {
-        padding: .5rem;
-        border-bottom:1px solid #aaaaaa;
-    }
-
-    li.woocommerce-MyAccount-navigation-link:last-child {        
-        border-bottom:none;
-    }
-
-    li.woocommerce-MyAccount-navigation-link a {
-        text-decoration:none;
-        padding: .5rem 0;
-    }
-
-    .woocommerce .quantity .qty{
-        padding: .6rem;
-        border:1px solid #aaaaaa;
-    }    
-
-    .woocommerce div.product form.cart .variations select{
-        padding: .5rem;
-        margin-bottom: 1rem;
-        border:1px solid #aaaaaa;
-        background-color:#fff;
-    }
-    
