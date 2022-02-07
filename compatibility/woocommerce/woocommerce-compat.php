@@ -1,5 +1,7 @@
 <?php
 
+// add theme support
+woocommerce_support();
 
 // remove existing wrappers
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );

@@ -89,7 +89,6 @@ if(mobileheader){
 	
 	
 	function togglemobilesearch(event){
-		console.log("here");
 		const searchform = mobileheader.getElementsByClassName('search-box')[0];
 		const menucontainer = mobileheader.getElementsByClassName('menu-container')[0];
 		const menuobjects = menucontainer.getElementsByClassName('menu');
