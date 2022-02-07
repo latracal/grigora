@@ -39,7 +39,7 @@ function grg_dynamic_customize_css_var() {
         background-color: ".get_theme_mod('grg_header_bg-color', $defaults['grg_header_bg-color']).";
     } ".
 
-    ".menu-container .menu, .mobile-header .menu-container .menu {
+    ".mobile-header .menu-container .menu {
         background-color: ".get_theme_mod('grg_header_menu_bg-color', $defaults['grg_header_menu_bg-color']).";
 
     }
@@ -275,7 +275,7 @@ else {
         
     }
 
-    .menu-container .menu, .mobile-header .menu-container .menu {
+    .mobile-header .menu-container .menu {
         background-color: ".$defaults['grg_header_menu_bg-color'].";
         
     }
