@@ -12,7 +12,7 @@
     <header id="masthead" itemtype="<?php echo grg_get_schema_tag('header')['itemtype'] ?>"
         itemscope="<?php echo grg_get_schema_tag('header')['itemscope'] ?>">
         <nav>
-            <div class="navbar">
+            <div class="navbar-1">
                 <div class="site-branding" itemtype="<?php echo grg_get_schema_tag('organization')['itemtype'] ?>"
                     itemscope="<?php echo grg_get_schema_tag('organization')['itemscope'] ?>">
                     <?php 
@@ -50,16 +50,15 @@
             }
             ?>
                 </div>
-            </div>
-            <div class="menu-toggle-btn" id="menu-toggle-btn">
-                <div class="menu-toggle-icon">
-                    <span class="menu-toggle-line line top"></span>
-                    <span class="menu-toggle-line line middle"></span>
-                    <span class="menu-toggle-line line bottom"></span>
+                <div class="menu-toggle-btn" id="menu-toggle-btn">
+                    <div class="menu-toggle-icon">
+                        <span class="menu-toggle-line line top"></span>
+                        <span class="menu-toggle-line line middle"></span>
+                        <span class="menu-toggle-line line bottom"></span>
+                    </div>
                 </div>
-            </div>
-            <div class="menu-container">
-                <?php
+                <div class="menu-container">
+                    <?php
                 if( has_nav_menu( 'primary' ) ){
                     echo '<div id="site-navigation" itemtype="'.grg_get_schema_tag('navigation')['itemtype'].'" itemscope="'.grg_get_schema_tag('navigation')['itemscope'].'">';
                     wp_nav_menu([
@@ -72,12 +71,14 @@
                     echo "</div>";
                 }
                 ?>
-                <div class="search-btn">
-                    <button class="toggle search-btn-obj"><svg class="search-btn-svg" xmlns="http://www.w3.org/2000/svg"
-                            width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                            <path
-                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                        </svg></button>
+                    <div class="search-btn">
+                        <button class="toggle search-btn-obj"><svg class="search-btn-svg"
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg></button>
+                    </div>
                 </div>
             </div>
             <?php get_search_form(); ?>

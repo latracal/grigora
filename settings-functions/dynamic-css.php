@@ -604,9 +604,18 @@ if($spacing_flag) {
 
     .navbar, .mobile-header .top-part {
         min-height: ".get_theme_mod('grg_header-height', $spacing_defaults['grg_header-height'])."px;
-    }";
+    }
 
+    .navbar .logo img{
+        height: ".get_theme_mod('grg_header_image_height', $spacing_defaults['grg_header_image_height'])."px;
+    }
+   
+    .mobile-header .logo img{
+        height: ".get_theme_mod('grg_header_image_height_mobile', $spacing_defaults['grg_header_image_height_mobile'])."px;
+    }
 
+    ";
+   
 
 }
 
@@ -648,7 +657,17 @@ else {
 
     .navbar, .mobile-header .top-part{
         min-height: ".$spacing_defaults['grg_header-height']."px;
-    }";
+    }
+    
+    .navbar .logo img{
+        height:".$spacing_defaults['grg_header_image_height']."px;
+    }
+    
+    .mobile-header .logo img{
+        height:".$spacing_defaults['grg_header_image_height_mobile']."px;
+    }
+    
+    ";
 
     
 }
