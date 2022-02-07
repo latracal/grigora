@@ -35,28 +35,28 @@ function grg_dynamic_customize_css_var() {
         background-color: ".get_theme_mod('grg_bg-color', $defaults['grg_bg-color']).";
     } ".
 
-    ".navbar, .mobile-header .top-part {
+    ".desktop-nav, .navbar, .mobile-header .top-part {
         background-color: ".get_theme_mod('grg_header_bg-color', $defaults['grg_header_bg-color']).";
     } ".
 
-    ".mobile-header .menu-container .menu {
+    ".desktop-nav .menu-container .menu, .mobile-header .menu-container .menu {
         background-color: ".get_theme_mod('grg_header_menu_bg-color', $defaults['grg_header_menu_bg-color']).";
 
     }
 
-    .menu-container .menu .menu-item .sub-menu, .mobile-header .menu-container .menu .menu-item .sub-menu {
+    .desktop-nav .menu-container .menu .menu-item .sub-menu, .mobile-header .menu-container .menu .menu-item .sub-menu {
         
         background-color: ".get_theme_mod('grg_header_submenu_bg-color', $defaults['grg_header_submenu_bg-color']).";
 
     }
 
-    .menu-container .search-btn .search-box,
-    .menu-container .search-btn .search-box .search-field, .mobile-header .search-box, .mobile-header .search-box .search-field {
+    .desktop-nav .search-box,
+    .desktop-nav .search-box .search-field, .mobile-header .search-box, .mobile-header .search-box .search-field {
         background-color: ".get_theme_mod('grg_header_searchbox_bg-color', $defaults['grg_header_searchbox_bg-color']).";
 
     }
 
-    .navbar .title a,
+    .desktop-nav .navbar .title a,
     .menu-container .menu a, .mobile-header .top-part .title a, .mobile-header .menu-container .menu a, .menu-container .search-btn svg {
         color: ".get_theme_mod('grg_header_text-color', $defaults['grg_header_text-color']).";
 
@@ -270,29 +270,29 @@ else {
         
     }
 
-    .navbar {
+    .desktop-nav .navbar {
         background-color: ".$defaults['grg_header_bg-color'].";
         
     }
 
-    .mobile-header .menu-container .menu {
+    .desktop-nav .menu-container .menu, .mobile-header .menu-container .menu {
         background-color: ".$defaults['grg_header_menu_bg-color'].";
         
     }
 
-    .menu-container .menu .menu-item .sub-menu, .mobile-header .menu-container .menu .menu-item .sub-menu {
+    .desktop-nav .menu-container .menu .menu-item .sub-menu, .mobile-header .menu-container .menu .menu-item .sub-menu {
         background-color: ".$defaults['grg_header_submenu_bg-color'].";
         
     }
 
-    .menu-container .search-btn .search-box,
-    .menu-container .search-btn .search-box .search-field, .mobile-header .search-box, .mobile-header .search-box .search-field {
+    .desktop-nav .search-box,
+    .desktop-nav .search-box .search-field, .mobile-header .search-box, .mobile-header .search-box .search-field {
         background-color: ".$defaults['grg_header_searchbox_bg-color'].";
         
     }
 
-    .navbar .title a,
-    .menu-container .menu a, .mobile-header .top-part .title a, .mobile-header .menu-container .menu a, .menu-container .search-btn svg{
+    .desktop-nav  .title a,
+    .desktop-nav .menu-container .menu a, .mobile-header .top-part .title a, .mobile-header .menu-container .menu a, .menu-container .search-btn svg{
         color: ".$defaults['grg_header_text-color'].";        
     }
    
@@ -570,12 +570,10 @@ if($spacing_flag) {
         }
         
         .desktop-nav .menu-container .menu{
-            background-color:transparent;
-        }
-
-        .desktop-nav .menu-container .menu{
+            background-color:transparent; 
             padding: 0 4rem 0 0;
         }
+
         ";
     }else{
         $out=$out.".desktop-nav{
@@ -625,11 +623,11 @@ if($spacing_flag) {
         }
     }
 
-    .navbar, .mobile-header .top-part {
+    .desktop-nav, .mobile-header .top-part {
         min-height: ".get_theme_mod('grg_header-height', $spacing_defaults['grg_header-height'])."px;
     }
 
-    .navbar .logo img{
+    .desktop-nav .navbar .logo img{
         height: ".get_theme_mod('grg_header_image_height', $spacing_defaults['grg_header_image_height'])."px;
     }
    
@@ -678,11 +676,11 @@ else {
         width: ".$spacing_defaults['grg_sidebar-width']."%;
     }
 
-    .navbar, .mobile-header .top-part{
+    .desktop-nav, .mobile-header .top-part{
         min-height: ".$spacing_defaults['grg_header-height']."px;
     }
     
-    .navbar .logo img{
+    .desktop-nav .navbar .logo img{
         height:".$spacing_defaults['grg_header_image_height']."px;
     }
     
@@ -712,7 +710,7 @@ if($typography_flag) {
         
     }
 
-    .navbar .title h1, .mobile-header .top-part .title h1 {
+    .desktop-nav .navbar .title h1, .mobile-header .top-part .title h1 {
         font-family: ".get_theme_mod('grg_typography_site_title_font', $typography_fonts_defaults['grg_typography_site_title_font']).", sans-serif;
         
         font-weight: ".get_theme_mod('grg_typography_site_title_weight', $typography_defaults['grg_typography_site_title_weight']).";
@@ -722,7 +720,7 @@ if($typography_flag) {
         
     }
 
-    .navbar .title h2, .mobile-header .top-part .title h2 {
+    .desktop-nav .navbar .title h2, .mobile-header .top-part .title h2 {
         font-family: ".get_theme_mod('grg_typography_site_desc_font', $typography_fonts_defaults['grg_typography_site_desc_font']).", sans-serif;
         
         font-weight: ".get_theme_mod('grg_typography_site_desc_weight', $typography_defaults['grg_typography_site_desc_weight']).";
@@ -732,7 +730,7 @@ if($typography_flag) {
         
     }
 
-    .menu-container .menu {
+    .desktop-nav .menu-container .menu {
         font-family: ".get_theme_mod('grg_typography_site_menu_font', $typography_fonts_defaults['grg_typography_site_menu_font']).", sans-serif;
         
         font-weight: ".get_theme_mod('grg_typography_site_menu_weight', $typography_defaults['grg_typography_site_menu_weight']).";
@@ -848,7 +846,7 @@ else {
         
     }
 
-    .navbar .title h1 {
+    .desktop-nav .navbar .title h1 {
         font-family: ".$typography_fonts_defaults['grg_typography_site_title_font'].", sans-serif;
         
         font-weight: ".$typography_defaults['grg_typography_site_title_weight'].";
@@ -858,7 +856,7 @@ else {
         
     }
 
-    .navbar .title h2 {
+    .desktop-nav .navbar .title h2 {
         font-family: ".$typography_fonts_defaults['grg_typography_site_desc_font'].", sans-serif;
         
         font-weight: ".$typography_defaults['grg_typography_site_desc_weight'].";
@@ -868,7 +866,7 @@ else {
         
     }
 
-    .menu-container .menu {
+    .desktop-nav .menu-container .menu {
         font-family: ".$typography_fonts_defaults['grg_typography_site_menu_font'].", sans-serif;
         
         font-weight: ".$typography_defaults['grg_typography_site_menu_weight'].";

@@ -10,6 +10,12 @@
   background-color: #e9e9e9;
 }
 
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none !important;
+  }
+}
+
 .desktop-nav .navbar {
   position: relative;
   display: -webkit-box;
@@ -153,7 +159,7 @@
 
 @media (max-width: 768px) {
   .desktop-nav .menu-container {
-    position: static;
+    display: none;
   }
 }
 
@@ -351,6 +357,9 @@
           flex-direction: row;
   right: 0;
   padding: 0.5rem;
+  bottom: 0;
+  -webkit-transform: translate(0px, 100%);
+          transform: translate(0px, 100%);
   background-color: #e9e9e9;
   gap: 0.5rem;
 }
