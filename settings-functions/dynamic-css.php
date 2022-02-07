@@ -56,6 +56,10 @@ function grg_dynamic_customize_css_var() {
 
     }
 
+    .mobile-header .top-part #menu-toggle-btn .line{
+        background-color: ".get_theme_mod('grg_header_text-color', $defaults['grg_header_text-color']).";
+    }
+
     .desktop-nav .navbar .title a,
     .menu-container .menu a, .mobile-header .top-part .title a, .mobile-header .menu-container .menu a, .mobile-header .top-part .search-btn svg {
         color: ".get_theme_mod('grg_header_text-color', $defaults['grg_header_text-color']).";
@@ -293,6 +297,10 @@ else {
     .desktop-nav .search-box .search-field, .mobile-header .search-box, .mobile-header .search-box .search-field {
         background-color: ".$defaults['grg_header_searchbox_bg-color'].";
         
+    }
+
+    .mobile-header .top-part #menu-toggle-btn .line{
+        background-color: ".$defaults['grg_header_text-color'].";
     }
 
     .desktop-nav  .title a,
