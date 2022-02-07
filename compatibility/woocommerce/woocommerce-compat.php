@@ -30,7 +30,30 @@ function grg_render_sidebar(){
 }
 
 function grigora_wcm_css(){
-    $out = "";
+    $out = ".woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea{
+        padding: .5rem;
+        border:1px solid #aaaaaa;
+    }
+
+    .woocommerce-MyAccount-navigation ul{
+        border:1px solid #aaaaaa;
+        border-radius:5px;
+    }
+
+    li.woocommerce-MyAccount-navigation-link {
+        padding: .5rem;
+        border-bottom:1px solid #aaaaaa;
+    }
+
+    li.woocommerce-MyAccount-navigation-link:last-child {        
+        border-bottom:none;
+    }
+
+    li.woocommerce-MyAccount-navigation-link a {
+        text-decoration:none;
+        padding: .5rem 0;
+    }
+    
+    ";
     return $out;
 }
-

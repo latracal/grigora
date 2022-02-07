@@ -18,6 +18,7 @@ add_action( 'after_setup_theme', 'grigora_custom_logo_setup' );
 add_filter( 'excerpt_more', 'change_excerpt_end_bracket' ); //Change excerpt end to ...
 add_action( 'widgets_init', 'grg_sidebar' ); //sidebar
 add_action( 'after_setup_theme', 'woocommerce_support' );
+add_theme_support( 'title-tag' );
 
 // Options
 include( get_theme_file_path( '/settings-functions/defaults.php' ) );
