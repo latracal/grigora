@@ -54,25 +54,25 @@ function clickoutsidemenuevent(event) {
 	}
 }
 
-function togglemenu(event) {
-	searchbox.classList.add('s-hide');
-	// if(menu.contains(event.target)){
-	// 	return;
-	// }
-	if (menu.classList.contains('hide')) {
-		menu.classList.remove('hide');
-		document.removeEventListener('click', clickoutsidemenuevent, false);
-		document.addEventListener('click', clickoutsidemenuevent, false);
-	} else {
-		document.removeEventListener('click', clickoutsidemenuevent, false);
-		menu.classList.add('hide');
-	}
-}
+// function togglemenu(event) {
+// 	searchbox.classList.add('s-hide');
+// 	// if(menu.contains(event.target)){
+// 	// 	return;
+// 	// }
+// 	if (menu.classList.contains('hide')) {
+// 		menu.classList.remove('hide');
+// 		document.removeEventListener('click', clickoutsidemenuevent, false);
+// 		document.addEventListener('click', clickoutsidemenuevent, false);
+// 	} else {
+// 		document.removeEventListener('click', clickoutsidemenuevent, false);
+// 		menu.classList.add('hide');
+// 	}
+// }
 if(searchbtn){
 	searchbtn.addEventListener('click', togglesearch, false);
 }
 if(menubtn){
-	menubtn.addEventListener('click', togglemenu, false);
+	// menubtn.addEventListener('click', togglemenu, false);
 
 }
 
@@ -89,6 +89,7 @@ if(mobileheader){
 	
 	
 	function togglemobilesearch(event){
+		console.log("here");
 		const searchform = mobileheader.getElementsByClassName('search-box')[0];
 		const menucontainer = mobileheader.getElementsByClassName('menu-container')[0];
 		const menuobjects = menucontainer.getElementsByClassName('menu');
