@@ -107,7 +107,10 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 
 	function grigora_spacing_defaults() {
 		return array(
-			'grg_header-height' => '155',		
+			'grg_header-height' => '155',
+			'grg_header_style' => 'style1',
+			'grg_header_image_height' => 100,
+			'grg_header_image_height_mobile' => 80,	
 			'grg_sidebar-alignment' => 'row',		
 			'grg_sidebar-width' => '30',	
 			'grg_sidebar-padding' => 15,
