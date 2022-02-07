@@ -169,6 +169,10 @@
 		}
 	}
 
+	.s-hide {
+		display: none !important;
+	}
+
 	.menu-container {
 		position: relative;
 
@@ -280,10 +284,6 @@
 					}
 				}
 			}
-		}
-
-		.s-hide {
-			display: none !important;
 		}
 	}
 }

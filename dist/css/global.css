@@ -605,6 +605,10 @@
   cursor: pointer;
 }
 
+.mobile-header .s-hide {
+  display: none !important;
+}
+
 .mobile-header .menu-container {
   position: relative;
 }
@@ -732,10 +736,6 @@
 
 .mobile-header .menu-container .menu .menu-item .sub-menu a:hover {
   border-bottom: none;
-}
-
-.mobile-header .menu-container .s-hide {
-  display: none !important;
 }
 
 .footer {
