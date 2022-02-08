@@ -164,6 +164,7 @@ grigora_set_default_scroll();
 grigora_set_default_typography_font();
 grigora_set_default_typography();
 grigora_set_default_blog();
+grigora_set_default_breadcrumbs();
 
 add_action( 'admin_menu', 'girgora_options_menu' );
 
@@ -325,6 +326,34 @@ function grigora_set_default_blog(){
         update_option('grigora_settings', $my_options);
     }
 }
+
+/**
+ * Set breadcrumbs settings
+ *
+ * @since  1.000
+ * 
+ */
+
+function grigora_set_default_breadcrumbs(){
+    if (!grigora_get_option("breadcrumbsdefaultsset")){
+        $defaults = grigora_breadcrumbs_defaults();
+        $mods = get_theme_mods();
+
+        foreach($defaults as $k => $value){
+            if(!$mods[$k]){
+                set_theme_mod($k, $value);
+            }
+        }
+
+        $my_options = get_option('grigora_settings');
+        if(!$my_options){
+            $my_options = array();
+        }
+        $my_options['breadcrumbsdefaultsset'] = 1;
+        update_option('grigora_settings', $my_options);
+    }
+}
+
 
 /**
  * Renders customizer setting in div having specific class name for each individual setting in
