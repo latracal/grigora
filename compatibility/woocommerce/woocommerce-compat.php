@@ -45,6 +45,7 @@ function grigora_wcm_css(){
     }
 
     .woocommerce-MyAccount-navigation ul{
+        list-style:none;
         border:1px solid #aaaaaa;
         border-radius:5px;
     }
@@ -64,8 +65,9 @@ function grigora_wcm_css(){
     }
 
     .woocommerce .quantity .qty{
-        padding: .6rem;
+        padding: .5rem;
         border:1px solid #aaaaaa;
+        margin-top: 0;
     }    
 
     .woocommerce div.product form.cart .variations select{

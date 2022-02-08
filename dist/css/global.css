@@ -2099,4 +2099,20 @@ main {
     margin-left: 0px;
   }
 }
+
+button,
+input,
+select,
+textarea {
+  padding: 0.5rem;
+  font-size: 100%;
+  border: 1px solid #aaaaaa;
+  margin-top: 0.5rem;
+}
+
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+  cursor: pointer;
+}
 /*# sourceMappingURL=global.css.map */

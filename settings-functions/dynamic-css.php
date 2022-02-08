@@ -76,6 +76,14 @@ function grg_dynamic_customize_css_var() {
         border-bottom: 3px solid ".get_theme_mod('grg_menu_text-color', $defaults['grg_menu_text-color'])." !important; 
     }
 
+    .desktop-nav .menu-container .menu .menu-item:hover a{
+        border-bottom: 3px solid ".get_theme_mod('grg_menu_text-color', $defaults['grg_menu_text-color'])." !important; 
+    }
+
+    .desktop-nav .menu-container .menu .menu-item:hover .sub-menu a{
+        border-bottom:none !important;
+    }
+
     .menu-container .menu-item-has-children a::after {
         border:solid ".get_theme_mod('grg_menu_text-color', $defaults['grg_menu_text-color'])." !important;
         border-width: 0 2px 2px 0 !important;
@@ -319,6 +327,10 @@ else {
     
     .desktop-nav .menu-container .menu a:hover{
         border-bottom: 3px solid ".$defaults['grg_menu_text-color'].";
+    }
+
+    .desktop-nav .menu-container .menu .menu-item:hover a{
+        border-bottom: 3px solid ".$defaults['grg_menu_text-color']." !important; 
     }
    
     .menu-container .menu-item-has-children a::after{
