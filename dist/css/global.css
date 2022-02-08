@@ -378,6 +378,7 @@
   border-left: none;
   border-right: none;
   width: 15rem;
+  margin-top: 0;
 }
 
 @media (max-width: 768px) {
