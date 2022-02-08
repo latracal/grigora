@@ -8,23 +8,7 @@
     <section class="post-content">
         <article class="single-post" itemtype="<?php echo grg_get_schema_tag('creativework')['itemtype'] ?>"
             itemscope="<?php echo grg_get_schema_tag('creativework')['itemscope'] ?>">
-            <div class="breadcrumb">
-
-                <?php
-                if( get_theme_mod( 'grg_breadcrumbs_home', grigora_breadcrumbs_defaults()['grg_breadcrumbs_home'] ) ){ ?>
-                <a href="<?php echo home_url(); ?>">Home</a><span class="seperator"></span>
-                <?php
-                }
-                ?>
-
-                <?php
-            $categories = get_the_category();
-
-            if ( ! empty( $categories ) ) {
-            echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
-            }
-        ?><span class="seperator"></span> <?php the_title(); ?>
-            </div>
+            <?php get_template_part('template-parts/breadcrumbs'); ?>
             <div class="post-header">
                 <div class="top">
                     <h1 class="post-title"

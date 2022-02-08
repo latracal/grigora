@@ -34,6 +34,45 @@ function grg_get_schema_tag($type){
             "itemscope" => "itemscope"
         );
     }
+    elseif($type=="breadcrumb"){
+        return array(
+            "itemtype" => "http://schema.org/BreadcrumbList",
+            "itemscope" => "itemscope"
+        );
+    }
+    elseif($type=="breadcrumbnumber"){
+        return array(
+            "name" => "numberOfItems",
+        );
+    }
+    elseif($type=="breadcrumborder"){
+        return array(
+            "name" => "itemListOrder",
+        );
+    }
+    elseif($type=="breadcrumblistitem"){
+        return array(
+            "itemtype" => "http://schema.org/ListItem",
+            "itemscope" => "itemscope",
+            "itemprop" => "itemListElement",
+            "class" => "trail-item"
+        );
+    }
+    elseif($type=="breadcrumblisturl"){
+        return array(
+            "itemprop" => "url",
+        );
+    }
+    elseif($type=="breadcrumblistname"){
+        return array(
+            "itemprop" => "name",
+        );
+    }
+    elseif($type=="breadcrumblistposition"){
+        return array(
+            "itemprop" => "position",
+        );
+    }
     elseif($type=="comment"){
         return array(
             "itemtype" => "https://schema.org/Comment",

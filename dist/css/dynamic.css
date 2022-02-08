@@ -135,7 +135,6 @@ body {
     .post-content .breadcrumb,
     .post-content .breadcrumb a {
         color: #454545;
-
     }
 
     .comment-list .comment-box p {
@@ -470,4 +469,10 @@ body {
     .cookie .cookie-btn {
         color: #fff; 
         background-color: #025640; 
-    }
+    } 
+.post-content .seperator::after {
+    content:'–';
+} 
+.post-content .breadcrumb {
+    text-align:center;
+}
