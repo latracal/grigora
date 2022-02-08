@@ -123,7 +123,10 @@ function grg_dynamic_customize_css_var() {
         color: ".get_theme_mod('grg_anchor-text-hover-color', $defaults['grg_anchor-text-hover-color']).";
     }
 
-    .read-btn, .container .article .pagination .next, .container .article .pagination .prev, .form-submit .submit {
+    .read-btn, .container .article .pagination .next, .container .article .pagination .prev, .form-submit .submit, 
+    input[type='button'],
+    input[type='reset'],
+    input[type='submit'] {
         background-color: ".get_theme_mod('grg_btn-color', $defaults['grg_btn-color'])." !important;
 
     }
@@ -132,7 +135,9 @@ function grg_dynamic_customize_css_var() {
         color: ".get_theme_mod('grg_btn-text-color', $defaults['grg_btn-text-color']).";
     }
     
-    .container .article .post-container .post .post-desc a {
+    .container .article .post-container .post .post-desc a, input[type='button'],
+    input[type='reset'],
+    input[type='submit'] {
         color: ".get_theme_mod('grg_btn-text-color', $defaults['grg_btn-text-color']).";
 
     }
@@ -374,7 +379,10 @@ else {
         
     }
 
-    .read-btn, .container .article .pagination .next, .container .article .pagination .prev,.form-submit .submit {
+    .read-btn, .container .article .pagination .next, .container .article .pagination .prev,.form-submit .submit, 
+    input[type='button'],
+    input[type='reset'],
+    input[type='submit'] {
         background-color: ".$defaults['grg_btn-color']." !important;
         
     }
@@ -384,7 +392,9 @@ else {
     }
     
 
-    .container .article .post-container .post .post-desc a {
+    .container .article .post-container .post .post-desc a, input[type='button'],
+    input[type='reset'],
+    input[type='submit'] {
         color: ".$defaults['grg_btn-text-color'].";
         
     }
