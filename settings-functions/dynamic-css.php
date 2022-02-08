@@ -27,7 +27,7 @@ function grg_dynamic_customize_css_var() {
     $scroll_defaults = grigora_scroll_defaults();
     $scroll_flag = grigora_get_option("scroll");
 
-    $breadcrumb_defaults = grigora_scroll_defaults();
+    $breadcrumb_defaults = grigora_breadcrumbs_defaults();
 
     $cookie_flag = grigora_get_option("cookie");
     $out = "";
