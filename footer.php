@@ -2,7 +2,11 @@
 <?php if(grigora_get_option("cookie") && function_exists("cookie_notice")){cookie_notice();} ?>
 
 </main>
-<?php if(get_post_meta( $post->ID, '_grigora-disable-footer', true ) == 0) { ?>
+<?php if(
+    (is_single() || is_page()) &&
+    get_post_meta( $post->ID, '_grigora-disable-footer', true ) && 
+    get_post_meta( $post->ID, '_grigora-disable-footer', true ) == 1
+    ) {} else { ?>
 <footer itemtype="<?php echo grg_get_schema_tag('footer')['itemtype'] ?>"
     itemscope="<?php echo grg_get_schema_tag('footer')['itemscope'] ?>">
     <div class="footer">

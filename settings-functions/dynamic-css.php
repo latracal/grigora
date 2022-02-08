@@ -1406,36 +1406,28 @@ if(current_user_can('manage_options')){
 function forced_meta_css(){
     $out = "";
     if(
-        get_post_meta( $post->ID, '_grigora-sidebar-align', true ) &&
-        get_post_meta( $post->ID, '_grigora-sidebar-align', true ) != get_theme_mod('grg_sidebar-alignment', grigora_spacing_defaults()['grg_sidebar-alignment'])
+        (is_single() || is_page()) &&
+        get_post_meta(get_the_ID(), '_grigora-sidebar-align', true ) &&
+        get_post_meta( get_the_ID(), '_grigora-sidebar-align', true ) != get_theme_mod('grg_sidebar-alignment', grigora_spacing_defaults()['grg_sidebar-alignment'])
     )
     {
-        
         $out = $out."
         .container{
-            flex-direction: ".get_post_meta( $post->ID, '_grigora-sidebar-align', true ).";
+            flex-direction: ".get_post_meta( get_the_ID(), '_grigora-sidebar-align', true ).";
         }
         ";
-               
     }
  
-    $out = "";
+    return $out;
 }
 
 function forced_meta_css_enqueue(){
     ?>
-<style id="grg-forced-meta-css">
-<?php echo forced_meta_css();
-?>
-</style>
-<?
+    <style id="grg-forced-meta-css">
+        <?php echo forced_meta_css(); ?>
+    </style>
+    <?php
 }
-
-if(forced_meta_css()){
-    add_action( 'wp_head', 'forced_meta_css_enqueue' );
-}
-
-
 
 
 ?>

@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php 
+// for post meta settings
+if(forced_meta_css()){
+    add_action( 'wp_head', 'forced_meta_css_enqueue' );
+}
+?>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
@@ -9,7 +14,11 @@
 
 <body <?php body_class(); ?> itemtype="<?php echo grg_get_schema_tag('body')['itemtype'] ?>"
     itemscope="<?php echo grg_get_schema_tag('body')['itemscope'] ?>">
-    <?php if(get_post_meta( $post->ID, '_grigora-disable-header', true ) == 0) { ?>
+    <?php if(
+        (is_single() || is_page()) &&
+        get_post_meta( $post->ID, '_grigora-disable-header', true ) && 
+        get_post_meta( $post->ID, '_grigora-disable-header', true ) == 1
+        ) {} else { ?>
     <header id="masthead" itemtype="<?php echo grg_get_schema_tag('header')['itemtype'] ?>"
         itemscope="<?php echo grg_get_schema_tag('header')['itemscope'] ?>">
         <nav class="desktop-nav">
