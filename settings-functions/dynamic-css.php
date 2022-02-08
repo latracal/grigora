@@ -1169,7 +1169,7 @@ $out=$out."
 
 $out=$out." 
 .post-content .breadcrumb {
-    text-align:".get_theme_mod('grg_breadcrumbs_align', $breadcrumb_defaults['grg_breadcrumbs_align']).";
+    justify-content:".get_theme_mod('grg_breadcrumbs_align', $breadcrumb_defaults['grg_breadcrumbs_align']).";
 }";
 
 
