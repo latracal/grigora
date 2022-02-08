@@ -7,6 +7,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: #e9e9e9;
 }
 
@@ -316,7 +319,7 @@
   display: block;
   position: absolute;
   right: 1rem;
-  bottom: 50%;
+  bottom: 47%;
   -webkit-transform: translate(0%, 50%);
           transform: translate(0%, 50%);
   z-index: 99;
@@ -336,6 +339,7 @@
 .desktop-nav .menu-container .search-btn .toggle {
   border: none;
   background-color: transparent;
+  margin-top: 0;
 }
 
 .desktop-nav .menu-container .search-btn .toggle:hover {
@@ -394,6 +398,7 @@
 .desktop-nav .search-box .search-icon {
   border: none;
   background-color: transparent;
+  margin-top: 0;
 }
 
 .desktop-nav .search-box .search-icon:hover {
@@ -1173,11 +1178,18 @@
 .post-content .breadcrumb {
   color: #454545;
   margin: 1rem 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.post-content .breadcrumb li {
+  margin-right: 0.3rem;
 }
 
 .post-content .breadcrumb a {
   color: #454545;
-  margin: 0 0.3rem;
 }
 
 .post-content .breadcrumb a:first-child {

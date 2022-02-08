@@ -37,10 +37,16 @@
 	.breadcrumb {
 		color: #454545;
 		margin: 1rem 0;
+		list-style: none;
+		display: flex;
+
+		li {
+			margin-right: 0.3rem;
+		}
 
 		a {
 			color: #454545;
-			margin: 0 0.3rem;
+			// margin: 0 0.3rem;
 
 			&:first-child {
 				margin-left: 0;
