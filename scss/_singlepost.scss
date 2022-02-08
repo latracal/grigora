@@ -11,6 +11,14 @@
 		width: 100%;
 	}
 
+	.seperator {
+		position: relative;
+
+		&::after {
+			content: '>';
+		}
+	}
+
 	article.single-post {
 		display: flex;
 		flex-direction: column;

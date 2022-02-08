@@ -172,7 +172,6 @@ function grg_dynamic_customize_css_var() {
     .post-content .breadcrumb,
     .post-content .breadcrumb a {
         color: ".get_theme_mod('grg_breadcrumb-color', $defaults['grg_breadcrumb-color']).";
-
     }
 
     .comment-list .comment-box p {
@@ -1137,6 +1136,53 @@ else{
         background-color: ".$defaults['grg_colors_cookie_button_background']."; 
     }";
 }
+
+
+    
+if(get_theme_mod('grg_breadcrumbs_seperator', $defaults['grg_breadcrumbs_seperator'])=='»'){
+    $out=$out." 
+    .post-content .seperator::after {
+        content:'»';
+    }";
+}    
+else if(get_theme_mod('grg_breadcrumbs_seperator', $defaults['grg_breadcrumbs_seperator'])=='-'){
+    $out=$out." 
+    .post-content .seperator::after {
+        content:'-';
+    }";
+}
+else if(get_theme_mod('grg_breadcrumbs_seperator', $defaults['grg_breadcrumbs_seperator'])=='>'){
+    $out=$out." 
+    .post-content .seperator::after {
+        content:'>';
+    }";
+}
+else if(get_theme_mod('grg_breadcrumbs_seperator', $defaults['grg_breadcrumbs_seperator'])=='|'){
+    $out=$out." 
+    .post-content .seperator::after {
+        content:'|';
+    }";
+}
+
+if(get_theme_mod('grg_breadcrumbs_align', $defaults['grg_breadcrumbs_align'])=='left'){
+    $out=$out." 
+    .post-content .breadcrumb {
+        text-align:start;
+    }";
+}    
+else if(get_theme_mod('grg_breadcrumbs_align', $defaults['grg_breadcrumbs_align'])=='right'){
+    $out=$out." 
+    .post-content .breadcrumb {
+        text-align:end;
+    }";
+}
+else if(get_theme_mod('grg_breadcrumbs_align', $defaults['grg_breadcrumbs_align'])=='center'){
+    $out=$out." 
+    .post-content .breadcrumb {
+        text-align:center;
+    }";
+}
+
 if(!has_nav_menu( 'primary' )){
     $out=$out." .menu-container .search-btn {
         -webkit-transform: translate(0%, -50%);

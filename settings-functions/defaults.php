@@ -264,7 +264,7 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 
 function grigora_breadcrumbs_defaults(){
 	return array(
-		"grg_breadcrumbs_seperator" => '&#x2013;',
+		"grg_breadcrumbs_seperator" => '»',
 		"grg_breadcrumbs_align" => 'left',
 		"grg_breadcrumbs_home" => 1,
 	);

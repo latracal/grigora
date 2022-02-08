@@ -1141,6 +1141,14 @@
   }
 }
 
+.post-content .seperator {
+  position: relative;
+}
+
+.post-content .seperator::after {
+  content: '>';
+}
+
 .post-content article.single-post {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -9,13 +9,26 @@
         <article class="single-post" itemtype="<?php echo grg_get_schema_tag('creativework')['itemtype'] ?>"
             itemscope="<?php echo grg_get_schema_tag('creativework')['itemscope'] ?>">
             <div class="breadcrumb">
-                <a href="<?php echo home_url(); ?>">Home</a>><?php
+
+                <?php
+                if( get_theme_mod( 'grg_breadcrumbs_home', grigora_blog_defaults()['grg_breadcrumbs_home'] ) ){ ?>
+                <a href="<?php echo home_url(); ?>">Home</a>
+                <?php
+                }                
+                else {                    
+                ?>
+                <span>Home</span>
+                <?php
+                }
+                ?>
+
+                <span class="seperator"></span><?php
             $categories = get_the_category();
 
             if ( ! empty( $categories ) ) {
             echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
             }
-        ?>> <?php the_title(); ?>
+        ?><span class="seperator"></span> <?php the_title(); ?>
             </div>
             <div class="post-header">
                 <div class="top">
