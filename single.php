@@ -6,6 +6,7 @@
 
 <div class="container">
     <section class="post-content">
+        <?php echo get_post_meta( $post->ID, '_grigora-sidebar-align', true ) ?>
         <article class="single-post" itemtype="<?php echo grg_get_schema_tag('creativework')['itemtype'] ?>"
             itemscope="<?php echo grg_get_schema_tag('creativework')['itemscope'] ?>">
             <?php get_template_part('template-parts/breadcrumbs'); ?>

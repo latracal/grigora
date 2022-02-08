@@ -37,6 +37,14 @@ body {
         border-bottom: 3px solid #000 !important; 
     }
 
+    .desktop-nav .menu-container .menu .menu-item:hover a{
+        border-bottom: 3px solid #000 !important; 
+    }
+
+    .desktop-nav .menu-container .menu .menu-item:hover .sub-menu a{
+        border-bottom:none !important;
+    }
+
     .menu-container .menu-item-has-children a::after {
         border:solid #000 !important;
         border-width: 0 2px 2px 0 !important;
@@ -76,7 +84,10 @@ body {
         color: #0170b9;
     }
 
-    .read-btn, .container .article .pagination .next, .container .article .pagination .prev, .form-submit .submit {
+    .read-btn, .container .article .pagination .next, .container .article .pagination .prev, .form-submit .submit, 
+    input[type='button'],
+    input[type='reset'],
+    input[type='submit'] {
         background-color: #f44336 !important;
 
     }
@@ -85,7 +96,9 @@ body {
         color: white;
     }
     
-    .container .article .post-container .post .post-desc a {
+    .container .article .post-container .post .post-desc a, input[type='button'],
+    input[type='reset'],
+    input[type='submit'] {
         color: white;
 
     }
@@ -235,23 +248,11 @@ body {
         
     }
 
-    .container .post-content {
-            width: 100%;
-            border-right: none;
+    .container {
+            flex-direction: row;
             
-        }
 
-        .container .article {
-            width: 100%;
-            border-right: none;
-            
-        }
-
-
-        aside {
-            display: none;
-            
-        } .desktop-nav{
+        }.desktop-nav{
             flex-direction:row;
             justify-content: space-between;
             align-items: center;
@@ -471,8 +472,8 @@ body {
         background-color: #025640; 
     } 
 .post-content .seperator::after {
-    content:'–';
+    content:'»';
 } 
 .post-content .breadcrumb {
-    text-align:center;
+    justify-content:end;
 }

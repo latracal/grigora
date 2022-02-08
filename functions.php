@@ -27,5 +27,8 @@ include( get_theme_file_path( '/settings-functions/dynamic-css.php' ) );
 include( get_theme_file_path( '/settings-functions/blog.php' ) );
 include( get_theme_file_path( '/settings-functions/schema.php' ) );
 
+// Metabox
+include( get_theme_file_path( '/settings-functions/metabox/metabox.php' ) );
+
 // Plugin Compatibilities
 include( get_theme_file_path( '/compatibility/init.php' ) );
