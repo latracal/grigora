@@ -1410,9 +1410,13 @@ function forced_meta_css(){
         get_post_meta( $post->ID, '_grigora-sidebar-align', true ) != get_theme_mod('grg_sidebar-alignment', grigora_spacing_defaults()['grg_sidebar-alignment'])
     )
     {
-        // todo sidebar force embed css
-        $out = $out."";
         
+        $out = $out."
+        .container{
+            flex-direction: ".get_post_meta( $post->ID, '_grigora-sidebar-align', true ).";
+        }
+        ";
+               
     }
  
     $out = "";

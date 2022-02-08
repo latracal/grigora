@@ -2,7 +2,9 @@
 <?php if(grigora_get_option("cookie") && function_exists("cookie_notice")){cookie_notice();} ?>
 
 </main>
-<footer itemtype="<?php echo grg_get_schema_tag('footer')['itemtype'] ?>" itemscope="<?php echo grg_get_schema_tag('footer')['itemscope'] ?>" >
+<?php if(get_post_meta( $post->ID, '_grigora-disable-footer', true ) == 0) { ?>
+<footer itemtype="<?php echo grg_get_schema_tag('footer')['itemtype'] ?>"
+    itemscope="<?php echo grg_get_schema_tag('footer')['itemscope'] ?>">
     <div class="footer">
 
         <?php
@@ -24,13 +26,14 @@
                 echo do_shortcode(get_theme_mod("grg_footer_text", grigora_spacing_defaults()['grg_footer_text']));
             }
             else { ?>
-                <?php echo do_shortcode(grigora_spacing_defaults()['grg_footer_text']) ?>
+            <?php echo do_shortcode(grigora_spacing_defaults()['grg_footer_text']) ?>
             <?php }
             
             ?>
         </div>
     </div>
 </footer>
+<?php } ?>
 <?php wp_footer(); ?>
 </body>
 

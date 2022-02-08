@@ -9,6 +9,7 @@
 
 <body <?php body_class(); ?> itemtype="<?php echo grg_get_schema_tag('body')['itemtype'] ?>"
     itemscope="<?php echo grg_get_schema_tag('body')['itemscope'] ?>">
+    <?php if(get_post_meta( $post->ID, '_grigora-disable-header', true ) == 0) { ?>
     <header id="masthead" itemtype="<?php echo grg_get_schema_tag('header')['itemtype'] ?>"
         itemscope="<?php echo grg_get_schema_tag('header')['itemscope'] ?>">
         <nav class="desktop-nav">
@@ -151,4 +152,5 @@
             </div>
         </nav>
     </header>
+    <?php } ?>
     <main>
