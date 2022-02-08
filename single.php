@@ -1,4 +1,10 @@
+<?php if( get_post_meta( $post->ID, '_grigora-disable-header', true ) == 0)
+{
+    ?>
 <?php get_header(); ?>
+<?php 
+} 
+?>
 
 <?php if ( have_posts() ) : ?>
 
@@ -182,4 +188,10 @@
 
 <?php endif; ?>
 
+<?php if( get_post_meta( $post->ID, '_grigora-disable-footer', true ) == 0)
+{
+    ?>
 <?php get_footer( ); ?>
+<?php
+} 
+?>
