@@ -97,7 +97,10 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 				'grg_colors_cookie_button_text' => '#fff',
 			);
 	}
+}
 
+
+if ( ! function_exists( 'grigora_spacing_defaults' ) ) {
 	/**
 	 * Predefined default spacing values that will used in customizer settings.
 	 * 
@@ -130,7 +133,9 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 			'grg_cookie_text' => 'This website uses cookies to provide necessary website functionality, improve your experience and analyze our traffic. By using our website, you agree to our Privacy Policy and our cookies usage.'
 		);
 	}
+}
 
+if ( ! function_exists( 'grigora_scroll_defaults' ) ) {
 	/**
 	 * Predefined default scroll values that will used in customizer settings.
 	 * 
@@ -147,7 +152,10 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 			'grg_scroll-display' => 'both'
 		);
 	}
+}
 
+
+if ( ! function_exists( 'grigora_typography_defaults_fonts' ) ) {
 	/**
 	 * Predefined default typography font values that will used in customizer settings.
 	 * 
@@ -172,7 +180,9 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 			"grg_typography_footer_font" => "Verdana",
 		);
 	}
+}
 
+if ( ! function_exists( 'grigora_typography_defaults' ) ) {
 	/**
 	 * Predefined default typography values that will used in customizer settings.
 	 * 
@@ -221,7 +231,9 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 			"grg_typography_footer_transform" => "none",
 		);
 	}
+}
 
+if ( ! function_exists( 'grigora_blog_defaults' ) ) {
 	/**
 	 * Predefined default blogpage values that will used in customizer settings.
 	 * 
@@ -253,19 +265,20 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 }
 
 
+if ( ! function_exists( 'grigora_breadcrumbs_defaults' ) ) {
+	/**
+	 * Predefined default breadcrumb settings.
+	 * 
+	 * @since  1.000
+	 * 
+	 * @return array breadcrumb settings
+	 */
 
-/**
- * Predefined default breadcrumb settings.
- * 
- * @since  1.000
- * 
- * @return array breadcrumb settings
- */
-
-function grigora_breadcrumbs_defaults(){
-	return array(
-		"grg_breadcrumbs_seperator" => '&#xbb;',
-		"grg_breadcrumbs_align" => 'start',
-		"grg_breadcrumbs_home" => 1,
-	);
+	function grigora_breadcrumbs_defaults(){
+		return array(
+			"grg_breadcrumbs_seperator" => '&#xbb;',
+			"grg_breadcrumbs_align" => 'start',
+			"grg_breadcrumbs_home" => 1,
+		);
+	}
 }
