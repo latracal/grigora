@@ -27,6 +27,8 @@ function grg_dynamic_customize_css_var() {
     $scroll_defaults = grigora_scroll_defaults();
     $scroll_flag = grigora_get_option("scroll");
 
+    $breadcrumb_defaults = grigora_scroll_defaults();
+
     $cookie_flag = grigora_get_option("cookie");
     $out = "";
     
@@ -1136,52 +1138,18 @@ else{
         background-color: ".$defaults['grg_colors_cookie_button_background']."; 
     }";
 }
-
-
     
-if(get_theme_mod('grg_breadcrumbs_seperator', $defaults['grg_breadcrumbs_seperator'])=='»'){
-    $out=$out." 
-    .post-content .seperator::after {
-        content:'»';
-    }";
-}    
-else if(get_theme_mod('grg_breadcrumbs_seperator', $defaults['grg_breadcrumbs_seperator'])=='-'){
-    $out=$out." 
-    .post-content .seperator::after {
-        content:'-';
-    }";
-}
-else if(get_theme_mod('grg_breadcrumbs_seperator', $defaults['grg_breadcrumbs_seperator'])=='>'){
-    $out=$out." 
-    .post-content .seperator::after {
-        content:'>';
-    }";
-}
-else if(get_theme_mod('grg_breadcrumbs_seperator', $defaults['grg_breadcrumbs_seperator'])=='|'){
-    $out=$out." 
-    .post-content .seperator::after {
-        content:'|';
-    }";
-}
+$out=$out." 
+.post-content .seperator::after {
+    content:'".html_entity_decode(get_theme_mod('grg_breadcrumbs_seperator', $breadcrumb_defaults['grg_breadcrumbs_seperator']))."';
+}"; 
 
-if(get_theme_mod('grg_breadcrumbs_align', $defaults['grg_breadcrumbs_align'])=='left'){
-    $out=$out." 
-    .post-content .breadcrumb {
-        text-align:start;
-    }";
-}    
-else if(get_theme_mod('grg_breadcrumbs_align', $defaults['grg_breadcrumbs_align'])=='right'){
-    $out=$out." 
-    .post-content .breadcrumb {
-        text-align:end;
-    }";
-}
-else if(get_theme_mod('grg_breadcrumbs_align', $defaults['grg_breadcrumbs_align'])=='center'){
-    $out=$out." 
-    .post-content .breadcrumb {
-        text-align:center;
-    }";
-}
+
+$out=$out." 
+.post-content .breadcrumb {
+    text-align:".get_theme_mod('grg_breadcrumbs_align', $breadcrumb_defaults['grg_breadcrumbs_align']).";
+}";
+
 
 if(!has_nav_menu( 'primary' )){
     $out=$out." .menu-container .search-btn {

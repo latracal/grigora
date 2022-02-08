@@ -11,18 +11,13 @@
             <div class="breadcrumb">
 
                 <?php
-                if( get_theme_mod( 'grg_breadcrumbs_home', grigora_blog_defaults()['grg_breadcrumbs_home'] ) ){ ?>
-                <a href="<?php echo home_url(); ?>">Home</a>
-                <?php
-                }                
-                else {                    
-                ?>
-                <span>Home</span>
+                if( get_theme_mod( 'grg_breadcrumbs_home', grigora_breadcrumbs_defaults()['grg_breadcrumbs_home'] ) ){ ?>
+                <a href="<?php echo home_url(); ?>">Home</a><span class="seperator"></span>
                 <?php
                 }
                 ?>
 
-                <span class="seperator"></span><?php
+                <?php
             $categories = get_the_category();
 
             if ( ! empty( $categories ) ) {
