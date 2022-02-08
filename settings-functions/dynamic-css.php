@@ -1403,6 +1403,32 @@ if(current_user_can('manage_options')){
     add_action("add_option_theme_mods_$theme_slug",'grg_regenerate_dynamic_css', 10, 2);
 }
 
+function forced_meta_css(){
+    $out = "";
+    if(
+        get_post_meta( $post->ID, '_grigora-sidebar-align', true ) &&
+        get_post_meta( $post->ID, '_grigora-sidebar-align', true ) != get_theme_mod('grg_sidebar-alignment', grigora_spacing_defaults()['grg_sidebar-alignment'])
+    )
+    {
+        // todo sidebar force embed css
+        $out = $out."";
+    }
+ 
+    $out = "";
+}
+
+function forced_meta_css_enqueue(){
+    ?>
+    <style id="grg-forced-meta-css">
+        <?php echo forced_meta_css(); ?>
+    </style>
+    <?
+}
+
+if(forced_meta_css()){
+    add_action( 'wp_head', 'forced_meta_css_enqueue' );
+}
+
 
 
 
