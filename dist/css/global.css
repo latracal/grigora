@@ -458,6 +458,7 @@
 }
 
 .mobile-header .top-part .title {
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -492,6 +493,7 @@
 
 .mobile-header .top-part .title h1 {
   font-size: 3.125rem;
+  word-break: break-word;
 }
 
 .mobile-header .top-part .title h2 {

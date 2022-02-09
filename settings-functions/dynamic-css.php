@@ -519,16 +519,6 @@ else {
         
     }
 
-    .container {
-        flex-direction: ".$spacing_defaults['grg_sidebar-alignment'].";
-        
-    }
-
-    .container {
-        max-width: ".$spacing_defaults['grg_container-width']."px;
-
-    }
-
     .grigora-table-of-contents {
         background-color: ".$defaults['grg_colors_toc_background'].";
         
@@ -564,6 +554,17 @@ else {
 }
 
 if($spacing_flag) {
+
+    if(get_theme_mod('grg_header-search-btn', $spacing_defaults['grg_header-search-btn'])== 0) {
+        $out=$out."
+        @media (max-width: 768px) {
+            .mobile-header .top-part .title {
+                padding: 0 0 0 3rem;
+            }
+        }
+        ";  
+    }
+
         if(get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment'])=='row') {
             $out=$out.".container {
             flex-direction: ".get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment']).";
