@@ -122,6 +122,7 @@ if ( ! function_exists( 'grigora_spacing_defaults' ) ) {
 			'grg_header_style' => 'style1',
 			'grg_header_image_height' => 100,
 			'grg_header_image_height_mobile' => 80,	
+			'grg_header-search-btn' => 1,
 			'grg_sidebar-alignment' => 'row',		
 			'grg_sidebar-width' => '30',	
 			'grg_sidebar-padding' => 15,
@@ -135,7 +136,7 @@ if ( ! function_exists( 'grigora_spacing_defaults' ) ) {
 			'grg_toc_heading3' => 1,
 			'grg_toc_heading4' => 1,
 			'grg_toc_heading5' => 1,
-			'grg_toc_heading6' => 1,
+			'grg_toc_heading6' => 1,			
 			'grg_footer_text' => 'Copyright [copy] [grg_year] | [blog_name] | Built with&nbsp;<a href="https://wpgrigora.com/">Grigora</a>',
 			'grg_cookie_text' => 'This website uses cookies to provide necessary website functionality, improve your experience and analyze our traffic. By using our website, you agree to our Privacy Policy and our cookies usage.'
 		);
