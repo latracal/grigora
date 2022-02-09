@@ -130,12 +130,27 @@ if ( ! defined( 'ABSPATH' ) ) {
         ?>
         </article>
         <?php
+
+        if( wp_count_posts()->publish > 1 ) {   
+        ?>
+        <?php
         if( get_theme_mod( 'grg_blog_single_postnav', grigora_blog_defaults()['grg_blog_single_postnav'] ) ){ ?>
         <div class="post-pagination">
             <?php previous_post_link('<div class="pagination-prev-post"> %link </div>', '← %title'); ?>
             <?php next_post_link('<div class="pagination-next-post"> %link </div>', '%title →'); ?>
         </div>
         <?php } ?>
+        <?php
+        }
+        else{
+        ?>
+        <div class="post-pagination" style="display:none;">
+            <?php previous_post_link('<div class="pagination-prev-post"> %link </div>', '← %title'); ?>
+            <?php next_post_link('<div class="pagination-next-post"> %link </div>', '%title →'); ?>
+        </div>
+        <?php
+        }
+        ?>
         <?php
         if( get_theme_mod( 'grg_blog_single_author_box', grigora_blog_defaults()['grg_blog_single_author_box'] ) ){ ?>
         <div class="author-desc">
@@ -159,8 +174,27 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div>
         <?php } ?>
         <?php
+         if( wp_count_posts()->publish > 1 ) {   
+            ?>
+        <?php
         if( get_theme_mod( 'grg_blog_single_related_posts', grigora_blog_defaults()['grg_blog_single_related_posts'] ) ){ ?>
         <div class="related-posts">
+            <?php
+                $related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 3, 'post__not_in' => array($post->ID) ) );
+                if( $related ) foreach( $related as $post ) {
+                    setup_postdata($post); 
+                    get_template_part('template-parts/posts/content-related');
+                    wp_reset_postdata();
+                }
+                wp_reset_postdata();
+                 ?>
+        </div>
+        <?php } ?>
+        <?php
+        }
+        else{
+        ?>
+        <div class="related-posts" style="display:none">
             <?php
                 $related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 3, 'post__not_in' => array($post->ID) ) );
                 if( $related ) foreach( $related as $post ) {
