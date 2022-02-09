@@ -1427,6 +1427,10 @@ function forced_meta_css(){
             aside{
                 display:none;
             }
+
+            .post-content{
+                border:none;
+            }
             ";
         }
     }
