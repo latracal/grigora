@@ -248,7 +248,13 @@ body {
         
     }
 
-    .container {
+    
+        @media (max-width: 768px) {
+            .mobile-header .top-part .title {
+                padding: 0 0 0 3rem;
+            }
+        }
+        .container {
             flex-direction: row;
             
 
@@ -475,5 +481,5 @@ body {
     content:'»';
 } 
 .post-content .breadcrumb {
-    justify-content:end;
+    justify-content:start;
 }

@@ -82,7 +82,9 @@ if(mobileheader){
 	const mobilesearchbtn = mobileheader.getElementsByClassName('search-btn')[0];
 	const mobilemenubtn = mobileheader.getElementsByClassName('menu-toggle-btn')[0];
 	
-	mobilesearchbtn.addEventListener('click', togglemobilesearch, false);
+	if(mobilesearchbtn){
+		mobilesearchbtn.addEventListener('click', togglemobilesearch, false);
+	}
 	if(mobilemenubtn){
 		mobilemenubtn.addEventListener('click', togglemobilemenu, false);
 	}
