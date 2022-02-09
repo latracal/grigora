@@ -1,5 +1,12 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // For security
+}
+
+?>
+<?php
+
 if ( ! function_exists( 'grigora_get_defaults' ) ) {
 
 	/**

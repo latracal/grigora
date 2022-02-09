@@ -1,3 +1,11 @@
+<?php
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // For security
+}
+
+?>
+
 <?php get_header(); ?>
 
 <div class="container">

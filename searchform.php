@@ -1,3 +1,11 @@
+<?php
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // For security
+}
+
+?>
+
 <?php $unique_id = esc_attr( uniqid( 'search-form-' ) ); ?>
 
 <form role="search" method="get" class="search-box s-hide" action="<?php echo esc_url( home_url( '/' ) ); ?>">

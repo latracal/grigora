@@ -1,5 +1,13 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // For security
+}
+
+?>
+
+<?php
+
 if(post_password_required()){
     return;
 }

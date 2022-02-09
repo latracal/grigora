@@ -1,5 +1,13 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // For security
+}
+
+?>
+
+<?php
+
 /**
  * Shortcode for blogname
  *

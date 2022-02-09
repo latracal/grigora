@@ -1,5 +1,12 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // For security
+}
+
+?>
+<?php
+
 if (grigora_get_option("typography") && function_exists('google_fonts')){
 
     /**

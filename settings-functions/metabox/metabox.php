@@ -1,5 +1,12 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // For security
+}
+
+?>
+<?php
+
 if ( ! class_exists( 'ezTOC_Option' ) ) {
 
     /**
@@ -89,12 +96,12 @@ if ( ! class_exists( 'ezTOC_Option' ) ) {
             }
 
             ?>
-            <table class="form-table grigora-table">
-                <tbody>
-                <tr>
-                    <th scope="row"><label for="sidebar-align">Sidebar Layout</label></th>
-                    <td>
-                        <?php if (  get_post_type( $post ) == "post" || get_post_type( $post ) == "page"){
+<table class="form-table grigora-table">
+    <tbody>
+        <tr>
+            <th scope="row"><label for="sidebar-align">Sidebar Layout</label></th>
+            <td>
+                <?php if (  get_post_type( $post ) == "post" || get_post_type( $post ) == "page"){
 
                             // sidebar align
                             $args = array(
@@ -110,11 +117,11 @@ if ( ! class_exists( 'ezTOC_Option' ) ) {
                         }
                         ?>
 
-                    </td>
-                <tr>
-                    <th scope="row"><label for="disable-header">Disable Header</label></th>
-                    <td>
-                        <?php if (  get_post_type( $post ) == "post" || get_post_type( $post ) == "page"){
+            </td>
+        <tr>
+            <th scope="row"><label for="disable-header">Disable Header</label></th>
+            <td>
+                <?php if (  get_post_type( $post ) == "post" || get_post_type( $post ) == "page"){
 
                             // disable header
                             $args = array(
@@ -125,12 +132,12 @@ if ( ! class_exists( 'ezTOC_Option' ) ) {
                             echo '<input type="checkbox" id="grigora-settings[' . $args['id'] . ']" name="grigora-settings[' . $args['id'] . ']" value="1" ' . $checked . '/>';
                         }
                         ?>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row"><label for="disable-footer">Disable Footer</label></th>
-                    <td>
-                        <?php if (  get_post_type( $post ) == "post" || get_post_type( $post ) == "page"){
+            </td>
+        </tr>
+        <tr>
+            <th scope="row"><label for="disable-footer">Disable Footer</label></th>
+            <td>
+                <?php if (  get_post_type( $post ) == "post" || get_post_type( $post ) == "page"){
 
                             // disable footer
                             $args = array(
@@ -141,13 +148,13 @@ if ( ! class_exists( 'ezTOC_Option' ) ) {
                             echo '<input type="checkbox" id="grigora-settings[' . $args['id'] . ']" name="grigora-settings[' . $args['id'] . ']" value="1" ' . $checked . '/>';
                         }
                         ?>
-                    </td>
-                </tr>
-                </tr>
-                </tbody>
-            </table>
+            </td>
+        </tr>
+        </tr>
+    </tbody>
+</table>
 
-            <?php
+<?php
         }
 
         /**
@@ -199,4 +206,3 @@ if ( ! class_exists( 'ezTOC_Option' ) ) {
 
     new grigora_metabox_cl();
 }
-

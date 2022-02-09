@@ -1,3 +1,10 @@
+<?php
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // For security
+}
+
+?>
 <div class="breadcrumb-wrapper">
     <ul class="breadcrumb" itemtype="<?php echo grg_get_schema_tag('breadcrumb')['itemtype'] ?>"
         itemscope="<?php echo grg_get_schema_tag('breadcrumb')['itemscope'] ?>">

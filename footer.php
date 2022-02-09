@@ -1,3 +1,11 @@
+<?php
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // For security
+}
+
+?>
+
 <?php if(grigora_get_option("scroll") && function_exists("to_top_scroll")){to_top_scroll();} ?>
 <?php if(grigora_get_option("cookie") && function_exists("cookie_notice")){cookie_notice();} ?>
 

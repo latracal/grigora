@@ -1,3 +1,10 @@
+<?php
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // For security
+}
+
+?>
 <div>
     <?php
         if ( has_post_thumbnail($post->ID)) {

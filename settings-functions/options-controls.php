@@ -1,5 +1,12 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // For security
+}
+
+?>
+<?php
+
 /**
 * Grigora Options in Appearance Menu
 */

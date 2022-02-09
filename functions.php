@@ -1,5 +1,13 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // For security
+}
+
+?>
+
+<?php
+
 // Setup
 define( 'grg_DEV_MODE', true );
 

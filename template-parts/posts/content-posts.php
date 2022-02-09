@@ -1,3 +1,10 @@
+<?php
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // For security
+}
+
+?>
 <div class="post">
     <?php
         if( get_theme_mod( 'grg_blog_archive_image_display', grigora_blog_defaults()['grg_blog_archive_image_display'] ) ){?>
