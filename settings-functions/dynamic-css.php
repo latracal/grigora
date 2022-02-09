@@ -1415,7 +1415,20 @@ function forced_meta_css(){
         .container{
             flex-direction: ".get_post_meta( get_the_ID(), '_grigora-sidebar-align', true ).";
         }
+
+        .post-content{
+            border-right:none;
+            border-left:1px solid #aaaaaa;
+        }
         ";
+
+        if(get_post_meta(get_the_ID(), '_grigora-sidebar-align', true ) == 'none'){
+            $out = $out."
+            aside{
+                display:none;
+            }
+            ";
+        }
     }
  
     return $out;
@@ -1423,10 +1436,11 @@ function forced_meta_css(){
 
 function forced_meta_css_enqueue(){
     ?>
-    <style id="grg-forced-meta-css">
-        <?php echo forced_meta_css(); ?>
-    </style>
-    <?php
+<style id="grg-forced-meta-css">
+<?php echo forced_meta_css();
+?>
+</style>
+<?php
 }
 
 
