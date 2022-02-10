@@ -1411,41 +1411,64 @@ if(current_user_can('manage_options')){
     add_action("add_option_theme_mods_$theme_slug",'grg_regenerate_dynamic_css', 10, 2);
 }
 
+/**
+ * Forced CSS as per user selection in specific post
+ * 
+ *  @since  1.000
+ * 
+ *  @return css string
+ * 
+ */
 function forced_meta_css(){
     $out = "";
-    if(
-        (is_single() || is_page()) &&
-        get_post_meta(get_the_ID(), '_grigora-sidebar-align', true ) &&
-        get_post_meta( get_the_ID(), '_grigora-sidebar-align', true ) != get_theme_mod('grg_sidebar-alignment', grigora_spacing_defaults()['grg_sidebar-alignment'])
-    )
-    {
-        $out = $out."
-        .container{
-            flex-direction: ".get_post_meta( get_the_ID(), '_grigora-sidebar-align', true ).";
-        }
-
-        .post-content{
-            border-right:none;
-            border-left:1px solid #aaaaaa;
-        }
-        ";
-
-        if(get_post_meta(get_the_ID(), '_grigora-sidebar-align', true ) == 'none'){
+    if(is_single() || is_page()){
+        if(
+            get_post_meta(get_the_ID(), '_grigora-sidebar-align', true ) &&
+            get_post_meta( get_the_ID(), '_grigora-sidebar-align', true ) != get_theme_mod('grg_sidebar-alignment', grigora_spacing_defaults()['grg_sidebar-alignment'])
+        )
+        {
             $out = $out."
-            aside{
-                display:none;
+            .container{
+                flex-direction: ".get_post_meta( get_the_ID(), '_grigora-sidebar-align', true ).";
             }
 
             .post-content{
-                border:none;
+                border-right:none;
+                border-left:1px solid #aaaaaa;
             }
             ";
+
+            if(get_post_meta(get_the_ID(), '_grigora-sidebar-align', true ) == 'none'){
+                $out = $out."
+                aside{
+                    display:none;
+                }
+
+                .post-content{
+                    border:none;
+                }
+                ";
+            }
+        }
+        if(
+            get_post_meta(get_the_ID(), '_grigora-layout-container', true ) &&
+            get_post_meta( get_the_ID(), '_grigora-layout-container', true ) != get_theme_mod('grg_layout-container', grigora_spacing_defaults()['grg_layout-container'])
+        ){
+            // todo force content layout
+            $out = $out."";
         }
     }
  
     return $out;
 }
 
+
+/**
+ * Enqueue the forced css settings
+ * 
+ *  @since  1.000
+ * 
+ */
 function forced_meta_css_enqueue(){
     ?>
 <style id="grg-forced-meta-css">

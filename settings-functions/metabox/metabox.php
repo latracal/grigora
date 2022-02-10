@@ -78,7 +78,7 @@ if ( ! class_exists( 'ezTOC_Option' ) ) {
                 $sidebar_value = get_post_meta( $post->ID, '_grigora-sidebar-align', true );
             }
             else{
-                $sidebar_value = grigora_spacing_defaults()['grg_sidebar-alignment'];
+                $sidebar_value = get_theme_mod('grg_sidebar-alignment', grigora_spacing_defaults()['grg_sidebar-alignment']);
             }
 
             if(get_post_meta( $post->ID, '_grigora-disable-header', true )){
@@ -95,9 +95,44 @@ if ( ! class_exists( 'ezTOC_Option' ) ) {
                 $disable_footer = 0;
             }
 
+            if(get_post_meta( $post->ID, '_grigora-layout-container', true )){
+                $layout_container = get_post_meta( $post->ID, '_grigora-layout-container', true );
+            }
+            else{
+                $layout_container = get_theme_mod('grg_layout-container', grigora_spacing_defaults()['grg_layout-container']);
+            }
+
+            if(get_post_meta( $post->ID, '_grigora-disable-title', true )){
+                $disable_title = get_post_meta( $post->ID, '_grigora-disable-title', true );
+            }
+            else{
+                $disable_title = 0;
+            }
+
             ?>
 <table class="form-table grigora-table">
     <tbody>
+        <tr>
+            <th scope="row"><label for="layout-container">Content Layout</label></th>
+            <td>
+                <?php if (  get_post_type( $post ) == "post" || get_post_type( $post ) == "page"){
+
+                            // content layout
+                            $args = array(
+                                "id" => "layout-container",
+                                "desc" => esc_html__("Content Layout", "grigora"),
+                                "default" => $layout_container,
+                            );
+                            echo '<select name="grigora-settings[' . $args['id'] . ']" id="grigora-settings[' . $args['id'] . ']">
+                                <option value="containedpadded" '.(($layout_container == 'containedpadded') ?  'selected="selected"' : '').'>Contained Padded</option>
+                                <option value="row-containedfull" '.(($layout_container == 'row-containedfull') ?  'selected="selected"' : '').'>Contained Full Width</option>
+                                <option value="stretch" '.(($layout_container == 'stretch') ?  'selected="selected"' : '').'>Stretch Full Width</option>
+                            </select>';
+                        }
+                        ?>
+
+            </td>
+        </tr>
         <tr>
             <th scope="row"><label for="sidebar-align">Sidebar Layout</label></th>
             <td>
@@ -118,6 +153,7 @@ if ( ! class_exists( 'ezTOC_Option' ) ) {
                         ?>
 
             </td>
+        </tr>
         <tr>
             <th scope="row"><label for="disable-header">Disable Header</label></th>
             <td>
@@ -150,6 +186,21 @@ if ( ! class_exists( 'ezTOC_Option' ) ) {
                         ?>
             </td>
         </tr>
+        <tr>
+            <th scope="row"><label for="disable-title">Disable Title</label></th>
+            <td>
+                <?php if (  get_post_type( $post ) == "post" || get_post_type( $post ) == "page"){
+
+                            // disable title
+                            $args = array(
+                                "id" => "disable-title",
+                                "desc" => esc_html__("Disable Title", "grigora"),
+                            );
+                            $checked = $disable_title ? checked( 1, $disable_title, false ) : '';
+                            echo '<input type="checkbox" id="grigora-settings[' . $args['id'] . ']" name="grigora-settings[' . $args['id'] . ']" value="1" ' . $checked . '/>';
+                        }
+                        ?>
+            </td>
         </tr>
     </tbody>
 </table>
@@ -168,6 +219,16 @@ if ( ! class_exists( 'ezTOC_Option' ) ) {
                 isset( $_REQUEST['_grigora_meta_nonce'] ) &&
                 wp_verify_nonce( $_REQUEST['_grigora_meta_nonce'], 'grigora_meta_nonce' )
             ) {
+
+                if ( isset( $_REQUEST['grigora-settings']['layout-container'] ) ) {
+
+                    update_post_meta( $post_id, '_grigora-layout-container', $_REQUEST['grigora-settings']['layout-container'] );
+
+                } else {
+
+                    update_post_meta( $post_id, '_grigora-layout-container', '' );
+
+                }
 
                 if ( isset( $_REQUEST['grigora-settings']['sidebar-align'] ) ) {
 
@@ -196,6 +257,16 @@ if ( ! class_exists( 'ezTOC_Option' ) ) {
                 } else {
 
                     update_post_meta( $post_id, '_grigora-disable-footer', 0 );
+
+                }
+
+                if ( isset( $_REQUEST['grigora-settings']['disable-title'] ) ) {
+
+                    update_post_meta( $post_id, '_grigora-disable-title', $_REQUEST['grigora-settings']['disable-title'] );
+
+                } else {
+
+                    update_post_meta( $post_id, '_grigora-disable-title', 0 );
 
                 }
 
