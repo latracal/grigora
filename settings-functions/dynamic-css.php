@@ -556,7 +556,7 @@ else {
 if($spacing_flag) {
     if(get_theme_mod('grg_layout-container', $spacing_defaults['grg_layout-container'])== 'containedpadded') {
         $out=$out."
-        .container .article{
+        .container .article, .post-content{
             padding: 0 2.5rem;
         }
 
@@ -566,7 +566,7 @@ if($spacing_flag) {
         ";
     }else if(get_theme_mod('grg_layout-container', $spacing_defaults['grg_layout-container'])== 'containedfull'){
         $out=$out."
-        .container .article{
+        .container .article, .post-content{
             padding-left: 0;
         }
 
@@ -576,8 +576,8 @@ if($spacing_flag) {
         ";
     }else if(get_theme_mod('grg_layout-container', $spacing_defaults['grg_layout-container'])== 'stretch'){
         $out=$out."
-        .container {
-            max-width:100%;
+        .container{
+            max-width:100% !important;
         }";
     }   
     
