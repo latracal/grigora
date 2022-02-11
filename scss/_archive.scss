@@ -291,12 +291,14 @@
 			}
 		}
 
-		img {
-			height: auto;
-			max-width: 100%;
-			vertical-align: bottom;
-			margin-bottom: 0.5rem;
-			margin-top: 0.5rem;
+		.feature-img {
+			img {
+				height: auto;
+				max-width: 100%;
+				vertical-align: bottom;
+				margin-bottom: 0.5rem;
+				margin-top: 0.5rem;
+			}
 		}
 
 		p {
@@ -602,14 +604,6 @@
 			}
 		}
 
-		img {
-			height: auto;
-			max-width: 100%;
-			vertical-align: bottom;
-			margin-bottom: 0.5rem;
-			margin-top: 0.5rem;
-		}
-
 		p {
 			font-size: 0.938rem;
 			margin-bottom: 1rem;
@@ -862,7 +856,7 @@
 		}
 	}
 
-	aside {
+	.grigora-primary-sidebar {
 		width: 30%;
 		padding: 0 2.5rem;
 

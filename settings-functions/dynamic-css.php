@@ -560,7 +560,7 @@ if($spacing_flag) {
             padding: 0 2.5rem;
         }
 
-        .container aside{
+        .container .grigora-primary-sidebar{
             padding: 0 2.5rem;
         }
         ";
@@ -570,7 +570,7 @@ if($spacing_flag) {
             padding-right: 0;
         }
 
-        .container aside{
+        .container .grigora-primary-sidebar{
             padding-left: 0;
         }
         ";
@@ -581,7 +581,7 @@ if($spacing_flag) {
             padding-right: 0;
         }
 
-        .container aside{
+        .container .grigora-primary-sidebar{
             padding-right: 0;
         }
         ";
@@ -591,7 +591,7 @@ if($spacing_flag) {
             padding-right: 0;
         }
 
-        .container aside{
+        .container .grigora-primary-sidebar{
             padding-left: 0;
         }
 
@@ -606,7 +606,7 @@ if($spacing_flag) {
             padding-right: 0;
         }
 
-        .container aside{
+        .container .grigora-primary-sidebar{
             padding-right: 0;
         }
         
@@ -619,7 +619,7 @@ if($spacing_flag) {
             padding-left: 0;            
         }
 
-        .container aside{
+        .container .grigora-primary-sidebar{
             padding-right: 0;
         }
         ";
@@ -629,7 +629,7 @@ if($spacing_flag) {
             padding-left: 0;
         }
 
-        .container aside{
+        .container .grigora-primary-sidebar{
             padding-right: 0;
         }
         
@@ -692,7 +692,7 @@ if($spacing_flag) {
         }
 
 
-        aside {
+        .grigora-primary-sidebar {
             display: ".get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment']).";
             
         } ";
@@ -746,12 +746,12 @@ if($spacing_flag) {
 
     }
 
-    .container aside {
+    .container .grigora-primary-sidebar {
         width: ".get_theme_mod('grg_sidebar-width', $spacing_defaults['grg_sidebar-width'])."%;
     }
 
     @media(max-width:768px) {
-        .container aside {
+        .container .grigora-primary-sidebar {
             width: 100%;
         }
     }
@@ -811,7 +811,7 @@ else {
     }
 
 
-    .container aside {
+    .container .grigora-primary-sidebar {
         width: ".$spacing_defaults['grg_sidebar-width']."%;
     }
 
@@ -890,7 +890,7 @@ if($typography_flag) {
     }
 
     .container .article h1,
-    aside h1 {
+    .grigora-primary-sidebar h1 {
         font-family: ".get_theme_mod('grg_typography_h1_font', $typography_fonts_defaults['grg_typography_h1_font']).", sans-serif;
         
         font-weight: ".get_theme_mod('grg_typography_h1_weight', $typography_defaults['grg_typography_h1_weight']).";
@@ -901,7 +901,7 @@ if($typography_flag) {
     }
 
     .container .article h2,
-    aside h2, .post-title {
+    .grigora-primary-sidebar h2, .post-title {
         font-family: ".get_theme_mod('grg_typography_h2_font', $typography_fonts_defaults['grg_typography_h2_font']).", sans-serif;
         
         font-weight: ".get_theme_mod('grg_typography_h2_weight', $typography_defaults['grg_typography_h2_weight']).";
@@ -912,7 +912,7 @@ if($typography_flag) {
     }
 
     .container .article h3,
-    aside h3 {
+    .grigora-primary-sidebar h3 {
         font-family: ".get_theme_mod('grg_typography_h3_font', $typography_fonts_defaults['grg_typography_h3_font']).", sans-serif;
         
         font-weight: ".get_theme_mod('grg_typography_h3_weight', $typography_defaults['grg_typography_h3_weight']).";
@@ -923,7 +923,7 @@ if($typography_flag) {
     }
 
     .container .article h4,
-    aside h4 {
+    .grigora-primary-sidebar h4 {
         font-family: ".get_theme_mod('grg_typography_h4_font', $typography_fonts_defaults['grg_typography_h4_font']).", sans-serif;
         
         font-weight: ".get_theme_mod('grg_typography_h4_weight', $typography_defaults['grg_typography_h4_weight']).";
@@ -934,7 +934,7 @@ if($typography_flag) {
     }
 
     .container .article h5,
-    aside h5 {
+    .grigora-primary-sidebar h5 {
         font-family: ".get_theme_mod('grg_typography_h5_font', $typography_fonts_defaults['grg_typography_h5_font']).", sans-serif;
         
         font-weight: ".get_theme_mod('grg_typography_h5_weight', $typography_defaults['grg_typography_h5_weight']).";
@@ -945,7 +945,7 @@ if($typography_flag) {
     }
 
     .container .article h6,
-    aside h6 {
+    .grigora-primary-sidebar h6 {
         font-family: ".get_theme_mod('grg_typography_h6_font', $typography_fonts_defaults['grg_typography_h6_font']).", sans-serif;
         
         font-weight: ".get_theme_mod('grg_typography_h6_weight', $typography_defaults['grg_typography_h6_weight']).";
@@ -1026,7 +1026,7 @@ else {
     }
 
     .container .article h1,
-    aside h1 {
+    .grigora-primary-sidebar h1 {
         font-family: ".$typography_fonts_defaults['grg_typography_h1_font'].", sans-serif;
         
         font-weight: ".$typography_defaults['grg_typography_h1_weight'].";
@@ -1037,7 +1037,7 @@ else {
     }
 
     .container .article h2,
-    aside h2 {
+    .grigora-primary-sidebar h2 {
         font-family: ".$typography_fonts_defaults['grg_typography_h2_font'].", sans-serif;
         
         font-weight: ".$typography_defaults['grg_typography_h2_weight'].";
@@ -1048,7 +1048,7 @@ else {
     }
 
     .container .article h3,
-    aside h3 {
+    .grigora-primary-sidebar h3 {
         font-family: ".$typography_fonts_defaults['grg_typography_h3_font'].", sans-serif;
         
         font-weight: ".$typography_defaults['grg_typography_h3_weight'].";
@@ -1059,7 +1059,7 @@ else {
     }
 
     .container .article h4,
-    aside h4 {
+    .grigora-primary-sidebar h4 {
         font-family: ".$typography_fonts_defaults['grg_typography_h4_font'].", sans-serif;
         
         font-weight: ".$typography_defaults['grg_typography_h4_weight'].";
@@ -1070,7 +1070,7 @@ else {
     }
 
     .container .article h5,
-    aside h5 {
+    .grigora-primary-sidebar h5 {
         font-family: ".$typography_fonts_defaults['grg_typography_h5_font'].", sans-serif;
         
         font-weight: ".$typography_defaults['grg_typography_h5_weight'].";
@@ -1081,7 +1081,7 @@ else {
     }
 
     .container .article h6,
-    aside h6 {
+    .grigora-primary-sidebar h6 {
         font-family: ".$typography_fonts_defaults['grg_typography_h6_font'].", sans-serif;
         
         font-weight: ".$typography_defaults['grg_typography_h6_weight'].";
@@ -1524,7 +1524,7 @@ function forced_meta_css(){
 
             if(get_post_meta(get_the_ID(), '_grigora-sidebar-align', true ) == 'none'){
                 $out = $out."
-                aside{
+                .grigora-primary-sidebar{
                     display:none;
                 }
 
