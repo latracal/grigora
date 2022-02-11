@@ -75,12 +75,12 @@ body {
     }
 
     main a,
-    .post-content p a, .post-content .cat-name, footer .copyrights a{
+    .container .article p a, .container .article .cat-name, footer .copyrights a{
         color: #0170b9;
     }
 
     main a:hover,
-    .post-content p a:hover, .post-content .cat-name:hover, footer .copyrights a:hover {
+    .container .article p a:hover, .container .article .cat-name:hover, footer .copyrights a:hover {
         color: #0170b9;
     }
 
@@ -145,8 +145,8 @@ body {
 
     }
 
-    .post-content .breadcrumb,
-    .post-content .breadcrumb a {
+    .container .article .breadcrumb,
+    .container .article .breadcrumb a {
         color: #454545;
     }
 
@@ -177,14 +177,14 @@ body {
 
     .container .article .pagination .next,
     .container .article .pagination .prev,
-    .post-content .post-pagination .pagination-prev-post,
-    .post-content .post-pagination .pagination-next-post {
+    .container .article .post-pagination .pagination-prev-post,
+    .container .article .post-pagination .pagination-next-post {
         background-color: #c4c4c4;
         
     }
 
-    .post-content .post-pagination .pagination-prev-post a,
-    .post-content .post-pagination .pagination-next-post a {
+    .container .article .post-pagination .pagination-prev-post a,
+    .container .article .post-pagination .pagination-next-post a {
         color: #000;        
     }
 
@@ -249,16 +249,34 @@ body {
     }
 
     
-        @media (max-width: 768px) {
-            .mobile-header .top-part .title {
-                padding: 0 0 0 3rem;
-            }
+        .container .article, .container .article{
+            padding-left: 0;
+            padding-right: 0;
         }
-        .container {
-            flex-direction: row;
-            
 
-        }.desktop-nav{
+        .container .grigora-primary-sidebar{
+            padding-right: 0;
+        }
+        
+        .container{
+            max-width:100% !important;
+        }.container .article {
+            width: 100%;
+            border-right: none;
+            
+        }
+
+        .container .article {
+            width: 100%;
+            border-right: none;
+            
+        }
+
+
+        .grigora-primary-sidebar {
+            display: none;
+            
+        } .desktop-nav{
             flex-direction:row;
             justify-content: space-between;
             align-items: center;
@@ -295,12 +313,12 @@ body {
 
     }
 
-    .container aside {
+    .container .grigora-primary-sidebar {
         width: 30%;
     }
 
     @media(max-width:768px) {
-        .container aside {
+        .container .grigora-primary-sidebar {
             width: 100%;
         }
     }
@@ -328,7 +346,7 @@ body {
         
     }
 
-    main p,.post-content p, .post-content li, .post-content .wp-block-quote p, .post-content .wp-block-quote cite, .post-content .wp-block-preformatted, .post-content .wp-block-code, .post-content .wp-block-table table, .wp-block-pullquote p, .wp-block-pullquote cite {
+    main p,.container .article p, .container .article li, .container .article .wp-block-quote p, .container .article .wp-block-quote cite, .container .article .wp-block-preformatted, .container .article .wp-block-code, .container .article .wp-block-table table, .wp-block-pullquote p, .wp-block-pullquote cite {
         font-weight: 500;
         
         font-size: 15px;
@@ -379,8 +397,8 @@ body {
         
     }
 
-    .post-content h1,
-    aside h1 {
+    .container .article h1,
+    .grigora-primary-sidebar h1 {
         font-family: Arial, sans-serif;
         
         font-weight: 700;
@@ -390,8 +408,8 @@ body {
         font-size: 25px;
     }
 
-    .post-content h2,
-    aside h2, .post-title {
+    .container .article h2,
+    .grigora-primary-sidebar h2, .post-title {
         font-family: Arial, sans-serif;
         
         font-weight: 700;
@@ -401,8 +419,8 @@ body {
         font-size: 24px;
     }
 
-    .post-content h3,
-    aside h3 {
+    .container .article h3,
+    .grigora-primary-sidebar h3 {
         font-family: Arial, sans-serif;
         
         font-weight: 700;
@@ -412,8 +430,8 @@ body {
         font-size: 23px;
     }
 
-    .post-content h4,
-    aside h4 {
+    .container .article h4,
+    .grigora-primary-sidebar h4 {
         font-family: Arial, sans-serif;
         
         font-weight: 700;
@@ -423,8 +441,8 @@ body {
         font-size: 22px;
     }
 
-    .post-content h5,
-    aside h5 {
+    .container .article h5,
+    .grigora-primary-sidebar h5 {
         font-family: Arial, sans-serif;
         
         font-weight: 700;
@@ -434,8 +452,8 @@ body {
         font-size: 21px;
     }
 
-    .post-content h6,
-    aside h6 {
+    .container .article h6,
+    .grigora-primary-sidebar h6 {
         font-family: Arial, sans-serif;
         
         font-weight: 700;
@@ -466,7 +484,7 @@ body {
             right: 2rem;
         } .to-top {
 
-            display: block;
+            display: grid;
         } .cookie {
         background-color: #fff; 
     }
@@ -477,9 +495,9 @@ body {
         color: #fff; 
         background-color: #025640; 
     } 
-.post-content .seperator::after {
+.container .article .seperator::after {
     content:'»';
 } 
-.post-content .breadcrumb {
+.container .article .breadcrumb {
     justify-content:start;
 }

@@ -220,7 +220,7 @@ if ( ! class_exists( 'ezTOC_Option' ) ) {
                 wp_verify_nonce( $_REQUEST['_grigora_meta_nonce'], 'grigora_meta_nonce' )
             ) {
 
-                if ( isset( $_REQUEST['grigora-settings']['layout-container'] ) ) {
+                if ( isset( $_REQUEST['grigora-settings']['layout-container'] ) && $_REQUEST['grigora-settings']['layout-container'] !=  get_theme_mod('grg_layout-container', grigora_spacing_defaults()['grg_layout-container'])) {
 
                     update_post_meta( $post_id, '_grigora-layout-container', $_REQUEST['grigora-settings']['layout-container'] );
 
@@ -230,7 +230,7 @@ if ( ! class_exists( 'ezTOC_Option' ) ) {
 
                 }
 
-                if ( isset( $_REQUEST['grigora-settings']['sidebar-align'] ) ) {
+                if ( isset( $_REQUEST['grigora-settings']['sidebar-align'] ) && $_REQUEST['grigora-settings']['sidebar-align'] != get_theme_mod('grg_sidebar-alignment', grigora_spacing_defaults()['grg_sidebar-alignment']) ) {
 
                     update_post_meta( $post_id, '_grigora-sidebar-align', $_REQUEST['grigora-settings']['sidebar-align'] );
 
