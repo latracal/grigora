@@ -121,12 +121,12 @@ function grg_dynamic_customize_css_var() {
     }
 
     main a,
-    .post-content p a, .post-content .cat-name, footer .copyrights a{
+    .container .article p a, .container .article .cat-name, footer .copyrights a{
         color: ".get_theme_mod('grg_anchor-text-color', $defaults['grg_anchor-text-color']).";
     }
 
     main a:hover,
-    .post-content p a:hover, .post-content .cat-name:hover, footer .copyrights a:hover {
+    .container .article p a:hover, .container .article .cat-name:hover, footer .copyrights a:hover {
         color: ".get_theme_mod('grg_anchor-text-hover-color', $defaults['grg_anchor-text-hover-color']).";
     }
 
@@ -191,8 +191,8 @@ function grg_dynamic_customize_css_var() {
 
     }
 
-    .post-content .breadcrumb,
-    .post-content .breadcrumb a {
+    .container .article .breadcrumb,
+    .container .article .breadcrumb a {
         color: ".get_theme_mod('grg_breadcrumb-color', $defaults['grg_breadcrumb-color']).";
     }
 
@@ -223,14 +223,14 @@ function grg_dynamic_customize_css_var() {
 
     .container .article .pagination .next,
     .container .article .pagination .prev,
-    .post-content .post-pagination .pagination-prev-post,
-    .post-content .post-pagination .pagination-next-post {
+    .container .article .post-pagination .pagination-prev-post,
+    .container .article .post-pagination .pagination-next-post {
         background-color: ".get_theme_mod('grg_post_nav_colors', $defaults['grg_post_nav_colors']).";
         
     }
 
-    .post-content .post-pagination .pagination-prev-post a,
-    .post-content .post-pagination .pagination-next-post a {
+    .container .article .post-pagination .pagination-prev-post a,
+    .container .article .post-pagination .pagination-next-post a {
         color: ".get_theme_mod('grg_post_nav_text_colors', $defaults['grg_post_nav_text_colors']).";        
     }
 
@@ -375,13 +375,13 @@ else {
     }
 
     main a,
-    .post-content p a, .post-content .cat-name, footer .copyrights a {
+    .container .article p a, .container .article .cat-name, footer .copyrights a {
         color: ".$defaults['grg_anchor-text-color'].";
         
     }
 
     main a:hover,
-    .post-content p a:hover, .post-content .cat-name:hover, footer .copyrights a:hover {
+    .container .article p a:hover, .container .article .cat-name:hover, footer .copyrights a:hover {
         color: ".$defaults['grg_anchor-text-hover-color'].";
         
     }
@@ -448,8 +448,8 @@ else {
         
     }
 
-    .post-content .breadcrumb,
-    .post-content .breadcrumb a {
+    .container .article .breadcrumb,
+    .container .article .breadcrumb a {
         color: ".$defaults['grg_breadcrumb-color'].";
         
     }
@@ -487,8 +487,8 @@ else {
 
     }
 
-    .post-content .post-pagination .pagination-prev-post a,
-    .post-content .post-pagination .pagination-next-post a {
+    .container .article .post-pagination .pagination-prev-post a,
+    .container .article .post-pagination .pagination-next-post a {
         color: ".$defaults['grg_post_nav_text_colors'].";        
     }
 
@@ -556,7 +556,7 @@ else {
 if($spacing_flag) {
     if(get_theme_mod('grg_layout-container', $spacing_defaults['grg_layout-container'])== 'containedpadded') {
         $out=$out."
-        .container .article, .post-content{
+        .container .article, .container .article{
             padding: 0 2.5rem;
         }
 
@@ -566,7 +566,7 @@ if($spacing_flag) {
         ";
     } else if(get_theme_mod('grg_layout-container', $spacing_defaults['grg_layout-container'])== 'containedfull' && get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment'])== 'row-reverse'){
         $out=$out."
-        .container .article, .post-content{         
+        .container .article, .container .article{         
             padding-right: 0;
         }
 
@@ -576,7 +576,7 @@ if($spacing_flag) {
         ";
     } else if(get_theme_mod('grg_layout-container', $spacing_defaults['grg_layout-container'])== 'containedfull' && get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment'])== 'none'){
         $out=$out."
-        .container .article, .post-content{
+        .container .article, .container .article{
             padding-left: 0;
             padding-right: 0;
         }
@@ -587,7 +587,7 @@ if($spacing_flag) {
         ";
     } else if(get_theme_mod('grg_layout-container', $spacing_defaults['grg_layout-container'])== 'stretch' && get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment'])== 'row-reverse'){
         $out=$out."
-        .container .article, .post-content{         
+        .container .article, .container .article{         
             padding-right: 0;
         }
 
@@ -601,7 +601,7 @@ if($spacing_flag) {
         ";
     } else if(get_theme_mod('grg_layout-container', $spacing_defaults['grg_layout-container'])== 'stretch' && get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment'])== 'none'){
         $out=$out."
-        .container .article, .post-content{
+        .container .article, .container .article{
             padding-left: 0;
             padding-right: 0;
         }
@@ -615,7 +615,7 @@ if($spacing_flag) {
         }";
     } else if(get_theme_mod('grg_layout-container', $spacing_defaults['grg_layout-container'])== 'containedfull'){
         $out=$out."
-        .container .article, .post-content{
+        .container .article, .container .article{
             padding-left: 0;            
         }
 
@@ -625,7 +625,7 @@ if($spacing_flag) {
         ";
     } else if(get_theme_mod('grg_layout-container', $spacing_defaults['grg_layout-container'])== 'stretch'){
         $out=$out."
-        .container .article, .post-content{
+        .container .article, .container .article{
             padding-left: 0;
         }
 
@@ -665,7 +665,7 @@ if($spacing_flag) {
 
         }
 
-        .container .post-content {
+        .container .article {
             border-right: 0;
             border-left: 1px solid #aaaaaa;
         }
@@ -679,7 +679,7 @@ if($spacing_flag) {
     }
 
     else {
-        $out=$out.".container .post-content {
+        $out=$out.".container .article {
             width: 100%;
             border-right: ".get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment']).";
             
@@ -838,7 +838,7 @@ if($typography_flag) {
         
     }
 
-    main p,.post-content p, .post-content li, .post-content .wp-block-quote p, .post-content .wp-block-quote cite, .post-content .wp-block-preformatted, .post-content .wp-block-code, .post-content .wp-block-table table, .wp-block-pullquote p, .wp-block-pullquote cite {
+    main p,.container .article p, .container .article li, .container .article .wp-block-quote p, .container .article .wp-block-quote cite, .container .article .wp-block-preformatted, .container .article .wp-block-code, .container .article .wp-block-table table, .wp-block-pullquote p, .wp-block-pullquote cite {
         font-weight: ".get_theme_mod('grg_typography_body_weight', $typography_defaults['grg_typography_body_weight']).";
         
         font-size: ".get_theme_mod('grg_typography_body_font_size', $typography_defaults['grg_typography_body_font_size'])."px;
@@ -889,7 +889,7 @@ if($typography_flag) {
         
     }
 
-    .post-content h1,
+    .container .article h1,
     aside h1 {
         font-family: ".get_theme_mod('grg_typography_h1_font', $typography_fonts_defaults['grg_typography_h1_font']).", sans-serif;
         
@@ -900,7 +900,7 @@ if($typography_flag) {
         font-size: ".get_theme_mod('grg_typography_h1_size', $typography_defaults['grg_typography_h1_size'])."px;
     }
 
-    .post-content h2,
+    .container .article h2,
     aside h2, .post-title {
         font-family: ".get_theme_mod('grg_typography_h2_font', $typography_fonts_defaults['grg_typography_h2_font']).", sans-serif;
         
@@ -911,7 +911,7 @@ if($typography_flag) {
         font-size: ".get_theme_mod('grg_typography_h2_size', $typography_defaults['grg_typography_h2_size'])."px;
     }
 
-    .post-content h3,
+    .container .article h3,
     aside h3 {
         font-family: ".get_theme_mod('grg_typography_h3_font', $typography_fonts_defaults['grg_typography_h3_font']).", sans-serif;
         
@@ -922,7 +922,7 @@ if($typography_flag) {
         font-size: ".get_theme_mod('grg_typography_h3_size', $typography_defaults['grg_typography_h3_size'])."px;
     }
 
-    .post-content h4,
+    .container .article h4,
     aside h4 {
         font-family: ".get_theme_mod('grg_typography_h4_font', $typography_fonts_defaults['grg_typography_h4_font']).", sans-serif;
         
@@ -933,7 +933,7 @@ if($typography_flag) {
         font-size: ".get_theme_mod('grg_typography_h4_size', $typography_defaults['grg_typography_h4_size'])."px;
     }
 
-    .post-content h5,
+    .container .article h5,
     aside h5 {
         font-family: ".get_theme_mod('grg_typography_h5_font', $typography_fonts_defaults['grg_typography_h5_font']).", sans-serif;
         
@@ -944,7 +944,7 @@ if($typography_flag) {
         font-size: ".get_theme_mod('grg_typography_h5_size', $typography_defaults['grg_typography_h5_size'])."px;
     }
 
-    .post-content h6,
+    .container .article h6,
     aside h6 {
         font-family: ".get_theme_mod('grg_typography_h6_font', $typography_fonts_defaults['grg_typography_h6_font']).", sans-serif;
         
@@ -974,7 +974,7 @@ else {
         
     }
 
-    main p,.post-content p, .post-content li, .post-content .wp-block-quote p, .post-content .wp-block-quote cite, .post-content .wp-block-preformatted, .post-content .wp-block-code, .post-content .wp-block-table table, .wp-block-pullquote p, .wp-block-pullquote cite {
+    main p,.container .article p, .container .article li, .container .article .wp-block-quote p, .container .article .wp-block-quote cite, .container .article .wp-block-preformatted, .container .article .wp-block-code, .container .article .wp-block-table table, .wp-block-pullquote p, .wp-block-pullquote cite {
         font-weight: ".$typography_defaults['grg_typography_body_weight']."px;
         font-size: ".$typography_defaults['grg_typography_body_font_size'].";
         
@@ -1025,7 +1025,7 @@ else {
         
     }
 
-    .post-content h1,
+    .container .article h1,
     aside h1 {
         font-family: ".$typography_fonts_defaults['grg_typography_h1_font'].", sans-serif;
         
@@ -1036,7 +1036,7 @@ else {
         font-size: ".$typography_defaults['grg_typography_h1_size']."px;
     }
 
-    .post-content h2,
+    .container .article h2,
     aside h2 {
         font-family: ".$typography_fonts_defaults['grg_typography_h2_font'].", sans-serif;
         
@@ -1047,7 +1047,7 @@ else {
         font-size: ".$typography_defaults['grg_typography_h2_size']."px;
     }
 
-    .post-content h3,
+    .container .article h3,
     aside h3 {
         font-family: ".$typography_fonts_defaults['grg_typography_h3_font'].", sans-serif;
         
@@ -1058,7 +1058,7 @@ else {
         font-size: ".$typography_defaults['grg_typography_h3_size']."px;
     }
 
-    .post-content h4,
+    .container .article h4,
     aside h4 {
         font-family: ".$typography_fonts_defaults['grg_typography_h4_font'].", sans-serif;
         
@@ -1069,7 +1069,7 @@ else {
         font-size: ".$typography_defaults['grg_typography_h4_size']."px;
     }
 
-    .post-content h5,
+    .container .article h5,
     aside h5 {
         font-family: ".$typography_fonts_defaults['grg_typography_h5_font'].", sans-serif;
         
@@ -1080,7 +1080,7 @@ else {
         font-size: ".$typography_defaults['grg_typography_h5_size']."px;
     }
 
-    .post-content h6,
+    .container .article h6,
     aside h6 {
         font-family: ".$typography_fonts_defaults['grg_typography_h6_font'].", sans-serif;
         
@@ -1254,13 +1254,13 @@ else{
 }
     
 $out=$out." 
-.post-content .seperator::after {
+.container .article .seperator::after {
     content:'".html_entity_decode(get_theme_mod('grg_breadcrumbs_seperator', $breadcrumb_defaults['grg_breadcrumbs_seperator']))."';
 }"; 
 
 
 $out=$out." 
-.post-content .breadcrumb {
+.container .article .breadcrumb {
     justify-content:".get_theme_mod('grg_breadcrumbs_align', $breadcrumb_defaults['grg_breadcrumbs_align']).";
 }";
 
@@ -1516,7 +1516,7 @@ function forced_meta_css(){
                 flex-direction: ".get_post_meta( get_the_ID(), '_grigora-sidebar-align', true ).";
             }
 
-            .article{
+            .container .article{
                 border-left:none !important;
                 border-right:1px solid #aaaaaa !important;
             }
@@ -1528,7 +1528,7 @@ function forced_meta_css(){
                     display:none;
                 }
 
-                .article{
+                .container .article{
                     width: 100% !important;
                     border:none !important;
                 }
