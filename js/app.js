@@ -155,7 +155,7 @@ if (totop) {
 			document.body.scrollTop > 150 ||
 			document.documentElement.scrollTop > 150
 		) {
-			totop.style.display = 'block';
+			totop.style.display = 'grid';
 		} else {
 			totop.style.display = 'none';
 		}

@@ -1088,7 +1088,7 @@ if($scroll_flag) {
     else {
         $out=$out." .to-top {
 
-            display: block;
+            display: grid;
         }";
 
     }
@@ -1136,7 +1136,7 @@ else {
     else {
         $out=$out." .to-top {
 
-            display: block;
+            display: grid;
         }";
 
 

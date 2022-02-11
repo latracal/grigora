@@ -1,9 +1,9 @@
 body {
         background-color: #f2f2f2;
     } .desktop-nav, .navbar, .mobile-header .top-part {
-        background-color: #e9e9e9;
+        background-color: #f6b26b;
     } .desktop-nav .menu-container .menu, .mobile-header .menu-container .menu {
-        background-color: #c4c4c4;
+        background-color: #e06666;
 
     }
 
@@ -20,12 +20,12 @@ body {
     }
 
     .mobile-header .top-part #menu-toggle-btn .line{
-        background-color: #000;
+        background-color: white;
     }
 
     .desktop-nav .navbar .title a,
     .menu-container .menu a, .mobile-header .top-part .title a, .mobile-header .menu-container .menu a, .mobile-header .top-part .search-btn svg {
-        color: #000;
+        color: white;
 
     }
 
@@ -51,7 +51,7 @@ body {
     }
 
     .footer .footer-menu {
-        background-color: #e9e9e9;
+        background-color: #4f1f1f;
 
     }
 
@@ -88,18 +88,18 @@ body {
     input[type='button'],
     input[type='reset'],
     input[type='submit'] {
-        background-color: #c4c4c4 !important;
+        background-color: #f44336 !important;
 
     }
 
     .container .article .pagination .next.page-numbers,.container .article .pagination .prev.page-numbers, .form-submit .submit{
-        color: #000;
+        color: white;
     }
     
     .container .article .post-container .post .post-desc a, input[type='button'],
     input[type='reset'],
     input[type='submit'] {
-        color: #000;
+        color: white;
 
     }
 
@@ -248,15 +248,30 @@ body {
         
     }
 
-    .container {
+    
+        @media (max-width: 768px) {
+            .mobile-header .top-part .title {
+                padding: 0 0 0 3rem;
+            }
+        }
+        .container {
             flex-direction: row;
             
 
         }.desktop-nav{
-            display: flex;
-            flex-direction: column;
-        }.container {
-        max-width: 1366px;
+            flex-direction:row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .desktop-nav .menu-container .menu{
+            background-color:transparent; 
+            padding: 0 4rem 0 0;
+        }
+
+        .container {
+        max-width: 885px;
 
     }
 
@@ -297,26 +312,26 @@ body {
     }
 
     .desktop-nav, .mobile-header .top-part {
-        min-height: 155px;
+        min-height: 96px;
     }
 
     .desktop-nav .navbar .logo img{
-        height: 100px;
+        height: 141px;
     }
    
     .mobile-header .logo img{
-        height: 80px;
+        height: 144px;
     }
 
     body {
-        font-family: Verdana, sans-serif;
+        font-family: Arial, sans-serif;
         
     }
 
     main p,.post-content p, .post-content li, .post-content .wp-block-quote p, .post-content .wp-block-quote cite, .post-content .wp-block-preformatted, .post-content .wp-block-code, .post-content .wp-block-table table, .wp-block-pullquote p, .wp-block-pullquote cite {
         font-weight: 500;
         
-        font-size: 18px;
+        font-size: 15px;
     }
 
     main {
