@@ -118,6 +118,7 @@ if ( ! function_exists( 'grigora_spacing_defaults' ) ) {
 
 	function grigora_spacing_defaults() {
 		return array(
+			'grg_layout-container' => 'containedpadded',
 			'grg_header-height' => '155',
 			'grg_header_style' => 'style1',
 			'grg_header_image_height' => 100,
