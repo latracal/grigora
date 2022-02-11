@@ -576,6 +576,14 @@ if($spacing_flag) {
         ";
     }else if(get_theme_mod('grg_layout-container', $spacing_defaults['grg_layout-container'])== 'stretch'){
         $out=$out."
+        .container .article, .post-content{
+            padding-left: 0;
+        }
+
+        .container aside{
+            padding-right: 0;
+        }
+        
         .container{
             max-width:100% !important;
         }";
