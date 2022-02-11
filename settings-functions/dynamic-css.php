@@ -1516,9 +1516,9 @@ function forced_meta_css(){
                 flex-direction: ".get_post_meta( get_the_ID(), '_grigora-sidebar-align', true ).";
             }
 
-            .post-content{
-                border-right:none;
-                border-left:1px solid #aaaaaa;
+            .article{
+                border-left:none !important;
+                border-right:1px solid #aaaaaa !important;
             }
             ";
 
@@ -1528,8 +1528,9 @@ function forced_meta_css(){
                     display:none;
                 }
 
-                .post-content{
-                    border:none;
+                .article{
+                    width: 100% !important;
+                    border:none !important;
                 }
                 ";
             }

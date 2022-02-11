@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php while ( have_posts() ) : the_post(); ?>
 
 <div class="container">
-    <section class="post-content">
+    <section class="article">
         <article class="single-post" itemtype="<?php echo grg_get_schema_tag('creativework')['itemtype'] ?>"
             itemscope="<?php echo grg_get_schema_tag('creativework')['itemscope'] ?>">
             <?php get_template_part('template-parts/breadcrumbs'); ?>
