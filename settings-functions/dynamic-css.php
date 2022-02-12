@@ -661,26 +661,17 @@ if($spacing_flag) {
     else if(get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment'])=='row-reverse') {
         $out=$out.".container {
             flex-direction: ".get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment']).";
-            
-
-        }
-
-        .container .article {
-            border-right: 0;
-            border-left: 1px solid #aaaaaa;
         }";
     }
 
     else {
         $out=$out.".container .article {
             width: 100%;
-            border-right: ".get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment']).";
             
         }
 
         .container .article {
             width: 100%;
-            border-right: ".get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment']).";
             
         }
 
