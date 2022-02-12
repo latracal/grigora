@@ -21,7 +21,13 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <div class="top">
                     <h1 class="post-title"
                         itemprop="<?php echo grg_get_schema_tag('creativeworkheadline')['itemprop'] ?>">
+                        <?php if(
+                        (is_single() || is_page()) &&
+                        get_post_meta( $post->ID, '_grigora-disable-title', true ) && 
+                        get_post_meta( $post->ID, '_grigora-disable-title', true ) == 1
+                        )  {} else { ?>
                         <?php the_title(); ?></h1>
+                    <?php } ?>
                     <span class="post-meta">
                         <?php if( get_theme_mod( 'grg_blog_single_author_display', grigora_blog_defaults()['grg_blog_single_author_display'] ) )
         {
