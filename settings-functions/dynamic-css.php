@@ -1513,7 +1513,7 @@ function forced_meta_css(){
             ) ||
             (
                 get_post_meta(get_the_ID(), '_grigora-sidebar-align', true ) &&
-            get_post_meta( get_the_ID(), '_grigora-sidebar-align', true ) != get_theme_mod('grg_sidebar-alignment', grigora_spacing_defaults()['grg_sidebar-alignment'])
+                get_post_meta( get_the_ID(), '_grigora-sidebar-align', true ) != get_theme_mod('grg_sidebar-alignment', grigora_spacing_defaults()['grg_sidebar-alignment'])
             )
         )
         {  

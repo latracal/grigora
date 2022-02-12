@@ -250,30 +250,17 @@ body {
 
     
         .container .article{
-            padding-left: 0;
-            padding-right: 0;
+            padding-left: 0;            
         }
 
         .container .grigora-primary-sidebar{
             padding-right: 0;
         }
-        .container .article {
-            width: 100%;
-            border-right: none;
+        .container {
+            flex-direction: row;
             
-        }
 
-        .container .article {
-            width: 100%;
-            border-right: none;
-            
-        }
-
-
-        .grigora-primary-sidebar {
-            display: none;
-            
-        } .desktop-nav{
+        }.desktop-nav{
             flex-direction:row;
             justify-content: space-between;
             align-items: center;
