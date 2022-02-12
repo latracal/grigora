@@ -1507,124 +1507,193 @@ function forced_meta_css(){
     $out = "";
     if(is_single() || is_page()){
         if(
-            get_post_meta(get_the_ID(), '_grigora-sidebar-align', true ) &&
+            (
+                get_post_meta(get_the_ID(), '_grigora-layout-container', true ) &&
+                get_post_meta( get_the_ID(), '_grigora-layout-container', true ) != get_theme_mod('grg_layout-container', grigora_spacing_defaults()['grg_layout-container'])
+            ) ||
+            (
+                get_post_meta(get_the_ID(), '_grigora-sidebar-align', true ) &&
             get_post_meta( get_the_ID(), '_grigora-sidebar-align', true ) != get_theme_mod('grg_sidebar-alignment', grigora_spacing_defaults()['grg_sidebar-alignment'])
+            )
         )
-        {
-            $out = $out."
-            .container{
-                flex-direction: ".get_post_meta( get_the_ID(), '_grigora-sidebar-align', true ).";
-            }
+        {  
+            
 
-            .container .article{
-                border-right:none !important;
-                border-left:1px solid #aaaaaa !important;
+            if(get_post_meta(get_the_ID(), '_grigora-layout-container', true )){
+                $layout_container = get_post_meta(get_the_ID(), '_grigora-layout-container', true );
             }
-            ";
+            else{
+                $layout_container = get_theme_mod("grg_layout-container", grigora_spacing_defaults()["grg_layout-container"]);
+            }
+            if(get_post_meta(get_the_ID(), '_grigora-sidebar-align', true )){
+                $sidebar_layout = get_post_meta(get_the_ID(), '_grigora-sidebar-align', true );
+            }
+            else{
+                $sidebar_layout = get_theme_mod("grg_sidebar-alignment", grigora_spacing_defaults()["grg_sidebar-alignment"]);
+            }
+            // echo "here";
+            // echo $layout_container;
+            // echo $sidebar_layout;
+            if($layout_container=="containedpadded" && $sidebar_layout=="row"){
+                $out=$out."
+                .grigora-primary-sidebar{
+                    display:block;
+                }
+                .container .article{
+                    padding: 0 2.5rem;
+                }
 
-            if(get_post_meta(get_the_ID(), '_grigora-sidebar-align', true ) == 'none'){
-                $out = $out."
+                .container {
+                    flex-direction: row;
+                }
+        
+                .container .grigora-primary-sidebar{
+                    padding: 0 2.5rem;
+                }
+                ";
+            }
+            else if($layout_container=="containedpadded" && $sidebar_layout=="row-reverse"){
+                $out=$out."
+                .grigora-primary-sidebar{
+                    display:block;
+                }
+                .container .article{
+                    padding: 0 2.5rem;
+                }
+
+                .container {
+                    flex-direction: row-reverse;
+                }
+        
+                .container .grigora-primary-sidebar{
+                    padding: 0 2.5rem;
+                }
+                ";
+            }
+            else if($layout_container=="containedpadded" && $sidebar_layout=="none"){
+                $out=$out."
+                .container .article{
+                    padding: 0 2.5rem;
+                }
+
+                .container {
+                    flex-direction: row-reverse;
+                }
+        
+                .container .grigora-primary-sidebar{
+                    padding: 0 2.5rem;
+                }
+
                 .grigora-primary-sidebar{
                     display:none;
                 }
-
+                ";
+            }
+            else if($layout_container=="containedfull" && $sidebar_layout=="row"){
+                $out=$out."
+                .grigora-primary-sidebar{
+                    display:block;
+                }
                 .container .article{
-                    width: 100% !important;
-                    border:none !important;
+                    padding: 0 2.5rem 0 0;
+                }
+
+                .container {
+                    flex-direction: row;
+                }
+        
+                .container .grigora-primary-sidebar{
+                    padding: 0 0 0 2.5rem;
                 }
                 ";
             }
-        }
-        if(
-            get_post_meta(get_the_ID(), '_grigora-layout-container', true ) &&
-            get_post_meta( get_the_ID(), '_grigora-layout-container', true ) != get_theme_mod('grg_layout-container', grigora_spacing_defaults()['grg_layout-container'])
-        ){
-            if(get_post_meta(get_the_ID(), '_grigora-layout-container', true )== 'containedpadded') {
+            else if($layout_container=="containedfull" && $sidebar_layout=="row-reverse"){
+                $out=$out."
+                .grigora-primary-sidebar{
+                    display:block;
+                }
+                .container .article{
+                    padding: 0 0 0 2.5rem;
+                }
+
+                .container {
+                    flex-direction: row-reverse;
+                }
+        
+                .container .grigora-primary-sidebar{
+                    padding: 0 2.5rem 0 0;
+                }
+                ";
+            }
+            else if($layout_container=="containedfull" && $sidebar_layout=="none"){
                 $out=$out."
                 .container .article{
-                    padding: 0 2.5rem;
+                    padding: 0 0 0 0;
                 }
-        
-                .container .grigora-primary-sidebar{
-                    padding: 0 2.5rem;
-                }
-                ";
-             } else 
-            if(get_post_meta(get_the_ID(), '_grigora-layout-container', true )== 'containedfull' && get_theme_mod('grg_sidebar-alignment', grigora_spacing_defaults()['grg_sidebar-alignment'])== 'row-reverse'){
-                $out=$out."
-                .container .article{         
-                    padding-right: 0;
-                }
-        
-                .container .grigora-primary-sidebar{
-                    padding-left: 0;
-                }
-                ";
-            } 
-            else if(get_post_meta(get_the_ID(), '_grigora-layout-container', true )== 'containedfull' && get_theme_mod('grg_sidebar-alignment', grigora_spacing_defaults()['grg_sidebar-alignment'])== 'none'){
-                $out=$out."
-                .container .article{
-                    padding-left: 0;
-                    padding-right: 0;
-                }
-        
-                .container .grigora-primary-sidebar{
-                    padding-right: 0;
-                }
-                ";
-            } else if(get_post_meta(get_the_ID(), '_grigora-layout-container', true )== 'stretch' && get_theme_mod('grg_sidebar-alignment', grigora_spacing_defaults()['grg_sidebar-alignment'])== 'row-reverse'){
-                $out=$out."
-                .container .article{         
-                    padding-right: 0;
-                }
-        
-                .container .grigora-primary-sidebar{
-                    padding-left: 0;
-                }
-        
-                .container{
-                    max-width:100% !important;
-                }
-                ";
-            } else if(get_post_meta(get_the_ID(), '_grigora-layout-container', true )== 'stretch' && get_theme_mod('grg_sidebar-alignment', grigora_spacing_defaults()['grg_sidebar-alignment'])== 'none'){
-                $out=$out."
-                .container .article{
-                    padding-left: 0;
-                    padding-right: 0;
-                }
-        
-                .container .grigora-primary-sidebar{
-                    padding-right: 0;
+                .grigora-primary-sidebar{
+                    display:none;
                 }
                 
+                ";
+            }
+            else if($layout_container=="stretch" && $sidebar_layout=="row"){
+                $out=$out."
+                .grigora-primary-sidebar{
+                    display:block;
+                }
                 .container{
                     max-width:100% !important;
-                }";
-            } else if(get_post_meta(get_the_ID(), '_grigora-layout-container', true )== 'containedfull'){
-                $out=$out."
+                }
                 .container .article{
-                    padding-left: 0;            
+                    padding: 0 2.5rem 0 0;
+                }
+
+                .container {
+                    flex-direction: row;
                 }
         
                 .container .grigora-primary-sidebar{
-                    padding-right: 0;
-                }
-                ";
-            } 
-            else if(get_post_meta(get_the_ID(), '_grigora-layout-container', true )== 'stretch'){
-                $out=$out."
-                .container .article{
-                    padding-left: 0;
-                }
-        
-                .container .grigora-primary-sidebar{
-                    padding-right: 0;
+                    padding: 0 0 0 2.5rem;
                 }
                 
+                ";
+            }
+            else if($layout_container=="stretch" && $sidebar_layout=="row-reverse"){
+                $out=$out."
+                .grigora-primary-sidebar{
+                    display:block;
+                }
                 .container{
                     max-width:100% !important;
-                }";
-            } 
+                }
+                .container .article{
+                    padding: 0 0 0 2.5rem;
+                }
+
+                .container {
+                    flex-direction: row-reverse;
+                }
+        
+                .container .grigora-primary-sidebar{
+                    padding: 0 2.5rem 0 0;
+                }
+                
+                ";
+            }
+            else if($layout_container=="stretch" && $sidebar_layout=="none"){
+                $out=$out."
+                .container{
+                    max-width:100% !important;
+                }
+                .container .article{
+                    padding: 0 0 0 0;
+                }
+                .grigora-primary-sidebar{
+                    display:none;
+                }
+                
+                ";
+            }
         }
     }
  

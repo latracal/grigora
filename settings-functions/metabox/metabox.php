@@ -125,7 +125,7 @@ if ( ! class_exists( 'ezTOC_Option' ) ) {
                             );
                             echo '<select name="grigora-settings[' . $args['id'] . ']" id="grigora-settings[' . $args['id'] . ']">
                                 <option value="containedpadded" '.(($layout_container == 'containedpadded') ?  'selected="selected"' : '').'>Contained Padded</option>
-                                <option value="row-containedfull" '.(($layout_container == 'row-containedfull') ?  'selected="selected"' : '').'>Contained Full Width</option>
+                                <option value="containedfull" '.(($layout_container == 'containedfull') ?  'selected="selected"' : '').'>Contained Full Width</option>
                                 <option value="stretch" '.(($layout_container == 'stretch') ?  'selected="selected"' : '').'>Stretch Full Width</option>
                             </select>';
                         }
