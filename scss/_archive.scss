@@ -19,7 +19,7 @@
 
 		@media (max-width: 768px) {
 			border-right: none;
-			padding: 0 1rem;
+			padding: 0 1rem !important;
 			width: 100%;
 		}
 
@@ -862,7 +862,7 @@
 
 		@media (max-width: 768px) {
 			width: 100%;
-			padding: 0 1rem;
+			padding: 0 1rem !important;
 		}
 	}
 }

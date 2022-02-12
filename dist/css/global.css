@@ -846,7 +846,7 @@
 @media (max-width: 768px) {
   .container .article {
     border-right: none;
-    padding: 0 1rem;
+    padding: 0 1rem !important;
     width: 100%;
   }
 }
@@ -1787,7 +1787,7 @@
 @media (max-width: 768px) {
   .container .grigora-primary-sidebar {
     width: 100%;
-    padding: 0 1rem;
+    padding: 0 1rem !important;
   }
 }
 
