@@ -249,18 +249,14 @@ body {
     }
 
     
-        .container .article, .container .article{
-            padding-left: 0;
-            padding-right: 0;
+        .container .article{
+            padding: 0 2.5rem;
         }
 
         .container .grigora-primary-sidebar{
-            padding-right: 0;
+            padding: 0 2.5rem;
         }
-        
-        .container{
-            max-width:100% !important;
-        }.container .article {
+        .container .article {
             width: 100%;
             border-right: none;
             
@@ -289,7 +285,7 @@ body {
         }
 
         .container {
-        max-width: 885px;
+        max-width: 852px;
 
     }
 

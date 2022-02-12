@@ -1535,47 +1535,57 @@ function forced_meta_css(){
                 ";
             }
         }
-        if(get_post_meta(get_the_ID(), '_grigora-layout-container', true )){
-            $layout_container = get_post_meta(get_the_ID(), '_grigora-layout-container', true );
-        }
-        else{
-            $layout_container = get_theme_mod("grg_layout-container", grigora_spacing_defaults()["grg_layout-container"]);
-        }
-        if(get_post_meta(get_the_ID(), '_grigora-sidebar-align', true )){
-            $sidebar_layout = get_post_meta(get_the_ID(), '_grigora-sidebar-align', true );
-        }
-        else{
-            $layout_container = get_theme_mod("grg_sidebar-alignment", grigora_spacing_defaults()["grg_sidebar-alignment"]);
-        }
-        
-        // todo
-        if($layout_container=="containedpadded" && $sidebar_layout=="row"){
 
-        }
-        else if($layout_container=="containedpadded" && $sidebar_layout=="row-reverse"){
 
-        }
-        else if($layout_container=="containedpadded" && $sidebar_layout=="none"){
+        if(
+            get_post_meta(get_the_ID(), '_grigora-layout-container', true ) &&
+            get_post_meta( get_the_ID(), '_grigora-layout-container', true ) != get_theme_mod('grg_layout-container', grigora_spacing_defaults()['grg_layout-container'])
+            )
+        {
 
-        }
-        else if($layout_container=="containedfull" && $sidebar_layout=="row"){
+            if(get_post_meta(get_the_ID(), '_grigora-layout-container', true )){
+                $layout_container = get_post_meta(get_the_ID(), '_grigora-layout-container', true );
+            }
+            else{
+                $layout_container = get_theme_mod("grg_layout-container", grigora_spacing_defaults()["grg_layout-container"]);
+            }
+            if(get_post_meta(get_the_ID(), '_grigora-sidebar-align', true )){
+                $sidebar_layout = get_post_meta(get_the_ID(), '_grigora-sidebar-align', true );
+            }
+            else{
+                $layout_container = get_theme_mod("grg_sidebar-alignment", grigora_spacing_defaults()["grg_sidebar-alignment"]);
+            }
 
-        }
-        else if($layout_container=="containedfull" && $sidebar_layout=="row-reverse"){
 
-        }
-        else if($layout_container=="containedfull" && $sidebar_layout=="none"){
+            // todo
+            if($layout_container=="containedpadded" && $sidebar_layout=="row"){
 
-        }
-        else if($layout_container=="stretch" && $sidebar_layout=="row"){
+            }
+            else if($layout_container=="containedpadded" && $sidebar_layout=="row-reverse"){
 
-        }
-        else if($layout_container=="stretch" && $sidebar_layout=="row-reverse"){
+            }
+            else if($layout_container=="containedpadded" && $sidebar_layout=="none"){
 
-        }
-        else if($layout_container=="stretch" && $sidebar_layout=="none"){
+            }
+            else if($layout_container=="containedfull" && $sidebar_layout=="row"){
 
-        }
+            }
+            else if($layout_container=="containedfull" && $sidebar_layout=="row-reverse"){
+
+            }
+            else if($layout_container=="containedfull" && $sidebar_layout=="none"){
+
+            }
+            else if($layout_container=="stretch" && $sidebar_layout=="row"){
+
+            }
+            else if($layout_container=="stretch" && $sidebar_layout=="row-reverse"){
+
+            }
+            else if($layout_container=="stretch" && $sidebar_layout=="none"){
+
+            }
+        }   
     }
  
     return $out;
