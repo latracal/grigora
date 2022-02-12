@@ -249,27 +249,28 @@ body {
     }
 
     
-        .container .article{         
-            padding-right: 0;
+        .container .article{
+            padding: 0 2.5rem;
         }
 
         .container .grigora-primary-sidebar{
-            padding-left: 0;
+            padding: 0 2.5rem;
         }
-
-        .container{
-            max-width:100% !important;
-        }
-        .container {
-            flex-direction: row-reverse;
+        .container .article {
+            width: 100%;
             
-
         }
 
         .container .article {
-            border-right: 0;
-            border-left: 1px solid #aaaaaa;
-        }.desktop-nav{
+            width: 100%;
+            
+        }
+
+
+        .grigora-primary-sidebar {
+            display: none;
+            
+        } .desktop-nav{
             flex-direction:row;
             justify-content: space-between;
             align-items: center;
