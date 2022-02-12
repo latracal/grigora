@@ -127,6 +127,7 @@ if ( ! function_exists( 'grigora_spacing_defaults' ) ) {
 			'grg_sidebar-alignment' => 'row',		
 			'grg_sidebar-width' => '30',	
 			'grg_sidebar-padding' => 15,
+			'grg_layout-container' => 'containedpadded',
 			'grg_container-width'=> '1366',
 			'grg_container-top-padding'=> '0',		
 			'grg_container-right-padding'=> '0',		
