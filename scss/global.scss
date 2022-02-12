@@ -22,8 +22,12 @@ p {
 	font-size: 13px;
 }
 
-.container > :nth-child(2) {
-	border-left: 1px solid #aaaaaa;
+.grg-right-sidebar aside.grigora-primary-sidebar {
+	border-left: 1px solid #c4c4c4;
+}
+
+.grg-left-sidebar aside.grigora-primary-sidebar {
+	border-right: 1px solid #c4c4c4;
 }
 
 .read-btn {

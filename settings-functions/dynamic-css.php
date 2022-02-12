@@ -665,12 +665,10 @@ if($spacing_flag) {
 
         }
 
-        .container > :nth-child(2){
-            border-right: 1px solid #aaaaaa;
-            border-left: none;
+        .container .article {
+            border-right: 0;
+            border-left: 1px solid #aaaaaa;
         }";
-
-
     }
 
     else {
