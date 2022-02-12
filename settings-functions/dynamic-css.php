@@ -665,14 +665,9 @@ if($spacing_flag) {
 
         }
 
-        .container .article {
-            border-right: 0;
-            border-left: 1px solid #aaaaaa;
-        }
-
-        .container .article {
-            border-right: 0;
-            border-left: 1px solid #aaaaaa;
+        .container > :nth-child(2){
+            border-right: 1px solid #aaaaaa;
+            border-left: none;
         }";
 
 
