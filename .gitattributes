@@ -1,4 +1,4 @@
-grigora-wp.zip
-.gitignore
-.gitattributes
-.git/*
+grigora-wp.zip export-ignore
+.gitignore export-ignore
+.gitattributes export-ignore
+.git/* export-ignore
