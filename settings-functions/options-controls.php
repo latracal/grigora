@@ -114,7 +114,7 @@ echo '<div class="admin-container">';
 </div>
 <?php 
     if ( !is_grigora_pro_active() ) {
-        echo '<div class="pro-notification"><p>Activate All Powerful Options By Purchasing Girgora Pro </p><button class="pro-btn">Buy Now</button></div>';
+        echo '<div class="pro-notification"><p>Activate All Powerful Options By Purchasing Girgora Pro </p><a href="https://wpgrigora.com/pro/" target="_blank"><button class="pro-btn">Buy Now</button></a></div>';
     }
 ?>
 <div class="grigora-settings">
@@ -158,6 +158,17 @@ echo '<div class="admin-container">';
             </div>
         </form>
         <div class="other">
+        </div>
+    </div>
+    <div class="grigora-admin-sidebar">
+        <div class="activation-form">
+            <form action="<?php echo esc_url( admin_url('admin-post.php' ) ) ?>" method="post">
+            <input type="hidden" name="action" value="grigora_update_license_key">
+            <?php wp_nonce_field( 'grigora_activation_nonce', 'grigora_activation_nonce' ); ?>
+            <p>Enter license key: </p>
+            <input type="password" id="grigora_license_key" name="grigora_license_key">
+            <?php submit_button(); ?>
+            </form>
         </div>
     </div>
 </div>
