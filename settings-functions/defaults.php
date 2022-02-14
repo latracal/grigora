@@ -270,6 +270,7 @@ if ( ! function_exists( 'grigora_blog_defaults' ) ) {
 			"grg_blog_single_postnav" => 1,
 			"grg_blog_single_featuredim_loc" => "column",
 			"grg_blog_single_featuredim_align" => "center",
+			"grg_blog_archive_image_fill" => "cover",
 		);
 	}
 }

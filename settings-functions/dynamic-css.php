@@ -1095,7 +1095,10 @@ if($blog_flag) {
 
     .feature-img {
         text-align: ".get_theme_mod('grg_blog_single_featuredim_align', $blog_defaults['grg_blog_single_featuredim_align']).";
-        
+    }
+    
+    .container .article .post-container .post img{
+        object-fit: ".get_theme_mod('grg_blog_archive_image_fill', $blog_defaults['grg_blog_archive_image_fill']).";
     }";
 
 
@@ -1104,12 +1107,14 @@ if($blog_flag) {
 else {
     $out=$out.".post-header {
         flex-direction: ".$blog_defaults['grg_blog_single_featuredim_loc'].";
-        
     }
 
     .feature-img {
-        text-align: ".$blog_defaults['grg_blog_single_featuredim_align'].";
-        
+        text-align: ".$blog_defaults['grg_blog_single_featuredim_align'].";     
+    }
+    
+    .container .article .post-container .post img{
+        object-fit: ".$blog_defaults['grg_blog_archive_image_fill'].";
     }";
 
 
