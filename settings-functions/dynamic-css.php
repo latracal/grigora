@@ -121,7 +121,7 @@ function grg_dynamic_customize_css_var() {
     }
 
     main a,
-    .container .article p a, .container .article .cat-name, footer .copyrights a{
+    .container .article p a, .container .article .cat-name, footer .copyrights a, .grigora-primary-sidebar a{
         color: ".get_theme_mod('grg_anchor-text-color', $defaults['grg_anchor-text-color']).";
     }
 
