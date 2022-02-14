@@ -17,6 +17,11 @@ if (grigora_get_option("typography") && function_exists('google_fonts')){
      */
 
     function grigora_add_google_fonts() {
+
+        if(grigora_get_option("localfonts")){
+            require_once get_theme_file_path( 'inc/wptt-webfont-loader.php' );
+        }
+        
         $safewebfonts = array(
             "Arial",
             "Times New Roman",
@@ -49,7 +54,12 @@ if (grigora_get_option("typography") && function_exists('google_fonts')){
         }
         if($count>0){
             $font_request = $font_request.'&display=fallback';
-            wp_enqueue_style( 'grigora-google-fonts', $font_request, false ); 
+            if(!grigora_get_option("localfonts")){
+                wp_enqueue_style( 'grigora-google-fonts', $font_request, false ); 
+            }
+            else{
+                wp_enqueue_style( 'grigora-google-fonts', wptt_get_webfont_url(esc_url_raw($font_request)), false ); 
+            }
         }
         
     }

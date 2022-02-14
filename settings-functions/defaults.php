@@ -40,7 +40,7 @@ if ( ! function_exists( 'grigora_get_defaults' ) ) {
 				'hidewpversion' => 0,
 				'minify' => 0,
 				'dynamicexternal' => 0,
-				'colordefaultsset' => 0,
+				'localfonts' => 0,
 			)
 		);
 	}

@@ -527,6 +527,14 @@ function grigora_customize_settings_section() {
     );
 
     add_settings_field(
+        'grigora_performance_section_localfonts',
+        'Host Google Fonts Locally',
+        'grigora_performance_section_localfonts_callback_function',
+        'grigora-options',
+        'grigora_performance_section'
+    );
+
+    add_settings_field(
        'grigora_performance_section_emoji',
        'Disable Emojis',
        'grigora_performance_section_emoji_callback_function',
@@ -640,6 +648,9 @@ function grigora_performance_section_minify_callback_function() {
 }
 function grigora_performance_section_dynamicexternal_callback_function() {
     echo '<input name="grigora_settings[dynamicexternal]" id="grigora_settings[dynamicexternal]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'dynamicexternal' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
+}
+function grigora_performance_section_localfonts_callback_function() {
+    echo '<input name="grigora_settings[localfonts]" id="grigora_settings[localfonts]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'localfonts' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
 }
 function grigora_performance_section_emoji_callback_function() {
     echo '<input name="grigora_settings[emoji]" id="grigora_settings[emoji]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'emoji' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';

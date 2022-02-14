@@ -75,7 +75,7 @@ body {
     }
 
     main a,
-    .container .article p a, .container .article .cat-name, footer .copyrights a{
+    .container .article p a, .container .article .cat-name, footer .copyrights a, .grigora-primary-sidebar a{
         color: #0170b9;
     }
 
@@ -336,7 +336,7 @@ body {
     }
 
     body {
-        font-family: Arial, sans-serif;
+        font-family: Chelsea Market, sans-serif;
         
     }
 
@@ -471,7 +471,10 @@ body {
 
     .feature-img {
         text-align: center;
-        
+    }
+    
+    .container .article .post-container .post img{
+        object-fit: cover;
     } .to-top {
         border-radius: 5px;
     } .to-top {
