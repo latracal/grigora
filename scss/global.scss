@@ -33,7 +33,13 @@ h4,
 h5,
 h6,
 p,
-span {
+span,
+dd,
+fieldset legend,
+blockquote,
+pre,
+hr,
+table {
 	margin-bottom: 1rem;
 }
 
