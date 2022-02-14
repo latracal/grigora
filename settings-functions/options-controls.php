@@ -118,46 +118,46 @@ echo '<div class="admin-container">';
     }
 ?>
 <div class="grigora-settings">
-    <div class="tab">
-        <button class="tab-btn" onclick="controlName(event, 'grigora_customizer_section')" id="default">Customizer
-            Options</button>
-        <button class="tab-btn" onclick="controlName(event, 'grigora_performance_section')">Performance</button>
-        <button class="tab-btn IE-tab" onclick="controlName(event, 'grigora_importexport_section')">Import &
-            Export</button>
-    </div>
-    <div class="tab-content">
-        <form action="options.php" method="post" class=" <?php echo (is_grigora_pro_active() ? '' : 'disabled') ?>">
+    <div class="tab-container">
+        <div class="tab">
+            <button class="tab-btn" onclick="controlName(event, 'grigora_customizer_section')" id="default">Customizer
+                Options</button>
+            <button class="tab-btn" onclick="controlName(event, 'grigora_performance_section')">Performance</button>
+            <button class="tab-btn IE-tab" onclick="controlName(event, 'grigora_importexport_section')">Import &
+                Export</button>
+        </div>
+        <div class="tab-content">
+            <form action="options.php" method="post" class=" <?php echo (is_grigora_pro_active() ? '' : 'disabled') ?>">
 
-            <?php
+                <?php
             settings_fields("grigora_settings");
             custom_do_settings_sections("grigora-options");
             submit_button();
         ?>
-        </form>
-        <form enctype="multipart/form-data" action="<?php echo get_admin_url( null, 'admin-post.php' ) ?>" method="post"
-            class="IETab <?php echo (is_grigora_pro_active() ? '' : 'disabled') ?>">
-            <div class="grigora_importexport_section customizer " id="grigora_importexport_section">
-                <h2>Import &amp; Export</h2>
-                <input type="hidden" name="action" value="grigora_import">
-                <p>Save and Restore your Grigora Settings in One Click!</p>
-                <table class="form-table" role="presentation">
-                    <tbody>
-                        <tr>
-                            <th scope="row">Export</th>
-                            <td><?php grigora_importexport_section_export_callback_function(); ?></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Import</th>
-                            <td><?php grigora_importexport_section_import_callback_function(); ?></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <?php
+            </form>
+            <form enctype="multipart/form-data" action="<?php echo get_admin_url( null, 'admin-post.php' ) ?>"
+                method="post" class="IETab <?php echo (is_grigora_pro_active() ? '' : 'disabled') ?>">
+                <div class="grigora_importexport_section customizer " id="grigora_importexport_section">
+                    <h2>Import &amp; Export</h2>
+                    <input type="hidden" name="action" value="grigora_import">
+                    <p>Save and Restore your Grigora Settings in One Click!</p>
+                    <table class="form-table" role="presentation">
+                        <tbody>
+                            <tr>
+                                <th scope="row">Export</th>
+                                <td><?php grigora_importexport_section_export_callback_function(); ?></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Import</th>
+                                <td><?php grigora_importexport_section_import_callback_function(); ?></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <?php
                     submit_button();
                 ?>
-            </div>
-        </form>
-        <div class="other">
+                </div>
+            </form>
         </div>
     </div>
     <div class="grigora-admin-sidebar">

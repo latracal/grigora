@@ -38,11 +38,30 @@
 	.grigora-settings {
 		display: flex;
 		flex-direction: row;
+		justify-content: space-between;
+
+		@media (max-width: 768px) {
+			flex-direction: column;
+		}
+
+		.tab-container {
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+
+			@media (max-width: 768px) {
+				flex-direction: column;
+			}
+		}
 
 		.tab {
 			display: flex;
 			flex-direction: column;
 			width: 25%;
+
+			@media (max-width: 768px) {
+				width: 100%;
+			}
 
 			.tab-btn {
 				cursor: pointer;
@@ -61,11 +80,15 @@
 		}
 
 		.tab-content {
-			width: 50%;
-		}
+			width: 75%;
 
-		.other {
-			width: 25%;
+			@media (max-width: 768px) {
+				width: 100%;
+			}
+
+			p.submit {
+				text-align: center;
+			}
 		}
 	}
 

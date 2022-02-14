@@ -51,6 +51,38 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .admin-container .grigora-settings {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.admin-container .grigora-settings .tab-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .admin-container .grigora-settings .tab-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .admin-container .grigora-settings .tab {
@@ -62,6 +94,12 @@
       -ms-flex-direction: column;
           flex-direction: column;
   width: 25%;
+}
+
+@media (max-width: 768px) {
+  .admin-container .grigora-settings .tab {
+    width: 100%;
+  }
 }
 
 .admin-container .grigora-settings .tab .tab-btn {
@@ -80,11 +118,17 @@
 }
 
 .admin-container .grigora-settings .tab-content {
-  width: 50%;
+  width: 75%;
 }
 
-.admin-container .grigora-settings .other {
-  width: 25%;
+@media (max-width: 768px) {
+  .admin-container .grigora-settings .tab-content {
+    width: 100%;
+  }
+}
+
+.admin-container .grigora-settings .tab-content p.submit {
+  text-align: center;
 }
 
 .admin-container .disabled {
