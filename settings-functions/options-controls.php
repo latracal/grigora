@@ -188,7 +188,7 @@ echo '<div class="admin-container">';
                 <div class="header">Grigora Pro License</div>
                 <input type="hidden" name="action" value="grigora_update_license_key">
                 <?php wp_nonce_field( 'grigora_activation_nonce', 'grigora_activation_nonce' ); ?>
-                <p>Enter your <a href="">license key</a> to enable auto updates. </p>
+                <p>Enter your <a href="https://wpgrigora.com/pro/">license key</a> to enable auto updates. </p>
                 <input type="password" id="grigora_license_key" name="grigora_license_key">
                 <input type="submit" name="submit" id="submit" class="button button-primary" value="Activate">
             </form>
