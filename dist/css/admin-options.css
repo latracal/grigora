@@ -178,6 +178,25 @@
   border-bottom: none;
 }
 
+@media (max-width: 768px) {
+  .admin-container .customizer .form-table tr th {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-container .customizer .form-table tr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
 .admin-container .customizer .form-table td {
   position: relative;
   display: table;
@@ -189,6 +208,12 @@
   margin-left: auto;
   margin-bottom: 0;
   overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .admin-container .customizer .form-table td {
+    margin: 0;
+  }
 }
 
 .admin-container .customizer .form-table td .checkbox {

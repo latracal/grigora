@@ -134,6 +134,19 @@
 				&:last-child {
 					border-bottom: none;
 				}
+
+				th {
+					@media (max-width: 768px) {
+						display: inline-block;
+					}
+				}
+
+				@media (max-width: 768px) {
+					display: flex;
+					justify-content: space-between;
+					padding-bottom: 1rem;
+					margin-bottom: 1rem;
+				}
 			}
 
 			td {
@@ -147,6 +160,10 @@
 				margin-left: auto;
 				margin-bottom: 0;
 				overflow: hidden;
+
+				@media (max-width: 768px) {
+					margin: 0;
+				}
 
 				.checkbox {
 					position: relative;
