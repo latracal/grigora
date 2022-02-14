@@ -658,6 +658,10 @@
   margin-left: 0;
 }
 
+.mobile-header .menu-container .menu ul {
+  margin-left: 0;
+}
+
 @media (max-width: 768px) {
   .mobile-header .menu-container .menu li {
     margin: 0 0.5rem;
