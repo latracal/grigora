@@ -109,21 +109,21 @@ if(forced_meta_css()){
                     </div>
                     <?php } ?>
                     <?php 
-            if(has_custom_logo()){
-                ?>
+                    if(has_custom_logo()){
+                        ?>
                     <div class="logo">
                         <?php
-                    if ( function_exists( 'the_custom_logo' ) ) {
-                    the_custom_logo();
-                    echo '<span class="site-title-hidden" itemprop="name">
-                    '.get_bloginfo( 'name' ).'
-                    </span>';
-                    }
-                ?>
+                            if ( function_exists( 'the_custom_logo' ) ) {
+                            the_custom_logo();
+                            echo '<span class="site-title-hidden" itemprop="name">
+                            '.get_bloginfo( 'name' ).'
+                            </span>';
+                            }
+                        ?>
                     </div>
                     <?php
-            } else { 
-            ?>
+                    } else { 
+                    ?>
                     <div class="title">
                         <div class="site-title"
                             itemprop="<?php echo grg_get_schema_tag('organizationname')['itemprop'] ?>">
