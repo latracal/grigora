@@ -78,7 +78,7 @@ if(forced_meta_css()){
                         'theme_location' => 'primary',
                         'container' => false,
                         'menu_class' => 'menu hide',
-                        'fallback_cb' => false,
+                        'fallback_cb' => 'fallback_menu',
                         'depth' => 2,
                     ]);
                     echo "</div>";
