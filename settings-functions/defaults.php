@@ -259,6 +259,7 @@ if ( ! function_exists( 'grigora_blog_defaults' ) ) {
 			"grg_blog_archive_date_display" => 1,
 			"grg_blog_archive_author_display" => 1,
 			"grg_blog_archive_image_display" => 1,
+			"grg_blog_archive_image_fill" => "cover",
 			"grg_blog_single_author_display" => 1,
 			"grg_blog_single_date_display" => 1,
 			"grg_blog_single_social_share" => 1,
