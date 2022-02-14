@@ -1,0 +1,169 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+	margin-bottom: 1rem;
+}
+
+svg {
+	width: 20px;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+.hero {
+	background: linear-gradient(90deg, #6a8dde 0%, #68c6df 100%);
+	margin-bottom: 4rem;
+
+	.hero-content {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		color: #fff;
+		width: 1366px;
+		height: 100vh;
+		margin: 0 auto;
+		padding: 0 5rem;
+
+		img {
+			width: 50rem;
+		}
+
+		.abstract {
+			position: absolute;
+			top: 50%;
+			transform: translate(50%, -50%);
+		}
+
+		.theme-point {
+			display: flex;
+			margin-bottom: 1rem;
+
+			svg {
+				color: #fff;
+				margin-right: 0.5rem;
+			}
+
+			p {
+				margin-bottom: 0;
+			}
+		}
+
+		a {
+			color: #fff;
+			display: inline-block;
+			text-decoration: none;
+			background-color: #291bc8;
+			padding: 1rem;
+			border-radius: 2rem;
+		}
+	}
+}
+
+.container {
+	position: relative;
+	max-width: 1366px;
+	margin: 0 auto;
+	color: #494444;
+
+	.customize {
+		text-align: center;
+		margin-bottom: 4rem;
+
+		.setting {
+			display: flex;
+			margin-top: 3rem;
+
+			div {
+				padding: 0 5rem;
+			}
+
+			.setting-icon {
+				display: inline-block;
+				background: linear-gradient(
+					122.88deg,
+					#408cc2 -23.04%,
+					rgba(62, 173, 53, 0.46) 123.28%
+				);
+				padding: 1.9rem 2rem;
+				border-radius: 50%;
+			}
+		}
+	}
+
+	.performance-section {
+		margin-bottom: 4rem;
+
+		h2 {
+			text-align: center;
+		}
+
+		.performance {
+			display: flex;
+			flex-direction: row;
+			padding: 0 4rem;
+			margin-top: 3rem;
+
+			h2 {
+				text-align: center;
+			}
+
+			div {
+				&:first-child {
+					width: 30%;
+				}
+				&:last-child {
+					width: 70%;
+					padding-left: 5rem;
+
+					ul {
+						margin-left: 1rem;
+					}
+				}
+			}
+		}
+	}
+
+	.feature-section {
+		margin-bottom: 4rem;
+		padding: 0 4rem;
+
+		h2 {
+			text-align: center;
+		}
+
+		.features {
+			display: flex;
+			margin-bottom: 3rem;
+
+			&:nth-child(odd) {
+				flex-direction: row-reverse;
+			}
+
+			div {
+				&:first-child {
+					width: 70%;
+				}
+
+				&:last-child {
+					width: 30%;
+				}
+			}
+		}
+	}
+}
