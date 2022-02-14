@@ -1254,15 +1254,6 @@ $out=$out."
 }";
 
 
-if(!has_nav_menu( 'primary' )){
-    $out=$out." .menu-container .search-btn {
-        -webkit-transform: translate(0%, -50%);
-        transform: translate(0%, -50%);
-    }
-    
-    ";
-}
-
 if(function_exists("grigora_wcm_css")){
     $out = $out.grigora_wcm_css();
 }
