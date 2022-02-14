@@ -19,11 +19,6 @@ function grg_setup_theme(){
 	register_nav_menu('footer', __('footer Menu', 'grg'));
 }
 
-// Menu Fallback
-function fallback_menu() {
-    get_template_part( 'template-parts/fallback_menu.php' );
-}
-
 /**
  * Add custom logo setup
  *

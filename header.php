@@ -78,7 +78,7 @@ if(forced_meta_css()){
                         'theme_location' => 'primary',
                         'container' => false,
                         'menu_class' => 'menu hide',
-                        'fallback_cb' => 'fallback_menu',
+                        'fallback_cb' => true,
                         'depth' => 2,
                     ]);
                     echo "</div>";
@@ -162,7 +162,6 @@ if(forced_meta_css()){
                         'theme_location' => 'primary',
                         'container' => false,
                         'menu_class' => 'menu hide',
-                        'fallback_cb' => false,
                         'depth' => 2,
                     ]);
                     echo "</div>";
