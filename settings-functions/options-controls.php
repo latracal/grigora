@@ -161,15 +161,36 @@ echo '<div class="admin-container">';
         </div>
     </div>
     <div class="grigora-admin-sidebar">
-        <div class="activation-form">
+        <?php if(get_option("grigora_license_key_status") == "valid"){
+            ?>
+        <div class="license-valid">
+            <div class="header">Grigora Pro License</div>
+            <div class="status">Valid</div>
+        </div>
+        <div class="deactivation-form">
+            <form action="<?php echo esc_url( admin_url('admin-post.php' ) ) ?>" method="post">
+            <input type="hidden" name="action" value="grigora_update_license_key">
+            <input type="hidden" id="grigora_license_key" name="grigora_license_key" value="">
+            <?php wp_nonce_field( 'grigora_activation_nonce', 'grigora_activation_nonce' ); ?>
+            <p>Press Deactivate button to disable auto updates.</p>
+            <input type="submit" name="submit" id="submit" class="button button-primary" value="Deactivate">
+            </form>
+        </div>
+        <?php } else { ?>
+            <div class="license-invalid">
+                <div class="header">Grigora Pro License</div>
+                <div class="status">Not Active</div>
+            </div>
+            <div class="activation-form">
             <form action="<?php echo esc_url( admin_url('admin-post.php' ) ) ?>" method="post">
             <input type="hidden" name="action" value="grigora_update_license_key">
             <?php wp_nonce_field( 'grigora_activation_nonce', 'grigora_activation_nonce' ); ?>
-            <p>Enter license key: </p>
+            <p>Enter your license key to enable auto updates. </p>
             <input type="password" id="grigora_license_key" name="grigora_license_key">
-            <?php submit_button(); ?>
+            <input type="submit" name="submit" id="submit" class="button button-primary" value="Activate">
             </form>
         </div>
+        <?php } ?>
     </div>
 </div>
 <?php
