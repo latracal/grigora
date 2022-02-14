@@ -188,4 +188,85 @@
 			}
 		}
 	}
+
+	.grigora-admin-sidebar {
+		.license-invalid {
+			text-align: center;
+			padding: 1rem;
+			margin: 0 1rem;
+			background-color: #fff;
+
+			.status {
+				color: #db3f3f;
+			}
+		}
+
+		.license-valid {
+			text-align: center;
+			padding: 1rem;
+			margin: 0 1rem;
+			background-color: #fff;
+
+			.status {
+				color: #3fdb4f;
+			}
+		}
+
+		.deactivation-form {
+			padding: 1rem;
+			margin: 1rem;
+			background-color: #fff;
+
+			#submit {
+				background-color: #bf000a;
+			}
+		}
+
+		.activation-form {
+			padding: 1rem;
+			margin: 1rem;
+			background-color: #fff;
+
+			.grg-active {
+				display: flex;
+				flex-direction: column;
+
+				#grigora_license_key {
+					margin-bottom: 1rem;
+				}
+			}
+
+			#submit {
+				background-color: #3fdb4f;
+			}
+		}
+
+		p {
+			color: #888888;
+			font-weight: bold;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		#submit {
+			display: block;
+			width: fit-content;
+			border: none;
+			padding: 0.3rem 5rem;
+			margin: 0 auto;
+		}
+
+		.header {
+			text-align: center;
+			font-size: 16px;
+			font-weight: bold;
+			margin-bottom: 1rem;
+		}
+
+		.status {
+			font-weight: bold;
+		}
+	}
 }

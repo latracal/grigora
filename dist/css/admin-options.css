@@ -210,4 +210,90 @@
   transition: 0.3s ease all;
   z-index: 1;
 }
+
+.admin-container .grigora-admin-sidebar .license-invalid {
+  text-align: center;
+  padding: 1rem;
+  margin: 0 1rem;
+  background-color: #fff;
+}
+
+.admin-container .grigora-admin-sidebar .license-invalid .status {
+  color: #db3f3f;
+}
+
+.admin-container .grigora-admin-sidebar .license-valid {
+  text-align: center;
+  padding: 1rem;
+  margin: 0 1rem;
+  background-color: #fff;
+}
+
+.admin-container .grigora-admin-sidebar .license-valid .status {
+  color: #3fdb4f;
+}
+
+.admin-container .grigora-admin-sidebar .deactivation-form {
+  padding: 1rem;
+  margin: 1rem;
+  background-color: #fff;
+}
+
+.admin-container .grigora-admin-sidebar .deactivation-form #submit {
+  background-color: #bf000a;
+}
+
+.admin-container .grigora-admin-sidebar .activation-form {
+  padding: 1rem;
+  margin: 1rem;
+  background-color: #fff;
+}
+
+.admin-container .grigora-admin-sidebar .activation-form .grg-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.admin-container .grigora-admin-sidebar .activation-form .grg-active #grigora_license_key {
+  margin-bottom: 1rem;
+}
+
+.admin-container .grigora-admin-sidebar .activation-form #submit {
+  background-color: #3fdb4f;
+}
+
+.admin-container .grigora-admin-sidebar p {
+  color: #888888;
+  font-weight: bold;
+}
+
+.admin-container .grigora-admin-sidebar a {
+  text-decoration: none;
+}
+
+.admin-container .grigora-admin-sidebar #submit {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  padding: 0.3rem 5rem;
+  margin: 0 auto;
+}
+
+.admin-container .grigora-admin-sidebar .header {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.admin-container .grigora-admin-sidebar .status {
+  font-weight: bold;
+}
 /*# sourceMappingURL=admin-options.css.map */
