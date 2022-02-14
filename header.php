@@ -72,17 +72,16 @@ if(forced_meta_css()){
             </div>
             <div class="menu-container">
                 <?php
-                if( has_nav_menu( 'primary' ) ){
+                
                     echo '<div id="site-navigation" itemtype="'.grg_get_schema_tag('navigation')['itemtype'].'" itemscope="'.grg_get_schema_tag('navigation')['itemscope'].'">';
                     wp_nav_menu([
                         'theme_location' => 'primary',
                         'container' => false,
                         'menu_class' => 'menu hide',
-                        'fallback_cb' => true,
                         'depth' => 2,
                     ]);
                     echo "</div>";
-                }
+                
                 ?>
                 <?php if(get_theme_mod( 'grg_header-search-btn', grigora_spacing_defaults()['grg_header-search-btn'] )) { ?>
                 <div class="search-btn">
@@ -156,7 +155,7 @@ if(forced_meta_css()){
             </div>
             <div class="menu-container">
                 <?php
-                if( has_nav_menu( 'primary' ) ){
+                
                     echo '<div id="site-navigation" itemtype="'.grg_get_schema_tag('navigation')['itemtype'].'" itemscope="'.grg_get_schema_tag('navigation')['itemscope'].'">';
                     wp_nav_menu([
                         'theme_location' => 'primary',
@@ -165,7 +164,7 @@ if(forced_meta_css()){
                         'depth' => 2,
                     ]);
                     echo "</div>";
-                }
+                
                 ?>
             </div>
             <div class="search-form">
