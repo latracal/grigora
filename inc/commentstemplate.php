@@ -15,7 +15,7 @@ if ( ! function_exists( 'grigora_comment' ) ) {
 <li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
     <div class="comment-body">
         <?php echo esc_html( __( "Pingback", "grigora" )); ?>: <?php comment_author_link(); ?>
-        <?php edit_comment_link( 'esc_html( __( "Edit", "grigora" ))', '<span class="comment-edit-link">- ', '</span>' ); ?>
+        <?php edit_comment_link( esc_html( __( "Edit", "grigora" )), '<span class="comment-edit-link">- ', '</span>' ); ?>
     </div>
     <?php else : ?>
 <li id="comment-list comment-<?php comment_ID(); ?>"
@@ -36,7 +36,7 @@ if ( ! function_exists( 'grigora_comment' ) ) {
                 <div class="comment-author-time">
                     <time datetime="<?php comment_time( 'c' ); ?>" itemprop="datePublished">
                         <?php printf('%1$s at %2$s',get_comment_date(),get_comment_time()); ?>
-                        <?php edit_comment_link( 'esc_html( __( "Edit", "grigora" ))', '<span class="comment-edit-link">- ', '</span>' ); ?>
+                        <?php edit_comment_link( esc_html( __( "Edit", "grigora" )), '<span class="comment-edit-link">- ', '</span>' ); ?>
                     </time>
                 </div>
             </div>
@@ -47,14 +47,14 @@ if ( ! function_exists( 'grigora_comment' ) ) {
                 <?php echo esc_html( __( "Your comment is awaiting moderation.", "grigora" )); ?></p>
         </div>
         <?php endif; ?>
-        <div class="comment-content" itemprop="text">
+        <div class="comment-content" >
             <?php
 
 					comment_text();
 
 					?>
         </div>
-        <div class="comment-reply" itemprop="text">
+        <div class="comment-reply" >
             <?php 
                         comment_reply_link(
                             array_merge(
