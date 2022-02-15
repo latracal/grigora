@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <span class="post-meta">
                         <?php if( get_theme_mod( 'grg_blog_single_author_display', grigora_blog_defaults()['grg_blog_single_author_display'] ) )
         {
-            ?><?php echo esc_html( __('Published by', 'grg')); ?>
+            ?><?php echo esc_html( __( "Published by", "grg" )); ?>
                         <?php 
                     $author_schema = grg_get_schema_tag("author");
                     $authorurl_schema = grg_get_schema_tag("authorurl");
@@ -50,7 +50,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             echo "</span>"
 
             ?><?php if(get_theme_mod( 'grg_blog_single_date_display', grigora_blog_defaults()['grg_blog_single_date_display'] ) && get_theme_mod( 'grg_blog_single_author_display', grigora_blog_defaults()['grg_blog_single_author_display'] )){ ?>
-                        <?php echo esc_html( __('on', 'grg')); ?><?php } ?>
+                        <?php echo esc_html( __( "on", "grg" )); ?> <?php } ?>
                         <?php } ?>
                         <?php if( get_theme_mod( 'grg_blog_single_date_display' , grigora_blog_defaults()['grg_blog_single_date_display']) ) { ?>
                         <time datetime="<?php echo get_the_date('c'); ?>"
@@ -104,9 +104,8 @@ if ( ! defined( 'ABSPATH' ) ) {
             </div>
             <?php if( get_theme_mod( 'grg_blog_single_category' , grigora_blog_defaults()['grg_blog_single_category']) )
         {
-            ?>
-            <?php
-             if(has_category()){ 
+            
+            if(has_category()){ 
                 ?>
             <span class="cat"><?php echo esc_html( __( "Posted in", "grg" )); ?>
                 <?php
@@ -114,9 +113,10 @@ if ( ! defined( 'ABSPATH' ) ) {
                     echo '<a href="'. esc_url( get_category_link( $category ) ) . '" class="cat-name">'.$category->cat_name .'</a>'; 
                 } 
             ?>
-            </span>
-            <?php } 
-             } ?>
+            </span><?php
+            }
+        }
+        ?>
             <?php
         if( get_theme_mod( 'grg_blog_single_tag', grigora_blog_defaults()['grg_blog_single_tag'] ) ){
 
