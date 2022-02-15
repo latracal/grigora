@@ -1361,6 +1361,7 @@ function increment_dynamic_css_cache_ver(){
 /**
  * Generate Minified Dynamic CSS External File
  * Requires Write Permissions
+ * Thanks to https://github.com/matthiasmullie/minify 
  * 
  * @since  1.000
  * 

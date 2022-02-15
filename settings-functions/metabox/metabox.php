@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <?php
 
-if ( ! class_exists( 'ezTOC_Option' ) ) {
+if ( ! class_exists( 'grigora_metabox_cl' ) ) {
 
     /**
 	 * Class to add metabox in post
