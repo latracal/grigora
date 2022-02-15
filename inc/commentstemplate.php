@@ -36,7 +36,7 @@ if ( ! function_exists( 'grigora_comment' ) ) {
                 <div class="comment-author-time">
                     <time datetime="<?php comment_time( 'c' ); ?>" itemprop="datePublished">
                         <?php printf('%1$s at %2$s',get_comment_date(),get_comment_time()); ?>
-                        <?php edit_comment_link( 'Edit', '<span class="comment-edit-link">- ', '</span>' ); ?>
+                        <?php edit_comment_link( 'esc_html( __( "Edit", "grigora" ))', '<span class="comment-edit-link">- ', '</span>' ); ?>
                     </time>
                 </div>
             </div>
