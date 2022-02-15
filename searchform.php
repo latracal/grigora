@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <form role="search" method="get" class="search-box s-hide" action="<?php echo esc_url( home_url( '/' ) ); ?>">
     <input type="search" class="search-field" id="search" name="s" value="<?php the_search_query(); ?>"
-        placeholder="<?php _e( 'Search Text', 'grg' ); ?>">
+        placeholder="<?php _e( 'Search Text', 'grigora' ); ?>">
     <button class="search-icon" type="submit"><svg xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256"
             xml:space="preserve">

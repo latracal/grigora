@@ -15,8 +15,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  * 
  */
 function grg_setup_theme(){
-	register_nav_menu('primary', __('Primary Menu', 'grg'));
-	register_nav_menu('footer', __('footer Menu', 'grg'));
+	register_nav_menu('primary', __('Primary Menu', 'grigora'));
+	register_nav_menu('footer', __('footer Menu', 'grigora'));
 }
 
 /**

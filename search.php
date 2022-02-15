@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div class="container">
     <section class="article">
         <div class="archive-desc">
-            <h2 class="page-title"><?php echo esc_html( __( "Search results for", "grg" )); ?>
+            <h2 class="page-title"><?php echo esc_html( __( "Search results for", "grigora" )); ?>
                 "<?php the_search_query(); ?>"
             </h2>
         </div>

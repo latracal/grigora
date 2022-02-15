@@ -113,7 +113,8 @@ if ( ! class_exists( 'grigora_metabox_cl' ) ) {
 <table class="form-table grigora-table">
     <tbody>
         <tr>
-            <th scope="row"><label for="layout-container">Content Layout</label></th>
+            <th scope="row"><label
+                    for="layout-container"><?php echo esc_html( __( "Content Layout", "grigora" )); ?></label></th>
             <td>
                 <?php if (  get_post_type( $post ) == "post" || get_post_type( $post ) == "page"){
 
@@ -134,7 +135,8 @@ if ( ! class_exists( 'grigora_metabox_cl' ) ) {
             </td>
         </tr>
         <tr>
-            <th scope="row"><label for="sidebar-align">Sidebar Layout</label></th>
+            <th scope="row"><label
+                    for="sidebar-align"><?php echo esc_html( __( "Sidebar Layout", "grigora" )); ?></label></th>
             <td>
                 <?php if (  get_post_type( $post ) == "post" || get_post_type( $post ) == "page"){
 
@@ -155,7 +157,8 @@ if ( ! class_exists( 'grigora_metabox_cl' ) ) {
             </td>
         </tr>
         <tr>
-            <th scope="row"><label for="disable-header">Disable Header</label></th>
+            <th scope="row"><label
+                    for="disable-header"><?php echo esc_html( __( "Disable Header", "grigora" )); ?></label></th>
             <td>
                 <?php if (  get_post_type( $post ) == "post" || get_post_type( $post ) == "page"){
 
@@ -171,7 +174,8 @@ if ( ! class_exists( 'grigora_metabox_cl' ) ) {
             </td>
         </tr>
         <tr>
-            <th scope="row"><label for="disable-footer">Disable Footer</label></th>
+            <th scope="row"><label
+                    for="disable-footer"><?php echo esc_html( __( "Disable Footer", "grigora" )); ?></label></th>
             <td>
                 <?php if (  get_post_type( $post ) == "post" || get_post_type( $post ) == "page"){
 
@@ -187,7 +191,8 @@ if ( ! class_exists( 'grigora_metabox_cl' ) ) {
             </td>
         </tr>
         <tr>
-            <th scope="row"><label for="disable-title">Disable Title</label></th>
+            <th scope="row"><label
+                    for="disable-title"><?php echo esc_html( __( "Disable Title", "grigora" )); ?></label></th>
             <td>
                 <?php if (  get_post_type( $post ) == "post" || get_post_type( $post ) == "page"){
 

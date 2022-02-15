@@ -114,17 +114,21 @@ echo '<div class="admin-container">';
 </div>
 <?php 
     if ( !is_grigora_pro_active() ) {
-        echo '<div class="pro-notification"><p>Activate All Powerful Options By Purchasing Girgora Pro </p><a href="https://wpgrigora.com/pro/" target="_blank"><button class="pro-btn">Buy Now</button></a></div>';
-    }
+        echo '<div class="pro-notification"><p>'; 
+        echo esc_html( __( "Activate All Powerful Options By Purchasing Girgora Pro", "grigora" )); 
+        echo '</p><a href="https://wpgrigora.com/pro/" target="_blank"><button class="pro-btn">Buy Now</button></a></div>';
+}
 ?>
 <div class="grigora-settings">
     <div class="tab-container">
         <div class="tab">
-            <button class="tab-btn" onclick="controlName(event, 'grigora_customizer_section')" id="default">Customizer
-                Options</button>
-            <button class="tab-btn" onclick="controlName(event, 'grigora_performance_section')">Performance</button>
-            <button class="tab-btn IE-tab" onclick="controlName(event, 'grigora_importexport_section')">Import &
-                Export</button>
+            <button class="tab-btn" onclick="controlName(event, 'grigora_customizer_section')" id="default"><?php echo esc_html( __( "Customizer
+                Options", "grigora" )); ?></button>
+            <button class="tab-btn"
+                onclick="controlName(event, 'grigora_performance_section')"><?php echo esc_html( __( "Performance", "grigora" )); ?></button>
+            <button class="tab-btn IE-tab" onclick="controlName(event, 'grigora_importexport_section')"><?php echo esc_html( __( "Import
+                &
+                Export", "grigora" )); ?></button>
         </div>
         <div class="tab-content">
             <form action="options.php" method="post" class=" <?php echo (is_grigora_pro_active() ? '' : 'disabled') ?>">
@@ -140,15 +144,16 @@ echo '<div class="admin-container">';
                 <div class="grigora_importexport_section customizer " id="grigora_importexport_section">
                     <h2>Import &amp; Export</h2>
                     <input type="hidden" name="action" value="grigora_import">
-                    <p>Save and Restore your Grigora Settings in One Click!</p>
+                    <p><?php echo esc_html( __( "Save and Restore your Grigora Settings in One Click!", "grigora" )); ?>
+                    </p>
                     <table class="form-table" role="presentation">
                         <tbody>
                             <tr>
-                                <th scope="row">Export</th>
+                                <th scope="row"><?php echo esc_html( __( "Export", "grigora" )); ?></th>
                                 <td><?php grigora_importexport_section_export_callback_function(); ?></td>
                             </tr>
                             <tr>
-                                <th scope="row">Import</th>
+                                <th scope="row"><?php echo esc_html( __( "Import", "grigora" )); ?></th>
                                 <td><?php grigora_importexport_section_import_callback_function(); ?></td>
                             </tr>
                         </tbody>
@@ -165,30 +170,32 @@ echo '<div class="admin-container">';
         <?php if(get_option("grigora_license_key_status") == "valid"){
             ?>
         <div class="license-valid">
-            <div class="header">License Status</div>
-            <div class="status">Valid</div>
+            <div class="header"><?php echo esc_html( __( "License Status", "grigora" )); ?></div>
+            <div class="status"><?php echo esc_html( __( "Valid", "grigora" )); ?></div>
         </div>
         <div class="deactivation-form">
             <form action="<?php echo esc_url( admin_url('admin-post.php' ) ) ?>" method="post">
-                <div class="header">Grigora Pro License</div>
+                <div class="header"><?php echo esc_html( __( "Grigora Pro License", "grigora" )); ?></div>
                 <input type="hidden" name="action" value="grigora_update_license_key">
                 <input type="hidden" id="grigora_license_key" name="grigora_license_key" value="">
                 <?php wp_nonce_field( 'grigora_activation_nonce', 'grigora_activation_nonce' ); ?>
-                <p>Press Deactivate button to disable auto updates.</p>
+                <p><?php echo esc_html( __( "Press Deactivate button to disable auto updates.", "grigora" )); ?></p>
                 <input type="submit" name="submit" id="submit" class="button button-primary" value="Deactivate">
             </form>
         </div>
         <?php } else { ?>
         <div class="license-invalid">
-            <div class="header">License Status</div>
-            <div class="status">Not Active</div>
+            <div class="header"><?php echo esc_html( __( "License Status", "grigora" )); ?></div>
+            <div class="status"><?php echo esc_html( __( "Not Active", "grigora" )); ?></div>
         </div>
         <div class="activation-form">
             <form action="<?php echo esc_url( admin_url('admin-post.php' ) ) ?>" method="post" class="grg-active">
-                <div class="header">Grigora Pro License</div>
+                <div class="header"><?php echo esc_html( __( "Grigora Pro License", "grigora" )); ?></div>
                 <input type="hidden" name="action" value="grigora_update_license_key">
                 <?php wp_nonce_field( 'grigora_activation_nonce', 'grigora_activation_nonce' ); ?>
-                <p>Enter your <a href="https://wpgrigora.com/pro/">license key</a> to enable auto updates. </p>
+                <p><?php echo esc_html( __( "Enter your", "grigora" )); ?> <a href="https://wpgrigora.com/pro/"><?php echo esc_html( __( "license
+                        key", "grigora" )); ?></a> <?php echo esc_html( __( "to enable auto updates.", "grigora" )); ?>
+                </p>
                 <input type="password" id="grigora_license_key" name="grigora_license_key">
                 <input type="submit" name="submit" id="submit" class="button button-primary" value="Activate">
             </form>

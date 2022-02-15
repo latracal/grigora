@@ -14,7 +14,7 @@ if(post_password_required()){
 ?>
 <div id="comments" class="comments-area">
     <?php if ( ! comments_open() && get_comments_number() ) : ?>
-    <p class="no-comments"><?php _e( 'Comments are closed.' , 'grg' ); ?></p>
+    <p class="no-comments"><?php _e( 'Comments are closed.' , 'grigora' ); ?></p>
     <?php endif; ?>
     <?php if ( have_comments() ) :
             ?>

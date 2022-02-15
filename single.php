@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <span class="post-meta">
                         <?php if( get_theme_mod( 'grg_blog_single_author_display', grigora_blog_defaults()['grg_blog_single_author_display'] ) )
         {
-            ?><?php echo esc_html( __( "Published by", "grg" )); ?>
+            ?><?php echo esc_html( __( "Published by", "grigora" )); ?>
                         <?php 
                     $author_schema = grg_get_schema_tag("author");
                     $authorurl_schema = grg_get_schema_tag("authorurl");
@@ -51,7 +51,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             echo "</span>"
 
             ?><?php if(get_theme_mod( 'grg_blog_single_date_display', grigora_blog_defaults()['grg_blog_single_date_display'] ) && get_theme_mod( 'grg_blog_single_author_display', grigora_blog_defaults()['grg_blog_single_author_display'] )){ ?>
-                        <?php echo esc_html( __( "on", "grg" )); ?> <?php } ?>
+                        <?php echo esc_html( __( "on", "grigora" )); ?> <?php } ?>
                         <?php } ?>
                         <?php if( get_theme_mod( 'grg_blog_single_date_display' , grigora_blog_defaults()['grg_blog_single_date_display']) ) { ?>
                         <time datetime="<?php echo get_the_date('c'); ?>"
@@ -108,7 +108,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             
             if(has_category()){ 
                 ?>
-            <span class="cat"><?php echo esc_html( __( "Posted in", "grg" )); ?>
+            <span class="cat"><?php echo esc_html( __( "Posted in", "grigora" )); ?>
                 <?php
                 foreach((get_the_category()) as $category) { 
                     echo '<a href="'. esc_url( get_category_link( $category ) ) . '" class="cat-name">'.$category->cat_name .'</a>'; 
@@ -123,7 +123,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
             if(has_tag()){ 
                 ?>
-            <span class="tag"><?php echo esc_html( __( "Tags", "grg" )); ?> - <?php
+            <span class="tag"><?php echo esc_html( __( "Tags", "grigora" )); ?> - <?php
             
                 foreach((get_the_tags()) as $tag) { 
                     echo '<a href="'. esc_url( get_tag_link( $tag ) ) . '" class="cat-name">'.$tag->name.'</a>'; 
