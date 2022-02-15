@@ -730,6 +730,11 @@ if($spacing_flag) {
 
     }
 
+    .container .article{
+        padding-left: ".get_theme_mod('grg_article-left-padding', $spacing_defaults['grg_article-left-padding'])."px;
+        padding-right: ".get_theme_mod('grg_article-right-padding', $spacing_defaults['grg_article-right-padding'])."px;
+    }
+
     .container .grigora-primary-sidebar {
         width: ".get_theme_mod('grg_sidebar-width', $spacing_defaults['grg_sidebar-width'])."%;
     }
@@ -742,6 +747,11 @@ if($spacing_flag) {
     .container .grigora-primary-sidebar{
         padding-right: ".get_theme_mod('grg_sidebar-padding-right', $spacing_defaults['grg_sidebar-padding-right'])."px;
         padding-left: ".get_theme_mod('grg_sidebar-padding-left', $spacing_defaults['grg_sidebar-padding-left'])."px;
+    }
+
+    .container .article{
+        margin-top: ".get_theme_mod('grg_article-top-margin', $spacing_defaults['grg_article-top-margin'])."px;
+        margin-bottom: ".get_theme_mod('grg_article-bottom-margin', $spacing_defaults['grg_article-bottom-margin'])."px;
     }
 
     @media(max-width:768px) {
@@ -804,6 +814,15 @@ else {
 
     }
 
+    .container .article{
+        padding-left: ".$spacing_defaults['grg_article-left-padding']."px;
+        padding-right: ".$spacing_defaults['grg_article-right-padding']."px;
+    }
+
+    .container .article{
+        margin-top: ".$spacing_defaults['grg_article-top-margin']."px;
+        margin-bottom: ".$spacing_defaults['grg_article-bottom-margin']."px;
+    }
 
     .container .grigora-primary-sidebar {
         width: ".$spacing_defaults['grg_sidebar-width']."%;
