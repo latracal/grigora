@@ -11,7 +11,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div class="container">
     <section class="article">
         <div class="archive-desc">
-            <h2 class="page-title">Search results for "<?php the_search_query(); ?>"
+            <h2 class="page-title"><?php echo esc_html( __( "Search results for", "grg" )); ?>
+                "<?php the_search_query(); ?>"
             </h2>
         </div>
         <div class="post-container">
@@ -35,9 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <?php the_posts_pagination(); ?>
 
     </section>
-    <aside>
-        <section class="sidebar">Sidebar Area Will Design Later</section>
-    </aside>
+    <?php get_sidebar(); ?>
 </div>
 
 <?php get_footer(); ?>

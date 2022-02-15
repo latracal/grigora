@@ -9,8 +9,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php get_header(); ?>
 
 <section class="not-found">
-    <h2>Error 404!</h2>
-    <h4>The page you requested does not exist or has moved.</h4>
+    <h2><?php echo esc_html( __( "Error 404!", "grg" )); ?></h2>
+    <h4><?php echo esc_html( __( "The page you requested does not exist or has moved.", "grg" )); ?></h4>
 </section>
 
 <?php get_footer(); ?>

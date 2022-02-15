@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <span class="post-meta">
                         <?php if( get_theme_mod( 'grg_blog_single_author_display', grigora_blog_defaults()['grg_blog_single_author_display'] ) )
         {
-            ?>Published by
+            ?><?php echo esc_html( __('Published by', 'grg')); ?>
                         <?php 
                     $author_schema = grg_get_schema_tag("author");
                     $authorurl_schema = grg_get_schema_tag("authorurl");
@@ -50,7 +50,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             echo "</span>"
 
             ?><?php if(get_theme_mod( 'grg_blog_single_date_display', grigora_blog_defaults()['grg_blog_single_date_display'] ) && get_theme_mod( 'grg_blog_single_author_display', grigora_blog_defaults()['grg_blog_single_author_display'] )){ ?>
-                        on <?php } ?>
+                        <?php echo esc_html( __('on', 'grg')); ?><?php } ?>
                         <?php } ?>
                         <?php if( get_theme_mod( 'grg_blog_single_date_display' , grigora_blog_defaults()['grg_blog_single_date_display']) ) { ?>
                         <time datetime="<?php echo get_the_date('c'); ?>"
@@ -91,11 +91,6 @@ if ( ! defined( 'ABSPATH' ) ) {
                                 <path
                                     d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
                             </svg></a>
-                        <!-- <a href="" target="_blank" rel="nofollow noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-share-fill" viewBox="0 0 16 16">
-                            <path
-                                d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z" />
-                        </svg></a> -->
                     </span>
                     <?php } ?>
                 </div>
@@ -110,20 +105,24 @@ if ( ! defined( 'ABSPATH' ) ) {
             <?php if( get_theme_mod( 'grg_blog_single_category' , grigora_blog_defaults()['grg_blog_single_category']) )
         {
             ?>
-            <span class="cat">Posted in
+            <?php
+             if(has_category()){ 
+                ?>
+            <span class="cat"><?php echo esc_html( __( "Posted in", "grg" )); ?>
                 <?php
                 foreach((get_the_category()) as $category) { 
                     echo '<a href="'. esc_url( get_category_link( $category ) ) . '" class="cat-name">'.$category->cat_name .'</a>'; 
                 } 
             ?>
             </span>
-            <?php } ?>
+            <?php } 
+             } ?>
             <?php
         if( get_theme_mod( 'grg_blog_single_tag', grigora_blog_defaults()['grg_blog_single_tag'] ) ){
 
             if(has_tag()){ 
                 ?>
-            <span class="tag">Tags - <?php
+            <span class="tag"><?php echo esc_html( __( "Tags", "grg" )); ?> - <?php
             
                 foreach((get_the_tags()) as $tag) { 
                     echo '<a href="'. esc_url( get_tag_link( $tag ) ) . '" class="cat-name">'.$tag->name.'</a>'; 
