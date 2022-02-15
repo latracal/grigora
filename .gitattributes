@@ -5,3 +5,5 @@ grigora-wp.zip export-ignore
 
 
 readme.md export-ignore
+
+.DS_Store export-ignore
