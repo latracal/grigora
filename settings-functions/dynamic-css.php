@@ -734,6 +734,16 @@ if($spacing_flag) {
         width: ".get_theme_mod('grg_sidebar-width', $spacing_defaults['grg_sidebar-width'])."%;
     }
 
+    .grigora-primary-sidebar{
+        margin-top: ".get_theme_mod('grg_sidebar-margin-top', $spacing_defaults['grg_sidebar-margin-top'])."px;
+        margin-bottom: ".get_theme_mod('grg_sidebar-margin-top', $spacing_defaults['grg_sidebar-margin-bottom'])."px;
+    }
+
+    .container .grigora-primary-sidebar{
+        padding-right: ".get_theme_mod('grg_sidebar-padding-right', $spacing_defaults['grg_sidebar-padding-right'])."px;
+        padding-left: ".get_theme_mod('grg_sidebar-padding-left', $spacing_defaults['grg_sidebar-padding-left'])."px;
+    }
+
     @media(max-width:768px) {
         .container .grigora-primary-sidebar {
             width: 100%;
@@ -797,6 +807,16 @@ else {
 
     .container .grigora-primary-sidebar {
         width: ".$spacing_defaults['grg_sidebar-width']."%;
+    }
+
+    .grigora-primary-sidebar{
+        margin-top: ".$spacing_defaults['grg_sidebar-margin-top']."px;
+        margin-bottom: ".$spacing_defaults['grg_sidebar-margin-bottom']."px;
+    }
+
+    .container .grigora-primary-sidebar{
+        padding-right: ".$spacing_defaults['grg_sidebar-padding-right']."px;
+        padding-left: ".$spacing_defaults['grg_sidebar-padding-left']."px;
     }
 
     .desktop-nav, .mobile-header .top-part{
