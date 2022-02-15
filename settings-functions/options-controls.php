@@ -602,15 +602,15 @@ add_action( 'admin_init', 'grigora_performance_settings_section' );
  */
 
 function grigora_customizer_section_callback_function() {
- 	echo '<p>Customize your theme!</p>';
+ 	echo '<p>'.esc_html( __( "Customize your theme!", "grigora" )).'</p>';
  }
 
 function grigora_performance_section_callback_function() {
-    echo '<p>Make your website fast by removing unnecessary imports!</p>';
+    echo '<p>'.esc_html( __( "Make your website fast by removing unnecessary imports!", "grigora" )).'</p>';
 }
 
 function grigora_importexport_section_callback_function() {
-    echo '<p>Save and Restore your Grigora Settings in One Click!</p>';
+    echo '<p>'.esc_html( __( "Save and Restore your Grigora Settings in One Click!", "grigora" )).'</p>';
 }
 
 function grigora_customizer_section_colors_callback_function() {
@@ -686,7 +686,7 @@ function grigora_performance_section_dashicons_callback_function() {
 function grigora_importexport_section_export_callback_function() {
     $url = get_admin_url( null, 'admin-post.php?' );
     $url = $url."action=grigora_export&_wpnonce=".wp_create_nonce( 'grigora_export' );
-    echo '<div class=""grigora-export-button"><a href="'.$url.'">Download Settings</a></div>';
+    echo '<div class=""grigora-export-button"><a href="'.$url.'">'.esc_html( __( "Download Settings", "grigora" )).'</a></div>';
 }
 
 function grigora_importexport_section_import_callback_function() {
