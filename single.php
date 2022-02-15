@@ -19,13 +19,14 @@ if ( ! defined( 'ABSPATH' ) ) {
             <?php get_template_part('template-parts/breadcrumbs'); ?>
             <div class="post-header">
                 <div class="top">
-                    <h1 class="post-title"
-                        itemprop="<?php echo grg_get_schema_tag('creativeworkheadline')['itemprop'] ?>">
-                        <?php if(
+                    <?php if(
                         (is_single() || is_page()) &&
                         get_post_meta( $post->ID, '_grigora-disable-title', true ) && 
                         get_post_meta( $post->ID, '_grigora-disable-title', true ) == 1
                         )  {} else { ?>
+                    <h1 class="post-title"
+                        itemprop="<?php echo grg_get_schema_tag('creativeworkheadline')['itemprop'] ?>">
+
                         <?php the_title(); ?></h1>
                     <?php } ?>
                     <span class="post-meta">
