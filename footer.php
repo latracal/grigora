@@ -21,15 +21,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
         <?php
 
-        if( has_nav_menu( 'footer' ) ){
+        
             wp_nav_menu([
                 'theme_location' => 'footer',
                 'container' => false,
                 'menu_class' => 'footer-menu hide',
-                'fallback_cb' => false,
                 'depth' => 2
             ]);
-        }
+        
 
         ?>
 
