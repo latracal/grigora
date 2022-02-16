@@ -256,21 +256,11 @@ body {
         .container .grigora-primary-sidebar{
             padding: 0 2.5rem;
         }
-        .container .article {
-            width: 100%;
+        .container {
+            flex-direction: row;
             
-        }
 
-        .container .article {
-            width: 100%;
-            
-        }
-
-
-        .grigora-primary-sidebar {
-            display: none;
-            
-        } .desktop-nav{
+        }.desktop-nav{
             flex-direction:row;
             justify-content: space-between;
             align-items: center;
@@ -283,7 +273,7 @@ body {
         }
 
         .container {
-        max-width: 852px;
+        max-width: 1039px;
 
     }
 
@@ -307,8 +297,28 @@ body {
 
     }
 
+    .container .article{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
     .container .grigora-primary-sidebar {
         width: 30%;
+    }
+
+    .grigora-primary-sidebar{
+        margin-top: 48px;
+        margin-bottom: 48px;
+    }
+
+    .container .grigora-primary-sidebar{
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+    .container .article{
+        margin-top: 139px;
+        margin-bottom: 22px;
     }
 
     @media(max-width:768px) {

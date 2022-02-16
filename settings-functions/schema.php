@@ -67,7 +67,7 @@ function grg_get_schema_tag($type){
     }
     elseif($type=="breadcrumblisturl"){
         return array(
-            "itemprop" => "url",
+            "itemprop" => "item",
         );
     }
     elseif($type=="breadcrumblistname"){
