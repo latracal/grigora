@@ -833,7 +833,8 @@
 
 .grg-empty-canvas .article {
   width: 100%;
-  margin: 0;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .grg-empty-canvas .grigora-primary-sidebar {
