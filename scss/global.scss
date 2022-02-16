@@ -26,6 +26,22 @@
 	}
 }
 
+.grg-empty-canvas {
+	.article {
+		width: 100%;
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+
+	.grigora-primary-sidebar {
+		display: none !important;
+	}
+
+	.container {
+		max-width: 100% !important;
+	}
+}
+
 body {
 	background-color: #f2f2f2;
 }

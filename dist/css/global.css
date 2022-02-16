@@ -831,20 +831,6 @@
   padding: 0.5rem 0;
 }
 
-.grg-empty-canvas .article {
-  width: 100%;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-.grg-empty-canvas .grigora-primary-sidebar {
-  display: none !important;
-}
-
-.grg-empty-canvas .container {
-  max-width: 100% !important;
-}
-
 .article {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2321,6 +2307,20 @@
         -ms-flex-direction: column !important;
             flex-direction: column !important;
   }
+}
+
+.grg-empty-canvas .article {
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.grg-empty-canvas .grigora-primary-sidebar {
+  display: none !important;
+}
+
+.grg-empty-canvas .container {
+  max-width: 100% !important;
 }
 
 body {
