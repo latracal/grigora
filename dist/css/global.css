@@ -10,7 +10,11 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 100%;
   background-color: #e9e9e9;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  z-index: 99;
 }
 
 @media (max-width: 768px) {

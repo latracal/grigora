@@ -15,7 +15,7 @@ var menubtn = document.querySelector('.menu-toggle-btn');
 var menuicon = document.querySelector('.menu-toggle-icon');
 
 function togglesearch(event) {
-	if(menu){
+	if (menu) {
 		menu.classList.add('hide');
 	}
 	if (searchinput.contains(event.target)) {
@@ -68,65 +68,62 @@ function clickoutsidemenuevent(event) {
 // 		menu.classList.add('hide');
 // 	}
 // }
-if(searchbtn){
+if (searchbtn) {
 	searchbtn.addEventListener('click', togglesearch, false);
 }
-if(menubtn){
+if (menubtn) {
 	// menubtn.addEventListener('click', togglemenu, false);
-
 }
 
 //submenu toggle in mobile
 const mobileheader = document.getElementsByClassName('mobile-header')[0];
-if(mobileheader){
-	const mobilesearchbtn = mobileheader.getElementsByClassName('search-btn')[0];
-	const mobilemenubtn = mobileheader.getElementsByClassName('menu-toggle-btn')[0];
-	
-	if(mobilesearchbtn){
+if (mobileheader) {
+	const mobilesearchbtn =
+		mobileheader.getElementsByClassName('search-btn')[0];
+	const mobilemenubtn =
+		mobileheader.getElementsByClassName('menu-toggle-btn')[0];
+
+	if (mobilesearchbtn) {
 		mobilesearchbtn.addEventListener('click', togglemobilesearch, false);
 	}
-	if(mobilemenubtn){
+	if (mobilemenubtn) {
 		mobilemenubtn.addEventListener('click', togglemobilemenu, false);
 	}
-	
-	
-	function togglemobilesearch(event){
+
+	function togglemobilesearch(event) {
 		const searchform = mobileheader.getElementsByClassName('search-box')[0];
-		const menucontainer = mobileheader.getElementsByClassName('menu-container')[0];
+		const menucontainer =
+			mobileheader.getElementsByClassName('menu-container')[0];
 		const menuobjects = menucontainer.getElementsByClassName('menu');
-		if(menuobjects.length > 0){
+		if (menuobjects.length > 0) {
 			menuobjects[0].classList.add('hide');
 		}
-		if(searchform.classList.contains('s-hide')){
+		if (searchform.classList.contains('s-hide')) {
 			searchform.classList.remove('s-hide');
-		}
-		else{
+		} else {
 			searchform.classList.add('s-hide');
 		}
-	
 	}
-	
-	function togglemobilemenu(event){
-		const menucontainer = mobileheader.getElementsByClassName('menu-container')[0];
+
+	function togglemobilemenu(event) {
+		const menucontainer =
+			mobileheader.getElementsByClassName('menu-container')[0];
 		const menuobjects = menucontainer.getElementsByClassName('menu');
 		const searchform = mobileheader.getElementsByClassName('search-box')[0];
 		searchform.classList.add('s-hide');
-		if(menuobjects.length>0){
-			if(menuobjects[0].classList.contains('hide')){
+		if (menuobjects.length > 0) {
+			if (menuobjects[0].classList.contains('hide')) {
 				menuobjects[0].classList.remove('hide');
-			}
-			else{
+			} else {
 				menuobjects[0].classList.add('hide');
 			}
 		}
 	}
 }
 
-
 w = screen.width;
 
 const parents = document.getElementsByClassName('menu-item-has-children');
-
 
 for (var i = 0; i < parents.length; i++) {
 	parents[i].addEventListener('click', toggleSubMenu, false);
@@ -139,10 +136,9 @@ function toggleSubMenu(event) {
 	if (w < 768) {
 		if (child.style.display == 'none' || child.style.display == '') {
 			child.style.display = 'block';
-		} else if(child.style.display == 'block'){
+		} else if (child.style.display == 'block') {
 			child.style.display = 'none';
-		}
-		else {
+		} else {
 			child.style.display = 'none';
 		}
 	}
@@ -232,5 +228,22 @@ if (notice) {
 			notice.style.display = 'none';
 			setCookie('grg_cookie_flag', '1', 30);
 		});
+	}
+}
+
+window.onscroll = function () {
+	shrink();
+};
+
+function shrink() {
+	if (
+		document.body.scrollTop > 20 ||
+		document.documentElement.scrollTop > 20
+	) {
+		document.querySelector('.desktop-nav').style.minHeight = '130px';
+		document.querySelector('.desktop-nav').style.position = 'fixed';
+	} else {
+		document.querySelector('.desktop-nav').style.minHeight = '155px';
+		document.querySelector('.desktop-nav').style.position = 'relative';
 	}
 }
