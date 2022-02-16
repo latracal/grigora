@@ -231,19 +231,24 @@ if (notice) {
 	}
 }
 
-window.onscroll = function () {
-	shrink();
-};
 
-function shrink() {
-	if (
-		document.body.scrollTop > 20 ||
-		document.documentElement.scrollTop > 20
-	) {
-		document.querySelector('.desktop-nav').style.minHeight = '130px';
-		document.querySelector('.desktop-nav').style.position = 'fixed';
-	} else {
-		document.querySelector('.desktop-nav').style.minHeight = '155px';
-		document.querySelector('.desktop-nav').style.position = 'relative';
+if(document.querySelector('.desktop-nav')){
+
+	const headerinitialheight = document.querySelector('.desktop-nav').clientHeight;
+	function shrink() {
+		if (
+			document.body.scrollTop > headerinitialheight ||
+			document.documentElement.scrollTop > headerinitialheight
+		) {
+			document.querySelector('.desktop-nav').style.minHeight = '65px';
+			document.querySelector('.desktop-nav').style.position = 'fixed';
+		} else {
+			document.querySelector('.desktop-nav').style.minHeight = null;
+			document.querySelector('.desktop-nav').style.position = 'relative';
+		}
 	}
+	window.onscroll = function () {
+		shrink();
+	};
 }
+
