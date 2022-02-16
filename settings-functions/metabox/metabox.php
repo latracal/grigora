@@ -109,6 +109,13 @@ if ( ! class_exists( 'grigora_metabox_cl' ) ) {
                 $disable_title = 0;
             }
 
+            if(get_post_meta( $post->ID, '_grigora-empty-canvas', true )){
+                $empty_canvas = get_post_meta( $post->ID, '_grigora-empty-canvas', true );
+            }
+            else{
+                $empty_canvas = 0;
+            }
+
             ?>
 <table class="form-table grigora-table">
     <tbody>
@@ -132,6 +139,23 @@ if ( ! class_exists( 'grigora_metabox_cl' ) ) {
                         }
                         ?>
 
+            </td>
+        </tr>
+        <tr>
+            <th scope="row"><label
+                    for="empty-canvas"><?php echo esc_html( __( "Empty Canvas", "grigora" )); ?></label></th>
+            <td>
+                <?php if (  get_post_type( $post ) == "post" || get_post_type( $post ) == "page"){
+
+                            // empty-canvas
+                            $args = array(
+                                "id" => "empty-canvas",
+                                "desc" => esc_html__("Empty Canvas", "grigora"),
+                            );
+                            $checked = $empty_canvas ? checked( 1, $empty_canvas, false ) : '';
+                            echo '<input type="checkbox" id="grigora-settings[' . $args['id'] . ']" name="grigora-settings[' . $args['id'] . ']" value="1" ' . $checked . '/>';
+                        }
+                        ?>
             </td>
         </tr>
         <tr>
@@ -262,6 +286,16 @@ if ( ! class_exists( 'grigora_metabox_cl' ) ) {
                 } else {
 
                     update_post_meta( $post_id, '_grigora-disable-footer', 0 );
+
+                }
+
+                if ( isset( $_REQUEST['grigora-settings']['empty-canvas'] ) ) {
+
+                    update_post_meta( $post_id, '_grigora-empty-canvas', $_REQUEST['grigora-settings']['empty-canvas'] );
+
+                } else {
+
+                    update_post_meta( $post_id, '_grigora-empty-canvas', 0 );
 
                 }
 

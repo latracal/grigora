@@ -15,8 +15,9 @@ define( 'grg_DEV_MODE', true );
 include( get_theme_file_path( '/inc/front/enqueue.php' ) );
 include( get_theme_file_path( '/inc/setup.php' ) );
 include( get_theme_file_path( '/inc/sidebarfunction.php' ) );
-include( get_theme_file_path( '/inc/commentstemplate.php' ) );
 include( get_theme_file_path( '/shortcodes.php' ) );
+
+include( get_theme_file_path( '/template-parts/comments.php' ) );
 
 // Hooks
 add_action('wp_enqueue_scripts', 'grg_global_enqueue'); //enqueue scripts

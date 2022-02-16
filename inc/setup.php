@@ -110,3 +110,20 @@ add_filter( 'body_class', function( $classes ) {
 	}
     return array_merge( $classes, array( '' ) );
 } );
+
+
+add_filter( 'body_class', function( $classes ) {
+	if(
+		(is_single() || is_page()) &&
+		get_post_meta(get_the_ID(), '_grigora-empty-canvas', true )
+	){
+		$empty_canvas = get_post_meta(get_the_ID(), '_grigora-empty-canvas', true );
+		if($empty_canvas){
+			return array_merge( $classes, array( 'grg-empty-canvas' ) );
+		}
+		else{
+			return array_merge( $classes, array( '' ) );
+		}
+	}
+    return array_merge( $classes, array( '' ) );
+} );
