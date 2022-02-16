@@ -243,7 +243,6 @@ if (
 			document.body.scrollTop > 0 ||
 			document.documentElement.scrollTop > 0
 		) {
-			console.log(document.getElementById('masthead').clientHeight);
 			document.querySelector('.desktop-nav').style.minHeight = '65px';
 			document.getElementById('masthead').style.minHeight = headerinitialheight.toString()+'px';
 			document.querySelector('.desktop-nav').style.position = 'fixed';
