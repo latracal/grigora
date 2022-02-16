@@ -841,6 +841,10 @@
   display: none !important;
 }
 
+.grg-empty-canvas .container {
+  max-width: 100% !important;
+}
+
 .article {
   display: -webkit-box;
   display: -ms-flexbox;
