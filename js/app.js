@@ -231,24 +231,22 @@ if (notice) {
 	}
 }
 
-
-if(document.querySelector('.desktop-nav')){
-
-	const headerinitialheight = document.querySelector('.desktop-nav').clientHeight;
-	function shrink() {
-		if (
-			document.body.scrollTop > headerinitialheight ||
-			document.documentElement.scrollTop > headerinitialheight
-		) {
-			document.querySelector('.desktop-nav').style.minHeight = '65px';
-			document.querySelector('.desktop-nav').style.position = 'fixed';
-		} else {
-			document.querySelector('.desktop-nav').style.minHeight = null;
-			document.querySelector('.desktop-nav').style.position = 'relative';
-		}
-	}
-	window.onscroll = function () {
-		shrink();
-	};
-}
-
+// if (document.querySelector('.desktop-nav')) {
+// 	const headerinitialheight =
+// 		document.querySelector('.desktop-nav').clientHeight;
+// 	function shrink() {
+// 		if (
+// 			document.body.scrollTop > headerinitialheight ||
+// 			document.documentElement.scrollTop > headerinitialheight
+// 		) {
+// 			document.querySelector('.desktop-nav').style.minHeight = '65px';
+// 			document.querySelector('.desktop-nav').style.position = 'fixed';
+// 		} else {
+// 			document.querySelector('.desktop-nav').style.minHeight = null;
+// 			document.querySelector('.desktop-nav').style.position = 'relative';
+// 		}
+// 	}
+// 	window.onscroll = function () {
+// 		shrink();
+// 	};
+// }

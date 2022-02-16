@@ -1,3 +1,14 @@
+.grg-empty-canvas {
+	.article {
+		width: 100%;
+		margin: 0;
+	}
+
+	.grigora-primary-sidebar {
+		display: none !important;
+	}
+}
+
 .article {
 	display: flex;
 	flex-direction: column;
