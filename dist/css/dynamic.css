@@ -334,11 +334,11 @@ body {
     }
 
     .desktop-nav, .mobile-header .top-part {
-        min-height: 96px;
+        min-height: 154px;
     }
 
     .desktop-nav .navbar .logo img{
-        height: 141px;
+        height: 61px;
     }
    
     .mobile-header .logo img{

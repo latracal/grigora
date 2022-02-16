@@ -230,7 +230,7 @@ if (notice) {
 		});
 	}
 }
-
+var lastScrollTop = 0;
 if (
 	document.getElementById('masthead') &&
 	document.querySelector('.desktop-nav')
@@ -238,18 +238,28 @@ if (
 	const headerinitialheight =
 		document.querySelector('.desktop-nav').clientHeight;
 	function shrink() {
+		var st = window.pageYOffset || document.documentElement.scrollTop;
 		if (
-			document.body.scrollTop > headerinitialheight ||
-			document.documentElement.scrollTop > headerinitialheight
+			document.body.scrollTop > 0 ||
+			document.documentElement.scrollTop > 0
 		) {
+			console.log(document.getElementById('masthead').clientHeight);
 			document.querySelector('.desktop-nav').style.minHeight = '65px';
-			document.getElementById('masthead').style.minHeight = '155px';
+			document.getElementById('masthead').style.minHeight = headerinitialheight.toString()+'px';
 			document.querySelector('.desktop-nav').style.position = 'fixed';
 		} else {
-			document.querySelector('.desktop-nav').style.minHeight = null;
-			document.getElementById('masthead').style.minHeight = null;
-			document.querySelector('.desktop-nav').style.position = 'relative';
+			if(st<=lastScrollTop){
+				document.querySelector('.desktop-nav').style.minHeight = null;
+				document.querySelector('.desktop-nav').style.position = 'relative';
+			}
+			else{
+				document.querySelector('.desktop-nav').style.minHeight = null;
+				document.getElementById('masthead').style.minHeight = null;
+				document.querySelector('.desktop-nav').style.position = 'relative';
+			}
+
 		}
+		lastScrollTop = st <= 0 ? 0 : st;
 	}
 	window.onscroll = function () {
 		shrink();

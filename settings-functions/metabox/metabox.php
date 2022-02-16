@@ -121,6 +121,23 @@ if ( ! class_exists( 'grigora_metabox_cl' ) ) {
     <tbody>
         <tr>
             <th scope="row"><label
+                    for="empty-canvas"><?php echo esc_html( __( "Empty Canvas", "grigora" )); ?></label></th>
+            <td>
+                <?php if (  get_post_type( $post ) == "post" || get_post_type( $post ) == "page"){
+
+                            // empty-canvas
+                            $args = array(
+                                "id" => "empty-canvas",
+                                "desc" => esc_html__("Empty Canvas", "grigora"),
+                            );
+                            $checked = $empty_canvas ? checked( 1, $empty_canvas, false ) : '';
+                            echo '<input type="checkbox" id="grigora-settings[' . $args['id'] . ']" name="grigora-settings[' . $args['id'] . ']" value="1" ' . $checked . '/>';
+                        }
+                        ?>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row"><label
                     for="layout-container"><?php echo esc_html( __( "Content Layout", "grigora" )); ?></label></th>
             <td>
                 <?php if (  get_post_type( $post ) == "post" || get_post_type( $post ) == "page"){
@@ -139,23 +156,6 @@ if ( ! class_exists( 'grigora_metabox_cl' ) ) {
                         }
                         ?>
 
-            </td>
-        </tr>
-        <tr>
-            <th scope="row"><label
-                    for="empty-canvas"><?php echo esc_html( __( "Empty Canvas", "grigora" )); ?></label></th>
-            <td>
-                <?php if (  get_post_type( $post ) == "post" || get_post_type( $post ) == "page"){
-
-                            // empty-canvas
-                            $args = array(
-                                "id" => "empty-canvas",
-                                "desc" => esc_html__("Empty Canvas", "grigora"),
-                            );
-                            $checked = $empty_canvas ? checked( 1, $empty_canvas, false ) : '';
-                            echo '<input type="checkbox" id="grigora-settings[' . $args['id'] . ']" name="grigora-settings[' . $args['id'] . ']" value="1" ' . $checked . '/>';
-                        }
-                        ?>
             </td>
         </tr>
         <tr>
