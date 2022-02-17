@@ -108,13 +108,13 @@ if ( ! defined( 'ABSPATH' ) ) {
             
             if(has_category()){ 
                 ?>
-            <span class="cat"><?php echo esc_html( __( "Posted in", "grigora" )); ?>
+            <p class="cat"><?php echo esc_html( __( "Posted in", "grigora" )); ?>
                 <?php
                 foreach((get_the_category()) as $category) { 
                     echo '<a href="'. esc_url( get_category_link( $category ) ) . '" class="cat-name">'.$category->cat_name .'</a>'; 
                 } 
             ?>
-            </span><?php
+            </p><?php
             }
         }
         ?>
@@ -123,14 +123,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
             if(has_tag()){ 
                 ?>
-            <span class="tag"><?php echo esc_html( __( "Tags", "grigora" )); ?> - <?php
+            <p class="tag"><?php echo esc_html( __( "Tags", "grigora" )); ?> - <?php
             
                 foreach((get_the_tags()) as $tag) { 
                     echo '<a href="'. esc_url( get_tag_link( $tag ) ) . '" class="cat-name">'.$tag->name.'</a>'; 
                 }
                 ?>
 
-            </span> <?php
+            </p> <?php
             }
         }
         ?>
