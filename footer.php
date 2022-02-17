@@ -25,8 +25,9 @@ if ( ! defined( 'ABSPATH' ) ) {
             wp_nav_menu([
                 'theme_location' => 'footer',
                 'container' => false,
+                'fallback_cb' => false,
                 'menu_class' => 'footer-menu hide',
-                'depth' => 2
+                'depth' => 1
             ]);
         
 
