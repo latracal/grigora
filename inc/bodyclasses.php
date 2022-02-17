@@ -52,6 +52,16 @@ add_filter( 'body_class', function( $classes ) {
     return array_merge( $classes, array( '' ) );
 } );
 
+add_filter( 'body_class', function( $classes ) {
+	$header_sticky = grigora_get_option("stickyh");
+    if ($header_sticky){
+        return array_merge( $classes, array( 'grg-sticky-header' ) );
+    }
+    else {
+        return array_merge( $classes, array( '' ) );
+    }
+    return array_merge( $classes, array( '' ) );
+} );
 
 add_filter( 'body_class', function( $classes ) {
 	$header_sticky = get_theme_mod("grg_header-sticky", grigora_spacing_defaults()['grg_header-sticky']);

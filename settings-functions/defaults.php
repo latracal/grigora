@@ -306,6 +306,7 @@ if ( ! function_exists( 'grigora_breadcrumbs_defaults' ) ) {
 			"grg_breadcrumbs_seperator" => '&#xbb;',
 			"grg_breadcrumbs_align" => 'start',
 			"grg_breadcrumbs_home" => 1,
+			"grg_breadcrumbs_display" => 1,
 		);
 	}
 }

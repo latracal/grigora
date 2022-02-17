@@ -235,6 +235,7 @@ if (notice) {
 var lastScrollTop = 0;
 
 if (
+	document.querySelector('.grg-sticky-header') &&
 	document.querySelector('.grg-desktop-sticky-header') &&
 	document.getElementById('masthead') &&
 	document.querySelector('.desktop-nav')

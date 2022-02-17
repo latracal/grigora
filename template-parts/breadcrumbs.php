@@ -4,6 +4,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // For security
 }
 
+if(get_theme_mod("grg_breadcrumbs_display", grigora_breadcrumbs_defaults()['grg_breadcrumbs_display'])){
+
 ?>
 <div class="breadcrumb-wrapper">
     <ul class="breadcrumb" itemtype="<?php echo grg_get_schema_tag('breadcrumb')['itemtype'] ?>"
@@ -53,3 +55,5 @@ if ( ! defined( 'ABSPATH' ) ) {
         <li><?php the_title(); ?></li>
     </ul>
 </div>
+
+<?php } ?>

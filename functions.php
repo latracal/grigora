@@ -12,6 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 define( 'grg_DEV_MODE', true );
 
 // Includes
+include( get_theme_file_path( '/settings-functions/defaults.php' ) );
 include( get_theme_file_path( '/inc/front/enqueue.php' ) );
 include( get_theme_file_path( '/inc/setup.php' ) );
 include( get_theme_file_path( '/inc/bodyclasses.php' ) );
@@ -29,7 +30,6 @@ add_action( 'widgets_init', 'grg_sidebar' ); //sidebar
 
 
 // Options
-include( get_theme_file_path( '/settings-functions/defaults.php' ) );
 include( get_theme_file_path( '/settings-functions/options-controls.php' ) );
 include( get_theme_file_path( '/settings-functions/fonts-loading.php' ) );
 include( get_theme_file_path( '/settings-functions/dynamic-css.php' ) );
