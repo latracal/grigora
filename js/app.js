@@ -290,11 +290,22 @@ if (
 			document.getElementById('masthead').style.minHeight =
 				headerinitialheight.toString() + 'px';
 			document.querySelector('.mobile-header').style.position = 'fixed';
+			if(document.querySelector('#wpadminbar')){
+				var offset = document.querySelector('#wpadminbar').clientHeight - st;
+				if(offset < 0){
+					offset = 0;
+				}
+				document.querySelector('.mobile-header').style.top = offset.toString()+'px';
+			}
+			
 		} else {
 			if (st <= lastScrollTop) {
 				document.querySelector('.top-part').style.minHeight = null;
 				document.querySelector('.mobile-header').style.position =
 					'relative';
+				if(document.querySelector('#wpadminbar')){
+					document.querySelector('.mobile-header').style.top = null;
+				}
 			}
 			else {
 				document.querySelector('.top-part').style.minHeight = null;
