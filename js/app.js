@@ -231,7 +231,6 @@ if (notice) {
 	}
 }
 
-
 var lastScrollTop = 0;
 
 if (
@@ -249,23 +248,52 @@ if (
 			document.documentElement.scrollTop > 0
 		) {
 			document.querySelector('.desktop-nav').style.minHeight = '65px';
-			document.getElementById('masthead').style.minHeight = headerinitialheight.toString()+'px';
+			document.getElementById('masthead').style.minHeight =
+				headerinitialheight.toString() + 'px';
 			document.querySelector('.desktop-nav').style.position = 'fixed';
 		} else {
-			if(st<=lastScrollTop){
+			if (st <= lastScrollTop) {
 				document.querySelector('.desktop-nav').style.minHeight = null;
-				document.querySelector('.desktop-nav').style.position = 'relative';
-			}
-			else{
+				document.querySelector('.desktop-nav').style.position =
+					'relative';
+			} else {
 				document.querySelector('.desktop-nav').style.minHeight = null;
 				document.getElementById('masthead').style.minHeight = null;
-				document.querySelector('.desktop-nav').style.position = 'relative';
+				document.querySelector('.desktop-nav').style.position =
+					'relative';
 			}
-
 		}
 		lastScrollTop = st <= 0 ? 0 : st;
 	}
 	window.onscroll = function () {
 		shrink();
+	};
+}
+
+if (
+	document.getElementById('masthead') &&
+	document.querySelector('.top-part') &&
+	document.querySelector('.mobile-header')
+) {
+	const headerinitialheight =
+		document.querySelector('.top-part').clientHeight;
+	function mobileshrink() {
+		if (
+			document.body.scrollTop > 0 ||
+			document.documentElement.scrollTop > 0
+		) {
+			document.querySelector('.top-part').style.minHeight = '100px';
+			document.getElementById('masthead').style.minHeight =
+				headerinitialheight.toString() + 'px';
+			document.querySelector('.mobile-header').style.position = 'fixed';
+		} else {
+			document.querySelector('.top-part').style.minHeight = null;
+			document.getElementById('masthead').style.minHeight = null;
+			document.querySelector('.mobile-header').style.position =
+				'relative';
+		}
+	}
+	window.onscroll = function () {
+		mobileshrink();
 	};
 }
