@@ -208,202 +208,35 @@ echo '<div class="admin-container">';
     }
 }
 
-grigora_set_default_colors();
-grigora_set_default_spacing();
-grigora_set_default_scroll();
-grigora_set_default_typography_font();
-grigora_set_default_typography();
-grigora_set_default_blog();
-grigora_set_default_breadcrumbs();
-
+grigora_set_defaults(
+    array_merge(
+        grigora_color_defaults(),
+        grigora_spacing_defaults(),
+        grigora_scroll_defaults(),
+        grigora_typography_defaults_fonts(),
+        grigora_typography_defaults(),
+        grigora_blog_defaults(),
+        grigora_breadcrumbs_defaults()
+    )
+);
 add_action( 'admin_menu', 'girgora_options_menu' );
 
 register_setting( 'grigora_settings', 'grigora_settings' );
 
 /**
- * Set default color theme mods
+ * Set theme defaults
  *
  * @since  1.000
  * 
  */
-function grigora_set_default_colors(){
-    if (!grigora_get_option("colordefaultsset")){
-        $defaults = grigora_color_defaults();
-        $mods = get_theme_mods();
-
-        foreach($defaults as $k => $value){
-            if(!$mods[$k]){
-                set_theme_mod($k, $value);
-            }
+function grigora_set_defaults($defaults){
+    $mods = get_theme_mods();
+    foreach($defaults as $k => $value){
+        if(!isset($mods[$k])){
+            set_theme_mod($k, $value);
         }
-
-        $my_options = get_option('grigora_settings');
-        if(!$my_options){
-            $my_options = array();
-        }
-        $my_options['colordefaultsset'] = 1;
-        update_option('grigora_settings', $my_options);
     }
 }
-
-/**
- * Set default spacing layout theme mods
- *
- * @since  1.000
- * 
- */
-function grigora_set_default_spacing(){
-    if (!grigora_get_option("spacingdefaultsset")){
-        $defaults = grigora_spacing_defaults();
-        $mods = get_theme_mods();
-
-        foreach($defaults as $k => $value){
-            if(!$mods[$k]){
-                set_theme_mod($k, $value);
-            }
-        }
-
-        $my_options = get_option('grigora_settings');
-        if(!$my_options){
-            $my_options = array();
-        }
-        $my_options['spacingdefaultsset'] = 1;
-        update_option('grigora_settings', $my_options);
-    }
-}
-
-/**
- * Set default scroll theme mods
- *
- * @since  1.000
- * 
- */
-function grigora_set_default_scroll(){
-    if (!grigora_get_option("scrolldefaultsset")){
-        $defaults = grigora_scroll_defaults();
-        $mods = get_theme_mods();
-
-        foreach($defaults as $k => $value){
-            if(!$mods[$k]){
-                set_theme_mod($k, $value);
-            }
-        }
-
-        $my_options = get_option('grigora_settings');
-        if(!$my_options){
-            $my_options = array();
-        }
-        $my_options['scrolldefaultsset'] = 1;
-        update_option('grigora_settings', $my_options);
-    }
-}
-
-/**
- * Set default typography fonts
- *
- * @since  1.000
- * 
- */
-function grigora_set_default_typography_font(){
-    if (!grigora_get_option("typographyfontdefaultsset")){
-        $defaults = grigora_typography_defaults_fonts();
-        $mods = get_theme_mods();
-
-        foreach($defaults as $k => $value){
-            if(!$mods[$k]){
-                set_theme_mod($k, $value);
-            }
-        }
-
-        $my_options = get_option('grigora_settings');
-        if(!$my_options){
-            $my_options = array();
-        }
-        $my_options['typographyfontdefaultsset'] = 1;
-        update_option('grigora_settings', $my_options);
-    }
-}
-
-/**
- * Set typography defaults
- *
- * @since  1.000
- * 
- */
-function grigora_set_default_typography(){
-    if (!grigora_get_option("typographydefaultsset")){
-        $defaults = grigora_typography_defaults();
-        $mods = get_theme_mods();
-
-        foreach($defaults as $k => $value){
-            if(!$mods[$k]){
-                set_theme_mod($k, $value);
-            }
-        }
-
-        $my_options = get_option('grigora_settings');
-        if(!$my_options){
-            $my_options = array();
-        }
-        $my_options['typographydefaultsset'] = 1;
-        update_option('grigora_settings', $my_options);
-    }
-}
-
-/**
- * Set default blog theme mods
- *
- * @since  1.000
- * 
- */
-
-function grigora_set_default_blog(){
-    if (!grigora_get_option("blogdefaultsset")){
-        $defaults = grigora_blog_defaults();
-        $mods = get_theme_mods();
-
-        foreach($defaults as $k => $value){
-            if(!$mods[$k]){
-                set_theme_mod($k, $value);
-            }
-        }
-
-        $my_options = get_option('grigora_settings');
-        if(!$my_options){
-            $my_options = array();
-        }
-        $my_options['blogdefaultsset'] = 1;
-        update_option('grigora_settings', $my_options);
-    }
-}
-
-/**
- * Set breadcrumbs settings
- *
- * @since  1.000
- * 
- */
-
-function grigora_set_default_breadcrumbs(){
-    if (!grigora_get_option("breadcrumbsdefaultsset")){
-        $defaults = grigora_breadcrumbs_defaults();
-        $mods = get_theme_mods();
-
-        foreach($defaults as $k => $value){
-            if(!$mods[$k]){
-                set_theme_mod($k, $value);
-            }
-        }
-
-        $my_options = get_option('grigora_settings');
-        if(!$my_options){
-            $my_options = array();
-        }
-        $my_options['breadcrumbsdefaultsset'] = 1;
-        update_option('grigora_settings', $my_options);
-    }
-}
-
 
 /**
  * Renders customizer setting in div having specific class name for each individual setting in
