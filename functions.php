@@ -14,7 +14,6 @@ define( 'grg_DEV_MODE', true );
 // Includes
 include( get_theme_file_path( '/inc/front/enqueue.php' ) );
 include( get_theme_file_path( '/inc/setup.php' ) );
-include( get_theme_file_path( '/inc/sidebarfunction.php' ) );
 include( get_theme_file_path( '/shortcodes.php' ) );
 
 include( get_theme_file_path( '/template-parts/comments.php' ) );

@@ -291,6 +291,14 @@ function grigora_customize_settings_section() {
 	);
 
     add_settings_field(
+		'grigora_customizer_section_stickyh',
+		__('Sticky Header', 'grigora'),
+		'grigora_customizer_section_stickyh_callback_function',
+		'grigora-options',
+		'grigora_customizer_section'
+	);
+
+    add_settings_field(
 		'grigora_customizer_section_toc',
 		__('Table Of Contents', 'grigora'),
 		'grigora_customizer_section_toc_callback_function',
@@ -455,6 +463,10 @@ function grigora_customizer_section_spacing_callback_function() {
 
 function grigora_customizer_section_blog_callback_function() {
     echo '<input name="grigora_settings[blog]" id="grigora_settings[blog]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'blog' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
+}
+
+function grigora_customizer_section_stickyh_callback_function() {
+    echo '<input name="grigora_settings[stickyh]" id="grigora_settings[stickyh]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'stickyh' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
 }
 
 function grigora_customizer_section_toc_callback_function() {

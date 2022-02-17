@@ -41,7 +41,8 @@ if ( ! function_exists( 'grigora_get_defaults' ) ) {
 				'minify' => 0,
 				'dynamicexternal' => 0,
 				'localfonts' => 0,
-				'blocks' => 0
+				'blocks' => 0,
+				'stickyh' => 0
 			)
 		);
 	}
