@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						get_template_part('/template-parts/posts/content-posts');
 					}
 				}else{
-					echo "<h4 class='search-not-found'>Sorry, your search did not match any entries. Please try again with different search terms.</h4>";
+					echo "<h4 class='search-not-found'>".esc_html( __( "Sorry, your search did not match any entries. Please try again with different search terms.", "grigora" ))."</h4>";
 					get_search_form(); 
             }
             ?>

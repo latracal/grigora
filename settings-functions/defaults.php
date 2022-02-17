@@ -41,6 +41,7 @@ if ( ! function_exists( 'grigora_get_defaults' ) ) {
 				'minify' => 0,
 				'dynamicexternal' => 0,
 				'localfonts' => 0,
+				'blocks' => 0
 			)
 		);
 	}
@@ -145,8 +146,14 @@ if ( ! function_exists( 'grigora_spacing_defaults' ) ) {
 			'grg_toc_heading4' => 1,
 			'grg_toc_heading5' => 1,
 			'grg_toc_heading6' => 1,			
-			'grg_footer_text' => 'Copyright [copy] [grg_year] | [blog_name] | Built with&nbsp;<a href="https://wpgrigora.com/">Grigora</a>',
-			'grg_cookie_text' => 'This website uses cookies to provide necessary website functionality, improve your experience and analyze our traffic. By using our website, you agree to our Privacy Policy and our cookies usage.'
+			'grg_footer_text' => sprintf(
+				'%1$s [copy] [grg_year] | [blog_name] | %2$s&nbsp;<a href="https://wpgrigora.com/">%3$s</a>',
+				__('Copyright', 'grigora'),
+				__('Built with', 'grigora'),
+				__('Grigora', 'grigora'),
+
+			),
+			'grg_cookie_text' => __('This website uses cookies to provide necessary website functionality, improve your experience and analyze our traffic. By using our website, you agree to our Privacy Policy and our cookies usage.', 'grigora')
 		);
 	}
 }

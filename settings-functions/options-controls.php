@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! function_exists( 'girgora_options_menu' ) ) { 
     function girgora_options_menu() {
-        add_theme_page( 'grigora-options', 'Grigora Options', 'manage_options', 'grigora-options', 'grigora_options_page' );
+        add_theme_page( 'grigora-options', __('Grigora Options', 'grigora'), 'manage_options', 'grigora-options', 'grigora_options_page' );
     }
 }
 
@@ -104,45 +104,40 @@ function grigora_options_page() {
 wp_enqueue_style( 'theme-options', get_template_directory_uri() . '/dist/css/admin-options.css' );
 wp_enqueue_script( 'theme-options', get_template_directory_uri() . '/js/admin-options.js' );
 if ( !current_user_can( 'manage_options' ) ) {
-wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
+wp_die( __( 'You do not have sufficient permissions to access this page.' , 'grigora') );
 }
 echo '<div class="admin-container">';
     settings_errors();
     ?>
 <div class="setting-title">
-    <h1>Grigora</h1>
+    <h1><?php echo esc_html( __( 'Grigora', 'grigora')); ?></h1>
 </div>
 <?php 
     if ( !is_grigora_pro_active() ) {
         echo '<div class="pro-notification"><p>'; 
         echo esc_html( __( "Activate All Powerful Options By Purchasing Girgora Pro", "grigora" )); 
-        echo '</p><a href="https://wpgrigora.com/pro/" target="_blank"><button class="pro-btn">Buy Now</button></a></div>';
+        echo '</p><a href="https://wpgrigora.com/pro/" target="_blank"><button class="pro-btn">'.esc_html( __( 'Buy Now', 'grigora')).'</button></a></div>';
 }
 ?>
 <div class="grigora-settings">
     <div class="tab-container">
         <div class="tab">
-            <button class="tab-btn" onclick="controlName(event, 'grigora_customizer_section')" id="default"><?php echo esc_html( __( "Customizer
-                Options", "grigora" )); ?></button>
-            <button class="tab-btn"
-                onclick="controlName(event, 'grigora_performance_section')"><?php echo esc_html( __( "Performance", "grigora" )); ?></button>
-            <button class="tab-btn IE-tab" onclick="controlName(event, 'grigora_importexport_section')"><?php echo esc_html( __( "Import
-                &
-                Export", "grigora" )); ?></button>
+            <button class="tab-btn" onclick="controlName(event, 'grigora_customizer_section')" id="default"><?php echo esc_html( __( "Customizer Options", "grigora" )); ?></button>
+            <button class="tab-btn" onclick="controlName(event, 'grigora_performance_section')"><?php echo esc_html( __( "Performance", "grigora" )); ?></button>
+            <button class="tab-btn IE-tab" onclick="controlName(event, 'grigora_importexport_section')"><?php echo esc_html( __( "Import & Export", "grigora" )); ?></button>
         </div>
         <div class="tab-content">
             <form action="options.php" method="post" class=" <?php echo (is_grigora_pro_active() ? '' : 'disabled') ?>">
-
                 <?php
-            settings_fields("grigora_settings");
-            custom_do_settings_sections("grigora-options");
-            submit_button();
-        ?>
+                    settings_fields("grigora_settings");
+                    custom_do_settings_sections("grigora-options");
+                    submit_button();
+                ?>
             </form>
             <form enctype="multipart/form-data" action="<?php echo get_admin_url( null, 'admin-post.php' ) ?>"
                 method="post" class="IETab <?php echo (is_grigora_pro_active() ? '' : 'disabled') ?>">
                 <div class="grigora_importexport_section customizer " id="grigora_importexport_section">
-                    <h2>Import &amp; Export</h2>
+                    <h2><?php echo esc_html( __( "Import & Export", "grigora" )); ?></h2>
                     <input type="hidden" name="action" value="grigora_import">
                     <p><?php echo esc_html( __( "Save and Restore your Grigora Settings in One Click!", "grigora" )); ?>
                     </p>
@@ -248,18 +243,16 @@ function grigora_set_defaults($defaults){
 
 function grigora_customize_settings_section() {
     
-
-
  	add_settings_section(
 		'grigora_customizer_section',
-		'Customizer Options',
+		__('Customizer Options', 'grigora'),
 		'grigora_customizer_section_callback_function',
         'grigora-options'	
 	);
 
  	add_settings_field(
 		'grigora_customizer_section_colors',
-		'Colors',
+		__('Advanced Colors', 'grigora'),
 		'grigora_customizer_section_colors_callback_function',
 		'grigora-options',
 		'grigora_customizer_section'
@@ -267,7 +260,7 @@ function grigora_customize_settings_section() {
 
     add_settings_field(
 		'grigora_customizer_section_typography',
-		'Typography',
+		__('Typography', 'grigora'),
 		'grigora_customizer_section_typography_callback_function',
 		'grigora-options',
 		'grigora_customizer_section'
@@ -275,7 +268,7 @@ function grigora_customize_settings_section() {
 
     add_settings_field(
 		'grigora_customizer_section_spacing',
-		'Spacing/Layout',
+		__('Layout & Spacing', 'grigora'),
 		'grigora_customizer_section_spacing_callback_function',
 		'grigora-options',
 		'grigora_customizer_section'
@@ -283,15 +276,23 @@ function grigora_customize_settings_section() {
 
     add_settings_field(
 		'grigora_customizer_section_blog',
-		'Blog Layout',
+		__('Blog Layout', 'grigora'),
 		'grigora_customizer_section_blog_callback_function',
 		'grigora-options',
 		'grigora_customizer_section'
 	);
 
     add_settings_field(
+		'grigora_customizer_section_blocks',
+		__('Grigora Blocks', 'grigora'),
+		'grigora_customizer_section_blocks_callback_function',
+		'grigora-options',
+		'grigora_customizer_section'
+	);
+
+    add_settings_field(
 		'grigora_customizer_section_toc',
-		'Table Of Contents',
+		__('Table Of Contents', 'grigora'),
 		'grigora_customizer_section_toc_callback_function',
 		'grigora-options',
 		'grigora_customizer_section'
@@ -299,7 +300,7 @@ function grigora_customize_settings_section() {
 
     add_settings_field(
 		'grigora_customizer_section_scroll',
-		'Scroll To Top',
+		__('Scroll To Top', 'grigora'),
 		'grigora_customizer_section_scroll_callback_function',
 		'grigora-options',
 		'grigora_customizer_section'
@@ -307,27 +308,21 @@ function grigora_customize_settings_section() {
 
     add_settings_field(
 		'grigora_customizer_section_cookie',
-		'Cookie Notice',
+		__('Cookie Notice', 'grigora'),
 		'grigora_customizer_section_cookie_callback_function',
 		'grigora-options',
 		'grigora_customizer_section'
 	);
 
-    add_settings_field(
-		'grigora_customizer_section_popup',
-		'Pop Ups (Upcoming)',
-		'grigora_customizer_section_popup_callback_function',
-		'grigora-options',
-		'grigora_customizer_section'
-	);
+    // add_settings_field(
+	// 	'grigora_customizer_section_popup',
+	// 	'Pop Ups (Upcoming)',
+	// 	'grigora_customizer_section_popup_callback_function',
+	// 	'grigora-options',
+	// 	'grigora_customizer_section'
+	// );
 
-    add_settings_field(
-		'grigora_customizer_section_procontable',
-		'Pros Cons Table (Upcoming)',
-		'grigora_customizer_section_procontable_callback_function',
-		'grigora-options',
-		'grigora_customizer_section'
-	);
+
 
  }
  
@@ -345,14 +340,14 @@ function grigora_customize_settings_section() {
 
     add_settings_section(
        'grigora_performance_section',
-       'Performance',
+		__('Performance', 'grigora'),
        'grigora_performance_section_callback_function',
        'grigora-options'
    );
 
    add_settings_field(
         'grigora_performance_section_minify',
-        'Minify CSS',
+		__('Minify CSS', 'grigora'),
         'grigora_performance_section_minify_callback_function',
         'grigora-options',
         'grigora_performance_section'
@@ -360,7 +355,7 @@ function grigora_customize_settings_section() {
 
     add_settings_field(
         'grigora_performance_section_dynamicexternal',
-        'Dynamic CSS in External File',
+		__('Dynamic CSS in External File', 'grigora'),
         'grigora_performance_section_dynamicexternal_callback_function',
         'grigora-options',
         'grigora_performance_section'
@@ -368,7 +363,7 @@ function grigora_customize_settings_section() {
 
     add_settings_field(
         'grigora_performance_section_localfonts',
-        'Host Google Fonts Locally',
+		__('Host Google Fonts Locally', 'grigora'),
         'grigora_performance_section_localfonts_callback_function',
         'grigora-options',
         'grigora_performance_section'
@@ -376,7 +371,7 @@ function grigora_customize_settings_section() {
 
     add_settings_field(
        'grigora_performance_section_emoji',
-       'Disable Emojis',
+		__('Disable Emojis', 'grigora'),
        'grigora_performance_section_emoji_callback_function',
        'grigora-options',
        'grigora_performance_section'
@@ -384,7 +379,7 @@ function grigora_customize_settings_section() {
 
     add_settings_field(
         'grigora_performance_section_embeds',
-        'Disable Embeds',
+		__('Disable Embeds', 'grigora'),
         'grigora_performance_section_embeds_callback_function',
         'grigora-options',
         'grigora_performance_section'
@@ -400,7 +395,7 @@ function grigora_customize_settings_section() {
 
     add_settings_field(
         'grigora_performance_section_jquerymigrate',
-        'Disable Jquery Migrate',
+		__('Disable Jquery Migrate', 'grigora'),
         'grigora_performance_section_jquerymigrate_callback_function',
         'grigora-options',
         'grigora_performance_section'
@@ -408,7 +403,7 @@ function grigora_customize_settings_section() {
 
     add_settings_field(
         'grigora_performance_section_jquery',
-        'Disable Jquery',
+		__('Disable Jquery', 'grigora'),
         'grigora_performance_section_jquery_callback_function',
         'grigora-options',
         'grigora_performance_section'
@@ -416,7 +411,7 @@ function grigora_customize_settings_section() {
 
     add_settings_field(
         'grigora_performance_section_dashicons',
-        'Disable Dashicons',
+		__('Disable Dashicons', 'grigora'),
         'grigora_performance_section_dashicons_callback_function',
         'grigora-options',
         'grigora_performance_section'
@@ -475,13 +470,11 @@ function grigora_customizer_section_cookie_callback_function() {
 }
 
 function grigora_customizer_section_popup_callback_function() {
-    // echo '<input name="grigora_settings[popup]" id="grigora_settings[popup]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'popup' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
-    // echo 'Upcoming';
+    echo '<input name="grigora_settings[popup]" id="grigora_settings[popup]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'popup' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
 }
 
-function grigora_customizer_section_procontable_callback_function() {
-    // echo '<input name="grigora_settings[procontable]" id="grigora_settings[procontable]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'procontable' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
-    // echo 'Upcoming';
+function grigora_customizer_section_blocks_callback_function() {
+    echo '<input name="grigora_settings[blocks]" id="grigora_settings[blocks]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'blocks' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
 }
 function grigora_performance_section_minify_callback_function() {
     echo '<input name="grigora_settings[minify]" id="grigora_settings[minify]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'minify' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
@@ -581,7 +574,7 @@ function grigora_admin_import_data() {
         $file_ext=strtolower(end(explode('.',$_FILES['grigora_import']['name'])));
         $file_tmp = $_FILES['grigora_import']['tmp_name'];
         $extensions = array('json');
-        if(in_array($file_ext,$extensions)=== false){
+        if(in_array($file_ext,$extensions) === false){
             wp_die( __( 'Please upload Json file', 'grigora' ) ); 
         }
         $str = file_get_contents($file_tmp);
