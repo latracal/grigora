@@ -232,10 +232,10 @@ if (notice) {
 }
 
 var lastScrollTop = 0;
-
 if (
 	document.querySelector('.grg-sticky-header') &&
 	document.querySelector('.grg-desktop-sticky-header') &&
+	screen.width >= 769 &&
 	document.getElementById('masthead') &&
 	document.querySelector('.desktop-nav')
 ) {
@@ -273,6 +273,7 @@ if (
 if (
 	document.querySelector('.grg-sticky-header') &&
 	document.querySelector('.grg-mobile-sticky-header') &&
+	screen.width < 769 &&
 	document.getElementById('masthead') &&
 	document.querySelector('.top-part') &&
 	document.querySelector('.mobile-header')

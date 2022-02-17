@@ -32,7 +32,7 @@ add_filter( 'body_class', function( $classes ) {
 	else if($sidebar_layout == "none"){
 		return array_merge( $classes, array( 'grg-no-sidebar' ) );
 	}
-    return array_merge( $classes, array( '' ) );
+    return $classes;
 } );
 
 
@@ -46,10 +46,10 @@ add_filter( 'body_class', function( $classes ) {
 			return array_merge( $classes, array( 'grg-empty-canvas' ) );
 		}
 		else{
-			return array_merge( $classes, array( '' ) );
+			return $classes;
 		}
 	}
-    return array_merge( $classes, array( '' ) );
+    return $classes;
 } );
 
 add_filter( 'body_class', function( $classes ) {
@@ -58,15 +58,15 @@ add_filter( 'body_class', function( $classes ) {
         return array_merge( $classes, array( 'grg-sticky-header' ) );
     }
     else {
-        return array_merge( $classes, array( '' ) );
+        return $classes;
     }
-    return array_merge( $classes, array( '' ) );
+    return $classes;
 } );
 
 add_filter( 'body_class', function( $classes ) {
 	$header_sticky = get_theme_mod("grg_header-sticky", grigora_spacing_defaults()['grg_header-sticky']);
     if ($header_sticky == "off"){
-        return array_merge( $classes, array( '' ) );
+        return $classes;
     }
     else if ($header_sticky == "mobile"){
         return array_merge( $classes, array( 'grg-mobile-sticky-header' ) );
@@ -77,5 +77,5 @@ add_filter( 'body_class', function( $classes ) {
     else if ($header_sticky == "both"){
         return array_merge( $classes, array( 'grg-mobile-sticky-header', 'grg-desktop-sticky-header' ) );
     }
-    return array_merge( $classes, array( '' ) );
+    return  $classes;
 } );
