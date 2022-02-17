@@ -30,7 +30,7 @@ if(post_password_required()){
                         'callback' => 'grigora_comment'
                     ) );
                 ?>
-    </ol><!-- .comment-list -->
+    </ol>
     <?php
          ?>
     <?php endif; ?>

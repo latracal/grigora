@@ -51,3 +51,21 @@ add_filter( 'body_class', function( $classes ) {
 	}
     return array_merge( $classes, array( '' ) );
 } );
+
+
+add_filter( 'body_class', function( $classes ) {
+	$header_sticky = get_theme_mod("grg_header-sticky", grigora_spacing_defaults()['grg_header-sticky']);
+    if ($header_sticky == "off"){
+        return array_merge( $classes, array( '' ) );
+    }
+    else if ($header_sticky == "mobile"){
+        return array_merge( $classes, array( 'grg-mobile-sticky-header' ) );
+    }
+    else if ($header_sticky == "desktop"){
+        return array_merge( $classes, array( 'grg-desktop-sticky-header' ) );
+    }
+    else if ($header_sticky == "both"){
+        return array_merge( $classes, array( 'grg-mobile-sticky-header', 'grg-desktop-sticky-header' ) );
+    }
+    return array_merge( $classes, array( '' ) );
+} );

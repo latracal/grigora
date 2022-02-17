@@ -31,6 +31,14 @@ function grigora_custom_logo_setup() {
 }
 
 /**
+ * Add theme support for title tag
+ *
+ * @since  1.000
+ * 
+ */
+add_theme_support( 'title-tag' );
+
+/**
  * Change excerpt suffix
  *
  * @since  1.000

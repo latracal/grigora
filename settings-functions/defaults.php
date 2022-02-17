@@ -126,6 +126,7 @@ if ( ! function_exists( 'grigora_spacing_defaults' ) ) {
 			'grg_header_image_height' => 100,
 			'grg_header_image_height_mobile' => 80,	
 			'grg_header-search-btn' => 1,
+			'grg_header-sticky' => 'off',
 			'grg_sidebar-alignment' => 'row',		
 			'grg_sidebar-width' => '30',	
 			'grg_sidebar-margin-top' => '48',	
