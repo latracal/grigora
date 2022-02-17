@@ -2361,7 +2361,13 @@ table {
 
 ul,
 ol {
-  margin-left: 1rem;
+  margin: 0 0 1rem 3rem;
+}
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+  margin-left: 1.5em;
 }
 
 .grg-right-sidebar aside.grigora-primary-sidebar {
