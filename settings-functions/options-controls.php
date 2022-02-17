@@ -101,8 +101,8 @@ if ( ! function_exists( 'grigora_options_page' ) ) {
  * 
  */
 function grigora_options_page() {
-wp_enqueue_style( 'theme-options', get_template_directory_uri() . '/dist/css/admin-options.css' );
-wp_enqueue_script( 'theme-options', get_template_directory_uri() . '/js/admin-options.js' );
+wp_enqueue_style( 'theme-options', get_template_directory_uri() . '/dist/css/admin-options.css', null, grg_VERSION );
+wp_enqueue_script( 'theme-options', get_template_directory_uri() . '/js/admin-options.js', null, grg_VERSION );
 if ( !current_user_can( 'manage_options' ) ) {
 wp_die( __( 'You do not have sufficient permissions to access this page.' , 'grigora') );
 }
