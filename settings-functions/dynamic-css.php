@@ -856,7 +856,7 @@ else {
 }
 
 if($typography_flag) {
-    $out=$out."body {
+    $out=$out."body, textarea {
         font-family: ".get_theme_mod('grg_typography_body_font', $typography_fonts_defaults['grg_typography_body_font']).", sans-serif;
         
     }
@@ -992,7 +992,7 @@ if($typography_flag) {
 }
 
 else {
-    $out=$out."body {
+    $out=$out."body, textarea {
         font-family: ".$typography_fonts_defaults['grg_typography_body_font'].", sans-serif;
         
     }
