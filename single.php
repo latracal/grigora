@@ -29,7 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                         <?php the_title(); ?></h1>
                     <?php } ?>
-                    <span class="post-meta">
+                    <p class="post-meta">
                         <?php if( get_theme_mod( 'grg_blog_single_author_display', grigora_blog_defaults()['grg_blog_single_author_display'] ) )
         {
             ?><span><?php echo esc_html( __( "Published by", "grigora" )); ?></span>
@@ -56,7 +56,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                         <?php if( get_theme_mod( 'grg_blog_single_date_display' , grigora_blog_defaults()['grg_blog_single_date_display']) ) { ?>
                         <time datetime="<?php echo get_the_date('c'); ?>"
                             itemprop="<?php echo grg_get_schema_tag('creativeworkdate')['itemprop']; ?>"><?php echo get_the_date(); ?></time>
-                        <?php } ?></span>
+                        <?php } ?></p>
                     <?php if( get_theme_mod( 'grg_blog_single_social_share', grigora_blog_defaults()['grg_blog_single_social_share'] ) )
         {
             ?>

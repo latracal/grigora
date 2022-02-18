@@ -1266,8 +1266,6 @@
 
 .article .post-meta {
   color: #454545;
-  font-size: 0.813rem;
-  margin-bottom: 1rem;
 }
 
 .article .post-meta a {
@@ -1599,8 +1597,6 @@
 
 .article .post-meta {
   color: #454545;
-  font-size: 0.813rem;
-  margin-bottom: 1rem;
 }
 
 .article .post-meta a {
@@ -2215,12 +2211,6 @@
   font-size: 1.875rem;
 }
 
-.grigora-primary-sidebar .post-meta {
-  color: #454545;
-  font-size: 0.813rem;
-  margin-bottom: 1rem;
-}
-
 .grigora-primary-sidebar .wp-block-quote {
   font-weight: bold;
   font-style: italic;
@@ -2500,6 +2490,14 @@ main {
 
 .grigora-table-of-contents a {
   text-decoration: none;
+}
+
+.grigora-table-of-contents p {
+  margin-bottom: 0;
+}
+
+.grigora-table-of-contents ol {
+  margin-bottom: 0;
 }
 
 .show-links {

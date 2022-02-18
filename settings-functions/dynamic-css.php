@@ -998,8 +998,8 @@ else {
     }
 
     main p,.container .article p, .container .article li, .container .article .wp-block-quote p, .container .article .wp-block-quote cite, .container .article .wp-block-preformatted, .container .article .wp-block-code, .container .article .wp-block-table table, .wp-block-pullquote p, .wp-block-pullquote cite {
-        font-weight: ".$typography_defaults['grg_typography_body_weight']."px;
-        font-size: ".$typography_defaults['grg_typography_body_font_size'].";
+        font-weight: ".$typography_defaults['grg_typography_body_weight'].";
+        font-size: ".$typography_defaults['grg_typography_body_font_size']."px;
         
     }
 

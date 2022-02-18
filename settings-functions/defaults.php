@@ -191,18 +191,18 @@ if ( ! function_exists( 'grigora_typography_defaults_fonts' ) ) {
 
 	function grigora_typography_defaults_fonts() {
 		return array(
-			"grg_typography_body_font" => "Verdana",
-			"grg_typography_site_title_font" => "Arial",
-			"grg_typography_site_desc_font" => "Arial",
-			"grg_typography_site_menu_font" => "Verdana",
-			"grg_typography_button_font" => "Verdana",
+			"grg_typography_body_font" => "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+			"grg_typography_site_title_font" => "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+			"grg_typography_site_desc_font" => "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+			"grg_typography_site_menu_font" => "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+			"grg_typography_button_font" => "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
 			"grg_typography_h1_font" => "Arial",
 			"grg_typography_h2_font" => "Arial",
 			"grg_typography_h3_font" => "Arial",
 			"grg_typography_h4_font" => "Arial",
 			"grg_typography_h5_font" => "Arial",
 			"grg_typography_h6_font" => "Arial",
-			"grg_typography_footer_font" => "Verdana",
+			"grg_typography_footer_font" => "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
 		);
 	}
 }
@@ -218,18 +218,18 @@ if ( ! function_exists( 'grigora_typography_defaults' ) ) {
 
 	function grigora_typography_defaults() {
 		return array(
-			"grg_typography_body_weight" => "500",
+			"grg_typography_body_weight" => "400",
 			"grg_typography_body_font_size" => "18",
 			"grg_typography_site_title_weight" => "700",
 			"grg_typography_site_title_size" => "30",
 			"grg_typography_site_desc_weight" => "500",
 			"grg_typography_site_desc_size" => "25",
-			"grg_typography_site_menu_weight" => "500",
+			"grg_typography_site_menu_weight" => "400",
 			"grg_typography_site_menu_size" => "18",
 			"grg_typography_button_weight" => "500",
 			"grg_typography_button_size" => "18",
 			"grg_typography_h1_weight" => "700",
-			"grg_typography_h1_size" => "25",
+			"grg_typography_h1_size" => "32",
 			"grg_typography_h2_weight" => "700",
 			"grg_typography_h2_size" => "24",
 			"grg_typography_h3_weight" => "700",
@@ -240,7 +240,7 @@ if ( ! function_exists( 'grigora_typography_defaults' ) ) {
 			"grg_typography_h5_size" => "21",
 			"grg_typography_h6_weight" => "700",
 			"grg_typography_h6_size" => "20",
-			"grg_typography_footer_weight" => "500",
+			"grg_typography_footer_weight" => "400",
 			"grg_typography_footer_size" => "18",
 			"grg_typography_body_font_transform" => "none",
 			"grg_typography_site_title_transform" => "none",
