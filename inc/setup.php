@@ -39,6 +39,51 @@ function grigora_custom_logo_setup() {
 add_theme_support( 'title-tag' );
 
 /**
+ * Add theme support for html5
+ *
+ * @since  1.001
+ * 
+ */
+add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
+
+/**
+ * Add theme support for automatic feed link
+ *
+ * @since  1.001
+ * 
+ */
+global $wp_version;
+if ( version_compare( $wp_version, '3.0', '>=' ) ) :
+	add_theme_support( 'automatic-feed-links' ); 
+else :
+	automatic_feed_links();
+endif;
+
+/**
+ * Add theme support for woocommerce
+ *
+ * @since  1.001
+ * 
+ */
+add_theme_support( 'woocommerce' );
+
+/**
+ * Add theme support for align wide
+ *
+ * @since  1.001
+ * 
+ */
+add_theme_support( 'align-wide' );
+
+/**
+ * Add theme support for responsive embeds
+ *
+ * @since  1.001
+ * 
+ */
+add_theme_support( 'responsive-embeds' );
+
+/**
  * Change excerpt suffix
  *
  * @since  1.000

@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         }
         if(get_theme_mod( 'grg_blog_archive_author_display', grigora_blog_defaults()['grg_blog_archive_author_display'] ) && get_theme_mod( 'grg_blog_archive_date_display', grigora_blog_defaults()['grg_blog_archive_date_display'] )){
             ?>
-            &nbsp;-&nbsp;
+            <span>&nbsp;-&nbsp;</span>
             <?php }
         ?>
 
