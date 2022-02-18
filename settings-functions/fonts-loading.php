@@ -47,7 +47,7 @@ if (grigora_get_option("typography") && function_exists('google_fonts')){
         $mods = array_unique($mods);
         $font_request = 'https://fonts.googleapis.com/css?family=';
         foreach ($mods as $key => $font) {
-            if(!in_array($font, $safewebfonts)){
+            if(!in_array($font, $safewebfonts) && !in_array($font, grigora_typography_defaults_fonts())){
                 $font_request = $font_request.google_fonts()[$font].'|';
                 $count++;
             }
