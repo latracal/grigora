@@ -1,57 +1,57 @@
-@import "header";
-@import "mobileheader";
-@import "footer";
-@import "archive";
-@import "search";
-@import "singlepost";
-@import "aside";
+@import 'header';
+@import 'mobileheader';
+@import 'footer';
+@import 'archive';
+@import 'search';
+@import 'singlepost';
+@import 'aside';
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 .container {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  margin: 0 auto;
-  max-width: 1366px;
-  transition: all 0.3s linear;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	margin: 0 auto;
+	max-width: 1366px;
+	transition: all 0.3s linear;
 
-  @media (max-width: 768px) {
-    flex-direction: column !important;
-  }
+	@media (max-width: 768px) {
+		flex-direction: column !important;
+	}
 }
 
 .grg-empty-canvas {
-  .article {
-    width: 100%;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
+	.article {
+		width: 100%;
+		margin: 0 !important;
+		padding: 0 !important;
+	}
 
-  .grigora-primary-sidebar {
-    display: none !important;
-  }
+	.grigora-primary-sidebar {
+		display: none !important;
+	}
 
-  .container {
-    max-width: 100% !important;
-  }
+	.container {
+		max-width: 100% !important;
+	}
 }
 
 body {
-  background-color: #f2f2f2;
+	background-color: #f2f2f2;
 }
 
 p {
-  font-size: 13px;
+	font-size: 13px;
 }
 
 .wp-block-image {
-  margin-bottom: 0.5rem;
+	margin-bottom: 0.5rem;
 }
 
 h1,
@@ -68,190 +68,190 @@ pre,
 hr,
 address,
 table {
-  margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 ul,
 ol {
-  margin: 0 0 1rem 3rem;
+	margin: 0 0 1rem 3rem;
 }
 
 li > ul,
 li > ol {
-  margin-bottom: 0;
-  margin-left: 1.5em;
+	margin-bottom: 0;
+	margin-left: 1.5em;
 }
 
 .grg-right-sidebar aside.grigora-primary-sidebar {
-  border-left: 1px solid #aaaaaa;
+	border-left: 1px solid #aaaaaa;
 }
 
 .grg-left-sidebar aside.grigora-primary-sidebar {
-  border-right: 1px solid #aaaaaa;
+	border-right: 1px solid #aaaaaa;
 }
 
 .read-btn {
-  color: #000;
-  text-decoration: none;
-  background-color: #c4c4c4;
-  padding: 0.25rem 1rem;
-  border-radius: 0.25rem;
-  transition: all 0.3s ease-out;
+	color: #000;
+	text-decoration: none;
+	background-color: #c4c4c4;
+	padding: 0.25rem 1rem;
+	border-radius: 0.25rem;
+	transition: all 0.3s ease-out;
 
-  &:hover {
-    filter: brightness(0.8);
-  }
+	&:hover {
+		filter: brightness(0.8);
+	}
 }
 
 .form-submit .submit {
-  background-color: #c4c4c4 !important;
-  transition: all 0.3s ease-out;
+	background-color: #c4c4c4 !important;
+	transition: all 0.3s ease-out;
 
-  &:hover {
-    filter: brightness(0.8);
-  }
+	&:hover {
+		filter: brightness(0.8);
+	}
 }
 
 .post-title {
-  font-size: 1.313rem;
+	font-size: 1.313rem;
 }
 
 .page-title {
-  font-size: 1.875rem;
-  margin-bottom: 1rem;
+	font-size: 1.875rem;
+	margin-bottom: 1rem;
 }
 
 .not-found {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 55vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 55vh;
 
-  h2 {
-    font-size: 3rem;
-  }
+	h2 {
+		font-size: 3rem;
+	}
 
-  h4 {
-    font-size: 1.125rem;
-  }
+	h4 {
+		font-size: 1.125rem;
+	}
 }
 
 main {
-  position: relative;
+	position: relative;
 }
 
 .to-top {
-  cursor: pointer;
-  display: none;
-  position: fixed;
-  bottom: 3rem;
-  padding: 16px 17px;
-  border: none;
-  background-color: #c4c4c4;
-  z-index: 10;
-  transition: all 0.3s ease-out;
-  margin-top: 0;
+	cursor: pointer;
+	display: none;
+	position: fixed;
+	bottom: 3rem;
+	padding: 16px 17px;
+	border: none;
+	background-color: #c4c4c4;
+	z-index: 10;
+	transition: all 0.3s ease-out;
+	margin-top: 0;
 
-  &:hover {
-    filter: brightness(0.8);
-  }
+	&:hover {
+		filter: brightness(0.8);
+	}
 }
 
 .grigora-table-of-contents {
-  padding: 1rem;
-  border: 1px solid #aaaaaa;
-  border-radius: 5px;
-  background-color: #fff;
-  margin-bottom: 1rem;
+	padding: 1rem;
+	border: 1px solid #aaaaaa;
+	border-radius: 5px;
+	background-color: #fff;
+	margin-bottom: 1rem;
 
-  p {
-    margin-bottom: 0;
-  }
+	p {
+		margin-bottom: 0;
+	}
 
-  ol {
-    margin-bottom: 0;
-  }
+	ol {
+		margin-bottom: 0;
+	}
 
-  .grigora-toc-headline {
-    font-weight: 700;
-  }
+	.grigora-toc-headline {
+		font-weight: 700;
+	}
 
-  .toggle-toc {
-    cursor: pointer;
-    color: #0170b9;
-  }
+	.toggle-toc {
+		cursor: pointer;
+		color: #0170b9;
+	}
 
-  .heading {
-    margin-top: 0.5rem;
-  }
+	.heading {
+		margin-top: 0.5rem;
+	}
 
-  a {
-    text-decoration: none;
-  }
+	a {
+		text-decoration: none;
+	}
 }
 
 .show-links {
-  display: none;
+	display: none;
 }
 
 .cookie {
-  position: fixed;
-  display: none;
-  flex-direction: row;
-  bottom: 0;
-  padding: 1rem 2rem;
-  background-color: #fff;
-  gap: 1rem;
-  border-top: 1px solid #aaaaaa;
-  font-size: 17px;
+	position: fixed;
+	display: none;
+	flex-direction: row;
+	bottom: 0;
+	padding: 1rem 2rem;
+	background-color: #fff;
+	gap: 1rem;
+	border-top: 1px solid #aaaaaa;
+	font-size: 17px;
 
-  @media (max-width: 768px) {
-    font-size: 14px;
-  }
+	@media (max-width: 768px) {
+		font-size: 14px;
+	}
 
-  .cookie-btn {
-    cursor: pointer;
-    border: none;
-    padding: 1rem;
-    margin-right: 100px;
-    margin-left: 50px;
+	.cookie-btn {
+		cursor: pointer;
+		border: none;
+		padding: 1rem;
+		margin-right: 100px;
+		margin-left: 50px;
 
-    @media (max-width: 768px) {
-      margin-right: 0px;
-      margin-left: 0px;
-    }
-  }
+		@media (max-width: 768px) {
+			margin-right: 0px;
+			margin-left: 0px;
+		}
+	}
 }
 
 button,
 input,
 select,
 textarea {
-  padding: 0.5rem;
-  font-size: 100%;
-  border: 1px solid #aaaaaa;
-  margin-top: 0.5rem;
+	padding: 0.5rem;
+	font-size: 100%;
+	border: 1px solid #aaaaaa;
+	margin-top: 0.5rem;
 }
 
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  cursor: pointer;
-  font-size: 18px;
-  padding: 0.25rem 1rem;
-  border: none;
-  border-radius: 0.25rem;
-  transition: all 0.3s ease-out;
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+	cursor: pointer;
+	font-size: 18px;
+	padding: 0.25rem 1rem;
+	border: none;
+	border-radius: 0.25rem;
+	transition: all 0.3s ease-out;
 }
 
 .grigora-primary-sidebar {
-  width: 30%;
-  padding: 0 2.5rem;
+	width: 30%;
+	padding: 0 2.5rem;
 
-  @media (max-width: 768px) {
-    width: 100%;
-    padding: 0 1rem !important;
-  }
+	@media (max-width: 768px) {
+		width: 100%;
+		padding: 0 1rem !important;
+	}
 }
