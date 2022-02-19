@@ -2481,40 +2481,4 @@ input[type='submit'] {
     padding: 0 1rem !important;
   }
 }
-
-.grigora-license-purchase {
-  padding: 2rem;
-}
-
-.grigora-license-purchase .grigora-license-heading {
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-align: center;
-}
-
-.grigora-license-purchase .grigora-version,
-.grigora-license-purchase .grigora-license-key,
-.grigora-license-purchase .grigora-expiration {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.grigora-license-purchase .grigora-expiration a {
-  text-decoration: none;
-}
-
-.grigora-license-purchase .grigora-download {
-  display: block;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  border: none;
-  padding: 0.3rem 5rem;
-  margin: 0 auto;
-  background-color: #3fdb4f;
-}
 /*# sourceMappingURL=global.css.map */

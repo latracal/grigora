@@ -255,37 +255,3 @@ input[type='submit'] {
 		padding: 0 1rem !important;
 	}
 }
-
-.grigora-license-purchase {
-	padding: 2rem;
-
-	.grigora-license-heading {
-		font-size: 1.5rem;
-		font-weight: bold;
-		text-align: center;
-	}
-
-	.grigora-version,
-	.grigora-license-key,
-	.grigora-expiration {
-		display: flex;
-		justify-content: space-between;
-	}
-
-	.grigora-expiration {
-		a {
-			text-decoration: none;
-		}
-	}
-
-	.grigora-download {
-		display: block;
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
-		width: fit-content;
-		border: none;
-		padding: 0.3rem 5rem;
-		margin: 0 auto;
-		background-color: #3fdb4f;
-	}
-}
