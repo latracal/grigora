@@ -1337,7 +1337,7 @@ if (grigora_get_option('minify') && class_exists('MatthiasMullie\Minify\CSS')){
      * 
      */
     function generate_global_minified_css(){
-        $uri = get_theme_file_uri();
+        $uri = get_template_directory_uri();
         $ver = grg_DEV_MODE ? time() : true;
         $unminified = get_theme_file_path( '/dist/css/global.css' );
         $minified = get_theme_file_path( '/dist/css/global.min.css' );
@@ -1370,7 +1370,7 @@ if (grigora_get_option('minify') && class_exists('MatthiasMullie\Minify\CSS')){
      */
 
     function grg_enqueue_min_global_css(){
-        $uri = get_theme_file_uri();
+        $uri = get_template_directory_uri();
         $ver = grg_DEV_MODE ? time() : true;
         $minified = get_theme_file_path( '/dist/css/global.min.css' );
         if(file_exists($minified)){
@@ -1407,7 +1407,7 @@ function increment_dynamic_css_cache_ver(){
  */
 function generate_dynamic_minified_css(){
     if(class_exists('MatthiasMullie\Minify\CSS')){
-        $uri = get_theme_file_uri();
+        $uri = get_template_directory_uri();
         $unminified_css = grg_dynamic_customize_css_var();
         $minified = get_theme_file_path( '/dist/css/dynamic.min.css' );
         $minifier = new MatthiasMullie\Minify\CSS($unminified_css);
@@ -1431,7 +1431,7 @@ function generate_dynamic_minified_css(){
  * 
  */
 function generate_dynamic_css(){
-    $uri = get_theme_file_uri();
+    $uri = get_template_directory_uri();
     $unminified_css = grg_dynamic_customize_css_var();
     $unminified = get_theme_file_path( '/dist/css/dynamic.css' );
     if(!$myfile2 = fopen($unminified, 'w+ ')){
@@ -1463,7 +1463,7 @@ if(grigora_get_option('dynamicexternal') && !current_user_can('manage_options'))
      * 
      */
     function grg_enqueue_dynamic_css_file(){
-        $uri = get_theme_file_uri();
+        $uri = get_template_directory_uri();
         $ver = grg_DEV_MODE ? time() : get_option("grg_dynamic_cache_ver", 1);
         wp_enqueue_style('grg_dynamic_style', $uri . '/dist/css/dynamic.css', [], $ver);
     }
@@ -1476,7 +1476,7 @@ if(grigora_get_option('dynamicexternal') && !current_user_can('manage_options'))
      * 
      */
     function grg_enqueue_dynamic_minified_css_file(){
-        $uri = get_theme_file_uri();
+        $uri = get_template_directory_uri();
         $ver = grg_DEV_MODE ? time() : get_option("grg_dynamic_cache_ver", 1);
         wp_enqueue_style('grg_dynamic_min_style', $uri . '/dist/css/dynamic.min.css', [], $ver);
     }

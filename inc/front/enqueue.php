@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * 
  */
 function grg_global_enqueue(){
-	$uri = get_theme_file_uri();
+	$uri = get_template_directory_uri();
 	$ver = grg_DEV_MODE ? time() : true;
 	
 	//endueue style sheet to header
