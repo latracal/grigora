@@ -260,7 +260,16 @@ input[type='submit'] {
 	padding: 2rem;
 
 	.grigora-license-heading {
+		font-size: 1.5rem;
+		font-weight: bold;
 		text-align: center;
+	}
+
+	.grigora-version,
+	.grigora-license-key,
+	.grigora-expiration {
+		display: flex;
+		justify-content: space-between;
 	}
 
 	.grigora-expiration {

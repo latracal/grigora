@@ -2487,7 +2487,20 @@ input[type='submit'] {
 }
 
 .grigora-license-purchase .grigora-license-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
   text-align: center;
+}
+
+.grigora-license-purchase .grigora-version,
+.grigora-license-purchase .grigora-license-key,
+.grigora-license-purchase .grigora-expiration {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .grigora-license-purchase .grigora-expiration a {
