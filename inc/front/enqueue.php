@@ -20,7 +20,7 @@ function grg_global_enqueue(){
 	$ver = grg_DEV_MODE ? time() : grg_VERSION;
 	
 	//endueue style sheet to header
-	wp_enqueue_style('grg_global_style', $uri . '/dist/css/global.css', [], $ver);	
+	wp_enqueue_style('grg_global_style', $uri . '/dist/css/global.min.css', [], $ver);	
     
     //use false as laster parameter to load script in footer
 	wp_register_script('grg_global_scripts1', $uri . '/js/app.js', [], $ver, true);
