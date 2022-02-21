@@ -36,12 +36,7 @@ if ( ! function_exists( 'grigora_customize_promo_css' ) ) {
 
 
 	function grigora_customize_promo_css() {
-		wp_enqueue_style(
-			'grigora_customize_promo_css',
-			get_template_directory_uri() . '/dist/css/grigora-customize-promo.css',
-			array(),
-			grg_VERSION
-		);
+        wp_enqueue_style( 'grigora-customize-promo', get_template_directory_uri() . '/dist/css/grigora-customize-promo.min.css', array(), grg_VERSION, 'all' );
 
 	}
 }

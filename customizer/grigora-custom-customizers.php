@@ -8,7 +8,6 @@ function my_customize_register($wp_customize) {
 
         public function enqueue() {
 			wp_enqueue_style( 'grigora-customizer-css', get_template_directory_uri() . '/dist/css/customizer.min.css', array(), grg_VERSION, 'all' );
-            wp_enqueue_style( 'grigora-customize-promo', get_template_directory_uri() . '/dist/css/grigora-customize-promo.min.css', array(), grg_VERSION, 'all' );
 		}
 
         public function render_content() {
