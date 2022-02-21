@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../../scss/woocommerce.scss"
+    ],
+    "names": [],
+    "file": "woocommerce.min.css"
+}

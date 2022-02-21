@@ -1338,7 +1338,7 @@ if (grigora_get_option('minify') && class_exists('MatthiasMullie\Minify\CSS')){
      */
     function generate_global_minified_css(){
         $uri = get_template_directory_uri();
-        $ver = grg_DEV_MODE ? time() : true;
+        $ver = grg_DEV_MODE ? time() : grg_VERSION;
         $unminified = get_theme_file_path( '/dist/css/global.css' );
         $minified = get_theme_file_path( '/dist/css/global.min.css' );
         if (!file_exists($unminified)) {
@@ -1371,7 +1371,7 @@ if (grigora_get_option('minify') && class_exists('MatthiasMullie\Minify\CSS')){
 
     function grg_enqueue_min_global_css(){
         $uri = get_template_directory_uri();
-        $ver = grg_DEV_MODE ? time() : true;
+        $ver = grg_DEV_MODE ? time() : grg_VERSION;
         $minified = get_theme_file_path( '/dist/css/global.min.css' );
         if(file_exists($minified)){
             wp_dequeue_style( 'grg_global_style' );

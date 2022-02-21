@@ -32,6 +32,7 @@ add_action( 'widgets_init', 'grg_sidebar' ); //sidebar
 
 // Options
 include( get_theme_file_path( '/settings-functions/options-controls.php' ) );
+include( get_theme_file_path( '/customizer/customizer.php' ) );
 include( get_theme_file_path( '/settings-functions/fonts-loading.php' ) );
 include( get_theme_file_path( '/settings-functions/dynamic-css.php' ) );
 include( get_theme_file_path( '/settings-functions/blog.php' ) );

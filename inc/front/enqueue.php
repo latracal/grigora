@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function grg_global_enqueue(){
 	$uri = get_template_directory_uri();
-	$ver = grg_DEV_MODE ? time() : true;
+	$ver = grg_DEV_MODE ? time() : grg_VERSION;
 	
 	//endueue style sheet to header
 	wp_enqueue_style('grg_global_style', $uri . '/dist/css/global.css', [], $ver);	
