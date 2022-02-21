@@ -55,7 +55,7 @@ if ( ! function_exists( 'grigora_add_promo' ) ) {
                 'grigora-customize-promo-section',
                 array(
                     'id' => "grigora-customize-promo-section",
-                    'promo_text' => __( 'Get More Customization Options - Grigora Pro', 'grigora' ),
+                    'promo_text' => __( 'Get More Customization Options in Grigora Pro', 'grigora' ),
                     'promo_url' => 'https://wpgrigora.com/pro',
                     'capability' => 'edit_theme_options',
                     'type' => 'grigora-customize-promo-section',

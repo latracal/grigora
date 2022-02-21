@@ -2,12 +2,20 @@
   text-align: center;
   padding: 1rem;
   margin: 1rem;
-  background-color: #3fdb4f;
+  background-color: #fff;
+  border: 1px solid #e64b17;
   border-radius: 5px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.grigora-customize-promo h3:hover {
+  -webkit-filter: brightness(0.95);
+          filter: brightness(0.95);
 }
 
 .grigora-customize-promo h3 a {
-  color: #fff;
+  color: #e64b17;
   text-decoration: none;
 }
 /*# sourceMappingURL=grigora-customize-promo.css.map */
