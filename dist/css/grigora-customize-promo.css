@@ -1,1 +1,13 @@
-/* No CSS *//*# sourceMappingURL=grigora-customize-promo.css.map */
+.grigora-customize-promo h3 {
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: #3fdb4f;
+  border-radius: 5px;
+}
+
+.grigora-customize-promo h3 a {
+  color: #fff;
+  text-decoration: none;
+}
+/*# sourceMappingURL=grigora-customize-promo.css.map */
