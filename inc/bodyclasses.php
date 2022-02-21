@@ -53,6 +53,9 @@ add_filter( 'body_class', function( $classes ) {
 } );
 
 add_filter( 'body_class', function( $classes ) {
+	if(!is_grigora_pro_active()){
+		return $classes;
+	}
 	$header_sticky = grigora_get_option("stickyh");
     if ($header_sticky){
         return array_merge( $classes, array( 'grg-sticky-header' ) );
@@ -64,6 +67,9 @@ add_filter( 'body_class', function( $classes ) {
 } );
 
 add_filter( 'body_class', function( $classes ) {
+	if(!is_grigora_pro_active()){
+		return $classes;
+	}
 	$header_sticky = get_theme_mod("grg_header-sticky", grigora_spacing_defaults()['grg_header-sticky']);
     if ($header_sticky == "off"){
         return $classes;
