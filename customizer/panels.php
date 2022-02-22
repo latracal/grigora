@@ -6,7 +6,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
     function grigora_customizer_free( $wp_customize ) {
 
         /**
-         * Colors
+         * Colors Panel
          *
          * @since  1.001
          * 
@@ -19,11 +19,25 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             'description'    => __( 'Edit colors of your theme', 'grigora' ),
         ) );
 
+        /**
+         * Global Colors Section
+         *
+         * @since  1.001
+         * 
+         */
+
         $wp_customize->add_section( 'grg_colors_global', [
             'title' => __( 'Global Colors', 'grigora' ),
             'priority' => 30,
             'panel' => 'grg_colors',
         ] );
+
+        /**
+         * Global Colors Settings
+         *
+         * @since  1.001
+         * 
+         */
 
         $wp_customize->add_setting( 'grg_bg-color', [ 
         ] );
@@ -79,6 +93,13 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );    
 
+        /**
+         * Header Colors Section
+         *
+         * @since  1.001
+         * 
+         */
+
         $wp_customize->add_setting( 'grg_header_bg-color', [ 
             ] );
     
@@ -91,6 +112,13 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
                 'settings'       => 'grg_header_bg-color',
             )
         ) );
+
+        /**
+         * Header Colors Settings
+         *
+         * @since  1.001
+         * 
+         */
 
         $wp_customize->add_setting( 'grg_header_menu_bg-color', [ 
             ] );
@@ -157,11 +185,25 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );
 
+        /**
+         * Footer Colors Section
+         *
+         * @since  1.001
+         * 
+         */
+
         $wp_customize->add_section( 'grg_colors_footer', [
             'title' => __( 'Footer', 'grigora' ),
             'priority' => 30,
             'panel' => 'grg_colors',
         ] );
+
+        /**
+         * Footer Colors Settings
+         *
+         * @since  1.001
+         * 
+         */
 
 
         $wp_customize->add_setting( 'grg_footer_menu_bg-color', [ 
@@ -202,6 +244,13 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
                 'settings'       => 'grg_footer_text-color',
             )
         ) );
+
+        /**
+         * Button Colors Section
+         *
+         * @since  1.001
+         * 
+         */
         
         $wp_customize->add_section( 'grg_colors_buttons', [
             'title' => __( 'Button', 'grigora' ),
@@ -209,6 +258,12 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             'panel' => 'grg_colors',
         ] );
 
+        /**
+         * Button Colors Settings
+         *
+         * @since  1.001
+         * 
+         */
 
         $wp_customize->add_setting( 'grg_btn-color', [ 
             ] );
@@ -235,12 +290,26 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
                 'settings'       => 'grg_btn-text-color',
             )
         ) );    
+
+        /**
+         * Heading Colors Section
+         *
+         * @since  1.001
+         * 
+         */
          
         $wp_customize->add_section( 'grg_colors_headings', [
             'title' => __( 'Headings', 'grigora' ),
             'priority' => 30,
             'panel' => 'grg_colors',
         ] );
+
+        /**
+         * Heading Colors Settings
+         *
+         * @since  1.001
+         * 
+         */
 
         $wp_customize->add_setting( 'grg_h1-tag-color', [ 
             ] );
@@ -320,11 +389,26 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );   
 
+        /**
+         * Breadcrumb Colors Section
+         *
+         * @since  1.001
+         * 
+         */
+
         $wp_customize->add_section( 'grg_colors_breadcrumb', [
             'title' => __( 'Breadcrumb', 'grigora' ),
             'priority' => 30,
             'panel' => 'grg_colors',
         ] );
+
+        /**
+         * 
+         * Breadcrumb Colors Settings
+         *
+         * @since  1.001
+         * 
+         */
 
         $wp_customize->add_setting( 'grg_breadcrumb-color', [ 
             ] );
@@ -337,15 +421,27 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
                 'section'        => 'grg_colors_breadcrumb',
                 'settings'       => 'grg_breadcrumb-color',
             )
-        ) );  
+        ) ); 
 
-        // comment
+        /**
+         * Comments Colors Section
+         *
+         * @since  1.001
+         * 
+         */
 
         $wp_customize->add_section( 'grg_colors_comments', [
             'title' => __( 'Comments', 'grigora' ),
             'priority' => 30,
             'panel' => 'grg_colors',
         ] );
+
+        /**
+         * Comments Colors Settings
+         *
+         * @since  1.001
+         * 
+         */
 
         $wp_customize->add_setting( 'grg_comment_text_colors', [ 
             ] );
@@ -412,13 +508,24 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );  
 
-        // todo add comments settings
-
+        /**
+         * Related Posts Colors Section
+         *
+         * @since  1.001
+         * 
+         */
         $wp_customize->add_section( 'grg_colors_related_posts', [
             'title' => __( 'Related Posts', 'grigora' ),
             'priority' => 30,
             'panel' => 'grg_colors',
         ] );
+
+        /**
+         * Related Posts Colors Settings
+         *
+         * @since  1.001
+         * 
+         */
         
         $wp_customize->add_setting( 'grg_related_post_title_colors', [ 
             ] );
@@ -446,11 +553,25 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );  
 
+        /**
+         * Post Navigation Colors Section
+         *
+         * @since  1.001
+         * 
+         */
+
         $wp_customize->add_section( 'grg_colors_postnav', [
             'title' => __( 'Post Navigation', 'grigora' ),
             'priority' => 30,
             'panel' => 'grg_colors',
         ] );
+
+        /**
+         * Post Navigation Colors Setting
+         *
+         * @since  1.001
+         * 
+         */
 
         $wp_customize->add_setting( 'grg_post_nav_colors', [ 
             ] );
@@ -485,6 +606,13 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
          * Layout and Spacing
          */
 
+         /**
+         * Layout & Spacing Panel
+         *
+         * @since  1.001
+         * 
+         */
+
         $wp_customize->add_panel( 'grg_spacing', array(
             'priority'       => 10,
             'capability'     => __('edit_theme_options' , 'grigora'),
@@ -493,12 +621,25 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             'description'    => __('Adjust spacing and layout with available options' , 'grigora'),
         ) );
 
+        /**
+         * Header Layout & Spacing Section
+         *
+         * @since  1.001
+         * 
+         */
+
         $wp_customize->add_section( 'grg_header', [
             'title' => __( 'Header', 'grigora' ),
             'priority' => 30,   
             'panel' => 'grg_spacing',
         ] );
 
+         /**
+         * Header Layout & Spacing Setting
+         *
+         * @since  1.001
+         * 
+         */
         
         $wp_customize->add_setting( 'grg_header_style', [ 
             ] );
@@ -514,6 +655,13 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             ]
             )));
 
+        /**
+         * Header Layout & Spacing Setting
+         *
+         * @since  1.001
+         * 
+         */  
+
         $wp_customize->add_setting( 'grg_header_image_height', [ 
             ] );
     
@@ -526,7 +674,8 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
                 'min' => 30,
                 'max' => 250,
                 )
-            )));
+            ))); 
+        
 
         $wp_customize->add_setting( 'grg_header_image_height_mobile', [ 
             ] );
@@ -567,12 +716,25 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ));
 
+         /**
+         * Sidebar Layout & Spacing Section
+         *
+         * @since  1.001
+         * 
+         */
 
         $wp_customize->add_section( 'grg_sidebar_alignment', [
             'title' => __( 'Sidebar', 'grigora' ),
             'priority' => 30,
             'panel' => 'grg_spacing',
         ] );
+
+         /**
+         * Sidebar Layout & Spacing Settings
+         *
+         * @since  1.001
+         * 
+         */
 
         $wp_customize->add_setting( 'grg_sidebar-alignment', [ 
         ] );
@@ -668,11 +830,27 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         )));
 
+
+         /**
+         * Container Layout & Spacing Section
+         *
+         * @since  1.001
+         * 
+         */
+
         $wp_customize->add_section( 'grg_layout', [
             'title' => __( 'Container', 'grigora' ),
             'priority' => 30,
             'panel' => 'grg_spacing',
         ] );
+
+
+         /**
+         * Container Layout & Spacing Settings
+         *
+         * @since  1.001
+         * 
+         */
 
         $wp_customize->add_setting( 'grg_layout-container', [ 
             ] );
@@ -835,10 +1013,25 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
          * Blog Layout
          */
 
+        
+         /**
+         * Blog / Archive Section
+         *
+         * @since  1.001
+         * 
+         */
+
         $wp_customize->add_section( 'grg_blog_archive', [
             'title' => __( 'Blog / Archive', 'grigora' ),
             'priority' => 30,
         ] );
+
+         /**
+         * Blog / Archive Settings
+         *
+         * @since  1.001
+         * 
+         */
 
         $wp_customize->add_setting( 'grg_blog_archive_excerpt_words', [ 
             ] );
@@ -870,12 +1063,18 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
         /**
          * End Blog Layout
          */
-
         
-
         /**
          * Typography
          */
+
+         /**
+         * Typography Panel
+         *
+         * @since  1.001
+         * 
+         */
+        
         $wp_customize->add_panel( 'grg_typography', array(
             'priority'       => 10,
             'capability'     => 'edit_theme_options',
@@ -884,11 +1083,25 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             'description'    => __('Edit text styling', 'grigora'),
         ) );
 
+         /**
+         * Body Typography Sections
+         *
+         * @since  1.001
+         * 
+         */ 
+        
         $wp_customize->add_section( 'grg_typography_body', [
             'title' => __( 'Body', 'grigora' ),
             'priority' => 30,
             'panel' => 'grg_typography',
         ] );
+
+          /**
+         * Body Typography Settings
+         *
+         * @since  1.001
+         * 
+         */ 
 
         $wp_customize->add_setting( 'grg_typography_body_font', [ 
         ] );
@@ -954,11 +1167,25 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );
 
+          /**
+         * Header Typography Sections
+         *
+         * @since  1.001
+         * 
+         */ 
+
         $wp_customize->add_section( 'grg_typography_header', [
             'title' => __( 'Header', 'grigora' ),
             'priority' => 30,
             'panel' => 'grg_typography',
         ] );
+
+        /**
+         * Header Typography Settings
+         *
+         * @since  1.001
+         * 
+         */ 
 
         $wp_customize->add_setting( 'grg_typography_site_title_font', [ 
         ] );
@@ -1153,11 +1380,25 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );
 
+          /**
+         * Button Typography Sections
+         *
+         * @since  1.001
+         * 
+         */ 
+
         $wp_customize->add_section( 'grg_typography_button', [
             'title' => __( 'Buttons', 'grigora' ),
             'priority' => 30,
             'panel' => 'grg_typography',
         ] );
+
+          /**
+         * Button Typography Settings
+         *
+         * @since  1.001
+         * 
+         */ 
 
         $wp_customize->add_setting( 'grg_typography_button_font', [ 
         ] );
@@ -1225,11 +1466,25 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );
 
+          /**
+         * Heading Typography Sections
+         *
+         * @since  1.001
+         * 
+         */ 
+
         $wp_customize->add_section( 'grg_typography_heading', [
             'title' => __( 'Headings', 'grigora' ),
             'priority' => 30,
             'panel' => 'grg_typography',
         ] );
+
+          /**
+         * Heading Typography Settings
+         *
+         * @since  1.001
+         * 
+         */ 
 
         $wp_customize->add_setting( 'grg_typography_h1_font', [ 
         ] );
@@ -1615,11 +1870,25 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
                 )
         )));
 
+        /**
+         * Footer Typography Sections
+         *
+         * @since  1.001
+         * 
+         */ 
+
         $wp_customize->add_section( 'grg_typography_footer', [
             'title' => __( 'Footer', 'grigora' ),
             'priority' => 30,
             'panel' => 'grg_typography',
         ] );
+
+        /**
+         * Footer Typography Settings
+         *
+         * @since  1.001
+         * 
+         */ 
 
         $wp_customize->add_setting( 'grg_typography_footer_font', [ 
         ] );
