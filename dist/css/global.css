@@ -302,6 +302,7 @@
 
 .desktop-nav .menu-container .menu .menu-item .sub-menu li {
   padding: 0;
+  background-color: inherit;
 }
 
 .desktop-nav .menu-container .menu .menu-item .sub-menu li:hover {
