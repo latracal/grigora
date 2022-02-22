@@ -188,7 +188,7 @@
 }
 
 .desktop-nav .menu-container .menu-item-has-children a::after {
-  content: "";
+  content: '';
   border: solid #000;
   border-width: 0 2px 2px 0;
   display: inline-block;
@@ -302,6 +302,11 @@
 
 .desktop-nav .menu-container .menu .menu-item .sub-menu li {
   padding: 0;
+}
+
+.desktop-nav .menu-container .menu .menu-item .sub-menu li:hover {
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
 }
 
 @media (max-width: 768px) {
