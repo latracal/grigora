@@ -19,28 +19,29 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 function grg_dynamic_customize_css_var() {
     $defaults = grigora_color_defaults();
-    $colors_flag = grigora_get_option("color");
 
     $spacing_defaults = grigora_spacing_defaults();
-    $spacing_flag = grigora_get_option("spacing");
   
     $typography_defaults = grigora_typography_defaults();
-    $typography_fonts_defaults = grigora_typography_defaults_fonts();
-    $typography_flag = grigora_get_option("typography");    
+    $typography_fonts_defaults = grigora_typography_defaults_fonts(); 
     
     $blog_defaults = grigora_blog_defaults();
-    $blog_flag = grigora_get_option("blog");
+    $blog_flag = grigora_get_option("blog") && is_grigora_pro_active();
     
     $scroll_defaults = grigora_scroll_defaults();
-    $scroll_flag = grigora_get_option("scroll");
+    $scroll_flag = grigora_get_option("scroll") && is_grigora_pro_active();
 
     $breadcrumb_defaults = grigora_breadcrumbs_defaults();
 
-    $cookie_flag = grigora_get_option("cookie");
+    $cookie_flag = grigora_get_option("cookie") && is_grigora_pro_active();
     $out = "";
     
-    if($colors_flag) {
-        $out = $out."body {
+
+    /**
+     * Colors
+     * 
+     */
+    $out = $out."body {
         background-color: ".get_theme_mod('grg_bg-color', $defaults['grg_bg-color']).";
     } ".
 
@@ -295,265 +296,10 @@ function grg_dynamic_customize_css_var() {
     }
 
     ";
-}
 
-else {
-    $out=$out."body {
-        background-color: ".$defaults['grg_bg-color'].";
-        
-    }
-
-    .desktop-nav .navbar {
-        background-color: ".$defaults['grg_header_bg-color'].";
-        
-    }
-
-    .desktop-nav .menu-container .menu, .mobile-header .menu-container .menu {
-        background-color: ".$defaults['grg_header_menu_bg-color'].";
-        
-    }
-
-    .desktop-nav .menu-container .menu .menu-item .sub-menu, .mobile-header .menu-container .menu .menu-item .sub-menu {
-        background-color: ".$defaults['grg_header_submenu_bg-color'].";
-        
-    }
-
-    .desktop-nav .search-box,
-    .desktop-nav .search-box .search-field, .mobile-header .search-box, .mobile-header .search-box .search-field {
-        background-color: ".$defaults['grg_header_searchbox_bg-color'].";
-        
-    }
-
-    .mobile-header .top-part #menu-toggle-btn .line{
-        background-color: ".$defaults['grg_header_text-color'].";
-    }
-
-    .desktop-nav  .title a,
-    .desktop-nav .menu-container .menu a, .mobile-header .top-part .title a, .mobile-header .menu-container .menu a, .mobile-header .top-part .search-btn svg{
-        color: ".$defaults['grg_header_text-color'].";        
-    }
-
-    .desktop-nav .menu-container .menu a, .mobile-header .menu-container .menu a , .desktop-nav .menu-container .search-btn svg{
-        color: ".$defaults['grg_menu_text-color'].";
-    }
-    
-    .desktop-nav .menu-container .menu a:hover{
-        border-bottom: 3px solid ".$defaults['grg_menu_text-color'].";
-    }
-
-    .desktop-nav .menu-container .menu .menu-item:hover a{
-        border-bottom: 3px solid ".$defaults['grg_menu_text-color']." !important; 
-    }
-   
-    .menu-container .menu-item-has-children a::after{
-        border:solid ".$defaults['grg_menu_text-color'].";
-        border-width: 0 2px 2px 0 !important;        
-    }
-
-    .footer .footer-menu {
-        background-color: ".$defaults['grg_footer_menu_bg-color'].";
-        
-    }
-
-    .footer .copyrights {
-        background-color: ".$defaults['grg_footer_bg-color'].";
-        
-    }
-
-    .footer .footer-menu a,
-    .footer .copyrights {
-        color: ".$defaults['grg_footer_text-color'].";
-        
-    }
-
-    .container .article .post-container .post .post-desc p,
-    p,
-    ul,
-    ol {
-        color: ".$defaults['grg_text-color'].";
-        
-    }
-
-    main a,
-    .container .article p a, .container .article .cat-name, footer .copyrights a {
-        color: ".$defaults['grg_anchor-text-color'].";
-        
-    }
-
-    main a:hover,
-    .container .article p a:hover, .container .article .cat-name:hover, footer .copyrights a:hover {
-        color: ".$defaults['grg_anchor-text-hover-color'].";
-        
-    }
-
-    .read-btn, .container .article .pagination .next, .container .article .pagination .prev,.form-submit .submit, 
-    input[type='button'],
-    input[type='reset'],
-    input[type='submit'] {
-        background-color: ".$defaults['grg_btn-color']." !important;
-        
-    }
-
-    .container .article .pagination .next.page-numbers,.container .article .pagination .prev.page-numbers, .form-submit .submit{
-        color: ".$defaults['grg_btn-text-color'].";
-    }
-    
-
-    .container .article .post-container .post .post-desc a, input[type='button'],
-    input[type='reset'],
-    input[type='submit'] {
-        color: ".$defaults['grg_btn-text-color'].";
-        
-    }
-
-    main h1,
-    main h1 a,
-    .container .article .post-container .post .post-desc .post-title a {
-        color: ".$defaults['grg_h1-tag-color'].";
-        
-    }
-
-    main h2,
-    main h2 a,
-    .container .article .post-container .post .post-desc .post-title a {
-        color: ".$defaults['grg_h2-tag-color'].";
-        
-    }
-
-    main h3,
-    main h3 a,
-    .container .article .post-container .post .post-desc .post-title a {
-        color: ".$defaults['grg_h3-tag-color'].";
-        
-    }
-
-    main h4,
-    main h4 a,
-    .container .article .post-container .post .post-desc .post-title a {
-        color: ".$defaults['grg_h4-tag-color'].";
-        
-    }
-
-    main h5,
-    main h5 a,
-    .container .article .post-container .post .post-desc .post-title a {
-        color: ".$defaults['grg_h5-tag-color'].";
-        
-    }
-
-    main h6,
-    main h6 a,
-    .container .article .post-container .post .post-desc .post-title a {
-        color: ".$defaults['grg_h6-tag-color'].";
-        
-    }
-
-    .container .article .breadcrumb,
-    .container .article .breadcrumb a {
-        color: ".$defaults['grg_breadcrumb-color'].";
-        
-    }
-
-    .comment-list .comment-box p {
-        color: ".$defaults['grg_comment_text_colors'].";
-        
-    }
-
-    .comment-list .comment-box .comment-meta .comment-author-time {
-        color: ".$defaults['grg_comment_date_colors'].";
-        
-
-    }
-
-    .comment-list .comment-box .comment-reply a {
-        background-color: ".$defaults['grg_comment_reply_colors'].";
-        
-    }
-
-    .comment-list .comment-box .comment-reply a {
-        color: ".$defaults['grg_comment_reply_text_colors'].";
-        
-    }
-
-    .comment-list .comment-box .comment-meta .fn a {
-        color: ".$defaults['grg_comment_title_colors'].";
-        
-    }
-
-    .container .article .pagination .next,
-    .container .article .pagination .prev {
-        background-color: ".$defaults['grg_post_nav_colors'].";
-        
-
-    }
-
-    .container .article .post-pagination .pagination-prev-post a,
-    .container .article .post-pagination .pagination-next-post a {
-        color: ".$defaults['grg_post_nav_text_colors'].";        
-    }
-
-    .container .article .pagination .nav-links a,
-    span.current {
-        color: ".$defaults['grg_post_nav_text_colors'].";
-        
-    }
-
-
-    .related-posts a {
-        color: ".$defaults['grg_related_post_title_colors'].";
-        
-    }
-
-    .related-posts a:hover {
-        color: ".$defaults['grg_related_post_title_hover_colors'].";
-        
-    }
-
-    .to-top {
-        background-color: ".$defaults['grg_scroll_colors'].";
-        
-    }
-
-    .to-top .up-arrow {
-        fill: ".$defaults['grg_scroll_icon_colors'].";
-        
-    }
-
-    .grigora-table-of-contents {
-        background-color: ".$defaults['grg_colors_toc_background'].";
-        
-        border: 1px solid ".$defaults['grg_colors_toc_border'].";
-        
-    }
-
-    .grigora-toc-headline {
-        color: ".$defaults['grg_colors_toc_title'].";
-        
-    }
-
-    .grigora-table-of-contents a {
-        color: ".$defaults['grg_colors_toc_links'].";
-        
-    }
-
-    .grigora-table-of-contents a:hover {
-        color: ".$defaults['grg_colors_toc_links_hover'].";
-        
-    }
-
-    .grigora-table-of-contents a:visited {
-        color: ".$defaults['grg_colors_toc_links_visited'].";
-        
-    }
-
-    .grigora-table-of-contents .toggle-toc {
-        color: ".$defaults['grg_colors_toc_toggle'].";
-        
-    }";
-
-}
-
-if($spacing_flag) {
+    /**
+     * Layout & Spacing
+     */
     if(get_theme_mod('grg_layout-container', $spacing_defaults['grg_layout-container'])== 'containedpadded') {
         $out=$out."
         .container .article{
@@ -779,83 +525,10 @@ if($spacing_flag) {
     }
 
     ";
-   
 
-}
-
-else {
-    $out=$out.".container {
-        flex-direction: ".$spacing_defaults['grg_sidebar-alignment'].";
-        
-    }
-
-    .container {
-        max-width: ".$spacing_defaults['grg_container-width']."px;
-
-    }
-
-    .container {
-        padding-top: ".$spacing_defaults['grg_container-top-padding']."px;
-
-    }
-
-    .container {
-        padding-right: ".$spacing_defaults['grg_container-right-padding']."px;
-
-    }
-
-    .container {
-        padding-bottom: ".$spacing_defaults['grg_container-bottom-padding']."px;
-
-    }
-
-    .container {
-        padding-left: ".$spacing_defaults['grg_container-left-padding']."px;
-
-    }
-
-    .container .article{
-        padding-left: ".$spacing_defaults['grg_article-left-padding']."px;
-        padding-right: ".$spacing_defaults['grg_article-right-padding']."px;
-    }
-
-    .container .article{
-        margin-top: ".$spacing_defaults['grg_article-top-margin']."px;
-        margin-bottom: ".$spacing_defaults['grg_article-bottom-margin']."px;
-    }
-
-    .container .grigora-primary-sidebar {
-        width: ".$spacing_defaults['grg_sidebar-width']."%;
-    }
-
-    .grigora-primary-sidebar{
-        margin-top: ".$spacing_defaults['grg_sidebar-margin-top']."px;
-        margin-bottom: ".$spacing_defaults['grg_sidebar-margin-bottom']."px;
-    }
-
-    .container .grigora-primary-sidebar{
-        padding-right: ".$spacing_defaults['grg_sidebar-padding-right']."px;
-        padding-left: ".$spacing_defaults['grg_sidebar-padding-left']."px;
-    }
-
-    .desktop-nav, .mobile-header .top-part{
-        min-height: ".$spacing_defaults['grg_header-height']."px;
-    }
-    
-    .desktop-nav .navbar .logo img{
-        height:".$spacing_defaults['grg_header_image_height']."px;
-    }
-    
-    .mobile-header .logo img{
-        height:".$spacing_defaults['grg_header_image_height_mobile']."px;
-    }
-    
-    ";
-
-    
-}
-
-if($typography_flag) {
+    /**
+     * Typography
+     */
     $out=$out."body, textarea {
         font-family: ".get_theme_mod('grg_typography_body_font', $typography_fonts_defaults['grg_typography_body_font']).", sans-serif;
         
@@ -989,143 +662,7 @@ if($typography_flag) {
     }";
 
 
-}
 
-else {
-    $out=$out."body, textarea {
-        font-family: ".$typography_fonts_defaults['grg_typography_body_font'].", sans-serif;
-        
-    }
-
-    main p,.container .article p, .container .article li, .container .article .wp-block-quote p, .container .article .wp-block-quote cite, .container .article .wp-block-preformatted, .container .article .wp-block-code, .container .article .wp-block-table table, .wp-block-pullquote p, .wp-block-pullquote cite {
-        font-weight: ".$typography_defaults['grg_typography_body_weight'].";
-        font-size: ".$typography_defaults['grg_typography_body_font_size']."px;
-        
-    }
-
-    main {
-        text-transform: ".$typography_defaults['grg_typography_body_font_transform'].";
-        
-    }
-
-    .desktop-nav .navbar .title h1 {
-        font-family: ".$typography_fonts_defaults['grg_typography_site_title_font'].", sans-serif;
-        
-        font-weight: ".$typography_defaults['grg_typography_site_title_weight'].";
-        
-        font-size: ".$typography_defaults['grg_typography_site_title_size']."px;
-        text-transform: ".$typography_defaults['grg_typography_site_title_transform'].";
-        
-    }
-
-    .desktop-nav .navbar .title h2 {
-        font-family: ".$typography_fonts_defaults['grg_typography_site_desc_font'].", sans-serif;
-        
-        font-weight: ".$typography_defaults['grg_typography_site_desc_weight'].";
-        
-        font-size: ".$typography_defaults['grg_typography_site_desc_size']."px;
-        text-transform: ".$typography_defaults['grg_typography_site_desc_transform'].";
-        
-    }
-
-    .desktop-nav .menu-container .menu {
-        font-family: ".$typography_fonts_defaults['grg_typography_site_menu_font'].", sans-serif;
-        
-        font-weight: ".$typography_defaults['grg_typography_site_menu_weight'].";
-        
-        font-size: ".$typography_defaults['grg_typography_site_menu_size']."px;
-        text-transform: ".$typography_defaults['grg_typography_site_menu_transform'].";
-        
-    }
-
-    .read-btn {
-        font-family: ".$typography_fonts_defaults['grg_typography_button_font'].", sans-serif;
-        
-        font-weight: ".$typography_defaults['grg_typography_button_weight'].";
-        
-        font-size: ".$typography_defaults['grg_typography_button_size']."px;
-        text-transform: ".$typography_defaults['grg_typography_button_transform'].";
-        
-    }
-
-    .container .article h1,
-    .grigora-primary-sidebar h1 {
-        font-family: ".$typography_fonts_defaults['grg_typography_h1_font'].", sans-serif;
-        
-        font-weight: ".$typography_defaults['grg_typography_h1_weight'].";
-        
-        text-transform: ".$typography_defaults['grg_typography_h1_transform'].";
-        
-        font-size: ".$typography_defaults['grg_typography_h1_size']."px;
-    }
-
-    .container .article h2,
-    .grigora-primary-sidebar h2 {
-        font-family: ".$typography_fonts_defaults['grg_typography_h2_font'].", sans-serif;
-        
-        font-weight: ".$typography_defaults['grg_typography_h2_weight'].";
-        
-        text-transform: ".$typography_defaults['grg_typography_h2_transform'].";
-        
-        font-size: ".$typography_defaults['grg_typography_h2_size']."px;
-    }
-
-    .container .article h3,
-    .grigora-primary-sidebar h3 {
-        font-family: ".$typography_fonts_defaults['grg_typography_h3_font'].", sans-serif;
-        
-        font-weight: ".$typography_defaults['grg_typography_h3_weight'].";
-        
-        text-transform: ".$typography_defaults['grg_typography_h3_transform'].";
-        
-        font-size: ".$typography_defaults['grg_typography_h3_size']."px;
-    }
-
-    .container .article h4,
-    .grigora-primary-sidebar h4 {
-        font-family: ".$typography_fonts_defaults['grg_typography_h4_font'].", sans-serif;
-        
-        font-weight: ".$typography_defaults['grg_typography_h4_weight'].";
-        
-        text-transform: ".$typography_defaults['grg_typography_h4_transform'].";
-        
-        font-size: ".$typography_defaults['grg_typography_h4_size']."px;
-    }
-
-    .container .article h5,
-    .grigora-primary-sidebar h5 {
-        font-family: ".$typography_fonts_defaults['grg_typography_h5_font'].", sans-serif;
-        
-        font-weight: ".$typography_defaults['grg_typography_h5_weight'].";
-        
-        text-transform: ".$typography_defaults['grg_typography_h5_transform'].";
-        
-        font-size: ".$typography_defaults['grg_typography_h5_size']."px;
-    }
-
-    .container .article h6,
-    .grigora-primary-sidebar h6 {
-        font-family: ".$typography_fonts_defaults['grg_typography_h6_font'].", sans-serif;
-        
-        font-weight: ".$typography_defaults['grg_typography_h6_weight'].";
-        
-        text-transform: ".$typography_defaults['grg_typography_h6_transform'].";
-        
-        font-size: ".$typography_defaults['grg_typography_h6_size']."px;
-    }
-
-    .footer {
-        font-family: ".$typography_fonts_defaults['grg_typography_footer_font'].", sans-serif;
-        
-        font-weight: ".$typography_defaults['grg_typography_footer_weight'].";
-        
-        text-transform: ".$typography_defaults['grg_typography_footer_transform'].";
-        
-        font-size: ".$typography_defaults['grg_typography_footer_size']."px;
-    }";
-
-
-}
 
 if($blog_flag) {
     $out=$out.".post-header {

@@ -36,12 +36,7 @@ if ( ! function_exists( 'grigora_customize_promo_css' ) ) {
 
 
 	function grigora_customize_promo_css() {
-		wp_enqueue_style(
-			'grigora_customize_promo_css',
-			get_template_directory_uri() . '/dist/css/grigora-customize-promo.css',
-			array(),
-			grg_VERSION
-		);
+        wp_enqueue_style( 'grigora-customize-promo', get_template_directory_uri() . '/dist/css/grigora-customize-promo.min.css', array(), grg_VERSION, 'all' );
 
 	}
 }
@@ -60,7 +55,7 @@ if ( ! function_exists( 'grigora_add_promo' ) ) {
                 'grigora-customize-promo-section',
                 array(
                     'id' => "grigora-customize-promo-section",
-                    'promo_text' => __( 'Get More Customization Options - Grigora Pro', 'grigora' ),
+                    'promo_text' => __( 'Get More Customization Options in Grigora Pro', 'grigora' ),
                     'promo_url' => 'https://wpgrigora.com/pro',
                     'capability' => 'edit_theme_options',
                     'type' => 'grigora-customize-promo-section',

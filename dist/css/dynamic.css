@@ -467,11 +467,11 @@ body {
         
         font-size: 18px;
     }.post-header {
-        flex-direction: column !important;
+        flex-direction: column;
     }
 
     .feature-img {
-        text-align: center;
+        text-align: center;     
     }
     
     .container .article .post-container .post img{
