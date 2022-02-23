@@ -1,10 +1,10 @@
 # Grigora
 
-Contributors: [Latracal Solutions](https://latracal.com/)
-License: GPLv2 or later
-License URI: [GPLv2](https://www.gnu.org/licenses/gpl-2.0.html)
-Stable Tag: v1.001
-Requires PHP Version Atleast: 5.2
+**Contributors:** [Latracal Solutions](https://latracal.com/)
+**License:** GPLv2 or later
+**License URI:** [GPLv2](https://www.gnu.org/licenses/gpl-2.0.html)
+**Stable Tag:** v1.001
+**Requires PHP Version Atleast:** 5.2
 
 Grigora is an awesome lightning-fast theme that delivers performance along with design. Highly customizable options to change color, layout, spacing, typography, and blog structure. Have SEO compatibility to make it mobile-friendly and add schema markups.
 
@@ -30,9 +30,9 @@ More advanced options are available in [Grigora Pro](https://wpgrigora.com/pro/)
 
 ### SEO Features
 
-Mobile Friendly: The number of mobile devices worldwide is growing exponentially. Thus, we need to ensure that our websites are mobile-friendly to avoid potential customer loss due to a bad mobile interface. Grigora is already optimized for mobile devices and passes all mobile-friendly tests.
-Basic Schema: Schemas help search engines to identify the type of content in your website and elements in each section. Grigora adds a basic blog schema markup to ensure your website is compliant with schema.org guidelines.
-Breadcrumbs: Search engines often use Breadcrumb to understand where the page sits on your website. Grigora provides an option to add breadcrumbs along with its markups.
+1. Mobile Friendly: The number of mobile devices worldwide is growing exponentially. Thus, we need to ensure that our websites are mobile-friendly to avoid potential customer loss due to a bad mobile interface. Grigora is already optimized for mobile devices and passes all mobile-friendly tests.
+2. Basic Schema: Schemas help search engines to identify the type of content in your website and elements in each section. Grigora adds a basic blog schema markup to ensure your website is compliant with schema.org guidelines.
+3. Breadcrumbs: Search engines often use Breadcrumb to understand where the page sits on your website. Grigora provides an option to add breadcrumbs along with its markups.
 
 ## Child Theme
 
