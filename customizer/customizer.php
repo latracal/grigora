@@ -14,7 +14,7 @@ if(!is_grigora_pro_active()){
     include( get_theme_file_path( '/customizer/google-fonts.php' ) );
     include( get_theme_file_path( '/customizer/grigora-custom-customizers.php' ) );
     include( get_theme_file_path( '/customizer/accordian.php' ) );
-    include( get_theme_file_path( '/customizer/sanitize.php' ) );
+    // include( get_theme_file_path( '/customizer/sanitize.php' ) );
     include( get_theme_file_path( '/customizer/panels.php' ) );
 
 }
