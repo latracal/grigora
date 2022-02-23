@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 add_action( 'customize_register', 'my_customize_register' );
 
 /**
- * Custom sections
+ * Custom controls
  * 
  * @since  1.001
  * 

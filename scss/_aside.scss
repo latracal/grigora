@@ -1,3 +1,12 @@
+.widget ul,
+.widget ol {
+  margin: 0;
+}
+.widget ul li ul {
+  margin-left: 1em;
+  margin-top: 0.5em;
+}
+
 .grigora-primary-sidebar {
   margin: 3rem 0;
 
@@ -46,11 +55,6 @@
 
   h6 {
     font-size: 1.313rem;
-  }
-
-  ul,
-  ol {
-    margin-left: 1rem;
   }
 
   .post-title {
