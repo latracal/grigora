@@ -1,9 +1,13 @@
 # Grigora
 
 **Contributors:** [Latracal Solutions](https://latracal.com/)
+
 **License:** GPLv2 or later
+
 **License URI:** [GPLv2](https://www.gnu.org/licenses/gpl-2.0.html)
+
 **Stable Tag:** v1.001
+
 **Requires PHP Version Atleast:** 5.2
 
 Grigora is an awesome lightning-fast theme that delivers performance along with design. Highly customizable options to change color, layout, spacing, typography, and blog structure. Have SEO compatibility to make it mobile-friendly and add schema markups.
@@ -45,9 +49,11 @@ Grigora is licensed under the GNU General Public License v2 or later.
 ### Webfonts Loader
 
 Grigora uses Webfonts Loader provided by the [WPTT Team](https://github.com/WPTT/webfont-loader).
+
 Licensed under MIT ( https://github.com/WPTT/webfont-loader/blob/master/LICENSE )
 
 ### Spectrum Color Picker
 
 Grigora uses Spectrum Color Picker in Customizer to provide a better UI. [Spectrum](https://github.com/bgrins/spectrum).
+
 Licensed under MIT ( https://github.com/bgrins/spectrum/blob/master/LICENSE )
