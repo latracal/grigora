@@ -2537,4 +2537,31 @@ input[type='submit'] {
     padding: 0 1rem !important;
   }
 }
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.wp-caption img[class*='wp-image-'] {
+  display: block;
+  margin: 0 auto 0;
+  max-width: 100%;
+}
+
+.alignleft {
+  float: left;
+  margin-right: 1.5em;
+}
+
+.alignright {
+  float: right;
+  margin-left: 1.5em;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin: 0 auto;
+}
 /*# sourceMappingURL=global.css.map */
