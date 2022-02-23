@@ -1903,10 +1903,6 @@
   border-bottom: 1px solid #aaaaaa;
 }
 
-.comment-list .comment-box p {
-  margin-bottom: 0;
-}
-
 .comment-list .comment-box .comment-awaiting-moderation {
   margin-bottom: 0.5rem;
 }
