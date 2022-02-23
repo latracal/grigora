@@ -21,10 +21,10 @@ if ( ! function_exists( 'grigora_get_defaults' ) ) {
 		return apply_filters(
 			'grigora_option_defaults',
 			array(
-				'color' => 0,
+				'color' => 1,
 				'background' => 0,
-				'typography' => 0,
-				'spacing' => 0,
+				'typography' => 1,
+				'spacing' => 1,
 				'blog' => 0,
 				'toc' => 0,
 				'scroll' => 0,
