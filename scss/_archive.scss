@@ -255,14 +255,15 @@
 		color: #454545;
 		margin: 1rem 0;
 		list-style: none;
-		display: flex;
 
 		li {
+			display: inline;
 			margin-right: 0.3rem;
 		}
 
 		a {
 			color: #454545;
+			word-break: normal;
 
 			&:first-child {
 				margin-left: 0;
@@ -541,24 +542,24 @@
 		}
 	}
 
-	.breadcrumb {
-		color: #454545;
-		margin: 1rem 0;
-		list-style: none;
-		display: flex;
+	// .breadcrumb {
+	// 	color: #454545;
+	// 	margin: 1rem 0;
+	// 	list-style: none;
+	// 	display: flex;
 
-		li {
-			margin-right: 0.3rem;
-		}
+	// 	li {
+	// 		margin-right: 0.3rem;
+	// 	}
 
-		a {
-			color: #454545;
+	// 	a {
+	// 		color: #454545;
 
-			&:first-child {
-				margin-left: 0;
-			}
-		}
-	}
+	// 		&:first-child {
+	// 			margin-left: 0;
+	// 		}
+	// 	}
+	// }
 
 	.post-header {
 		display: flex;

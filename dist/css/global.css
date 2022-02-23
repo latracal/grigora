@@ -1170,17 +1170,16 @@
   color: #454545;
   margin: 1rem 0;
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .article .breadcrumb li {
+  display: inline;
   margin-right: 0.3rem;
 }
 
 .article .breadcrumb a {
   color: #454545;
+  word-break: normal;
 }
 
 .article .breadcrumb a:first-child {
@@ -1480,27 +1479,6 @@
 .article .wp-block-button a:hover {
   -webkit-filter: brightness(0.8);
           filter: brightness(0.8);
-}
-
-.article .breadcrumb {
-  color: #454545;
-  margin: 1rem 0;
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.article .breadcrumb li {
-  margin-right: 0.3rem;
-}
-
-.article .breadcrumb a {
-  color: #454545;
-}
-
-.article .breadcrumb a:first-child {
-  margin-left: 0;
 }
 
 .article .post-header {
