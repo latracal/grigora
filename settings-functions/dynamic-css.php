@@ -436,7 +436,7 @@ function grg_dynamic_customize_css_var() {
             justify-content: space-between;
             align-items: center;
             padding: 0 2rem;
-            box-shadow: 0px 2px 10px #888888;
+            border-bottom: 1px solid #aaaaaa;
         }
         
         .desktop-nav .menu-container .menu{
