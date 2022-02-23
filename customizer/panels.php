@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // For security
+}
+
 
 if ( ! function_exists( 'grigora_customizer_free' ) ) {
     add_action( 'customize_register', 'grigora_customizer_free', 20 );

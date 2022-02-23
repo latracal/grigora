@@ -4,6 +4,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // For security
 }
 
+/**
+ * Customize Promo Section
+ * 
+ * @since  1.001
+ * 
+ */
 if ( class_exists( 'WP_Customize_Section' ) && ! class_exists( 'Grigora_Customize_Promo' ) ) {
     class Grigora_Customize_Promo extends WP_Customize_Section {
 
@@ -31,6 +37,12 @@ if ( class_exists( 'WP_Customize_Section' ) && ! class_exists( 'Grigora_Customiz
     }
 }
 
+/**
+ * Enqueue CSS for Customize Promo
+ * 
+ * @since  1.001
+ * 
+ */
 if ( ! function_exists( 'grigora_customize_promo_css' ) ) {
 	add_action( 'customize_controls_enqueue_scripts', 'grigora_customize_promo_css' );
 
@@ -41,6 +53,12 @@ if ( ! function_exists( 'grigora_customize_promo_css' ) ) {
 	}
 }
 
+/**
+ * Register section and add setting in it
+ * 
+ * @since  1.001
+ * 
+ */
 if ( ! function_exists( 'grigora_add_promo' ) ) {
     add_action( 'customize_register', 'grigora_add_promo', 20 );
     function grigora_add_promo( $wp_customize ) {

@@ -1,4 +1,15 @@
 <?php
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // For security
+}
+
+/**
+ * Array to store google fonts
+ * 
+ * @since  1.001
+ * 
+ */
 if (!function_exists('google_fonts')){
     function google_fonts(){
         return array (
@@ -870,6 +881,12 @@ if (!function_exists('google_fonts')){
     }
 }
 
+/**
+ * Array font size
+ * 
+ * @since  1.001
+ * 
+ */
 if (!function_exists('font_weight')){
     function font_weight(){
         return array(

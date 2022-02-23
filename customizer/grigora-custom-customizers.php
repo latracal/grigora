@@ -1,7 +1,17 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // For security
+}
+
 add_action( 'customize_register', 'my_customize_register' );
 
+/**
+ * Custom sections
+ * 
+ * @since  1.001
+ * 
+ */
 function my_customize_register($wp_customize) {
     class grg_customize_width_range_control extends WP_Customize_Control {
         public $type = 'range';
@@ -12,20 +22,20 @@ function my_customize_register($wp_customize) {
 
         public function render_content() {
         ?>
-<label>
-    <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-    <div class="grg-range-picker">
-        <input type="range" class="range slider" min="<?php echo esc_html($this->input_attrs['min']); ?>"
-            max="<?php echo esc_html($this->input_attrs['max']); ?>" value="<?php echo esc_html($this->value()); ?>"
-            <?php $this->link(); ?>>
-        <div class="unit">
-            <input type="number" class="number" min="<?php echo esc_html($this->input_attrs['min']); ?>"
+        <label>
+        <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+        <div class="grg-range-picker">
+            <input type="range" class="range slider" min="<?php echo esc_html($this->input_attrs['min']); ?>"
                 max="<?php echo esc_html($this->input_attrs['max']); ?>" value="<?php echo esc_html($this->value()); ?>"
-                <?php $this->link(); ?>><span class="px">PX</span>
+                <?php $this->link(); ?>>
+            <div class="unit">
+                <input type="number" class="number" min="<?php echo esc_html($this->input_attrs['min']); ?>"
+                    max="<?php echo esc_html($this->input_attrs['max']); ?>" value="<?php echo esc_html($this->value()); ?>"
+                    <?php $this->link(); ?>><span class="px">PX</span>
+            </div>
         </div>
-    </div>
-</label>
-<?php
+        </label>
+        <?php
         }
     }
 
@@ -41,11 +51,11 @@ function my_customize_register($wp_customize) {
 
         public function render_content() {
         ?>
-<div class="grigora-custom-color-picker">
-    <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-    <input id="color-picker" class="color-picker" value='<?php $this->value(); ?>' <?php $this->link(); ?> />
-</div>
-<?php
+        <div class="grigora-custom-color-picker">
+            <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+            <input id="color-picker" class="color-picker" value='<?php $this->value(); ?>' <?php $this->link(); ?> />
+        </div>
+        <?php
         }
     }
 
@@ -58,16 +68,16 @@ function my_customize_register($wp_customize) {
 
         public function render_content() {
         ?>
-<div class="grigora-custom-big-text">
-    <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-    <textarea id="footer-text" class="footer-text" value='<?php $this->value(); ?>'
-        <?php $this->link(); ?> /></textarea>
-    <p><code>[grg_year]</code> to update year automatically.</p>
-    <p><code>[blog_name]</code> to add blog name.</p>
-    <p><code>[copy]</code> to add copyright symbol.</p>
-    <p>HTML & Shortcodes are allowed.</p>
-</div>
-<?php
+        <div class="grigora-custom-big-text">
+            <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+            <textarea id="footer-text" class="footer-text" value='<?php $this->value(); ?>'
+                <?php $this->link(); ?> /></textarea>
+            <p><code>[grg_year]</code> to update year automatically.</p>
+            <p><code>[blog_name]</code> to add blog name.</p>
+            <p><code>[copy]</code> to add copyright symbol.</p>
+            <p>HTML & Shortcodes are allowed.</p>
+        </div>
+        <?php
         }
     }
 
@@ -77,10 +87,10 @@ function my_customize_register($wp_customize) {
 
         public function render_content() {
         ?>
-<div class="custom-customizer-text">
-    <?php echo $this->input_attrs['html'] ?>
-</div>
-<?php
+        <div class="custom-customizer-text">
+            <?php echo $this->input_attrs['html'] ?>
+        </div>
+        <?php
         }
     }
 
@@ -93,14 +103,14 @@ function my_customize_register($wp_customize) {
 
         public function render_content() {
         ?>
-<div class="grigora-custom-checkbox">
-    <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-    <div class="grigora-custom">
-        <input type="checkbox" id="footer-text" class="checkbox" value='<?php $this->value(); ?>'
-            <?php $this->link(); ?> /></input><span class="knob"></span><span class="layer"></span>
-    </div>
-</div>
-<?php
+        <div class="grigora-custom-checkbox">
+            <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+            <div class="grigora-custom">
+                <input type="checkbox" id="footer-text" class="checkbox" value='<?php $this->value(); ?>'
+                    <?php $this->link(); ?> /></input><span class="knob"></span><span class="layer"></span>
+            </div>
+        </div>
+        <?php
         }
     }
 }
