@@ -1,7 +1,7 @@
 body {
         background-color: #fff;
     } .desktop-nav, .navbar, .mobile-header .top-part {
-        background-color: #fff;
+        background-color: white;
     } .desktop-nav .menu-container .menu, .mobile-header .menu-container .menu {
         background-color: #eeeeee;
 
@@ -70,7 +70,7 @@ body {
     p,
     ul,
     ol {
-        color: #000;
+        color: black;
 
     }
 
@@ -93,13 +93,13 @@ body {
     }
 
     .container .article .pagination .next.page-numbers,.container .article .pagination .prev.page-numbers, .form-submit .submit{
-        color: #fff;
+        color: white;
     }
     
     .container .article .post-container .post .post-desc a, input[type='button'],
     input[type='reset'],
     input[type='submit'] {
-        color: #fff;
+        color: white;
 
     }
 
@@ -179,7 +179,7 @@ body {
     .container .article .pagination .prev,
     .container .article .post-pagination .pagination-prev-post,
     .container .article .post-pagination .pagination-next-post {
-        background-color: #fff;
+        background-color: white;
         
     }
 
@@ -201,7 +201,7 @@ body {
     }
 
     .related-posts a:hover {
-        color: #000;
+        color: black;
         
     }
 
@@ -261,9 +261,19 @@ body {
             
 
         }.desktop-nav{
-            display: flex;
-            flex-direction: column;
-        }.container {
+            flex-direction:row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+            border-bottom: 1px solid #aaaaaa;
+        }
+        
+        .desktop-nav .menu-container .menu{
+            background-color:transparent; 
+            padding: 0 4rem 0 0;
+        }
+
+        .container {
         max-width: 1366px;
 
     }
@@ -325,7 +335,7 @@ body {
     }
 
     .desktop-nav, .mobile-header .top-part {
-        min-height: 155px;
+        min-height: 110px;
     }
 
     .desktop-nav .navbar .logo img{

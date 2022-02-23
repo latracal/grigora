@@ -40,7 +40,7 @@ if ( ! function_exists( 'grigora_get_defaults' ) ) {
 				'hidewpversion' => 0,
 				'minify' => 0,
 				'dynamicexternal' => 0,
-				'localfonts' => 0,
+				'localfonts' => 1,
 				'blocks' => 0,
 				'stickyh' => 0
 			)
@@ -85,8 +85,8 @@ if ( ! function_exists( 'grigora_color_defaults' ) ) {
 				'grg_comment_title_colors' => '#000',				
 				'grg_comment_text_colors' => '#000',				
 				'grg_comment_date_colors' => '#7b7b7b',				
-				'grg_comment_reply_colors' => '#c4c4c4',				
-				'grg_comment_reply_text_colors' => '#000',				
+				'grg_comment_reply_colors' => '#16537e',				
+				'grg_comment_reply_text_colors' => '#fff',				
 				'grg_related_post_title_colors' => '#444444',				
 				'grg_related_post_title_hover_colors' => '#000',				
 				'grg_post_nav_colors' => '#fff',				
@@ -121,7 +121,7 @@ if ( ! function_exists( 'grigora_spacing_defaults' ) ) {
 	function grigora_spacing_defaults() {
 		return array(
 			'grg_layout-container' => 'containedpadded',
-			'grg_header-height' => '155',
+			'grg_header-height' => '110',
 			'grg_header_style' => 'style1',
 			'grg_header_image_height' => 100,
 			'grg_header_image_height_mobile' => 80,	
