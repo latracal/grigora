@@ -22,9 +22,11 @@ Keeping Core Web Vitals in mind, we've ensured that all the dynamic settings are
 
 ### Customization
 
-Colors: Change color styling according to your preferences. From header to footer, everything's color can be changed.
-Typography: Select from 800+ font families and give your website a unique look.
-Layouts: Whether it be a blog page, single post, header, or footer, everything's layout can be changed.
+1. Colors: Change color styling according to your preferences. From header to footer, everything's color can be changed.
+2. Typography: Select from 800+ font families and give your website a unique look.
+3. Layouts: Whether it be a blog page, single post, header, or footer, everything's layout can be changed.
+
+More advanced options are available in [Grigora Pro](https://wpgrigora.com/pro/).
 
 ### SEO Features
 
