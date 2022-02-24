@@ -665,7 +665,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
          * 
          */  
 
-        $wp_customize->add_setting( 'grg_header_image_height', [ 
+        $wp_customize->add_setting( 'grg_header_image_height', [ 'default' => 'grg_header_image_height', 'sanitize_callback' => 'absint'
             ] );
     
         $wp_customize->add_control(new grg_customize_width_range_control($wp_customize, 'grg_header_image_height', array(
@@ -680,7 +680,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             ))); 
         
 
-        $wp_customize->add_setting( 'grg_header_image_height_mobile', [ 
+        $wp_customize->add_setting( 'grg_header_image_height_mobile', [ 'default' => 'grg_header_image_height_mobile', 'sanitize_callback' => 'absint'
             ] );
     
         $wp_customize->add_control(new grg_customize_width_range_control($wp_customize, 'grg_header_image_height_mobile', array(
@@ -694,7 +694,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
                 )
             )));
 
-        $wp_customize->add_setting( 'grg_header-height', [ 
+        $wp_customize->add_setting( 'grg_header-height', [ 'default' => 'grg_header-height', 'sanitize_callback' => 'absint'
         ] );
 
         $wp_customize->add_control(new grg_customize_width_range_control($wp_customize, 'grg_header-height-settings', array(
@@ -708,7 +708,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
                 )
         )));
 
-        $wp_customize->add_setting( 'grg_header-search-btn', [ 
+        $wp_customize->add_setting( 'grg_header-search-btn', [ 'sanitize_callback' => 'grg_sanitize_checkbox'
             ] );
     
         $wp_customize->add_control(new grg_checkbox($wp_customize, 'grg_header-search-btn-settings', array(
@@ -758,7 +758,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );
         
-        $wp_customize->add_setting('grg_sidebar-width', [
+        $wp_customize->add_setting('grg_sidebar-width', [ 'default' => 'grg_sidebar-width', 'sanitize_callback' => 'absint'
             
         ]);
 
@@ -773,7 +773,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         )));
 
-        $wp_customize->add_setting('grg_sidebar-margin-top', [
+        $wp_customize->add_setting('grg_sidebar-margin-top', [ 'default' => 'grg_sidebar-margin-top', 'sanitize_callback' => 'absint'
             
         ]);
 
@@ -788,7 +788,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         )));
 
-        $wp_customize->add_setting('grg_sidebar-margin-bottom', [
+        $wp_customize->add_setting('grg_sidebar-margin-bottom', [ 'default' => 'grg_sidebar-margin-bottom', 'sanitize_callback' => 'absint'
             
         ]);
 
@@ -803,7 +803,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         )));
 
-        $wp_customize->add_setting('grg_sidebar-padding-right', [
+        $wp_customize->add_setting('grg_sidebar-padding-right', [ 'default' => 'grg_header_image_height', 'sanitize_callback' => 'absint'
             
         ]);
 
@@ -818,7 +818,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         )));
 
-        $wp_customize->add_setting('grg_sidebar-padding-left', [
+        $wp_customize->add_setting('grg_sidebar-padding-left', [ 'default' => 'grg_sidebar-padding-left', 'sanitize_callback' => 'absint'
             
         ]);
 
@@ -855,7 +855,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
          * 
          */
 
-        $wp_customize->add_setting( 'grg_layout-container', [ 'default' => 'grg_sidebar-alignment', 'sanitize_callback' => 'grg_sanitize_select'
+        $wp_customize->add_setting( 'grg_layout-container', [ 'default' => 'grg_layout-container', 'sanitize_callback' => 'grg_sanitize_select'
             ] );
     
         $wp_customize->add_control( new WP_Customize_Control(
@@ -874,7 +874,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );
 
-        $wp_customize->add_setting('grg_container-width', [
+        $wp_customize->add_setting('grg_container-width', [ 'default' => 'grg_container-width', 'sanitize_callback' => 'absint'
             
         ]);
 
@@ -889,7 +889,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         )));
               
-        $wp_customize->add_setting('grg_container-top-padding', [
+        $wp_customize->add_setting('grg_container-top-padding', [ 'default' => 'grg_container-top-padding', 'sanitize_callback' => 'absint'
             
         ]);
 
@@ -904,7 +904,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         )));
               
-        $wp_customize->add_setting('grg_container-right-padding', [
+        $wp_customize->add_setting('grg_container-right-padding', [ 'default' => 'grg_container-right-padding', 'sanitize_callback' => 'absint'
             
         ]);
 
@@ -919,7 +919,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         )));
               
-        $wp_customize->add_setting('grg_container-bottom-padding', [
+        $wp_customize->add_setting('grg_container-bottom-padding', [ 'default' => 'grg_container-bottom-padding', 'sanitize_callback' => 'absint'
             
         ]);
 
@@ -934,7 +934,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         )));
               
-        $wp_customize->add_setting('grg_container-left-padding', [
+        $wp_customize->add_setting('grg_container-left-padding', [ 'default' => 'grg_container-left-padding', 'sanitize_callback' => 'absint'
             
         ]);
 
@@ -949,7 +949,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         )));
 
-        $wp_customize->add_setting('grg_article-top-margin', [
+        $wp_customize->add_setting('grg_article-top-margin', [ 'default' => 'grg_article-top-margin', 'sanitize_callback' => 'absint'
             
         ]);
 
@@ -964,7 +964,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         )));
 
-        $wp_customize->add_setting('grg_article-bottom-margin', [
+        $wp_customize->add_setting('grg_article-bottom-margin', [ 'default' => 'grg_article-bottom-margin', 'sanitize_callback' => 'absint'
             
         ]);
 
@@ -979,7 +979,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         )));
 
-        $wp_customize->add_setting('grg_article-left-padding', [
+        $wp_customize->add_setting('grg_article-left-padding', [ 'default' => 'grg_article-left-padding', 'sanitize_callback' => 'absint'
             
         ]);
 
@@ -994,7 +994,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         )));
 
-        $wp_customize->add_setting('grg_article-right-padding', [
+        $wp_customize->add_setting('grg_article-right-padding', [ 'default' => 'grg_article-right-padding', 'sanitize_callback' => 'absint'
             
         ]);
 
@@ -1036,7 +1036,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
          * 
          */
 
-        $wp_customize->add_setting( 'grg_blog_archive_excerpt_words', [ 
+        $wp_customize->add_setting( 'grg_blog_archive_excerpt_words', [ 'default' => 'grg_blog_archive_excerpt_words',  'sanitize_callback' => 'absint'
             ] );
     
         $wp_customize->add_control(new grg_customize_width_range_control($wp_customize, 'grg_blog_archive_excerpt_words', array(
@@ -1050,7 +1050,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
                 )
         )));
 
-        $wp_customize->add_setting( 'grg_blog_archive_read_more_display', [ 
+        $wp_customize->add_setting( 'grg_blog_archive_read_more_display', [ 'sanitize_callback' => 'grg_sanitize_checkbox'
             ] );
     
         $wp_customize->add_control( new grg_checkbox(
@@ -1136,7 +1136,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );
 
-        $wp_customize->add_setting( 'grg_typography_body_font_size', [ 
+        $wp_customize->add_setting( 'grg_typography_body_font_size', [ 'default' => 'grg_typography_body_font_size', 'sanitize_callback' => 'absint'
             ] );
     
         $wp_customize->add_control(new grg_customize_width_range_control($wp_customize, 'grg_typography_body_font_size', array(
@@ -1220,7 +1220,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );
 
-        $wp_customize->add_setting( 'grg_typography_site_title_size', [ 
+        $wp_customize->add_setting( 'grg_typography_site_title_size', [ 'default' => 'grg_typography_site_title_size', 'sanitize_callback' => 'absint'
             ] );
     
         $wp_customize->add_control(new grg_customize_width_range_control($wp_customize, 'grg_typography_site_title_size', array(
@@ -1285,7 +1285,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
         ) );
 
 
-        $wp_customize->add_setting( 'grg_typography_site_desc_size', [ 
+        $wp_customize->add_setting( 'grg_typography_site_desc_size', [ 'default' => 'grg_typography_site_desc_size', 'sanitize_callback' => 'absint'
             ] );
     
         $wp_customize->add_control(new grg_customize_width_range_control($wp_customize, 'grg_typography_site_desc_size', array(
@@ -1349,7 +1349,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );
 
-        $wp_customize->add_setting( 'grg_typography_site_menu_size', [ 
+        $wp_customize->add_setting( 'grg_typography_site_menu_size', [ 'default' => 'grg_typography_site_menu_size', 'sanitize_callback' => 'absint'
             ] );
     
         $wp_customize->add_control(new grg_customize_width_range_control($wp_customize, 'grg_typography_site_menu_size', array(
@@ -1434,7 +1434,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
         ) );
 
 
-        $wp_customize->add_setting( 'grg_typography_button_size', [ 
+        $wp_customize->add_setting( 'grg_typography_button_size', [ 'default' => 'grg_typography_button_size', 'sanitize_callback' => 'absint'
             ] );
     
         $wp_customize->add_control(new grg_customize_width_range_control($wp_customize, 'grg_typography_button_size', array(
@@ -1539,7 +1539,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );
 
-        $wp_customize->add_setting( 'grg_typography_h1_size', [ 
+        $wp_customize->add_setting( 'grg_typography_h1_size', [ 'default' => 'grg_typography_h1_size', 'sanitize_callback' => 'absint'
             ] );
     
         $wp_customize->add_control(new grg_customize_width_range_control($wp_customize, 'grg_typography_h1_size', array(
@@ -1603,7 +1603,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );
 
-        $wp_customize->add_setting( 'grg_typography_h2_size', [ 
+        $wp_customize->add_setting( 'grg_typography_h2_size', [ 'default' => 'grg_typography_h2_size', 'sanitize_callback' => 'absint'
             ] );
     
         $wp_customize->add_control(new grg_customize_width_range_control($wp_customize, 'grg_typography_h2_size', array(
@@ -1667,7 +1667,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );
 
-        $wp_customize->add_setting( 'grg_typography_h3_size', [ 
+        $wp_customize->add_setting( 'grg_typography_h3_size', [ 'default' => 'grg_typography_h3_size', 'sanitize_callback' => 'absint'
             ] );
     
         $wp_customize->add_control(new grg_customize_width_range_control($wp_customize, 'grg_typography_h3_size', array(
@@ -1731,7 +1731,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );
 
-        $wp_customize->add_setting( 'grg_typography_h4_size', [ 
+        $wp_customize->add_setting( 'grg_typography_h4_size', [ 'default' => 'grg_typography_h4_size', 'sanitize_callback' => 'absint'
             ] );
     
         $wp_customize->add_control(new grg_customize_width_range_control($wp_customize, 'grg_typography_h4_size', array(
@@ -1795,7 +1795,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );
 
-        $wp_customize->add_setting( 'grg_typography_h5_size', [ 
+        $wp_customize->add_setting( 'grg_typography_h5_size', [ 'default' => 'grg_typography_h5_size', 'sanitize_callback' => 'absint'
             ] );
     
         $wp_customize->add_control(new grg_customize_width_range_control($wp_customize, 'grg_typography_h5_size', array(
@@ -1859,7 +1859,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );
 
-        $wp_customize->add_setting( 'grg_typography_h6_size', [ 
+        $wp_customize->add_setting( 'grg_typography_h6_size', [ 'default' => 'grg_typography_h6_size', 'sanitize_callback' => 'absint'
             ] );
     
         $wp_customize->add_control(new grg_customize_width_range_control($wp_customize, 'grg_typography_h6_size', array(
@@ -1943,7 +1943,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );
 
-        $wp_customize->add_setting( 'grg_typography_footer_size', [ 
+        $wp_customize->add_setting( 'grg_typography_footer_size', [ 'default' => 'grg_typography_footer_size', 'sanitize_callback' => 'absint'
             ] );
     
         $wp_customize->add_control(new grg_customize_width_range_control($wp_customize, 'grg_typography_footer_size', array(

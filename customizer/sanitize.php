@@ -17,15 +17,11 @@ if(!function_exists('grg_sanitize_select')){
 	}
 }
 
-if(!function_exists('grg_sanitize_range')){
-	//select sanitization function
-	function grg_sanitize_range( $input, $setting ){
-			
-		$input = sanitize_key($input);
-
-		$choices = $setting->manager->get_control( $setting->id )->choices;
-						
-		return ( array_key_exists( $input, $choices ) ? $input : $setting->default );                
+if(!function_exists('grg_sanitize_checkbox')){
+	//checkbox sanitization function
+	function grg_sanitize_checkbox( $input ){
+              
+		return ( isset( $input ) ? true : false );
 		
 	}
 }
