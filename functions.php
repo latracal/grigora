@@ -9,8 +9,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php
 
 // Setup
-define( 'grg_DEV_MODE', true );
-define( 'grg_VERSION', '1.001' );
+define( 'grg_DEV_MODE', false );
+define( 'grg_VERSION', '1.002' );
 
 // Includes
 include( get_theme_file_path( '/settings-functions/defaults.php' ) );

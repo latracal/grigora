@@ -43,7 +43,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <?php
         if( get_theme_mod( 'grg_blog_archive_read_more_display', grigora_blog_defaults()['grg_blog_archive_read_more_display'] ) ){?>
         <a href="<?php echo get_permalink(); ?>"
-            class="read-btn"><?php echo get_theme_mod('grg_blog_archive_read_more', grigora_blog_defaults()['grg_blog_archive_read_more']); ?></a>
+            class="read-btn"><?php echo esc_html(get_theme_mod('grg_blog_archive_read_more', grigora_blog_defaults()['grg_blog_archive_read_more'])); ?></a>
         <?php
         }
         ?>
