@@ -645,7 +645,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
          * 
          */
         
-        $wp_customize->add_setting( 'grg_header_style', [ 
+        $wp_customize->add_setting( 'grg_header_style', [ 'sanitize_callback' => 'grg_sanitize_select'
             ] );
     
         $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'grg_header_style', array(
