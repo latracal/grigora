@@ -122,7 +122,7 @@ if ( ! function_exists( 'grigora_spacing_defaults' ) ) {
 		return array(
 			'grg_layout-container' => 'containedpadded',
 			'grg_header-height' => '110',
-			'grg_header_style' => 'style1',
+			'grg_header_style' => 'style2',
 			'grg_header_image_height' => 100,
 			'grg_header_image_height_mobile' => 80,	
 			'grg_header-search-btn' => 1,
@@ -133,7 +133,7 @@ if ( ! function_exists( 'grigora_spacing_defaults' ) ) {
 			'grg_sidebar-margin-bottom' => '48',	
 			'grg_sidebar-padding-right' => '40',
 			'grg_sidebar-padding-left' => '40',
-			'grg_container-width'=> '1366',
+			'grg_container-width'=> '1200',
 			'grg_container-top-padding'=> '0',		
 			'grg_container-right-padding'=> '0',		
 			'grg_container-bottom-padding'=> '0',		
@@ -149,10 +149,12 @@ if ( ! function_exists( 'grigora_spacing_defaults' ) ) {
 			'grg_toc_heading5' => 1,
 			'grg_toc_heading6' => 1,			
 			'grg_footer_text' => sprintf(
-				'%1$s [copy] [grg_year] | [blog_name] | %2$s&nbsp;<a href="https://wpgrigora.com/">%3$s</a>',
+				'%1$s © %4$s | %5$s | %2$s&nbsp;<a href="https://wpgrigora.com/">%3$s</a>',
 				__('Copyright', 'grigora'),
 				__('Built with', 'grigora'),
 				__('Grigora', 'grigora'),
+				get_bloginfo('name'),
+				date('Y')
 
 			),
 			'grg_cookie_text' => __('This website uses cookies to provide necessary website functionality, improve your experience and analyze our traffic. By using our website, you agree to our Privacy Policy and our cookies usage.', 'grigora')
@@ -241,7 +243,7 @@ if ( ! function_exists( 'grigora_typography_defaults' ) ) {
 			"grg_typography_h6_weight" => "700",
 			"grg_typography_h6_size" => "20",
 			"grg_typography_footer_weight" => "400",
-			"grg_typography_footer_size" => "18",
+			"grg_typography_footer_size" => "16",
 			"grg_typography_body_font_transform" => "none",
 			"grg_typography_site_title_transform" => "none",
 			"grg_typography_site_desc_transform" => "none",

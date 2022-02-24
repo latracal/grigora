@@ -37,6 +37,8 @@ if ( ! defined( 'ABSPATH' ) ) {
                 itemprop="<?php echo grg_get_schema_tag('creativeworktext')['itemprop'] ?>">
                 <?php the_content(); ?>
             </div>
+            <?php wp_link_pages(); ?>
+            <p></p>
         </article>
     </section>
 

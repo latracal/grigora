@@ -26,7 +26,7 @@ if(get_theme_mod("grg_breadcrumbs_display", grigora_breadcrumbs_defaults()['grg_
         <li itemprop="<?php echo grg_get_schema_tag('breadcrumblistitem')['itemprop'] ?>"
             itemtype="<?php echo grg_get_schema_tag('breadcrumblistitem')['itemtype'] ?>"
             itemscope="<?php echo grg_get_schema_tag('breadcrumblistitem')['itemscope'] ?>"><a
-                href="<?php echo home_url(); ?>" rel="home"
+                href="<?php echo esc_url(home_url()); ?>" rel="home"
                 itemprop="<?php echo grg_get_schema_tag('breadcrumblisturl')['itemprop'] ?>"><span
                     itemprop="<?php echo grg_get_schema_tag('breadcrumblistname')['itemprop'] ?>">Home<span></a>
             <meta itemprop="<?php echo grg_get_schema_tag('breadcrumblistposition')['itemprop'] ?>"
