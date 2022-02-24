@@ -17,7 +17,6 @@ include( get_theme_file_path( '/settings-functions/defaults.php' ) );
 include( get_theme_file_path( '/inc/front/enqueue.php' ) );
 include( get_theme_file_path( '/inc/setup.php' ) );
 include( get_theme_file_path( '/inc/bodyclasses.php' ) );
-include( get_theme_file_path( '/shortcodes.php' ) );
 
 include( get_theme_file_path( '/template-parts/comments.php' ) );
 
