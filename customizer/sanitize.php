@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // For security
 }
 
-if(!functionexists()){
+if(!functionexists('grg_sanitize_select')){
 	//select sanitization function
 	function grg_sanitize_select( $input, $setting ){
 			
