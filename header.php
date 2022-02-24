@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?> >
 <?php 
 // for post meta settings
 if(forced_meta_css()){
@@ -23,6 +23,13 @@ if(forced_meta_css()){
 
 <body <?php body_class(); ?> itemtype="<?php echo grg_get_schema_tag('body')['itemtype'] ?>"
     itemscope="<?php echo grg_get_schema_tag('body')['itemscope'] ?>">
+    <?php 
+    if ( function_exists( 'wp_body_open' ) ) {
+        wp_body_open();
+    } else {
+        do_action( 'wp_body_open' );
+    }
+    ?>
     <?php if(
         (is_single() || is_page()) &&
         get_post_meta( $post->ID, '_grigora-disable-header', true ) && 
