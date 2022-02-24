@@ -56,4 +56,4 @@ Licensed under MIT ( https://github.com/WPTT/webfont-loader/blob/master/LICENSE 
 
 Grigora uses Spectrum Color Picker in Customizer to provide a better UI. [Spectrum](https://github.com/bgrins/spectrum).
 
-Licensed under MIT ( https://github.com/bgrins/spectrum/blob/master/LICENSE )
+Licensed under MIT ( https://github.com/seballot/spectrum/blob/master/LICENSE )
