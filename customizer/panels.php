@@ -1943,8 +1943,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );
 
-        $wp_customize->add_setting( 'grg_typography_footer_size', [ 'default' => 'grg_typography_footer_size', 'sanitize_callback' => 'absint'
-            ] );
+        $wp_customize->add_setting( 'grg_typography_footer_size', [ 'default' => 'grg_typography_footer_size', 'sanitize_callback' => 'absint'] );
     
         $wp_customize->add_control(new grg_customize_width_range_control($wp_customize, 'grg_typography_footer_size', array(
             'label' => __('Footer Font Size', 'grigora'),
