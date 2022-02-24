@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // Setup
 define( 'grg_DEV_MODE', false );
-define( 'grg_VERSION', '1.002' );
+define( 'grg_VERSION', '1.003' );
 
 // Includes
 include( get_theme_file_path( '/settings-functions/defaults.php' ) );
