@@ -25,3 +25,13 @@ if(!function_exists('grg_sanitize_checkbox')){
 		
 	}
 }
+
+
+if(!function_exists('grg_dummy_promo')){
+	//dummy variable sanitization
+	function grg_dummy_promo( $input ){
+              
+		return '';
+		
+	}
+}

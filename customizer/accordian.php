@@ -84,6 +84,10 @@ if ( ! function_exists( 'grigora_add_promo' ) ) {
 
         $wp_customize->add_setting(
 			'grigora_promo_dummy',
+            array(
+                'default' => '',
+                'sanitize_callback' => 'grg_dummy_promo'
+            )
 		);
 
         $wp_customize->add_control(
