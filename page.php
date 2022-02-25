@@ -38,7 +38,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <?php the_content(); ?>
             </div>
             <?php wp_link_pages(); ?>
-            <p></p>
+            <p class="post-bottom-p"></p>
         </article>
     </section>
 

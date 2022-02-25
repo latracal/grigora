@@ -104,7 +104,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <?php the_content(); ?>
             </div>
             <?php wp_link_pages(); ?>
-            <p></p>
+            <p class="post-bottom-p"></p>
             <?php if( get_theme_mod( 'grg_blog_single_category' , grigora_blog_defaults()['grg_blog_single_category']) )
         {
             
