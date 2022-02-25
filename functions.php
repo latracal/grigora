@@ -10,7 +10,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // Setup
 define( 'grg_DEV_MODE', false );
-define( 'grg_VERSION', '1.003' );
+define( 'grg_VERSION', '1.004' );
+define( 'grg_HOME_URL', 'https://wpgrigora.com/' );
+define( 'grg_PRO_URL', 'https://wpgrigora.com/pro/' );
 
 // Includes
 include( get_theme_file_path( '/settings-functions/defaults.php' ) );

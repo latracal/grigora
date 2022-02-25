@@ -149,13 +149,13 @@ if ( ! function_exists( 'grigora_spacing_defaults' ) ) {
 			'grg_toc_heading5' => 1,
 			'grg_toc_heading6' => 1,			
 			'grg_footer_text' => sprintf(
-				'%1$s © %4$s | %5$s | %2$s&nbsp;<a href="https://wpgrigora.com/">%3$s</a>',
+				'%1$s © %4$s | %5$s | %2$s&nbsp;<a href="%6$s">%3$s</a>',
 				__('Copyright', 'grigora'),
 				__('Built with', 'grigora'),
 				__('Grigora', 'grigora'),
 				get_bloginfo('name'),
-				date('Y')
-
+				date('Y'),
+				grg_HOME_URL
 			),
 			'grg_cookie_text' => __('This website uses cookies to provide necessary website functionality, improve your experience and analyze our traffic. By using our website, you agree to our Privacy Policy and our cookies usage.', 'grigora')
 		);

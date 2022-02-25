@@ -116,7 +116,7 @@ echo '<div class="admin-container">';
     if ( !is_grigora_pro_active() ) {
         echo '<div class="pro-notification"><p>'; 
         echo esc_html( __( "Activate All Powerful Options By Purchasing Girgora Pro", "grigora" )); 
-        echo '</p><a href="https://wpgrigora.com/pro/" target="_blank"><button class="pro-btn">'.esc_html( __( 'Buy Now', 'grigora')).'</button></a></div>';
+        echo '</p><a href="'.grg_PRO_URL.'" target="_blank"><button class="pro-btn">'.esc_html( __( 'Buy Now', 'grigora')).'</button></a></div>';
 }
 ?>
 <div class="grigora-settings">
@@ -188,7 +188,7 @@ echo '<div class="admin-container">';
                 <div class="header"><?php echo esc_html( __( "Grigora Pro License", "grigora" )); ?></div>
                 <input type="hidden" name="action" value="grigora_update_license_key">
                 <?php wp_nonce_field( 'grigora_activation_nonce', 'grigora_activation_nonce' ); ?>
-                <p><?php echo esc_html( __( "Enter your", "grigora" )); ?> <a href="https://wpgrigora.com/pro/"><?php echo esc_html( __( "license
+                <p><?php echo esc_html( __( "Enter your", "grigora" )); ?> <a href="<?php echo grg_PRO_URL; ?>"><?php echo esc_html( __( "license
                         key", "grigora" )); ?></a> <?php echo esc_html( __( "to enable auto updates.", "grigora" )); ?>
                 </p>
                 <input type="password" id="grigora_license_key" name="grigora_license_key">

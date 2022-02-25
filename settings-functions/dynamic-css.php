@@ -848,59 +848,181 @@ function grg_enqueue_dynamic_css() {
 }
 
 /**
- * Dynamic CSS pro plugin enqueue
+ * Enqueue External File Dynamic CSS
  * 
- *  @since  1.000
+ *  @since  1.004
  * 
- *  @return css string
  * 
  */
 if(current_user_can('manage_options') || !is_grigora_pro_active()){
+    /**
+     * Inline css for logged in users & non pro users
+     * 
+     *  @since  1.004
+     * 
+     */
     add_action( 'wp_head', 'grg_enqueue_dynamic_css' );
 }
 else{
-    if(function_exists("grigora_pro_get_minified_css") && grigora_get_option("minify") && grigora_get_option("dynamicexternal")){
-        if(grigora_pro_dynamic_minified_exists()){
+    /**
+     * Serve dynamic css in external file if available
+     * 
+     *  @since  1.004
+     * 
+     */
+    if(grigora_get_option("dynamicexternal")){
+        /**
+         * If external CSS is on minified active
+         * 
+         *  @since  1.004
+         * 
+         */
+        if(
+            grigora_get_option("minify") && 
+            function_exists("grigora_pro_dynamic_minified_file_exists") &&
+            function_exists("grigora_pro_dynamic_minified_file_uri") &&
+            grigora_pro_dynamic_minified_file_exists()
+        ){
             function grigora_pro_dynamic_minified_file(){
-                $uri = get_template_directory_uri();
                 $ver = grg_DEV_MODE ? time() : get_option("grg_dynamic_cache_ver", 1);
                 wp_enqueue_style('grg_dynamic_style', grigora_pro_dynamic_minified_file_uri(), [], $ver);
             }
             add_action('wp_enqueue_scripts', 'grigora_pro_dynamic_minified_file');
         }
-        else if(grigora_pro_dynamic_exists()){
+        /**
+         * If external CSS is on minified inactive
+         * 
+         *  @since  1.004
+         * 
+         */
+        else if(
+            function_exists("grigora_pro_dynamic_file_exists") &&
+            function_exists("grigora_pro_dynamic_file_uri") &&
+            grigora_pro_dynamic_file_exists()
+        ){
             function grigora_pro_dynamic_file(){
-                $uri = get_template_directory_uri();
                 $ver = grg_DEV_MODE ? time() : get_option("grg_dynamic_cache_ver", 1);
                 wp_enqueue_style('grg_dynamic_style', grigora_pro_dynamic_file_uri(), [], $ver);
             }
             add_action('wp_enqueue_scripts', 'grigora_pro_dynamic_file');
         }
+        /**
+         * Fallback
+         * 
+         *  @since  1.004
+         * 
+         */
         else{
             add_action( 'wp_head', 'grg_enqueue_dynamic_css' );
         }
     }
-    else if(function_exists("grigora_pro_get_minified_css") && grigora_get_option("minify")){
-        if(grigora_pro_dynamic()){
+    /**
+     * Minified inline css
+     * 
+     *  @since  1.004
+     * 
+     */
+    else if(grigora_get_option("minify")){
+        if(
+            function_exists("grigora_pro_minify_available") && 
+            function_exists("grigora_pro_minified_dynamic_css") && 
+            grigora_pro_minify_available()
+        ){
             function grg_enqueue_dynamic_minified_css() {
                 ?>
             <style id="grg-dynamic-inline-css">
-                <?php echo $dynamiccss; ?>
+                <?php echo grigora_pro_minified_dynamic_css(grg_dynamic_customize_css_var()); ?>
             </style>
             <?php
-            add_action( 'wp_head', 'grg_enqueue_dynamic_minified_css' );
             }
+            add_action( 'wp_head', 'grg_enqueue_dynamic_minified_css' );
         }
+        /**
+         * Fallback
+         * 
+         *  @since  1.004
+         * 
+         */
         else{
             add_action( 'wp_head', 'grg_enqueue_dynamic_css' );
         }
-
-        
     }
+    /**
+     * Fallback
+     * 
+     *  @since  1.004
+     * 
+     */
     else{
         add_action( 'wp_head', 'grg_enqueue_dynamic_css' );
     }
 }
+
+
+
+/**
+ * Increment the cache version to reset the dynamic css cache
+ * 
+ * @since  1.000
+ * 
+ */
+function increment_dynamic_css_cache_ver(){
+    $cache_ver = get_option("grg_dynamic_cache_ver", 1);
+    $cache_ver++;
+    update_option( 'grg_dynamic_cache_ver', $cache_ver );
+}
+
+/**
+ * Send request to Grigora Pro plugin to regenerate minified CSS files
+ * 
+ * @since  1.004
+ * 
+ */
+function generate_dynamic_minified_file_css(){
+    if(function_exists("grigora_pro_generate_dynamic_file_minified_css")){
+        if(grigora_pro_generate_dynamic_file_minified_css(grg_dynamic_customize_css_var())){
+            increment_dynamic_css_cache_ver();
+        }
+    }
+}
+
+/**
+ * Send request to Grigora Pro plugin to regenerate CSS files
+ * 
+ * @since  1.004
+ * 
+ */
+function generate_dynamic_file_css(){
+    if(function_exists("grigora_pro_generate_dynamic_file_css")){
+        if(grigora_pro_generate_dynamic_file_css(grg_dynamic_customize_css_var())){
+            increment_dynamic_css_cache_ver();
+        }
+    }
+}
+
+/**
+ * Regenerate Dynamic CSS External Files.
+ * 
+ * @since  1.004
+ * 
+ */
+function grg_regenerate_dynamic_css($old, $new) {
+    generate_dynamic_minified_file_css();
+    generate_dynamic_file_css();
+}
+
+/**
+ * Call Regenerate Function Everytime Settings are Updated.
+ * 
+ */
+if(current_user_can('manage_options')){
+    $theme_slug = get_option( 'stylesheet' );    
+    add_action('update_option_grigora_settings','grg_regenerate_dynamic_css', 10, 2);
+    add_action('add_option_grigora_settings','grg_regenerate_dynamic_css', 10, 2);
+    add_action("update_option_theme_mods_$theme_slug",'grg_regenerate_dynamic_css', 10, 2);
+    add_action("add_option_theme_mods_$theme_slug",'grg_regenerate_dynamic_css', 10, 2);
+}
+
 
 
 /**
@@ -937,9 +1059,6 @@ function forced_meta_css(){
             else{
                 $sidebar_layout = get_theme_mod("grg_sidebar-alignment", grigora_spacing_defaults()["grg_sidebar-alignment"]);
             }
-            // echo "here";
-            // echo $layout_container;
-            // echo $sidebar_layout;
             if($layout_container=="containedpadded" && $sidebar_layout=="row"){
                 $out=$out."
                 .grigora-primary-sidebar{
