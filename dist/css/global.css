@@ -1012,6 +1012,12 @@
   }
 }
 
+.article .post-container .post .post-desc {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
 .article .post-container .post .post-desc h3 {
   margin-bottom: 1rem;
 }
