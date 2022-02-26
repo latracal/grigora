@@ -4,30 +4,63 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // For security
 }
 
-// remove existing wrappers
+/**
+ * Remove default wrappers
+ *
+ * @since  1.001
+ * 
+ */
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 
-// add grigora wrappers
+/**
+ * Add grigora wrappers
+ *
+ * @since  1.001
+ * 
+ */
 add_action( 'woocommerce_before_main_content', 'grg_main_container_open', 5 );
 add_action( 'woocommerce_after_main_content', 'grg_main_container_close', 5 );
 add_action( 'woocommerce_sidebar', 'grg_render_sidebar' );
 	 
-
+/**
+ * Custom wrapper for container open
+ *
+ * @since  1.001
+ * 
+ */
 function grg_main_container_open(){
     echo '<div class="container"><section class="post-content"><article class="woocommerce-page" itemtype="'.grg_get_schema_tag('creativework')['itemtype'].'"
     itemscope="'.grg_get_schema_tag('creativework')['itemscope'].'" >';
 }
 
+/**
+ * Custom wrapper for container close
+ *
+ * @since  1.001
+ * 
+ */
 function grg_main_container_close(){
     echo '</article></section>';
 }
 
+/**
+ * Render sidebar
+ *
+ * @since  1.001
+ * 
+ */
 function grg_render_sidebar(){
     get_sidebar();
 }
 
+/**
+ * Grigora woocommerce css
+ *
+ * @since  1.001
+ * 
+ */
 function grigora_wcm_css(){
     $out = "
     .orderby{
