@@ -6,7 +6,7 @@
 
 **License URI:** [GPLv2](https://www.gnu.org/licenses/gpl-2.0.html)
 
-**Stable Tag:** v1.005
+**Stable Tag:** v1.006
 
 **Requires PHP Version Atleast:** 5.2
 

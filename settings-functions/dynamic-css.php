@@ -1231,12 +1231,9 @@ function forced_meta_css(){
  */
 function forced_meta_css_enqueue(){
     ?>
-<style id="grg-forced-meta-css">
-<?php echo forced_meta_css();
-?>
-</style>
-<?php
+    <style id="grg-forced-meta-css">
+        <?php echo forced_meta_css(); ?>
+    </style>
+    <?php
 }
-
-
 ?>

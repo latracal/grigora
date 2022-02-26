@@ -43,26 +43,23 @@ function custom_do_settings_sections( $page ) {
     }
  
     foreach ( (array) $wp_settings_sections[ $page ] as $section ) {
-        echo "<div class='{$section['id']} customizer ". (is_grigora_pro_active() ? '' : 'disabled') ."'
-id='{$section['id']}'>
-";
-if ( $section['title'] ) {
-echo "<h2>{$section['title']}</h2>\n";
-}
+        echo "<div class='{$section['id']} customizer ". (is_grigora_pro_active() ? '' : 'disabled') ."' id='{$section['id']}'>";
+        if ( $section['title'] ) {
+            echo "<h2>{$section['title']}</h2>\n";
+        }
 
-if ( $section['callback'] ) {
-call_user_func( $section['callback'], $section );
-}
+        if ( $section['callback'] ) {
+            call_user_func( $section['callback'], $section );
+        }
 
-if ( ! isset( $wp_settings_fields ) || ! isset( $wp_settings_fields[ $page ] ) || ! isset( $wp_settings_fields[ $page ][
-$section['id'] ] ) ) {
-continue;
-}
-echo '<table class="form-table" role="presentation">';
-    do_settings_fields( $page, $section['id'] );
-    echo '</table>';
-echo '</div>';
-}
+        if ( ! isset( $wp_settings_fields ) || ! isset( $wp_settings_fields[ $page ] ) || ! isset( $wp_settings_fields[ $page ][$section['id'] ] ) ) {
+            continue;
+        }
+        echo '<table class="form-table" role="presentation">';
+            do_settings_fields( $page, $section['id'] );
+            echo '</table>';
+        echo '</div>';
+    }
 }
 
 /**
@@ -75,15 +72,12 @@ echo '</div>';
  */
 
 function grigora_get_option( $option ) {
-
-$defaults = grigora_get_defaults();
-
-$options = wp_parse_args(
-get_option( 'grigora_settings', array() ),
-$defaults
-);
-
-return $options[$option];
+    $defaults = grigora_get_defaults();
+    $options = wp_parse_args(
+        get_option( 'grigora_settings', array() ),
+        $defaults
+    );
+    return $options[$option];
 }
 
 if ( ! function_exists( 'grigora_options_page' ) ) {
@@ -98,65 +92,66 @@ if ( ! function_exists( 'grigora_options_page' ) ) {
  * 
  */
 function grigora_options_page() {
-wp_enqueue_style( 'theme-options', get_template_directory_uri() . '/dist/css/admin-options.min.css', null, grg_VERSION );
-wp_enqueue_script( 'theme-options', get_template_directory_uri() . '/js/admin-options.js', null, grg_VERSION );
-if ( !current_user_can( 'manage_options' ) ) {
-wp_die( __( 'You do not have sufficient permissions to access this page.' , 'grigora') );
-}
-echo '<div class="admin-container">';
+    wp_enqueue_style( 'theme-options', get_template_directory_uri() . '/dist/css/admin-options.min.css', null, grg_VERSION );
+    wp_enqueue_script( 'theme-options', get_template_directory_uri() . '/js/admin-options.js', null, grg_VERSION );
+
+    if ( !current_user_can( 'manage_options' ) ) {
+        wp_die( __( 'You do not have sufficient permissions to access this page.' , 'grigora') );
+    }
+    echo '<div class="admin-container">';
     settings_errors();
     ?>
-<div class="setting-title">
-    <h1><?php echo esc_html( __( 'Grigora', 'grigora')); ?></h1>
-</div>
-<?php 
+    <div class="setting-title">
+        <h1><?php echo esc_html( __( 'Grigora', 'grigora')); ?></h1>
+    </div>
+    <?php 
     if ( !is_grigora_pro_active() ) {
         echo '<div class="pro-notification"><p>'; 
         echo esc_html( __( "Activate All Powerful Options By Purchasing Girgora Pro", "grigora" )); 
         echo '</p><a href="'.grg_PRO_URL.'" target="_blank"><button class="pro-btn">'.esc_html( __( 'Buy Now', 'grigora')).'</button></a></div>';
-}
-?>
-<div class="grigora-settings">
-    <div class="tab-container">
-        <div class="tab">
-            <button class="tab-btn" onclick="controlName(event, 'grigora_customizer_section')" id="default"><?php echo esc_html( __( "Customizer Options", "grigora" )); ?></button>
-            <button class="tab-btn" onclick="controlName(event, 'grigora_performance_section')"><?php echo esc_html( __( "Performance", "grigora" )); ?></button>
-            <button class="tab-btn IE-tab" onclick="controlName(event, 'grigora_importexport_section')"><?php echo esc_html( __( "Import & Export", "grigora" )); ?></button>
-        </div>
-        <div class="tab-content">
-            <form action="options.php" method="post" class=" <?php echo (is_grigora_pro_active() ? '' : 'disabled') ?>">
-                <?php
-                    settings_fields("grigora_settings");
-                    custom_do_settings_sections("grigora-options");
-                    submit_button();
-                ?>
-            </form>
-            <form enctype="multipart/form-data" action="<?php echo get_admin_url( null, 'admin-post.php' ) ?>"
-                method="post" class="IETab <?php echo (is_grigora_pro_active() ? '' : 'disabled') ?>">
-                <div class="grigora_importexport_section customizer " id="grigora_importexport_section">
-                    <h2><?php echo esc_html( __( "Import & Export", "grigora" )); ?></h2>
-                    <input type="hidden" name="action" value="grigora_import">
-                    <p><?php echo esc_html( __( "Save and Restore your Grigora Settings in One Click!", "grigora" )); ?>
-                    </p>
-                    <table class="form-table" role="presentation">
-                        <tbody>
-                            <tr>
-                                <th scope="row"><?php echo esc_html( __( "Export", "grigora" )); ?></th>
-                                <td><?php grigora_importexport_section_export_callback_function(); ?></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><?php echo esc_html( __( "Import", "grigora" )); ?></th>
-                                <td><?php grigora_importexport_section_import_callback_function(); ?></td>
-                            </tr>
-                        </tbody>
-                    </table>
+    }
+    ?>
+    <div class="grigora-settings">
+        <div class="tab-container">
+            <div class="tab">
+                <button class="tab-btn" onclick="controlName(event, 'grigora_customizer_section')" id="default"><?php echo esc_html( __( "Customizer Options", "grigora" )); ?></button>
+                <button class="tab-btn" onclick="controlName(event, 'grigora_performance_section')"><?php echo esc_html( __( "Performance", "grigora" )); ?></button>
+                <button class="tab-btn IE-tab" onclick="controlName(event, 'grigora_importexport_section')"><?php echo esc_html( __( "Import & Export", "grigora" )); ?></button>
+            </div>
+            <div class="tab-content">
+                <form action="options.php" method="post" class=" <?php echo (is_grigora_pro_active() ? '' : 'disabled') ?>">
                     <?php
-                    submit_button();
-                ?>
-                </div>
-            </form>
+                        settings_fields("grigora_settings");
+                        custom_do_settings_sections("grigora-options");
+                        submit_button();
+                    ?>
+                </form>
+                <form enctype="multipart/form-data" action="<?php echo get_admin_url( null, 'admin-post.php' ) ?>"
+                    method="post" class="IETab <?php echo (is_grigora_pro_active() ? '' : 'disabled') ?>">
+                    <div class="grigora_importexport_section customizer " id="grigora_importexport_section">
+                        <h2><?php echo esc_html( __( "Import & Export", "grigora" )); ?></h2>
+                        <input type="hidden" name="action" value="grigora_import">
+                        <p><?php echo esc_html( __( "Save and Restore your Grigora Settings in One Click!", "grigora" )); ?>
+                        </p>
+                        <table class="form-table" role="presentation">
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><?php echo esc_html( __( "Export", "grigora" )); ?></th>
+                                    <td><?php grigora_importexport_section_export_callback_function(); ?></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><?php echo esc_html( __( "Import", "grigora" )); ?></th>
+                                    <td><?php grigora_importexport_section_import_callback_function(); ?></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <?php
+                        submit_button();
+                    ?>
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
     <div class="grigora-admin-sidebar">
         <?php if(is_grigora_pro_active()){ ?>
         <?php if(get_option("grigora_license_key_status") == "valid"){
@@ -192,10 +187,10 @@ echo '<div class="admin-container">';
                 <input type="submit" name="submit" id="submit" class="button button-primary" value="Activate">
             </form>
         </div>
-        <?php } ?>
-        <?php } ?>
+        <?php }
+        } ?>
+        </div>
     </div>
-</div>
 <?php
     }
 }
@@ -390,14 +385,6 @@ function grigora_customize_settings_section() {
         'grigora_performance_section'
     );
 
-    // add_settings_field(
-    //     'grigora_performance_section_xmlrpc',
-    //     'Disable XML RPC',
-    //     'grigora_performance_section_xmlrpc_callback_function',
-    //     'grigora-options',
-    //     'grigora_performance_section'
-    // );
-
     add_settings_field(
         'grigora_performance_section_jquerymigrate',
 		__('Disable Jquery Migrate', 'grigora'),
@@ -501,10 +488,6 @@ function grigora_performance_section_emoji_callback_function() {
 function grigora_performance_section_embeds_callback_function() {
     echo '<input name="grigora_settings[embeds]" id="grigora_settings[embeds]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'embeds' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
 }
-
-// function grigora_performance_section_xmlrpc_callback_function() {
-//     echo '<input name="grigora_settings[xmlrpc]" id="grigora_settings[xmlrpc]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'xmlrpc' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
-// }
 
 function grigora_performance_section_jquerymigrate_callback_function() {
     echo '<input name="grigora_settings[jquerymigrate]" id="grigora_settings[jquerymigrate]" type="checkbox" value="1" class="checkbox" ' . checked( 1, grigora_get_option( 'jquerymigrate' ), false ) . ' /><span class="knob"></span><span class="layer"></span>';
