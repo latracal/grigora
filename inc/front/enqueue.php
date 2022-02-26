@@ -4,11 +4,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // For security
 }
 
-?>
-
-<?php
-
-
 /**
  * Enqueue basic global css and main js
  *

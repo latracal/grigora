@@ -4,9 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // For security
 }
 
-?>
-
-<?php get_header(); ?>
+get_header(); ?>
 
 <div class="container">
     <section class="article">

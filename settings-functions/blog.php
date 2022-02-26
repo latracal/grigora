@@ -4,8 +4,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // For security
 }
 
-?>
-<?php
 if (grigora_get_option("blog")){
     /**
 	 * Dynamic number of excerpt words that can be changed in customizer

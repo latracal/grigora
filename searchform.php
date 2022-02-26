@@ -4,9 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // For security
 }
 
-?>
-
-<?php $unique_id = esc_attr( uniqid( 'search-form-' ) ); ?>
+$unique_id = esc_attr( uniqid( 'search-form-' ) ); ?>
 
 <form role="search" method="get" class="search-box s-hide" action="<?php echo esc_url( home_url( '/' ) ); ?>">
     <input type="search" class="search-field" id="search" name="s" value="<?php the_search_query(); ?>"

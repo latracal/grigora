@@ -4,9 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // For security
 }
 
-?>
-
-<?php get_header(); ?>
+get_header(); ?>
 
 <?php if ( have_posts() ) : ?>
 

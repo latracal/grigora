@@ -5,7 +5,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
-
 <aside id="sidebar" class="grigora-primary-sidebar" itemtype="<?php echo grg_get_schema_tag('sidebar')['itemtype'] ?>"
     itemscope="<?php echo grg_get_schema_tag('sidebar')['itemscope'] ?>">
     <?php if ( is_active_sidebar( 'primary' ) ) : ?>

@@ -4,9 +4,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // For security
 }
 
-?>
-<?php
-
 /**
  * Applies dynamic css to elements when the value is changed through customizer setting
  * each flag check if the option is enabled in the Grigora options and then shows settings inside

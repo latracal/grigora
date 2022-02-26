@@ -4,9 +4,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // For security
 }
 
-?>
-<?php
-
 if ( ! class_exists( 'grigora_metabox_cl' ) ) {
 
     /**
