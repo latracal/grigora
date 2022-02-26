@@ -36,6 +36,27 @@ if(!function_exists('grg_sanitize_checkbox')){
 	}
 }
 
+/**
+ * Color sanitize
+ *
+ * @since  1.005
+ * 
+ */
+if(!function_exists('grg_sanitize_color')){
+	//checkbox sanitization function
+	function grg_sanitize_color( $input ){
+        if ( '' === $input ) {
+			return '';
+		}
+		if ( false === strpos( $input, 'rgba' ) ) {
+			return sanitize_hex_color( $input );
+		}
+		$input = str_replace( ' ', '', $input );
+		sscanf( $input, 'rgba(%d,%d,%d,%f)', $red, $green, $blue, $alpha );
+		return 'rgba(' . $red . ',' . $green . ',' . $blue . ',' . $alpha . ')';
+	}
+}
+
 
 /**
  * Dummy variable sanitize

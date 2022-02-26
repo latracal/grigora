@@ -42,7 +42,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
          * 
          */
 
-        $wp_customize->add_setting( 'grg_bg-color', [ 'default'   => grigora_color_defaults()['grg_bg-color'], 'sanitize_callback' => 'sanitize_hex_color'
+        $wp_customize->add_setting( 'grg_bg-color', [ 'default'   => grigora_color_defaults()['grg_bg-color'], 'sanitize_callback' => 'grg_sanitize_color'
         ] );
 
         $wp_customize->add_control(new grg_customize_color_control($wp_customize, 'grg_bg-setting', array(
@@ -51,7 +51,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             'settings'       => 'grg_bg-color',
         )));
 
-        $wp_customize->add_setting( 'grg_text-color', [ 'default'   => grigora_color_defaults()['grg_text-color'], 'sanitize_callback' => 'sanitize_hex_color'
+        $wp_customize->add_setting( 'grg_text-color', [ 'default'   => grigora_color_defaults()['grg_text-color'], 'sanitize_callback' => 'grg_sanitize_color'
             ] );
     
         $wp_customize->add_control( new grg_customize_color_control(
@@ -70,7 +70,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             'panel' => 'grg_colors',
         ] );
 
-        $wp_customize->add_setting( 'grg_anchor-text-color', [ 'default'   => grigora_color_defaults()['grg_anchor-text-color'], 'sanitize_callback' => 'sanitize_hex_color'
+        $wp_customize->add_setting( 'grg_anchor-text-color', [ 'default'   => grigora_color_defaults()['grg_anchor-text-color'], 'sanitize_callback' => 'grg_sanitize_color'
             ] );
     
         $wp_customize->add_control( new grg_customize_color_control(
@@ -83,7 +83,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) ); 
         
-        $wp_customize->add_setting( 'grg_anchor-text-hover-color', [ 'default'   => grigora_color_defaults()['grg_anchor-text-hover-color'], 'sanitize_callback' => 'sanitize_hex_color'
+        $wp_customize->add_setting( 'grg_anchor-text-hover-color', [ 'default'   => grigora_color_defaults()['grg_anchor-text-hover-color'], 'sanitize_callback' => 'grg_sanitize_color'
             ] );
     
         $wp_customize->add_control( new grg_customize_color_control(
@@ -103,7 +103,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
          * 
          */
 
-        $wp_customize->add_setting( 'grg_header_bg-color', [ 'default'   => grigora_color_defaults()['grg_bg-color'], 'sanitize_callback' => 'sanitize_hex_color'
+        $wp_customize->add_setting( 'grg_header_bg-color', [ 'default'   => grigora_color_defaults()['grg_bg-color'], 'sanitize_callback' => 'grg_sanitize_color'
             ] );
     
         $wp_customize->add_control( new grg_customize_color_control(
@@ -123,7 +123,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
          * 
          */
 
-        $wp_customize->add_setting( 'grg_header_menu_bg-color', [ 'default'   => grigora_color_defaults()['grg_header_menu_bg-color'], 'sanitize_callback' => 'sanitize_hex_color'
+        $wp_customize->add_setting( 'grg_header_menu_bg-color', [ 'default'   => grigora_color_defaults()['grg_header_menu_bg-color'], 'sanitize_callback' => 'grg_sanitize_color'
             ] );
     
         $wp_customize->add_control( new grg_customize_color_control(
@@ -136,7 +136,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );
 
-        $wp_customize->add_setting( 'grg_header_submenu_bg-color', [ 'default'   => grigora_color_defaults()['grg_header_submenu_bg-color'], 'sanitize_callback' => 'sanitize_hex_color'
+        $wp_customize->add_setting( 'grg_header_submenu_bg-color', [ 'default'   => grigora_color_defaults()['grg_header_submenu_bg-color'], 'sanitize_callback' => 'grg_sanitize_color'
             ] );
     
         $wp_customize->add_control( new grg_customize_color_control(
@@ -149,7 +149,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );
 
-        $wp_customize->add_setting( 'grg_header_searchbox_bg-color', [ 'default'   => grigora_color_defaults()['grg_header_searchbox_bg-color'], 'sanitize_callback' => 'sanitize_hex_color'
+        $wp_customize->add_setting( 'grg_header_searchbox_bg-color', [ 'default'   => grigora_color_defaults()['grg_header_searchbox_bg-color'], 'sanitize_callback' => 'grg_sanitize_color'
             ] );
     
         $wp_customize->add_control( new grg_customize_color_control(
@@ -162,7 +162,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );
 
-        $wp_customize->add_setting( 'grg_header_text-color', [ 'default'   => grigora_color_defaults()['grg_header_text-color'], 'sanitize_callback' => 'sanitize_hex_color'
+        $wp_customize->add_setting( 'grg_header_text-color', [ 'default'   => grigora_color_defaults()['grg_header_text-color'], 'sanitize_callback' => 'grg_sanitize_color'
             ] );
     
         $wp_customize->add_control( new grg_customize_color_control(
@@ -175,7 +175,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );
 
-        $wp_customize->add_setting( 'grg_menu_text-color', [ 'default'   => grigora_color_defaults()['grg_menu_text-color'], 'sanitize_callback' => 'sanitize_hex_color'
+        $wp_customize->add_setting( 'grg_menu_text-color', [ 'default'   => grigora_color_defaults()['grg_menu_text-color'], 'sanitize_callback' => 'grg_sanitize_color'
             ] );
     
         $wp_customize->add_control( new grg_customize_color_control(
@@ -209,7 +209,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
          */
 
 
-        $wp_customize->add_setting( 'grg_footer_menu_bg-color', [ 'default'   => grigora_color_defaults()['grg_footer_menu_bg-color'], 'sanitize_callback' => 'sanitize_hex_color'
+        $wp_customize->add_setting( 'grg_footer_menu_bg-color', [ 'default'   => grigora_color_defaults()['grg_footer_menu_bg-color'], 'sanitize_callback' => 'grg_sanitize_color'
             ] );
     
         $wp_customize->add_control( new grg_customize_color_control(
@@ -222,7 +222,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );
 
-        $wp_customize->add_setting( 'grg_footer_bg-color', [ 'default'   => grigora_color_defaults()['grg_footer_bg-color'], 'sanitize_callback' => 'sanitize_hex_color'
+        $wp_customize->add_setting( 'grg_footer_bg-color', [ 'default'   => grigora_color_defaults()['grg_footer_bg-color'], 'sanitize_callback' => 'grg_sanitize_color'
             ] );
     
         $wp_customize->add_control( new grg_customize_color_control(
@@ -235,7 +235,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );
 
-        $wp_customize->add_setting( 'grg_footer_text-color', [ 'default'   => grigora_color_defaults()['grg_footer_text-color'], 'sanitize_callback' => 'sanitize_hex_color'
+        $wp_customize->add_setting( 'grg_footer_text-color', [ 'default'   => grigora_color_defaults()['grg_footer_text-color'], 'sanitize_callback' => 'grg_sanitize_color'
             ] );
     
         $wp_customize->add_control( new grg_customize_color_control(
@@ -268,7 +268,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
          * 
          */
 
-        $wp_customize->add_setting( 'grg_btn-color', [ 'default'   => grigora_color_defaults()['grg_bg-color'], 'sanitize_callback' => 'sanitize_hex_color'
+        $wp_customize->add_setting( 'grg_btn-color', [ 'default'   => grigora_color_defaults()['grg_bg-color'], 'sanitize_callback' => 'grg_sanitize_color'
             ] );
     
         $wp_customize->add_control( new grg_customize_color_control(
@@ -281,7 +281,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );   
         
-        $wp_customize->add_setting( 'grg_btn-text-color', [ 'default'   => grigora_color_defaults()['grg_bg-color'], 'sanitize_callback' => 'sanitize_hex_color'
+        $wp_customize->add_setting( 'grg_btn-text-color', [ 'default'   => grigora_color_defaults()['grg_bg-color'], 'sanitize_callback' => 'grg_sanitize_color'
             ] );
     
         $wp_customize->add_control( new grg_customize_color_control(
@@ -314,7 +314,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
          * 
          */
 
-        $wp_customize->add_setting( 'grg_h1-tag-color', [ 'default'   => grigora_color_defaults()['grg_h1-tag-color'], 'sanitize_callback' => 'sanitize_hex_color'
+        $wp_customize->add_setting( 'grg_h1-tag-color', [ 'default'   => grigora_color_defaults()['grg_h1-tag-color'], 'sanitize_callback' => 'grg_sanitize_color'
             ] );
     
         $wp_customize->add_control( new grg_customize_color_control(
@@ -327,7 +327,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );         
                  
-        $wp_customize->add_setting( 'grg_h2-tag-color', [ 'default'   => grigora_color_defaults()['grg_h2-tag-color'], 'sanitize_callback' => 'sanitize_hex_color'
+        $wp_customize->add_setting( 'grg_h2-tag-color', [ 'default'   => grigora_color_defaults()['grg_h2-tag-color'], 'sanitize_callback' => 'grg_sanitize_color'
             ] );
     
         $wp_customize->add_control( new grg_customize_color_control(
@@ -340,7 +340,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );         
             
-        $wp_customize->add_setting( 'grg_h3-tag-color', [ 'default'   => grigora_color_defaults()['grg_h3-tag-color'], 'sanitize_callback' => 'sanitize_hex_color'
+        $wp_customize->add_setting( 'grg_h3-tag-color', [ 'default'   => grigora_color_defaults()['grg_h3-tag-color'], 'sanitize_callback' => 'grg_sanitize_color'
             ] );
     
         $wp_customize->add_control( new grg_customize_color_control(
@@ -353,7 +353,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );    
                      
-        $wp_customize->add_setting( 'grg_h4-tag-color', [ 'default'   => grigora_color_defaults()['grg_h4-tag-color'], 'sanitize_callback' => 'sanitize_hex_color'
+        $wp_customize->add_setting( 'grg_h4-tag-color', [ 'default'   => grigora_color_defaults()['grg_h4-tag-color'], 'sanitize_callback' => 'grg_sanitize_color'
             ] );
     
         $wp_customize->add_control( new grg_customize_color_control(
@@ -366,7 +366,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );   
                     
-        $wp_customize->add_setting( 'grg_h5-tag-color', [ 'default'   => grigora_color_defaults()['grg_h5-tag-color'], 'sanitize_callback' => 'sanitize_hex_color'
+        $wp_customize->add_setting( 'grg_h5-tag-color', [ 'default'   => grigora_color_defaults()['grg_h5-tag-color'], 'sanitize_callback' => 'grg_sanitize_color'
             ] );
     
         $wp_customize->add_control( new grg_customize_color_control(
@@ -379,7 +379,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );   
                     
-        $wp_customize->add_setting( 'grg_h6-tag-color', [ 'default'   => grigora_color_defaults()['grg_h6-tag-color'], 'sanitize_callback' => 'sanitize_hex_color'
+        $wp_customize->add_setting( 'grg_h6-tag-color', [ 'default'   => grigora_color_defaults()['grg_h6-tag-color'], 'sanitize_callback' => 'grg_sanitize_color'
             ] );
     
         $wp_customize->add_control( new grg_customize_color_control(
@@ -413,7 +413,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
          * 
          */
 
-        $wp_customize->add_setting( 'grg_breadcrumb-color', [ 'default'   => grigora_color_defaults()['grg_breadcrumb-color'], 'sanitize_callback' => 'sanitize_hex_color'
+        $wp_customize->add_setting( 'grg_breadcrumb-color', [ 'default'   => grigora_color_defaults()['grg_breadcrumb-color'], 'sanitize_callback' => 'grg_sanitize_color'
             ] );
     
         $wp_customize->add_control( new grg_customize_color_control(
@@ -446,7 +446,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
          * 
          */
 
-        $wp_customize->add_setting( 'grg_comment_text_colors', [ 'default'   => grigora_color_defaults()['grg_comment_text_colors'], 'sanitize_callback' => 'sanitize_hex_color'
+        $wp_customize->add_setting( 'grg_comment_text_colors', [ 'default'   => grigora_color_defaults()['grg_comment_text_colors'], 'sanitize_callback' => 'grg_sanitize_color'
             ] );
     
         $wp_customize->add_control( new grg_customize_color_control(
@@ -459,7 +459,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );  
 
-        $wp_customize->add_setting( 'grg_comment_date_colors', [ 'default'   => grigora_color_defaults()['grg_comment_date_colors'], 'sanitize_callback' => 'sanitize_hex_color'
+        $wp_customize->add_setting( 'grg_comment_date_colors', [ 'default'   => grigora_color_defaults()['grg_comment_date_colors'], 'sanitize_callback' => 'grg_sanitize_color'
             ] );
     
         $wp_customize->add_control( new grg_customize_color_control(
@@ -472,7 +472,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );  
 
-        $wp_customize->add_setting( 'grg_comment_reply_colors', [ 'default'   => grigora_color_defaults()['grg_comment_reply_colors'], 'sanitize_callback' => 'sanitize_hex_color'
+        $wp_customize->add_setting( 'grg_comment_reply_colors', [ 'default'   => grigora_color_defaults()['grg_comment_reply_colors'], 'sanitize_callback' => 'grg_sanitize_color'
             ] );
     
         $wp_customize->add_control( new grg_customize_color_control(
@@ -485,7 +485,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );  
 
-        $wp_customize->add_setting( 'grg_comment_reply_text_colors', [ 'default'   => grigora_color_defaults()['grg_comment_reply_text_colors'], 'sanitize_callback' => 'sanitize_hex_color'
+        $wp_customize->add_setting( 'grg_comment_reply_text_colors', [ 'default'   => grigora_color_defaults()['grg_comment_reply_text_colors'], 'sanitize_callback' => 'grg_sanitize_color'
             ] );
     
         $wp_customize->add_control( new grg_customize_color_control(
@@ -498,7 +498,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );  
 
-        $wp_customize->add_setting( 'grg_comment_title_colors', [ 'default'   => grigora_color_defaults()['grg_comment_title_colors'], 'sanitize_callback' => 'sanitize_hex_color'
+        $wp_customize->add_setting( 'grg_comment_title_colors', [ 'default'   => grigora_color_defaults()['grg_comment_title_colors'], 'sanitize_callback' => 'grg_sanitize_color'
             ] );
     
         $wp_customize->add_control( new grg_customize_color_control(
@@ -530,7 +530,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
          * 
          */
         
-        $wp_customize->add_setting( 'grg_related_post_title_colors', [ 'default'   => grigora_color_defaults()['grg_related_post_title_colors'], 'sanitize_callback' => 'sanitize_hex_color'
+        $wp_customize->add_setting( 'grg_related_post_title_colors', [ 'default'   => grigora_color_defaults()['grg_related_post_title_colors'], 'sanitize_callback' => 'grg_sanitize_color'
             ] );
     
         $wp_customize->add_control( new grg_customize_color_control(
@@ -543,7 +543,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );  
 
-        $wp_customize->add_setting( 'grg_related_post_title_hover_colors', [ 'default'   => grigora_color_defaults()['grg_related_post_title_hover_colors'], 'sanitize_callback' => 'sanitize_hex_color'
+        $wp_customize->add_setting( 'grg_related_post_title_hover_colors', [ 'default'   => grigora_color_defaults()['grg_related_post_title_hover_colors'], 'sanitize_callback' => 'grg_sanitize_color'
             ] );
     
         $wp_customize->add_control( new grg_customize_color_control(
@@ -576,7 +576,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
          * 
          */
 
-        $wp_customize->add_setting( 'grg_post_nav_colors', [ 'default'   => grigora_color_defaults()['grg_post_nav_colors'], 'sanitize_callback' => 'sanitize_hex_color'
+        $wp_customize->add_setting( 'grg_post_nav_colors', [ 'default'   => grigora_color_defaults()['grg_post_nav_colors'], 'sanitize_callback' => 'grg_sanitize_color'
             ] );
     
         $wp_customize->add_control( new grg_customize_color_control(
@@ -589,7 +589,7 @@ if ( ! function_exists( 'grigora_customizer_free' ) ) {
             )
         ) );  
 
-        $wp_customize->add_setting( 'grg_post_nav_text_colors', [ 'default'   => grigora_color_defaults()['grg_post_nav_text_colors'], 'sanitize_callback' => 'sanitize_hex_color'
+        $wp_customize->add_setting( 'grg_post_nav_text_colors', [ 'default'   => grigora_color_defaults()['grg_post_nav_text_colors'], 'sanitize_callback' => 'grg_sanitize_color'
             ] );
     
         $wp_customize->add_control( new grg_customize_color_control(
