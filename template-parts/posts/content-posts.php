@@ -8,9 +8,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div class="post">
     <?php
         if( get_theme_mod( 'grg_blog_archive_image_display', grigora_blog_defaults()['grg_blog_archive_image_display'] ) ){?>
-    <div>
+    <?php if ( has_post_thumbnail() ) : ?>
+        <div class="archive-thumbnail">
         <a href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
-    </div>
+        </div>
+    <?php endif; ?>
 
     <?php
         }
