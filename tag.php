@@ -4,10 +4,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // For security
 }
 
+get_header();
 ?>
-
-<?php get_header(); ?>
-
 <div class="container">
     <section class="article">
         <div class="archive-desc">
