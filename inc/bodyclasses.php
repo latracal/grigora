@@ -4,7 +4,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // For security
 }
 
-
+/**
+ * Sidebar alignment class
+ *
+ * @since  1.000
+ * 
+ */
 add_filter( 'body_class', function( $classes ) {
 	if(
 		(is_single() || is_page()) &&
@@ -35,7 +40,12 @@ add_filter( 'body_class', function( $classes ) {
     return $classes;
 } );
 
-
+/**
+ * Empty canvas class
+ *
+ * @since  1.000
+ * 
+ */
 add_filter( 'body_class', function( $classes ) {
 	if(
 		(is_single() || is_page()) &&
@@ -52,6 +62,12 @@ add_filter( 'body_class', function( $classes ) {
     return $classes;
 } );
 
+/**
+ * Sticky header class
+ *
+ * @since  1.000
+ * 
+ */
 add_filter( 'body_class', function( $classes ) {
 	if(!is_grigora_pro_active()){
 		return $classes;
@@ -66,6 +82,12 @@ add_filter( 'body_class', function( $classes ) {
     return $classes;
 } );
 
+/**
+ * Sticky header device class
+ *
+ * @since  1.000
+ * 
+ */
 add_filter( 'body_class', function( $classes ) {
 	if(!is_grigora_pro_active()){
 		return $classes;
