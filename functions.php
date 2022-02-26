@@ -29,7 +29,18 @@ add_action( 'widgets_init', 'grg_sidebar' ); //sidebar
 
 // Options
 include( get_theme_file_path( '/settings-functions/options-controls.php' ) );
-include( get_theme_file_path( '/customizer/customizer.php' ) );
+
+// Free customizer options
+if(!is_grigora_pro_active()){
+    include( get_theme_file_path( '/customizer/google-fonts.php' ) );
+    include( get_theme_file_path( '/customizer/grigora-custom-customizers.php' ) );
+    include( get_theme_file_path( '/customizer/accordian.php' ) );
+    include( get_theme_file_path( '/customizer/sanitize.php' ) );
+    include( get_theme_file_path( '/customizer/panels.php' ) );
+
+}
+
+
 include( get_theme_file_path( '/settings-functions/fonts-loading.php' ) );
 include( get_theme_file_path( '/settings-functions/dynamic-css.php' ) );
 include( get_theme_file_path( '/settings-functions/blog.php' ) );
@@ -39,4 +50,13 @@ include( get_theme_file_path( '/settings-functions/schema.php' ) );
 include( get_theme_file_path( '/settings-functions/metabox/metabox.php' ) );
 
 // Plugin Compatibilities
-include( get_theme_file_path( '/compatibility/init.php' ) );
+
+/**
+ * Import woocommerce modules
+ *
+ * @since  1.001
+ * 
+ */
+if(class_exists( 'WooCommerce' )){
+    include( get_theme_file_path( '/compatibility/woocommerce/woocommerce-compat.php' ) );
+}
