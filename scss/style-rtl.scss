@@ -309,26 +309,28 @@ img {
 	display: block;
 }
 
-.grg-right-sidebar aside.grigora-primary-sidebar {
-	border-right: 1px solid #aaaaaa;
-	border-left: none;
-}
+.rtl {
+	aside.grigora-primary-sidebar {
+		border-right: 1px solid #aaaaaa;
+		border-left: none;
+	}
 
-.desktop-nav .menu-container .menu-item-has-children a::after {
-	margin-right: 8px;
-}
+	.desktop-nav .menu-container .menu-item-has-children a::after {
+		margin-right: 8px;
+	}
 
-.desktop-nav .menu-container .menu {
-	padding: 0 0 0 4rem !important;
-}
+	.desktop-nav .menu-container .menu {
+		padding: 0 0 0 4rem !important;
+	}
 
-.desktop-nav .menu-container .search-btn {
-	left: 1rem;
-	right: unset;
-}
+	.desktop-nav .menu-container .search-btn {
+		left: 1rem;
+		right: unset;
+	}
 
-.desktop-nav .search-box {
-	flex-direction: row-reverse;
-	left: 0;
-	right: unset;
+	.desktop-nav .search-box {
+		flex-direction: row-reverse;
+		left: 0;
+		right: unset;
+	}
 }
