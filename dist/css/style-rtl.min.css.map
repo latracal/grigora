@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACC,IADG,CACH,kBAAkB,CAAC,KAAK,AAAA,wBAAwB,AAAC,CAChD,YAAY,CAAE,iBAAiB,CAC/B,WAAW,CAAE,IAAI,CACjB",
+    "sources": [
+        "../../scss/style-rtl.scss"
+    ],
+    "names": [],
+    "file": "style-rtl.min.css"
+}
