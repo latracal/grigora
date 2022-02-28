@@ -859,20 +859,18 @@ else{
 $out=$out." 
 .container .article .seperator::after {
     content:'".html_entity_decode(get_theme_mod('grg_breadcrumbs_seperator', $breadcrumb_defaults['grg_breadcrumbs_seperator']))."';
-}"; 
+    }"; 
 
+    $out=$out." 
+    .container .article .breadcrumb {
+        text-align:".get_theme_mod('grg_breadcrumbs_align', $breadcrumb_defaults['grg_breadcrumbs_align']).";
+    }";
 
-$out=$out." 
-     {
-    text-align:".get_theme_mod('grg_breadcrumbs_align', $breadcrumb_defaults['grg_breadcrumbs_align']).";
-}";
+    if(function_exists("grigora_wcm_css")){
+        $out = $out.grigora_wcm_css();
+    }
 
-
-if(function_exists("grigora_wcm_css")){
-    $out = $out.grigora_wcm_css();
-}
-
-return $out;
+    return $out;
 
 }
 
