@@ -16,7 +16,6 @@ function grg_global_enqueue(){
 	
 	//endueue style sheet to header
 	wp_enqueue_style('grg_global_style', $uri . '/dist/css/global.min.css', [], $ver);	
-	wp_enqueue_style('grg_global_style_rtl', $uri . '/dist/css/style-rtl.min.css', [], $ver);	
 	wp_style_add_data( 'grg_global_style', 'grg_global_style_rtl', 'replace' );
     
     //use false as laster parameter to load script in footer
