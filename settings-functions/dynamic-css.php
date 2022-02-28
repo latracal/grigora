@@ -310,11 +310,11 @@ function grg_dynamic_customize_css_var() {
     } else if(get_theme_mod('grg_layout-container', $spacing_defaults['grg_layout-container'])== 'containedfull' && get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment'])== 'row-reverse'){
         $out=$out."
         .container .article{         
-            padding-right: 0;
+            padding-right: 0 !important;
         }
 
         .container .grigora-primary-sidebar{
-            padding-left: 0;
+            padding-left: 0 !important;
         }
         ";
     } else if(get_theme_mod('grg_layout-container', $spacing_defaults['grg_layout-container'])== 'containedfull' && get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment'])== 'none'){
@@ -359,11 +359,11 @@ function grg_dynamic_customize_css_var() {
     } else if(get_theme_mod('grg_layout-container', $spacing_defaults['grg_layout-container'])== 'containedfull'){
         $out=$out."
         .container .article{
-            padding-left: 0;            
+            padding-left: 0 !important;            
         }
 
         .container .grigora-primary-sidebar{
-            padding-right: 0;
+            padding-right: 0 !important;
         }
         ";
     } else if(get_theme_mod('grg_layout-container', $spacing_defaults['grg_layout-container'])== 'stretch'){
@@ -1136,6 +1136,7 @@ function forced_meta_css(){
                 $out=$out."
                 .container .article{
                     padding: 0 2.5rem;
+                    width: 100%;
                 }
 
                 .container {
@@ -1191,6 +1192,7 @@ function forced_meta_css(){
                 $out=$out."
                 .container .article{
                     padding: 0 0 0 0;
+                    width: 100%;
                 }
                 .grigora-primary-sidebar{
                     display:none;
@@ -1244,6 +1246,10 @@ function forced_meta_css(){
             }
             else if($layout_container=="stretch" && $sidebar_layout=="none"){
                 $out=$out."
+                .container .article{
+                    width: 100%;
+                }
+
                 .container{
                     max-width:100% !important;
                 }
