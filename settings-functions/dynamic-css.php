@@ -362,11 +362,11 @@ function grg_dynamic_customize_css_var() {
     } else if(get_theme_mod('grg_layout-container', $spacing_defaults['grg_layout-container'])== 'containedfull'){
         $out=$out."
         .container .article{
-            padding-left: 0;            
+            padding-left: 0 !important;            
         }
 
         .container .grigora-primary-sidebar{
-            padding-right: 0;
+            padding-right: 0 !important;
         }
         ";
     } else if(get_theme_mod('grg_layout-container', $spacing_defaults['grg_layout-container'])== 'stretch'){
@@ -863,7 +863,7 @@ $out=$out."
 
 
 $out=$out." 
-.container .article .breadcrumb {
+     {
     text-align:".get_theme_mod('grg_breadcrumbs_align', $breadcrumb_defaults['grg_breadcrumbs_align']).";
 }";
 
