@@ -2612,13 +2612,6 @@ img {
   margin-bottom: 0.5em;
 }
 
-.rtl .container {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-}
-
 .rtl .desktop-nav .menu-container .menu-item-has-children a::after {
   margin-right: 8px;
 }

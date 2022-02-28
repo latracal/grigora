@@ -380,8 +380,7 @@ function grg_dynamic_customize_css_var() {
             max-width:100% !important;
         }";
     } 
-    
-    
+        
     if(get_theme_mod('grg_header-search-btn', $spacing_defaults['grg_header-search-btn'])== 0) {
         $out=$out."
         @media (max-width: 768px) {
@@ -392,6 +391,44 @@ function grg_dynamic_customize_css_var() {
         ";  
     }
 
+    $classes = get_body_class();
+    if(in_array('rtl',$classes)){
+        if(get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment'])=='row') {
+            $out=$out.".container {
+            flex-direction: row-reverse;
+            
+
+        }";
+
+        }
+
+        else if(get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment'])=='row-reverse') {
+            $out=$out.".container {
+                flex-direction: row;
+            }";
+        }
+
+        else {
+            $out=$out.".container .article {
+                width: 100%;
+                
+            }
+
+            .container .article {
+                width: 100%;
+                
+            }
+
+
+            .grigora-primary-sidebar {
+                display: none;
+                
+            } ";
+
+
+        }
+    }else{
+
         if(get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment'])=='row') {
             $out=$out.".container {
             flex-direction: ".get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment']).";
@@ -399,32 +436,33 @@ function grg_dynamic_customize_css_var() {
 
         }";
 
-    }
-
-    else if(get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment'])=='row-reverse') {
-        $out=$out.".container {
-            flex-direction: ".get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment']).";
-        }";
-    }
-
-    else {
-        $out=$out.".container .article {
-            width: 100%;
-            
         }
 
-        .container .article {
-            width: 100%;
-            
+        else if(get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment'])=='row-reverse') {
+            $out=$out.".container {
+                flex-direction: ".get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment']).";
+            }";
         }
 
+        else {
+            $out=$out.".container .article {
+                width: 100%;
+                
+            }
 
-        .grigora-primary-sidebar {
-            display: ".get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment']).";
-            
-        } ";
+            .container .article {
+                width: 100%;
+                
+            }
 
 
+            .grigora-primary-sidebar {
+                display: ".get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment']).";
+                
+            } ";
+
+
+        }
     }
 
     if(get_theme_mod('grg_header_style', $spacing_defaults['grg_header_style'])=='style2'){
@@ -839,7 +877,8 @@ return $out;
 function grg_enqueue_dynamic_css() {
     ?>
 <style id="grg-dynamic-inline-css">
-    <?php echo grg_dynamic_customize_css_var(); ?>
+<?php echo grg_dynamic_customize_css_var();
+?>
 </style>
 <?php
 }
@@ -927,10 +966,11 @@ else{
         ){
             function grg_enqueue_dynamic_minified_css() {
                 ?>
-            <style id="grg-dynamic-inline-css">
-                <?php echo grigora_pro_minified_dynamic_css(grg_dynamic_customize_css_var()); ?>
-            </style>
-            <?php
+<style id="grg-dynamic-inline-css">
+<?php echo grigora_pro_minified_dynamic_css(grg_dynamic_customize_css_var());
+?>
+</style>
+<?php
             }
             add_action( 'wp_head', 'grg_enqueue_dynamic_minified_css' );
         }
@@ -1231,9 +1271,10 @@ function forced_meta_css(){
  */
 function forced_meta_css_enqueue(){
     ?>
-    <style id="grg-forced-meta-css">
-        <?php echo forced_meta_css(); ?>
-    </style>
-    <?php
+<style id="grg-forced-meta-css">
+<?php echo forced_meta_css();
+?>
+</style>
+<?php
 }
 ?>
