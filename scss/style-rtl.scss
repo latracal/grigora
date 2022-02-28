@@ -310,9 +310,42 @@ img {
 }
 
 .rtl {
-	aside.grigora-primary-sidebar {
-		border-right: 1px solid #aaaaaa;
-		border-left: none;
+	.single-post-content {
+		ul,
+		ol {
+			margin: 0 3rem 1rem 3rem;
+
+			li > ul,
+			li > ol {
+				margin-bottom: 0;
+			}
+		}
+
+		.grigora-pro-cons .grigora-pc-table .wp-pros-list,
+		.grigora-pro-cons .grigora-pc-table .wp-cons-list {
+			margin-right: 0;
+			margin-left: 0;
+		}
+
+		.wp-block-image .alignright {
+			float: right;
+			margin-left: 1em;
+			margin-right: 0;
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+		}
+
+		.wp-block-image .alignleft {
+			float: left;
+			margin-right: 1em;
+			margin-left: 0;
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+		}
+	}
+
+	.container {
+		flex-direction: row-reverse;
 	}
 
 	.desktop-nav .menu-container .menu-item-has-children a::after {
@@ -332,5 +365,23 @@ img {
 		flex-direction: row-reverse;
 		left: 0;
 		right: unset;
+	}
+
+	[class^='icon-'] li:before,
+	[class*=' icon-'] li:before,
+	.pc-btn-wrapper [class^='icon-']:before,
+	.pc-btn-wrapper [class*=' icon-']:before {
+		margin-right: 0.2em;
+		margin-left: 0.5em;
+	}
+
+	.article .wp-block-quote {
+		border-right: 3px solid #c4c4c4;
+		border-left: none;
+	}
+
+	.wp-block-pullquote {
+		border-right: 3px solid #c4c4c4;
+		border-left: none;
 	}
 }

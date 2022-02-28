@@ -2505,9 +2505,9 @@ textarea {
   margin-top: 0.5rem;
 }
 
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
   cursor: pointer;
   font-size: 18px;
   padding: 0.25rem 1rem;
@@ -2534,7 +2534,7 @@ img {
   max-width: 100%;
 }
 
-.wp-caption img[class*="wp-image-"] {
+.wp-caption img[class*='wp-image-'] {
   display: block;
   margin: 0 auto 0;
   max-width: 100%;

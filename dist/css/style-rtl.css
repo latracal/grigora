@@ -2578,9 +2578,45 @@ img {
   display: block;
 }
 
-.rtl aside.grigora-primary-sidebar {
-  border-right: 1px solid #aaaaaa;
-  border-left: none;
+.rtl .single-post-content ul,
+.rtl .single-post-content ol {
+  margin: 0 3rem 1rem 3rem;
+}
+
+.rtl .single-post-content ul li > ul,
+.rtl .single-post-content ul li > ol,
+.rtl .single-post-content ol li > ul,
+.rtl .single-post-content ol li > ol {
+  margin-bottom: 0;
+}
+
+.rtl .single-post-content .grigora-pro-cons .grigora-pc-table .wp-pros-list,
+.rtl .single-post-content .grigora-pro-cons .grigora-pc-table .wp-cons-list {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.rtl .single-post-content .wp-block-image .alignright {
+  float: right;
+  margin-left: 1em;
+  margin-right: 0;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.rtl .single-post-content .wp-block-image .alignleft {
+  float: left;
+  margin-right: 1em;
+  margin-left: 0;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.rtl .container {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
 .rtl .desktop-nav .menu-container .menu-item-has-children a::after {
@@ -2603,5 +2639,23 @@ img {
           flex-direction: row-reverse;
   left: 0;
   right: unset;
+}
+
+.rtl [class^='icon-'] li:before,
+.rtl [class*=' icon-'] li:before,
+.rtl .pc-btn-wrapper [class^='icon-']:before,
+.rtl .pc-btn-wrapper [class*=' icon-']:before {
+  margin-right: 0.2em;
+  margin-left: 0.5em;
+}
+
+.rtl .article .wp-block-quote {
+  border-right: 3px solid #c4c4c4;
+  border-left: none;
+}
+
+.rtl .wp-block-pullquote {
+  border-right: 3px solid #c4c4c4;
+  border-left: none;
 }
 /*# sourceMappingURL=style-rtl.css.map */
