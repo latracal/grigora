@@ -188,7 +188,7 @@
 }
 
 .desktop-nav .menu-container .menu-item-has-children a::after {
-  content: '';
+  content: "";
   border: solid #000;
   border-width: 0 2px 2px 0;
   display: inline-block;
@@ -278,6 +278,22 @@
 }
 
 .desktop-nav .menu-container .menu .menu-item:hover .sub-menu {
+  display: block;
+}
+
+.desktop-nav .menu-container .menu .menu-item:focus-within a {
+  border-bottom: 3px solid #000;
+}
+
+.desktop-nav .menu-container .menu .menu-item:focus-within .sub-menu {
+  display: block;
+}
+
+.desktop-nav .menu-container .menu .menu-item:focus a {
+  border-bottom: 3px solid #000;
+}
+
+.desktop-nav .menu-container .menu .menu-item:focus .sub-menu {
   display: block;
 }
 

@@ -105,14 +105,15 @@ if(forced_meta_css()){
             <div class="site-branding" itemtype="<?php echo grg_get_schema_tag('organization')['itemtype'] ?>"
                 itemscope="<?php echo grg_get_schema_tag('organization')['itemscope'] ?>">
                 <div class="top-part">
-
-                    <div class="menu-toggle-btn" id="menu-toggle-btn">
+                    <!-- <a class="mobile-menu-icon" href="#"> -->
+                    <a href="#" class="menu-toggle-btn" id="menu-toggle-btn">
                         <div class="menu-toggle-icon">
                             <span class="menu-toggle-line line top"></span>
                             <span class="menu-toggle-line line middle"></span>
                             <span class="menu-toggle-line line bottom"></span>
                         </div>
-                    </div>
+                    </a>
+                    <!-- </a> -->
 
                     <?php 
                     if(has_custom_logo()){

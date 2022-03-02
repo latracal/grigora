@@ -54,25 +54,9 @@ function clickoutsidemenuevent(event) {
 	}
 }
 
-// function togglemenu(event) {
-// 	searchbox.classList.add('s-hide');
-// 	// if(menu.contains(event.target)){
-// 	// 	return;
-// 	// }
-// 	if (menu.classList.contains('hide')) {
-// 		menu.classList.remove('hide');
-// 		document.removeEventListener('click', clickoutsidemenuevent, false);
-// 		document.addEventListener('click', clickoutsidemenuevent, false);
-// 	} else {
-// 		document.removeEventListener('click', clickoutsidemenuevent, false);
-// 		menu.classList.add('hide');
-// 	}
-// }
+
 if (searchbtn) {
 	searchbtn.addEventListener('click', togglesearch, false);
-}
-if (menubtn) {
-	// menubtn.addEventListener('click', togglemenu, false);
 }
 
 //submenu toggle in mobile
@@ -127,12 +111,32 @@ const parents = document.getElementsByClassName('menu-item-has-children');
 
 for (var i = 0; i < parents.length; i++) {
 	parents[i].addEventListener('click', toggleSubMenu, false);
+	var anchort = parents[i].querySelector('a');
+	if(anchort){
+		anchort.addEventListener('focus', focusSubmenuopener, false);
+	}
+	
+}
+
+// keyboard navigation
+function focusSubmenuopener(event){
+	if(w>768){
+		return;
+	}
+	var parentElement = event.target.parentNode;
+	var submenu = parentElement.querySelector(".sub-menu");
+	if(submenu){
+		submenu.style.display = 'block';
+	}
 }
 
 function toggleSubMenu(event) {
+	console.log("triggered");
 	var targetElement = event.target || event.srcElement;
 	var child = targetElement.getElementsByClassName('sub-menu')[0];
-
+	if(!child){
+		return;
+	}
 	if (w < 768) {
 		if (child.style.display == 'none' || child.style.display == '') {
 			child.style.display = 'block';

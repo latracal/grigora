@@ -52,12 +52,8 @@ add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form'
  * @since  1.001
  * 
  */
-global $wp_version;
-if ( version_compare( $wp_version, '3.0', '>=' ) ) :
-	add_theme_support( 'automatic-feed-links' ); 
-else :
-	automatic_feed_links();
-endif;
+add_theme_support( 'automatic-feed-links' ); 
+
 
 /**
  * Add theme support for woocommerce
