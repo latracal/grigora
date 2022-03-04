@@ -24,6 +24,10 @@
 	@media (max-width: 768px) {
 		flex-direction: column !important;
 	}
+
+	p {
+		word-break: break-word;
+	}
 }
 
 .grg-empty-canvas {
