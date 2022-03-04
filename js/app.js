@@ -129,7 +129,6 @@ function focusSubmenuopener(event) {
 }
 
 function toggleSubMenu(event) {
-	console.log('triggered');
 	var targetElement = event.target || event.srcElement;
 	var child = targetElement.getElementsByClassName('sub-menu')[0];
 	if (!child) {
