@@ -24,10 +24,6 @@
 	@media (max-width: 768px) {
 		flex-direction: column !important;
 	}
-
-	p {
-		word-break: break-word;
-	}
 }
 
 .grg-empty-canvas {
@@ -77,11 +73,16 @@ hr,
 address,
 table {
 	margin-bottom: 1rem;
+	word-break: break-word;
 }
 
 ul,
 ol {
 	margin: 0 0 1rem 3rem;
+
+	li {
+		word-break: break-word;
+	}
 }
 
 li > ul,

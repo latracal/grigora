@@ -2288,10 +2288,6 @@
   }
 }
 
-.container p {
-  word-break: break-word;
-}
-
 .grg-empty-canvas .post-bottom-p {
   margin: 0;
 }
@@ -2337,11 +2333,17 @@ hr,
 address,
 table {
   margin-bottom: 1rem;
+  word-break: break-word;
 }
 
 ul,
 ol {
   margin: 0 0 1rem 3rem;
+}
+
+ul li,
+ol li {
+  word-break: break-word;
 }
 
 li > ul,
