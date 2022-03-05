@@ -11,7 +11,7 @@ Grigora is an awesome lightning-fast theme that delivers performance along with 
 
 All changes will be noted here
 
-== v1.0072 ==
+== v1.008 ==
 1. version changed
 2. container class rename to grigora_container
 3. header style 2 box shadow added when scrolled when sticky header is enabled

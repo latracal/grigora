@@ -16,7 +16,7 @@ Grigora is an awesome lightning-fast theme that delivers performance along with 
 
 All changes will be noted here
 
-### v1.0072
+### v1.008
 
 -   version changed
 -   container class rename to grigora_container
