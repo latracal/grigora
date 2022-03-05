@@ -7,6 +7,12 @@ Requires PHP Version Atleast: 5.2
 
 Grigora is an awesome lightning-fast theme that delivers performance along with design. Highly customizable options to change color, layout, spacing, typography, and blog structure. Have SEO compatibility to make it mobile-friendly and add schema markups.
 
+== Changelog ==
+1. version changed
+2. container class rename to grigora_container
+3. header style 2 box shadow added when scrolled when sticky header is enabled
+4. word-break globally
+
 == Installation ==
 1. Visit “Appearance > Themes > Add New”
 2. Search for “Grigora”

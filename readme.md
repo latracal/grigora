@@ -20,6 +20,8 @@ All changes will be noted here
 
 -   version changed
 -   container class rename to grigora_container
+-   header style 2 box shadow added when scrolled when sticky header is enabled
+-   word-break globally
 
 ## Installation
 
