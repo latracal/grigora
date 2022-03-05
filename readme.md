@@ -18,6 +18,9 @@ All changes will be noted here
 
 ### v1.0072
 
+-   version changed
+-   container class rename to grigora_container
+
 ## Installation
 
 1. Visit "Appearance > Themes > Add New"
