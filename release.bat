@@ -1,0 +1,1 @@
+7z a grigora.zip . -x!.git -x!node_modules -x!.gitignore -x!grigora.zip -x!grigora.tar.gz -x!.gitattributes -x!release.bat -x!release.sh
