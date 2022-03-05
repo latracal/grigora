@@ -2,7 +2,7 @@
 Contributors: Latracal Solutions
 License: GPLv2 or later
 License URI: GPLv2
-Stable Tag: v1.0072
+Stable Tag: v1.008
 Requires PHP Version Atleast: 5.2
 
 Grigora is an awesome lightning-fast theme that delivers performance along with design. Highly customizable options to change color, layout, spacing, typography, and blog structure. Have SEO compatibility to make it mobile-friendly and add schema markups.
