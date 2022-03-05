@@ -110,7 +110,7 @@ function grg_dynamic_customize_css_var() {
 
     }
 
-    .container .article .post-container .post .post-desc p,
+    .grigora_container .article .post-container .post .post-desc p,
     p,
     ul,
     ol {
@@ -119,16 +119,16 @@ function grg_dynamic_customize_css_var() {
     }
 
     main a,
-    .container .article p a, .container .article .cat-name, footer .copyrights a, .grigora-primary-sidebar a{
+    .grigora_container .article p a, .grigora_container .article .cat-name, footer .copyrights a, .grigora-primary-sidebar a{
         color: ".get_theme_mod('grg_anchor-text-color', $defaults['grg_anchor-text-color']).";
     }
 
     main a:hover,
-    .container .article p a:hover, .container .article .cat-name:hover, footer .copyrights a:hover {
+    .grigora_container .article p a:hover, .grigora_container .article .cat-name:hover, footer .copyrights a:hover {
         color: ".get_theme_mod('grg_anchor-text-hover-color', $defaults['grg_anchor-text-hover-color']).";
     }
 
-    .read-btn, .container .article .pagination .next, .container .article .pagination .prev, .form-submit .submit, 
+    .read-btn, .grigora_container .article .pagination .next, .grigora_container .article .pagination .prev, .form-submit .submit, 
     input[type='button'],
     input[type='reset'],
     input[type='submit'] {
@@ -136,11 +136,11 @@ function grg_dynamic_customize_css_var() {
 
     }
 
-    .container .article .pagination .next.page-numbers,.container .article .pagination .prev.page-numbers, .form-submit .submit{
+    .grigora_container .article .pagination .next.page-numbers,.grigora_container .article .pagination .prev.page-numbers, .form-submit .submit{
         color: ".get_theme_mod('grg_btn-text-color', $defaults['grg_btn-text-color']).";
     }
     
-    .container .article .post-container .post .post-desc a, input[type='button'],
+    .grigora_container .article .post-container .post .post-desc a, input[type='button'],
     input[type='reset'],
     input[type='submit'] {
         color: ".get_theme_mod('grg_btn-text-color', $defaults['grg_btn-text-color']).";
@@ -149,48 +149,48 @@ function grg_dynamic_customize_css_var() {
 
     main h1,
     main h1 a,
-    .container .article .post-container .post .post-desc .post-title a {
+    .grigora_container .article .post-container .post .post-desc .post-title a {
         color: ".get_theme_mod('grg_h1-tag-color', $defaults['grg_h1-tag-color']).";
 
     }
 
     main h2,
     main h2 a,
-    .container .article .post-container .post .post-desc .post-title a {
+    .grigora_container .article .post-container .post .post-desc .post-title a {
         color: ".get_theme_mod('grg_h2-tag-color', $defaults['grg_h2-tag-color']).";
 
     }
 
     main h3,
     main h3 a,
-    .container .article .post-container .post .post-desc .post-title a {
+    .grigora_container .article .post-container .post .post-desc .post-title a {
         color: ".get_theme_mod('grg_h3-tag-color', $defaults['grg_h3-tag-color']).";
 
     }
 
     main h4,
     main h4 a,
-    .container .article .post-container .post .post-desc .post-title a {
+    .grigora_container .article .post-container .post .post-desc .post-title a {
         color: ".get_theme_mod('grg_h4-tag-color', $defaults['grg_h4-tag-color']).";
 
     }
 
     main h5,
     main h5 a,
-    .container .article .post-container .post .post-desc .post-title a {
+    .grigora_container .article .post-container .post .post-desc .post-title a {
         color: ".get_theme_mod('grg_h5-tag-color', $defaults['grg_h5-tag-color']).";
 
     }
 
     main h6,
     main h6 a,
-    .container .article .post-container .post .post-desc .post-title a {
+    .grigora_container .article .post-container .post .post-desc .post-title a {
         color: ".get_theme_mod('grg_h6-tag-color', $defaults['grg_h6-tag-color']).";
 
     }
 
-    .container .article .breadcrumb,
-    .container .article .breadcrumb a {
+    .grigora_container .article .breadcrumb,
+    .grigora_container .article .breadcrumb a {
         color: ".get_theme_mod('grg_breadcrumb-color', $defaults['grg_breadcrumb-color']).";
     }
 
@@ -219,20 +219,20 @@ function grg_dynamic_customize_css_var() {
         
     }
 
-    .container .article .pagination .next,
-    .container .article .pagination .prev,
-    .container .article .post-pagination .pagination-prev-post,
-    .container .article .post-pagination .pagination-next-post {
+    .grigora_container .article .pagination .next,
+    .grigora_container .article .pagination .prev,
+    .grigora_container .article .post-pagination .pagination-prev-post,
+    .grigora_container .article .post-pagination .pagination-next-post {
         background-color: ".get_theme_mod('grg_post_nav_colors', $defaults['grg_post_nav_colors']).";
         
     }
 
-    .container .article .post-pagination .pagination-prev-post a,
-    .container .article .post-pagination .pagination-next-post a {
+    .grigora_container .article .post-pagination .pagination-prev-post a,
+    .grigora_container .article .post-pagination .pagination-next-post a {
         color: ".get_theme_mod('grg_post_nav_text_colors', $defaults['grg_post_nav_text_colors']).";        
     }
 
-    .container .article .pagination .nav-links a,
+    .grigora_container .article .pagination .nav-links a,
     span.current {
         color: ".get_theme_mod('grg_post_nav_text_colors', $defaults['grg_post_nav_text_colors']).";
         
@@ -299,84 +299,84 @@ function grg_dynamic_customize_css_var() {
      */
     if(get_theme_mod('grg_layout-container', $spacing_defaults['grg_layout-container'])== 'containedpadded') {
         $out=$out."
-        .container .article{
+        .grigora_container .article{
             padding: 0 2.5rem;
         }
 
-        .container .grigora-primary-sidebar{
+        .grigora_container .grigora-primary-sidebar{
             padding: 0 2.5rem;
         }
         ";
     } else if(get_theme_mod('grg_layout-container', $spacing_defaults['grg_layout-container'])== 'containedfull' && get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment'])== 'row-reverse'){
         $out=$out."
-        .container .article{         
+        .grigora_container .article{         
             padding-right: 0;
         }
 
-        .container .grigora-primary-sidebar{
+        .grigora_container .grigora-primary-sidebar{
             padding-left: 0;
         }
         ";
     } else if(get_theme_mod('grg_layout-container', $spacing_defaults['grg_layout-container'])== 'containedfull' && get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment'])== 'none'){
         $out=$out."
-        .container .article{
+        .grigora_container .article{
             padding-left: 0;
             padding-right: 0;
         }
 
-        .container .grigora-primary-sidebar{
+        .grigora_container .grigora-primary-sidebar{
             padding-right: 0;
         }
         ";
     } else if(get_theme_mod('grg_layout-container', $spacing_defaults['grg_layout-container'])== 'stretch' && get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment'])== 'row-reverse'){
         $out=$out."
-        .container .article{         
+        .grigora_container .article{         
             padding-right: 0;
         }
 
-        .container .grigora-primary-sidebar{
+        .grigora_container .grigora-primary-sidebar{
             padding-left: 0;
         }
 
-        .container{
+        .grigora_container{
             max-width:100% !important;
         }
         ";
     } else if(get_theme_mod('grg_layout-container', $spacing_defaults['grg_layout-container'])== 'stretch' && get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment'])== 'none'){
         $out=$out."
-        .container .article{
+        .grigora_container .article{
             padding-left: 0;
             padding-right: 0;
         }
 
-        .container .grigora-primary-sidebar{
+        .grigora_container .grigora-primary-sidebar{
             padding-right: 0;
         }
         
-        .container{
+        .grigora_container{
             max-width:100% !important;
         }";
     } else if(get_theme_mod('grg_layout-container', $spacing_defaults['grg_layout-container'])== 'containedfull'){
         $out=$out."
-        .container .article{
+        .grigora_container .article{
             padding-left: 0;            
         }
 
-        .container .grigora-primary-sidebar{
+        .grigora_container .grigora-primary-sidebar{
             padding-right: 0;
         }
         ";
     } else if(get_theme_mod('grg_layout-container', $spacing_defaults['grg_layout-container'])== 'stretch'){
         $out=$out."
-        .container .article{
+        .grigora_container .article{
             padding-left: 0;
         }
 
-        .container .grigora-primary-sidebar{
+        .grigora_container .grigora-primary-sidebar{
             padding-right: 0;
         }
         
-        .container{
+        .grigora_container{
             max-width:100% !important;
         }";
     } 
@@ -393,7 +393,7 @@ function grg_dynamic_customize_css_var() {
     }
 
         if(get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment'])=='row') {
-            $out=$out.".container {
+            $out=$out.".grigora_container {
             flex-direction: ".get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment']).";
             
 
@@ -402,18 +402,18 @@ function grg_dynamic_customize_css_var() {
     }
 
     else if(get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment'])=='row-reverse') {
-        $out=$out.".container {
+        $out=$out.".grigora_container {
             flex-direction: ".get_theme_mod('grg_sidebar-alignment', $spacing_defaults['grg_sidebar-alignment']).";
         }";
     }
 
     else {
-        $out=$out.".container .article {
+        $out=$out.".grigora_container .article {
             width: 100%;
             
         }
 
-        .container .article {
+        .grigora_container .article {
             width: 100%;
             
         }
@@ -449,37 +449,37 @@ function grg_dynamic_customize_css_var() {
         }";
     }
 
-    $out=$out.".container {
+    $out=$out.".grigora_container {
         max-width: ".get_theme_mod('grg_container-width', $spacing_defaults['grg_container-width'])."px;
 
     }
 
-    .container {
+    .grigora_container {
         padding-top: ".get_theme_mod('grg_container-top-padding', $spacing_defaults['grg_container-top-padding'])."px;
 
     }
 
-    .container {
+    .grigora_container {
         padding-right: ".get_theme_mod('grg_container-right-padding', $spacing_defaults['grg_container-right-padding'])."px;
 
     }
 
-    .container {
+    .grigora_container {
         padding-bottom: ".get_theme_mod('grg_container-bottom-padding', $spacing_defaults['grg_container-bottom-padding'])."px;
 
     }
 
-    .container {
+    .grigora_container {
         padding-left: ".get_theme_mod('grg_container-left-padding', $spacing_defaults['grg_container-left-padding'])."px;
 
     }
 
-    .container .article{
+    .grigora_container .article{
         padding-left: ".get_theme_mod('grg_article-left-padding', $spacing_defaults['grg_article-left-padding'])."px;
         padding-right: ".get_theme_mod('grg_article-right-padding', $spacing_defaults['grg_article-right-padding'])."px;
     }
 
-    .container .grigora-primary-sidebar {
+    .grigora_container .grigora-primary-sidebar {
         width: ".get_theme_mod('grg_sidebar-width', $spacing_defaults['grg_sidebar-width'])."%;
     }
 
@@ -488,24 +488,24 @@ function grg_dynamic_customize_css_var() {
         margin-bottom: ".get_theme_mod('grg_sidebar-margin-top', $spacing_defaults['grg_sidebar-margin-bottom'])."px;
     }
 
-    .container .grigora-primary-sidebar{
+    .grigora_container .grigora-primary-sidebar{
         padding-right: ".get_theme_mod('grg_sidebar-padding-right', $spacing_defaults['grg_sidebar-padding-right'])."px;
         padding-left: ".get_theme_mod('grg_sidebar-padding-left', $spacing_defaults['grg_sidebar-padding-left'])."px;
     }
 
-    .container .article{
+    .grigora_container .article{
         margin-top: ".get_theme_mod('grg_article-top-margin', $spacing_defaults['grg_article-top-margin'])."px;
         margin-bottom: ".get_theme_mod('grg_article-bottom-margin', $spacing_defaults['grg_article-bottom-margin'])."px;
     }
 
     @media(max-width:768px) {
-        .container .grigora-primary-sidebar {
+        .grigora_container .grigora-primary-sidebar {
             width: 100%;
         }
     }
 
     @media(max-width:768px) {
-        .container .article {
+        .grigora_container .article {
             width: 100%;
         }
     }
@@ -532,7 +532,7 @@ function grg_dynamic_customize_css_var() {
         
     }
 
-    main p,.container .article p, .container .article li, .container .article .wp-block-quote p, .container .article .wp-block-quote cite, .container .article .wp-block-preformatted, .container .article .wp-block-code, .container .article .wp-block-table table, .wp-block-pullquote p, .wp-block-pullquote cite {
+    main p,.grigora_container .article p, .grigora_container .article li, .grigora_container .article .wp-block-quote p, .grigora_container .article .wp-block-quote cite, .grigora_container .article .wp-block-preformatted, .grigora_container .article .wp-block-code, .grigora_container .article .wp-block-table table, .wp-block-pullquote p, .wp-block-pullquote cite {
         font-weight: ".get_theme_mod('grg_typography_body_weight', $typography_defaults['grg_typography_body_weight']).";
         
         font-size: ".get_theme_mod('grg_typography_body_font_size', $typography_defaults['grg_typography_body_font_size'])."px;
@@ -583,7 +583,7 @@ function grg_dynamic_customize_css_var() {
         
     }
 
-    .container .article h1,
+    .grigora_container .article h1,
     .grigora-primary-sidebar h1 {
         font-family: ".get_theme_mod('grg_typography_h1_font', $typography_fonts_defaults['grg_typography_h1_font']).", sans-serif;
         
@@ -594,7 +594,7 @@ function grg_dynamic_customize_css_var() {
         font-size: ".get_theme_mod('grg_typography_h1_size', $typography_defaults['grg_typography_h1_size'])."px;
     }
 
-    .container .article h2,
+    .grigora_container .article h2,
     .grigora-primary-sidebar h2, .post-title {
         font-family: ".get_theme_mod('grg_typography_h2_font', $typography_fonts_defaults['grg_typography_h2_font']).", sans-serif;
         
@@ -605,7 +605,7 @@ function grg_dynamic_customize_css_var() {
         font-size: ".get_theme_mod('grg_typography_h2_size', $typography_defaults['grg_typography_h2_size'])."px;
     }
 
-    .container .article h3,
+    .grigora_container .article h3,
     .grigora-primary-sidebar h3 {
         font-family: ".get_theme_mod('grg_typography_h3_font', $typography_fonts_defaults['grg_typography_h3_font']).", sans-serif;
         
@@ -616,7 +616,7 @@ function grg_dynamic_customize_css_var() {
         font-size: ".get_theme_mod('grg_typography_h3_size', $typography_defaults['grg_typography_h3_size'])."px;
     }
 
-    .container .article h4,
+    .grigora_container .article h4,
     .grigora-primary-sidebar h4 {
         font-family: ".get_theme_mod('grg_typography_h4_font', $typography_fonts_defaults['grg_typography_h4_font']).", sans-serif;
         
@@ -627,7 +627,7 @@ function grg_dynamic_customize_css_var() {
         font-size: ".get_theme_mod('grg_typography_h4_size', $typography_defaults['grg_typography_h4_size'])."px;
     }
 
-    .container .article h5,
+    .grigora_container .article h5,
     .grigora-primary-sidebar h5 {
         font-family: ".get_theme_mod('grg_typography_h5_font', $typography_fonts_defaults['grg_typography_h5_font']).", sans-serif;
         
@@ -638,7 +638,7 @@ function grg_dynamic_customize_css_var() {
         font-size: ".get_theme_mod('grg_typography_h5_size', $typography_defaults['grg_typography_h5_size'])."px;
     }
 
-    .container .article h6,
+    .grigora_container .article h6,
     .grigora-primary-sidebar h6 {
         font-family: ".get_theme_mod('grg_typography_h6_font', $typography_fonts_defaults['grg_typography_h6_font']).", sans-serif;
         
@@ -671,7 +671,7 @@ if($blog_flag) {
         text-align: ".get_theme_mod('grg_blog_single_featuredim_align', $blog_defaults['grg_blog_single_featuredim_align']).";
     }
     
-    .container .article .post-container .post img{
+    .grigora_container .article .post-container .post img{
         object-fit: ".get_theme_mod('grg_blog_archive_image_fill', $blog_defaults['grg_blog_archive_image_fill']).";
     }";
 
@@ -687,7 +687,7 @@ else {
         text-align: ".$blog_defaults['grg_blog_single_featuredim_align'].";     
     }
     
-    .container .article .post-container .post img{
+    .grigora_container .article .post-container .post img{
         object-fit: ".$blog_defaults['grg_blog_archive_image_fill'].";
     }";
 
@@ -817,13 +817,13 @@ else{
 }
     
 $out=$out." 
-.container .article .seperator::after {
+.grigora_container .article .seperator::after {
     content:'".html_entity_decode(get_theme_mod('grg_breadcrumbs_seperator', $breadcrumb_defaults['grg_breadcrumbs_seperator']))."';
 }"; 
 
 
 $out=$out." 
-.container .article .breadcrumb {
+.grigora_container .article .breadcrumb {
     justify-content:".get_theme_mod('grg_breadcrumbs_align', $breadcrumb_defaults['grg_breadcrumbs_align']).";
 }";
 
@@ -1061,15 +1061,15 @@ function forced_meta_css(){
                 .grigora-primary-sidebar{
                     display:block;
                 }
-                .container .article{
+                .grigora_container .article{
                     padding: 0 2.5rem;
                 }
 
-                .container {
+                .grigora_container {
                     flex-direction: row;
                 }
         
-                .container .grigora-primary-sidebar{
+                .grigora_container .grigora-primary-sidebar{
                     padding: 0 2.5rem;
                 }
                 ";
@@ -1079,30 +1079,30 @@ function forced_meta_css(){
                 .grigora-primary-sidebar{
                     display:block;
                 }
-                .container .article{
+                .grigora_container .article{
                     padding: 0 2.5rem;
                 }
 
-                .container {
+                .grigora_container {
                     flex-direction: row-reverse;
                 }
         
-                .container .grigora-primary-sidebar{
+                .grigora_container .grigora-primary-sidebar{
                     padding: 0 2.5rem;
                 }
                 ";
             }
             else if($layout_container=="containedpadded" && $sidebar_layout=="none"){
                 $out=$out."
-                .container .article{
+                .grigora_container .article{
                     padding: 0 2.5rem;
                 }
 
-                .container {
+                .grigora_container {
                     flex-direction: row-reverse;
                 }
         
-                .container .grigora-primary-sidebar{
+                .grigora_container .grigora-primary-sidebar{
                     padding: 0 2.5rem;
                 }
 
@@ -1116,15 +1116,15 @@ function forced_meta_css(){
                 .grigora-primary-sidebar{
                     display:block;
                 }
-                .container .article{
+                .grigora_container .article{
                     padding: 0 2.5rem 0 0;
                 }
 
-                .container {
+                .grigora_container {
                     flex-direction: row;
                 }
         
-                .container .grigora-primary-sidebar{
+                .grigora_container .grigora-primary-sidebar{
                     padding: 0 0 0 2.5rem;
                 }
                 ";
@@ -1134,22 +1134,22 @@ function forced_meta_css(){
                 .grigora-primary-sidebar{
                     display:block;
                 }
-                .container .article{
+                .grigora_container .article{
                     padding: 0 0 0 2.5rem;
                 }
 
-                .container {
+                .grigora_container {
                     flex-direction: row-reverse;
                 }
         
-                .container .grigora-primary-sidebar{
+                .grigora_container .grigora-primary-sidebar{
                     padding: 0 2.5rem 0 0;
                 }
                 ";
             }
             else if($layout_container=="containedfull" && $sidebar_layout=="none"){
                 $out=$out."
-                .container .article{
+                .grigora_container .article{
                     padding: 0 0 0 0;
                 }
                 .grigora-primary-sidebar{
@@ -1163,18 +1163,18 @@ function forced_meta_css(){
                 .grigora-primary-sidebar{
                     display:block;
                 }
-                .container{
+                .grigora_container{
                     max-width:100% !important;
                 }
-                .container .article{
+                .grigora_container .article{
                     padding: 0 2.5rem 0 0;
                 }
 
-                .container {
+                .grigora_container {
                     flex-direction: row;
                 }
         
-                .container .grigora-primary-sidebar{
+                .grigora_container .grigora-primary-sidebar{
                     padding: 0 0 0 2.5rem;
                 }
                 
@@ -1185,18 +1185,18 @@ function forced_meta_css(){
                 .grigora-primary-sidebar{
                     display:block;
                 }
-                .container{
+                .grigora_container{
                     max-width:100% !important;
                 }
-                .container .article{
+                .grigora_container .article{
                     padding: 0 0 0 2.5rem;
                 }
 
-                .container {
+                .grigora_container {
                     flex-direction: row-reverse;
                 }
         
-                .container .grigora-primary-sidebar{
+                .grigora_container .grigora-primary-sidebar{
                     padding: 0 2.5rem 0 0;
                 }
                 
@@ -1204,10 +1204,10 @@ function forced_meta_css(){
             }
             else if($layout_container=="stretch" && $sidebar_layout=="none"){
                 $out=$out."
-                .container{
+                .grigora_container{
                     max-width:100% !important;
                 }
-                .container .article{
+                .grigora_container .article{
                     padding: 0 0 0 0;
                 }
                 .grigora-primary-sidebar{
