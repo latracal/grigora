@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header(); ?>
 
-<div class="container">
+<div class="grigora_container">
     <section class="article">
         <div class="archive-desc">
             <h2 class="page-title"><?php echo esc_html( __( "Search results for", "grigora" )); ?>

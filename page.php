@@ -10,7 +10,7 @@ get_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-<div class="container">
+<div class="grigora_container">
     <section class="article">
         <article class="single-post" itemtype="<?php echo grg_get_schema_tag('creativework')['itemtype'] ?>"
             itemscope="<?php echo grg_get_schema_tag('creativework')['itemscope'] ?>">

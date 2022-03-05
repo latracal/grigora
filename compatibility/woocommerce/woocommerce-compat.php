@@ -31,7 +31,7 @@ add_action( 'woocommerce_sidebar', 'grg_render_sidebar' );
  * 
  */
 function grg_main_container_open(){
-    echo '<div class="container"><section class="post-content"><article class="woocommerce-page" itemtype="'.grg_get_schema_tag('creativework')['itemtype'].'"
+    echo '<div class="grigora_container"><section class="post-content"><article class="woocommerce-page" itemtype="'.grg_get_schema_tag('creativework')['itemtype'].'"
     itemscope="'.grg_get_schema_tag('creativework')['itemscope'].'" >';
 }
 

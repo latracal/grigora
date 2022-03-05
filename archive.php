@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header(); ?>
 
-<div class="container">
+<div class="grigora_container">
     <section class="article">
 
         <div class="post-container">
