@@ -1,20 +1,20 @@
 .grigora-customize-promo {
-  h3 {
-    text-align: center;
-    padding: 1rem;
-    margin: 1rem;
-    background-color: #fff;
-    border: 1px solid #e64b17;
-    border-radius: 5px;
-    transition: all 0.3s ease-out;
+	h3 {
+		text-align: center;
+		padding: 1rem;
+		margin: 1rem;
+		background-color: #fff;
+		border: 1px solid #e64b17;
+		border-radius: 5px;
+		transition: all 0.3s ease-out;
 
-    &:hover {
-      filter: brightness(0.95);
-    }
+		&:hover {
+			filter: brightness(0.95);
+		}
 
-    a {
-      color: #e64b17;
-      text-decoration: none;
-    }
-  }
+		a {
+			color: #e64b17;
+			text-decoration: none;
+		}
+	}
 }

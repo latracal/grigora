@@ -839,7 +839,8 @@ return $out;
 function grg_enqueue_dynamic_css() {
     ?>
 <style id="grg-dynamic-inline-css">
-    <?php echo grg_dynamic_customize_css_var(); ?>
+<?php echo grg_dynamic_customize_css_var();
+?>
 </style>
 <?php
 }
@@ -927,10 +928,11 @@ else{
         ){
             function grg_enqueue_dynamic_minified_css() {
                 ?>
-            <style id="grg-dynamic-inline-css">
-                <?php echo grigora_pro_minified_dynamic_css(grg_dynamic_customize_css_var()); ?>
-            </style>
-            <?php
+<style id="grg-dynamic-inline-css">
+<?php echo grigora_pro_minified_dynamic_css(grg_dynamic_customize_css_var());
+?>
+</style>
+<?php
             }
             add_action( 'wp_head', 'grg_enqueue_dynamic_minified_css' );
         }
@@ -1231,9 +1233,10 @@ function forced_meta_css(){
  */
 function forced_meta_css_enqueue(){
     ?>
-    <style id="grg-forced-meta-css">
-        <?php echo forced_meta_css(); ?>
-    </style>
-    <?php
+<style id="grg-forced-meta-css">
+<?php echo forced_meta_css();
+?>
+</style>
+<?php
 }
 ?>

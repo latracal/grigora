@@ -2265,7 +2265,7 @@
   scroll-behavior: smooth;
 }
 
-.container {
+.grigora_container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2281,7 +2281,7 @@
 }
 
 @media (max-width: 768px) {
-  .container {
+  .grigora_container {
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
         -ms-flex-direction: column !important;
@@ -2303,7 +2303,7 @@
   display: none !important;
 }
 
-.grg-empty-canvas .container {
+.grg-empty-canvas .grigora_container {
   max-width: 100% !important;
 }
 
