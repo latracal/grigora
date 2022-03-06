@@ -2,7 +2,7 @@
 Contributors: Latracal Solutions
 License: GPLv2 or later
 License URI: GPLv2
-Stable Tag: v1.008
+Stable Tag: v1.009
 Requires PHP Version Atleast: 5.2
 
 Grigora is an awesome lightning-fast theme that delivers performance along with design. Highly customizable options to change color, layout, spacing, typography, and blog structure. Have SEO compatibility to make it mobile-friendly and add schema markups.
@@ -11,11 +11,14 @@ Grigora is an awesome lightning-fast theme that delivers performance along with 
 
 All changes will be noted here
 
+== v1.009 ==
+1. Added CSS for search form in content container
+
 == v1.008 ==
-1. version changed
-2. container class rename to grigora_container
-3. header style 2 box shadow added when scrolled when sticky header is enabled
-4. word-break added globally
+1. Version changed
+2. Container class rename to grigora_container
+3. Header style 2 box shadow added when scrolled when sticky header is enabled
+4. Word-break added globally
 
 == Installation ==
 1. Visit “Appearance > Themes > Add New”

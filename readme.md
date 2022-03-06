@@ -6,7 +6,7 @@
 
 **License URI:** [GPLv2](https://www.gnu.org/licenses/gpl-2.0.html)
 
-**Stable Tag:** v1.008
+**Stable Tag:** v1.009
 
 **Requires PHP Version Atleast:** 5.2
 
@@ -16,12 +16,16 @@ Grigora is an awesome lightning-fast theme that delivers performance along with 
 
 All changes will be noted here
 
+### v1.009
+
+- Added CSS for search form in content container
+
 ### v1.008
 
--   version changed
--   container class rename to grigora_container
--   header style 2 box shadow added when scrolled when sticky header is enabled
--   word-break added globally
+- Version changed
+- Container class rename to grigora_container
+- Header style 2 box shadow added when scrolled when sticky header is enabled
+- Word-break added globally
 
 ## Installation
 
