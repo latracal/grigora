@@ -2289,6 +2289,56 @@
   }
 }
 
+.grigora_container .search-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0.5rem;
+  background-color: #e9e9e9;
+  gap: 0.5rem;
+}
+
+.grigora_container .search-box svg {
+  width: 20px;
+  height: 20px;
+}
+
+.grigora_container .search-box .search-field {
+  font-size: 1rem;
+  outline: none;
+  padding: 0 0.5rem;
+  background-color: #e9e9e9;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 15rem;
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .grigora_container .search-box .search-field {
+    width: 100%;
+  }
+}
+
+.grigora_container .search-box .search-field::-webkit-input-placeholder {
+  font-size: 16px;
+}
+
+.grigora_container .search-box .search-icon {
+  border: none;
+  background-color: transparent;
+  margin-top: 0;
+}
+
+.grigora_container .search-box .search-icon:hover {
+  cursor: pointer;
+}
+
 .grg-empty-canvas .post-bottom-p {
   margin: 0;
 }
