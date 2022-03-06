@@ -12,6 +12,10 @@
 
 Grigora is an awesome lightning-fast theme that delivers performance along with design. Highly customizable options to change color, layout, spacing, typography, and blog structure. Have SEO compatibility to make it mobile-friendly and add schema markups.
 
+## Important Note
+
+Please do not download or clone the GitHub repository to add Grigora to your production environment. Please use the distributions from Wordpress.org ( https://wordpress.org/themes/grigora/ ) to avoid adding unnecessary files that could attract potential vulnerabilities to your website.
+
 ## Changelog
 
 All changes will be noted here
