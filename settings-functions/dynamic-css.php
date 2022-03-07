@@ -573,7 +573,7 @@ function grg_dynamic_customize_css_var() {
         
     }
 
-    .read-btn {
+    .read-btn, .next, .prev {
         font-family: ".get_theme_mod('grg_typography_button_font', $typography_fonts_defaults['grg_typography_button_font']).", sans-serif;
         
         font-weight: ".get_theme_mod('grg_typography_button_weight', $typography_defaults['grg_typography_button_weight']).";
