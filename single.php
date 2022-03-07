@@ -156,7 +156,7 @@ get_header(); ?>
                     href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?></a>
             </div>
             <div class="details">
-                <h3><?php 
+                <h4><?php 
 
                 if (empty( get_the_author_meta('first_name') ) && empty( get_the_author_meta('last_name') ) ){
 
@@ -166,7 +166,7 @@ get_header(); ?>
                     echo '<a href="'. esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) .'">'.nl2br(get_the_author_meta('first_name'))." ". nl2br(get_the_author_meta('last_name')) .'</a>';
                 }
                 ?>
-                </h3>
+                </h4>
                 <p><?php echo nl2br(get_the_author_meta('description')); ?></p>
             </div>
         </div>
