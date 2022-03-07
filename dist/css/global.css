@@ -359,6 +359,101 @@
   border-bottom: none;
 }
 
+.desktop-nav .menu-container .menu .page_item {
+  position: relative;
+}
+
+.desktop-nav .menu-container .menu .page_item:hover a {
+  border-bottom: 3px solid #000;
+}
+
+@media (max-width: 768px) {
+  .desktop-nav .menu-container .menu .page_item:hover a {
+    border-bottom: none;
+  }
+}
+
+.desktop-nav .menu-container .menu .page_item:hover .children {
+  display: block;
+}
+
+.desktop-nav .menu-container .menu .page_item:focus-within a {
+  border-bottom: 3px solid #000;
+}
+
+.desktop-nav .menu-container .menu .page_item:focus-within .children {
+  display: block;
+}
+
+.desktop-nav .menu-container .menu .page_item:focus a {
+  border-bottom: 3px solid #000;
+}
+
+.desktop-nav .menu-container .menu .page_item:focus .children {
+  display: block;
+}
+
+.desktop-nav .menu-container .menu .page_item .children {
+  display: none;
+  position: absolute;
+  width: 100%;
+  min-width: 10rem;
+  background-color: #e9e9e9;
+  z-index: 99;
+  margin-left: 0;
+}
+
+@media (max-width: 768px) {
+  .desktop-nav .menu-container .menu .page_item .children {
+    position: relative;
+    top: 0;
+    width: 100%;
+    background-color: #c4c4c4;
+  }
+}
+
+.desktop-nav .menu-container .menu .page_item .children li {
+  padding: 0;
+  background-color: inherit;
+}
+
+.desktop-nav .menu-container .menu .page_item .children li:hover {
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+}
+
+@media (max-width: 768px) {
+  .desktop-nav .menu-container .menu .page_item .children li:first-child {
+    border-top: 1px solid #888888;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-nav .menu-container .menu .page_item .children li {
+    margin: 0;
+  }
+}
+
+.desktop-nav .menu-container .menu .page_item .children a {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: none;
+}
+
+.desktop-nav .menu-container .menu .page_item .children a::after {
+  content: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-nav .menu-container .menu .page_item .children a {
+    margin: 0 1rem;
+  }
+}
+
+.desktop-nav .menu-container .menu .page_item .children a:hover {
+  border-bottom: none !important;
+}
+
 .desktop-nav .menu-container .search-btn {
   display: block;
   position: absolute;
