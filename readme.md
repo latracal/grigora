@@ -6,7 +6,7 @@
 
 **License URI:** [GPLv2](https://www.gnu.org/licenses/gpl-2.0.html)
 
-**Stable Tag:** v1.009
+**Stable Tag:** v1.010
 
 **Requires PHP Version Atleast:** 5.2
 
@@ -20,16 +20,22 @@ Please do not download or clone the GitHub repository to add Grigora to your pro
 
 All changes will be noted here
 
+### v1.010
+
+-   Removed related posts image placeholder
+-   Author box font style change
+-   Archives pagination button font properties dynamic
+
 ### v1.009
 
-- Added CSS for search form in content container
+-   Added CSS for search form in content container
 
 ### v1.008
 
-- Version changed
-- Container class rename to grigora_container
-- Header style 2 box shadow added when scrolled when sticky header is enabled
-- Word-break added globally
+-   Version changed
+-   Container class rename to grigora_container
+-   Header style 2 box shadow added when scrolled when sticky header is enabled
+-   Word-break added globally
 
 ## Installation
 

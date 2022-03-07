@@ -15,6 +15,11 @@ Please do not download or clone the GitHub repository to add Grigora to your pro
 
 All changes will be noted here
 
+== v1.010 ==
+1. Removed related posts image placeholder
+2. Author box font style change
+3. Archives pagination button font properties dynamic
+
 == v1.009 ==
 1. Added CSS for search form in content container
 
