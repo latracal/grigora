@@ -17,6 +17,7 @@ Grigora is an awesome lightning-fast theme that delivers performance along with 
 Please do not download or clone the GitHub repository to add Grigora to your production environment. Please use the distributions from Wordpress.org ( https://wordpress.org/themes/grigora/ ) to avoid adding unnecessary files that could attract potential vulnerabilities to your website.
 
 Report all the bugs to bugs[at]wpgrigora[dot]com
+
 Want to help us improving? contact[at]wpgrigora[dot]com
 
 ## Changelog
