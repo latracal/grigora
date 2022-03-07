@@ -16,26 +16,30 @@ Grigora is an awesome lightning-fast theme that delivers performance along with 
 
 Please do not download or clone the GitHub repository to add Grigora to your production environment. Please use the distributions from Wordpress.org ( https://wordpress.org/themes/grigora/ ) to avoid adding unnecessary files that could attract potential vulnerabilities to your website.
 
+Report all the bugs to bugs[at]wpgrigora[dot]com
+Want to help us improving? contact[at]wpgrigora[dot]com
+
 ## Changelog
 
 All changes will be noted here
 
 ### v1.010
 
--   Removed related posts image placeholder
--   Author box font style change
--   Archives pagination button font properties dynamic
+- Removed related posts image placeholder
+- Author box font style change
+- Archives pagination button font properties dynamic
+- Added a tagline in style.css to fix Wordpress Preview Bug
 
 ### v1.009
 
--   Added CSS for search form in content container
+- Added CSS for search form in content container
 
 ### v1.008
 
--   Version changed
--   Container class rename to grigora_container
--   Header style 2 box shadow added when scrolled when sticky header is enabled
--   Word-break added globally
+- Version changed
+- Container class rename to grigora_container
+- Header style 2 box shadow added when scrolled when sticky header is enabled
+- Word-break added globally
 
 ## Installation
 
