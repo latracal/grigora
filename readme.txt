@@ -2,7 +2,7 @@
 Contributors: Latracal Solutions
 License: GPLv2 or later
 License URI: GPLv2
-Stable Tag: v1.009
+Stable Tag: v1.010
 Requires PHP Version Atleast: 5.2
 
 Grigora is an awesome lightning-fast theme that delivers performance along with design. Highly customizable options to change color, layout, spacing, typography, and blog structure. Have SEO compatibility to make it mobile-friendly and add schema markups.
@@ -10,6 +10,9 @@ Grigora is an awesome lightning-fast theme that delivers performance along with 
 == Important Note ==
 
 Please do not download or clone the GitHub repository to add Grigora to your production environment. Please use the distributions from Wordpress.org ( https://wordpress.org/themes/grigora/ ) to avoid adding unnecessary files that could attract potential vulnerabilities to your website.
+
+Report all the bugs to bugs[at]wpgrigora[dot]com
+Want to help us improving? contact[at]wpgrigora[dot]com
 
 == Changelog ==
 
@@ -19,6 +22,7 @@ All changes will be noted here
 1. Removed related posts image placeholder
 2. Author box font style change
 3. Archives pagination button font properties dynamic
+4. Added a tagline in style.css to fix Wordpress Preview Bug
 
 == v1.009 ==
 1. Added CSS for search form in content container
