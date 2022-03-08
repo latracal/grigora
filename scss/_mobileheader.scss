@@ -200,6 +200,8 @@
 
 	.menu-container {
 		position: relative;
+		max-height: 100vh;
+		overflow: auto;
 
 		ul {
 			list-style: none;
