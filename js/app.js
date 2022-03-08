@@ -106,7 +106,7 @@ if (mobileheader) {
 
 w = screen.width;
 
-const parents = document.getElementsByClassName('menu-item-has-children');
+const parents = document.querySelectorAll('.menu-item-has-children,.page_item_has_children');
 
 for (var i = 0; i < parents.length; i++) {
 	parents[i].addEventListener('click', toggleSubMenu, false);
@@ -122,7 +122,7 @@ function focusSubmenuopener(event) {
 		return;
 	}
 	var parentElement = event.target.parentNode;
-	var submenu = parentElement.querySelector('.sub-menu');
+	var submenu = parentElement.querySelector('.sub-menu,.children');
 	if (submenu) {
 		submenu.style.display = 'block';
 	}
@@ -130,7 +130,7 @@ function focusSubmenuopener(event) {
 
 function toggleSubMenu(event) {
 	var targetElement = event.target || event.srcElement;
-	var child = targetElement.getElementsByClassName('sub-menu')[0];
+	var child = targetElement.querySelector('.sub-menu,.children');
 	if (!child) {
 		return;
 	}
