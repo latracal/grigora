@@ -625,7 +625,19 @@
 }
 
 .mobile-header .menu-item-has-children a::after {
-  content: "";
+  content: '';
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin-bottom: 3px;
+  margin-left: 8px;
+}
+
+.mobile-header .page_item_has_children a::after {
+  content: '';
   border: solid #000;
   border-width: 0 2px 2px 0;
   display: inline-block;
@@ -904,7 +916,6 @@
   position: absolute;
   width: 100%;
   min-width: 10rem;
-  background-color: #e9e9e9;
   z-index: 99;
 }
 
@@ -913,7 +924,6 @@
     position: relative;
     top: 0;
     width: 100%;
-    background-color: #c4c4c4;
   }
 }
 
@@ -950,6 +960,66 @@
 }
 
 .mobile-header .menu-container .menu .menu-item .sub-menu a:hover {
+  border-bottom: none;
+}
+
+.mobile-header .menu-container .menu .page_item {
+  position: relative;
+}
+
+.mobile-header .menu-container .menu .page_item:hover .children {
+  display: block;
+}
+
+.mobile-header .menu-container .menu .page_item .children {
+  display: none;
+  position: absolute;
+  width: 100%;
+  min-width: 10rem;
+  z-index: 99;
+}
+
+@media (max-width: 768px) {
+  .mobile-header .menu-container .menu .page_item .children {
+    position: relative;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.mobile-header .menu-container .menu .page_item .children li {
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .mobile-header .menu-container .menu .page_item .children li:first-child {
+    border-top: 1px solid #888888;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-header .menu-container .menu .page_item .children li {
+    margin: 0;
+  }
+}
+
+.mobile-header .menu-container .menu .page_item .children a {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: none;
+}
+
+.mobile-header .menu-container .menu .page_item .children a::after {
+  content: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-header .menu-container .menu .page_item .children a {
+    margin: 0 1rem;
+  }
+}
+
+.mobile-header .menu-container .menu .page_item .children a:hover {
   border-bottom: none;
 }
 
