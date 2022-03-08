@@ -7,8 +7,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <aside id="sidebar" class="grigora-primary-sidebar" itemtype="<?php echo grg_get_schema_tag('sidebar')['itemtype'] ?>"
     itemscope="<?php echo grg_get_schema_tag('sidebar')['itemscope'] ?>">
-    <?php if ( is_active_sidebar( 'primary' ) ) : ?>
-    <?php dynamic_sidebar( 'primary' ); ?>
+    <?php do_action( 'before_sidebar' ); ?>
+    <?php if ( ! dynamic_sidebar( 'primary' ) ) : ?>
+    <div id="search" class="widget widget_search">
+        <?php get_search_form(); ?>
+    </div>
+    <div id="archives" class="widget">
+        <h3 class="widget-title"><?php _e( 'Archives', 'shape' ); ?></h3>
+        <ul>
+            <?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
+        </ul>
+    </div>
+    <div id="meta" class="widget">
+        <h3 class="widget-title"><?php _e( 'Meta', 'shape' ); ?></h3>
+        <ul>
+            <?php wp_register(); ?>
+            <li><?php wp_loginout(); ?></li>
+            <?php wp_meta(); ?>
+        </ul>
+    </div>
     <?php else : ?>
     <?php endif; ?>
 </aside>
