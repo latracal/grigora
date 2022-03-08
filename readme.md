@@ -6,7 +6,7 @@
 
 **License URI:** [GPLv2](https://www.gnu.org/licenses/gpl-2.0.html)
 
-**Stable Tag:** v1.010
+**Stable Tag:** v1.011
 
 **Requires PHP Version Atleast:** 5.2
 
@@ -24,23 +24,32 @@ Want to help us improving? contact[at]wpgrigora[dot]com
 
 All changes will be noted here
 
+### v1.011
+
+-   Default sidebar added
+-   Default menu submenu fix
+-   Default mobile submenu fix
+-   Transitions to submenu in desktop
+-   Search form CSS in container
+-   Removed markers from few lists in girogra_sidebar
+
 ### v1.010
 
-- Removed related posts image placeholder
-- Author box font style change
-- Archives pagination button font properties dynamic
-- Added a tagline in style.css to fix Wordpress Preview Bug
+-   Removed related posts image placeholder
+-   Author box font style change
+-   Archives pagination button font properties dynamic
+-   Added a tagline in style.css to fix Wordpress Preview Bug
 
 ### v1.009
 
-- Added CSS for search form in content container
+-   Added CSS for search form in content container
 
 ### v1.008
 
-- Version changed
-- Container class rename to grigora_container
-- Header style 2 box shadow added when scrolled when sticky header is enabled
-- Word-break added globally
+-   Version changed
+-   Container class rename to grigora_container
+-   Header style 2 box shadow added when scrolled when sticky header is enabled
+-   Word-break added globally
 
 ## Installation
 

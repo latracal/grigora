@@ -2,7 +2,7 @@
 Contributors: Latracal Solutions
 License: GPLv2 or later
 License URI: GPLv2
-Stable Tag: v1.010
+Stable Tag: v1.011
 Requires PHP Version Atleast: 5.2
 
 Grigora is an awesome lightning-fast theme that delivers performance along with design. Highly customizable options to change color, layout, spacing, typography, and blog structure. Have SEO compatibility to make it mobile-friendly and add schema markups.
@@ -17,6 +17,14 @@ Want to help us improving? contact[at]wpgrigora[dot]com
 == Changelog ==
 
 All changes will be noted here
+
+== v1.011 ==
+1. Default sidebar added
+2. Default menu submenu fix
+3. Default mobile submenu fix
+4. Transitions to submenu in desktop
+5. Search form CSS in container
+6. Removed markers from few lists in girogra_sidebar
 
 == v1.010 ==
 1. Removed related posts image placeholder
