@@ -13,13 +13,13 @@ if ( ! defined( 'ABSPATH' ) ) {
         <?php get_search_form(); ?>
     </div>
     <div id="archives" class="widget">
-        <h3 class="widget-title"><?php _e( 'Archives', 'shape' ); ?></h3>
+        <h3 class="widget-title"><?php _e( 'Archives', 'grigora' ); ?></h3>
         <ul>
             <?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
         </ul>
     </div>
     <div id="meta" class="widget">
-        <h3 class="widget-title"><?php _e( 'Meta', 'shape' ); ?></h3>
+        <h3 class="widget-title"><?php _e( 'Meta', 'grigora' ); ?></h3>
         <ul>
             <?php wp_register(); ?>
             <li><?php wp_loginout(); ?></li>
