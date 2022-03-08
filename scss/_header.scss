@@ -217,7 +217,13 @@
 					border-bottom: 3px solid #000;
 				}
 				&:focus-within .sub-menu {
-					display: block;
+					visibility: visible;
+					opacity: 1;
+					height: auto;
+
+					a {
+						border-bottom: none;
+					}
 				}
 
 				&:focus a {
@@ -225,7 +231,13 @@
 				}
 
 				&:focus .sub-menu {
-					display: block;
+					visibility: visible;
+					opacity: 1;
+					height: auto;
+
+					a {
+						border-bottom: none;
+					}
 				}
 
 				.sub-menu {
@@ -306,7 +318,13 @@
 					border-bottom: 3px solid #000;
 				}
 				&:focus-within .children {
-					display: block;
+					visibility: visible;
+					opacity: 1;
+					height: auto;
+
+					a {
+						border-bottom: none;
+					}
 				}
 
 				&:focus a {
@@ -314,7 +332,13 @@
 				}
 
 				&:focus .children {
-					display: block;
+					visibility: visible;
+					opacity: 1;
+					height: auto;
+
+					a {
+						border-bottom: none;
+					}
 				}
 
 				.children {

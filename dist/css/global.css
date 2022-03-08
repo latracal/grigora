@@ -289,7 +289,13 @@
 }
 
 .desktop-nav .menu-container .menu .menu-item:focus-within .sub-menu {
-  display: block;
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+}
+
+.desktop-nav .menu-container .menu .menu-item:focus-within .sub-menu a {
+  border-bottom: none;
 }
 
 .desktop-nav .menu-container .menu .menu-item:focus a {
@@ -297,7 +303,13 @@
 }
 
 .desktop-nav .menu-container .menu .menu-item:focus .sub-menu {
-  display: block;
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+}
+
+.desktop-nav .menu-container .menu .menu-item:focus .sub-menu a {
+  border-bottom: none;
 }
 
 .desktop-nav .menu-container .menu .menu-item .sub-menu {
@@ -391,7 +403,13 @@
 }
 
 .desktop-nav .menu-container .menu .page_item:focus-within .children {
-  display: block;
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+}
+
+.desktop-nav .menu-container .menu .page_item:focus-within .children a {
+  border-bottom: none;
 }
 
 .desktop-nav .menu-container .menu .page_item:focus a {
@@ -399,7 +417,13 @@
 }
 
 .desktop-nav .menu-container .menu .page_item:focus .children {
-  display: block;
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+}
+
+.desktop-nav .menu-container .menu .page_item:focus .children a {
+  border-bottom: none;
 }
 
 .desktop-nav .menu-container .menu .page_item .children {
