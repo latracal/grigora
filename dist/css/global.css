@@ -281,7 +281,7 @@
 .desktop-nav .menu-container .menu .menu-item:hover .sub-menu {
   visibility: visible;
   opacity: 1;
-  height: 100%;
+  height: auto;
 }
 
 .desktop-nav .menu-container .menu .menu-item:focus-within a {
@@ -383,7 +383,7 @@
 .desktop-nav .menu-container .menu .page_item:hover .children {
   visibility: visible;
   opacity: 1;
-  height: 100%;
+  height: auto;
 }
 
 .desktop-nav .menu-container .menu .page_item:focus-within a {
