@@ -209,7 +209,9 @@
 				}
 
 				&:hover .sub-menu {
-					display: block;
+					visibility: visible;
+					opacity: 1;
+					height: 100%;
 				}
 				&:focus-within a {
 					border-bottom: 3px solid #000;
@@ -227,13 +229,17 @@
 				}
 
 				.sub-menu {
-					display: none;
+					display: block;
 					position: absolute;
 					width: 100%;
 					min-width: 10rem;
 					background-color: #e9e9e9;
 					z-index: 99;
 					margin-left: 0;
+					height: 0;
+					opacity: 0;
+					visibility: hidden;
+					transition: opacity 0.3s ease-in-out;
 
 					@media (max-width: 768px) {
 						position: relative;
@@ -292,7 +298,9 @@
 				}
 
 				&:hover .children {
-					display: block;
+					visibility: visible;
+					opacity: 1;
+					height: 100%;
 				}
 				&:focus-within a {
 					border-bottom: 3px solid #000;
@@ -310,13 +318,17 @@
 				}
 
 				.children {
-					display: none;
+					display: block;
 					position: absolute;
 					width: 100%;
 					min-width: 10rem;
 					background-color: #e9e9e9;
 					z-index: 99;
 					margin-left: 0;
+					height: 0;
+					opacity: 0;
+					visibility: hidden;
+					transition: opacity 0.3s ease-in-out;
 
 					@media (max-width: 768px) {
 						position: relative;
