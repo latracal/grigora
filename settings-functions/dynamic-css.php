@@ -824,7 +824,7 @@ $out=$out."
 
 $out=$out." 
 .grigora_container .article .breadcrumb {
-    justify-content:".get_theme_mod('grg_breadcrumbs_align', $breadcrumb_defaults['grg_breadcrumbs_align']).";
+    text-align:".get_theme_mod('grg_breadcrumbs_align', $breadcrumb_defaults['grg_breadcrumbs_align']).";
 }";
 
 
